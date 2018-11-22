@@ -10,4 +10,5 @@ export default {
   yellow: '#ffc655',
   lightenRed: '#FCECEC',
   blue: '#5990DC',
+  primary: '#FC6821',
 };

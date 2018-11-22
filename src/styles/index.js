@@ -46,9 +46,15 @@ Typography.loadTypographies({
   },
 });
 
-Assets.loadAssetsGroup('illustrations', {});
+Assets.loadAssetsGroup('images', {
+  'bottom-bar-background': require('../../assets/images/bottom_bar_background.png'),
+});
 
-Assets.loadAssetsGroup('icons', {});
+Assets.loadAssetsGroup('icons', {
+  'plus': require('../../assets/icons/plus.png'),
+  'history': require('../../assets/icons/history.png'),
+  'flashlight': require('../../assets/icons/flashlight.png'),
+});
 
 const scale = (size: number): number => width / guidelineBaseWidth * size;
 const verticalScale = (size: number): number => height / guidelineBaseHeight * size;
