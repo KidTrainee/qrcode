@@ -31,8 +31,8 @@ export default function HomeView(props: Props) {
       <RNCamera
         style={styles.cameraPreview}
         flashMode={props.isFlashlightOn ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off}
-        permissionDialogTitle={'Permission to use camera'}
-        permissionDialogMessage={'We need your permission to use your camera phone'}
+        permissionDialogTitle="Permission to use camera"
+        permissionDialogMessage="We need your permission to use your camera phone"
         onBarCodeRead={({ data }) => {
           console.log(data);
         }}
@@ -55,7 +55,7 @@ export default function HomeView(props: Props) {
           }}
         >
           <RoundButton iconName="flashlight"  
-            onPress={() => props.toggleFlashlight(!props.isFlashlightOn)}
+            onPress={props.toggleFlashlight}
             style={props.isFlashlightOn && styles.flashlightButtonDark}
           />
           <RoundButton iconName="plus" bigger style={{ marginTop: -30}} />
