@@ -54,6 +54,7 @@ Assets.loadAssetsGroup('icons', {
   'plus': require('../../assets/icons/plus.png'),
   'history': require('../../assets/icons/history.png'),
   'flashlight': require('../../assets/icons/flashlight.png'),
+  'scan-area': require('../../assets/icons/scan-area.png'),
 });
 
 const scale = (size: number): number => width / guidelineBaseWidth * size;

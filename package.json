@@ -16,7 +16,12 @@
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.5",
+    "react-native-camera": "^1.4.3",
+    "react-native-camera-kit": "^6.3.0",
     "react-native-gesture-handler": "^1.0.9",
+    "react-native-permissions": "^1.1.1",
+    "react-native-qrcode-scanner": "^1.1.0",
+    "react-native-torch": "^1.1.5",
     "react-native-ui-lib": "^3.5.0",
     "react-navigation": "^3.0.0",
     "react-redux": "^5.1.1",
