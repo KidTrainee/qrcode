@@ -44,6 +44,12 @@ Typography.loadTypographies({
     fontFamily: 'Muli',
     fontWeight: '300',
   },
+  button: {
+    fontSize: 18,
+    fontFamily: 'Muli',
+    fontWeight: 'bold',
+    color: colors.primary,
+  },
 });
 
 Assets.loadAssetsGroup('images', {
