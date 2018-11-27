@@ -1,12 +1,15 @@
-import { compose, withState, withHandlers } from 'recompose';
+import { compose, withState, withHandlers, hoistStatics } from 'recompose';
 
 import HomeView from './HomeView';
 
-export default compose(
-    withState('isFlashlightOn', 'setFlashlight', false),
-    withHandlers({
-        toggleFlashlight: props => () => {
-          props.setFlashlight(!props.isFlashlightOn);
-        },
-      }),
-)(HomeView);
+const enhance = compose(
+  withState('isFlashlightOn', 'setFlashlight', false),
+  withState('qrcodeDetected', 'detectCode', false),
+  withHandlers({
+    toggleFlashlight: props => () => {
+      props.setFlashlight(!props.isFlashlightOn);
+    },
+  }),
+);
+
+export default hoistStatics(enhance)(HomeView);

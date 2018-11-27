@@ -12,7 +12,7 @@ const AppNavigator = createStackNavigator({
   History,
   NewCode,
 }, {
-  headerMode: 'none',
+  headerMode: 'float',
   initialRouteName: 'Home',
 });
 

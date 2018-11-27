@@ -54,17 +54,27 @@ export default function HomeView(props: Props) {
             justifyContent: 'space-around',
           }}
         >
-          <RoundButton iconName="flashlight"  
+          <RoundButton
+            iconName="flashlight"  
             onPress={props.toggleFlashlight}
             style={props.isFlashlightOn && styles.flashlightButtonDark}
           />
-          <RoundButton iconName="plus" bigger style={{ marginTop: -30}} />
+          <RoundButton
+            onPress={() => props.navigation.navigate('NewCode')}
+            iconName="plus"
+            bigger
+            style={{ marginTop: -30}}
+          />
           <RoundButton iconName="history" />
         </View>
       </View>
     </SafeAreaView>
   )
 }
+
+HomeView.navigationOptions = {
+  header: null,
+};
 
 const styles = StyleSheet.create({
   cameraPreview: {
