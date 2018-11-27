@@ -63,6 +63,17 @@ Assets.loadAssetsGroup('icons', {
   'scan-area': require('../../assets/icons/scan-area.png'),
 });
 
+Assets.loadAssetsGroup('tabbar-icons', {
+  'history': require('../../assets/icons/tabbar/history.png'),
+  'history-active': require('../../assets/icons/tabbar/history-active.png'),
+  'plus': require('../../assets/icons/tabbar/plus.png'),
+  'plus-active': require('../../assets/icons/tabbar/plus-active.png'),
+  'qrcode': require('../../assets/icons/tabbar/qrcode.png'),
+  'qrcode-active': require('../../assets/icons/tabbar/qrcode-active.png'),
+  'settings': require('../../assets/icons/tabbar/settings.png'),
+  'settings-active': require('../../assets/icons/tabbar/settings-active.png'),
+});
+
 const scale = (size: number): number => width / guidelineBaseWidth * size;
 const verticalScale = (size: number): number => height / guidelineBaseHeight * size;
 const moderateScale = (size: number, factor: number = 0.5): number => size + (scale(size) - size) * factor;
