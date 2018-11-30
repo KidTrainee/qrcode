@@ -44,6 +44,12 @@ Typography.loadTypographies({
     fontFamily: 'Muli',
     fontWeight: '300',
   },
+  button: {
+    fontSize: 18,
+    fontFamily: 'Muli',
+    fontWeight: 'bold',
+    color: colors.primary,
+  },
 });
 
 Assets.loadAssetsGroup('images', {
@@ -56,6 +62,17 @@ Assets.loadAssetsGroup('icons', {
   'flashlight': require('../../assets/icons/flashlight.png'),
   'scan-area': require('../../assets/icons/scan-area.png'),
   'back-arrow': require('../../assets/icons/back-arrow.png'),
+});
+
+Assets.loadAssetsGroup('tabbar-icons', {
+  'history': require('../../assets/icons/tabbar/history.png'),
+  'history-active': require('../../assets/icons/tabbar/history-active.png'),
+  'plus': require('../../assets/icons/tabbar/plus.png'),
+  'plus-active': require('../../assets/icons/tabbar/plus-active.png'),
+  'qrcode': require('../../assets/icons/tabbar/qrcode.png'),
+  'qrcode-active': require('../../assets/icons/tabbar/qrcode-active.png'),
+  'settings': require('../../assets/icons/tabbar/settings.png'),
+  'settings-active': require('../../assets/icons/tabbar/settings-active.png'),
 });
 
 const scale = (size: number): number => width / guidelineBaseWidth * size;

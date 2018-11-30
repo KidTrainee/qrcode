@@ -1,10 +1,25 @@
-import { compose, withState, hoistStatics } from 'recompose';
+import { connect } from 'react-redux';
+import { compose, withState, withHandlers } from 'recompose';
+
+import { clearValues, updateField, setCodeType } from './NewCodeState';
 
 import NewCodeView from './NewCodeView';
 
-const enhance =  compose(
-    withState('codeInputValue', 'setCodeValue', ''),
-    withState('codeTypeValue', 'setCodeType', 'QR Code'),
-);
-
-export default hoistStatics(enhance)(NewCodeView);
+export default compose(
+	connect(
+		state => ({
+			activeCodeType: state.newCode.codeType,
+		}),
+		dispatch => ({
+			clearValues: () => dispatch(clearValues()),
+			updateField: (field, value) => dispatch(updateField(field, value)),
+			setCodeType: (type) => dispatch(setCodeType(type)),
+		}),
+	),
+	withHandlers({
+		changeCodeType: props => nextCodeType => {
+			props.setCodeType(nextCodeType);
+			props.clearValues();
+		},
+	}),
+)(NewCodeView);
