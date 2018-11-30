@@ -3,16 +3,14 @@ import {
   SafeAreaView,
   Dimensions,
   StyleSheet,
-  Text,
-  TouchableOpacity,
 } from 'react-native';
 import { View } from 'react-native-ui-lib';
-import { Image } from 'react-native-ui-lib';
 import QRCode from 'react-native-qrcode';
-import ViewShot from "react-native-view-shot";
-import Share, {ShareSheet} from 'react-native-share';
+import ViewShot from 'react-native-view-shot';
+import Share from 'react-native-share';
 
-import { commonStyles, colors } from '../../styles';
+import { codeTypesList, fieldTypesList } from '../newCode/NewCodeState';
+import { commonStyles } from '../../styles';
 import { Button } from '../../components';
 
 type Props = {
@@ -22,75 +20,86 @@ type Props = {
   onCapture: (string) => void,
 };
 
-const generateQRValueFromState = state => {
+const generateQRValueFromState = (state) => {
   const { codeType, fieldValues } = state;
 
-  if (['Text', 'URL', 'Email', 'Tel'].includes(codeType) ) {
-    return fieldValues.text;
-  }
-
-  if (codeType === 'SMS') {
-    return `SMSTO:${fieldValues.sms_to}:${fieldValues.sms_message}`
-  }
-
-  if (codeType === 'WiFi') {
-    return `WIFI:S:${fieldValues.wifi_ssid};T:${fieldValues.wifi_encryption};P:${fieldValues.wifi_password};;`
-  }
-
-  if (codeType === 'Geo') {
-    return `geo:${fieldValues.geo_long},${fieldValues.geo_lat}`
-  }
-
-  if (codeType === 'Contact') {
-    return `BEGIN:VCARD
+  switch (codeType) {
+    case codeTypesList.SMS:
+      return `SMSTO:${fieldValues[fieldTypesList.SMS_TO]}:${fieldValues[fieldTypesList.SMS_MESSAGE]}`;
+    case codeTypesList.WIFI:
+      return `WIFI:S:${fieldValues[fieldTypesList.WIFI_SSID]};
+T:${fieldValues[fieldTypesList.WIFI_ENCRYPTION]};
+P:${fieldValues[fieldTypesList.WIFI_PASSWORD]};;`;
+    case codeTypesList.GEO:
+      return `geo:${fieldValues[fieldTypesList.GEO_LONG]},${fieldValues[fieldTypesList.GEO_LAT]}`;
+    case codeTypesList.CONTACT:
+      return `BEGIN:VCARD
 VERSION:4.0
-N:${fieldValues.contact_surname};${fieldValues.contact_name};;;
-FN:${fieldValues.contact_name} ${fieldValues.contact_surname}
-TEL:${fieldValues.contact_phone}
-EMAIL:${fieldValues.contact_email}
-END:VCARD`
+N:${fieldValues[fieldTypesList.CONTACT_SURNAME]};${fieldValues[fieldTypesList.CONTACT_NAME]};;;
+FN:${fieldValues[fieldTypesList.CONTACT_NAME]} ${fieldValues[fieldTypesList.CONTACT_SURNAME]}
+TEL:${fieldValues[fieldTypesList.CONTACT_PHONE]}
+EMAIL:${fieldValues[fieldTypesList.CONTACT_EMAIL]}
+END:VCARD`;
+    case codeTypesList.EVENT:
+      return `BEGIN:VEVENT
+SUMMARY:${fieldValues[fieldTypesList.EVENT_TITLE]}
+LOCATION:${fieldValues[fieldTypesList.EVENT_LOCATION]}
+DESCRIPTION:${fieldValues[fieldTypesList.EVENT_DESCRIPTION]}
+DTSTART:${fieldValues[fieldTypesList.EVENT_START]}
+DTEND:${fieldValues[fieldTypesList.EVENT_END]}
+END:VEVENT`;
+    default:
+      return fieldValues[fieldTypesList.TEXT];
   }
-
-  if (codeType === 'Event') {
-    return `BEGIN:VEVENT
-SUMMARY:${fieldValues.event_title}
-LOCATION:${fieldValues.event_location}
-DESCRIPTION:${fieldValues.event_description}
-DTSTART:${fieldValues.event_start}
-DTEND:${fieldValues.event_end}
-END:VEVENT`
-  }
-}
+};
 
 const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 
 export default function GeneratedCodeView(props: Props) {
   return (
     <SafeAreaView style={[commonStyles.safeArea, styles.viewContainer]}>
       <View flex-1 center>
         <ViewShot
-          ref={(input) => props.updateCameraRef(input)}
+          ref={input => props.updateCameraRef(input)}
         >
-          <View style={{backgroundColor: 'gray'}}>
+          <View style={{ backgroundColor: 'gray' }}>
             <QRCode
               value={generateQRValueFromState(props.codeCreatingState)}
               size={windowWidth - 30}
-              bgColor='black'
-              fgColor='white'/>
+              bgColor="black"
+              fgColor="white"
+            />
           </View>
         </ViewShot>
         <View marginT-20 row>
-          <Button onPress={() => props.handleShareButtonClick(Share)} radius={5} style={{flexGrow: 1, marginRight: 20}}>Share</Button>
-          <Button radius={5} style={{flexGrow: 1}}>Save</Button>
+          <View flex style={{ marginRight: 20 }}>
+            <Button
+              onPress={() => props.handleShareButtonClick(Share)}
+              radius={5}
+              style={{ flexGrow: 1 }}
+            >
+            Share
+            </Button>
+          </View>
+          <View flex>
+            <Button
+              variant="white"
+              radius={5}
+              style={{ flexGrow: 1 }}
+              textColor="red"
+              borderColor="red"
+            >
+              Customize
+            </Button>
+          </View>
         </View>
       </View>
     </SafeAreaView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   viewContainer: {
     marginHorizontal: 15,
-  }
+  },
 });

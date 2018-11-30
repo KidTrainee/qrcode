@@ -65,7 +65,7 @@ const TabNavigator = createBottomTabNavigator({
     style: {
       height: 60,
       borderTopWidth: 0,
-      shadowColor: "#000000",
+      shadowColor: '#000000',
       shadowOffset: {
         width: 0,
         height: 0,
@@ -74,7 +74,7 @@ const TabNavigator = createBottomTabNavigator({
       shadowRadius: 2.22,
       paddingTop: 5,
       elevation: 3,
-    }
+    },
   },
 });
 
