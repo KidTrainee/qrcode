@@ -12,11 +12,12 @@ import Scanner from '../scanner/ScannerViewContainer';
 import History from '../history/HistoryViewContainer';
 import NewCode from '../newCode/NewCodeViewContainer';
 import Settings from '../settings/SettingViewContainer';
+import GeneratedCode from '../generatedCode/GeneratedCodeViewContainer';
 
-const AppNavigator = createBottomTabNavigator({
+const TabNavigator = createBottomTabNavigator({
   Scanner,
   History,
-  NewCode,
+  Generate: NewCode,
   Settings,
 }, {
   defaultNavigationOptions: ({ navigation }) => ({
@@ -30,7 +31,7 @@ const AppNavigator = createBottomTabNavigator({
         case 'Settings':
           iconName = 'settings';
           break;
-        case 'NewCode':
+        case 'Generate':
           iconName = 'plus';
           break;
         default:
@@ -48,6 +49,7 @@ const AppNavigator = createBottomTabNavigator({
           resizeMode="contain"
           style={{
             height: 23,
+            marginTop: 5,
           }}
         />
       );
@@ -61,18 +63,26 @@ const AppNavigator = createBottomTabNavigator({
       fontSize: 10,
     },
     style: {
+      height: 60,
       borderTopWidth: 0,
-      shadowColor: "#000000",
+      shadowColor: '#000000',
       shadowOffset: {
         width: 0,
         height: 0,
       },
       shadowOpacity: 0.22,
       shadowRadius: 2.22,
-
+      paddingTop: 5,
       elevation: 3,
-    }
+    },
   },
+});
+
+const AppNavigator = createStackNavigator({
+  TabNavigator,
+  GeneratedCode,
+}, {
+  headerMode: 'none',
 });
 
 const AppContainer = createAppContainer(AppNavigator);

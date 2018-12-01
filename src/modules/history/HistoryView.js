@@ -15,6 +15,7 @@ type Props = {
   },
 };
 
+// eslint-disable-next-line
 export default function HistoryView(props: Props) {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
@@ -22,5 +23,5 @@ export default function HistoryView(props: Props) {
         <Text darkBlue h1>History View</Text>
       </View>
     </SafeAreaView>
-  )
+  );
 }
