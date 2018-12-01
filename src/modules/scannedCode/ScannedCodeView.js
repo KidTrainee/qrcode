@@ -10,7 +10,7 @@ import {
 } from 'react-native-ui-lib';
 
 import { commonStyles, colors } from '../../styles';
-import { codeTypesList } from '../newCode/NewCodeState';
+import { parseScannedString } from './ScannedCodeState';
 
 type Props = {
   navigation: {
@@ -18,22 +18,36 @@ type Props = {
   },
 };
 
+const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+
 export default function ScannedCodeView(props: Props) {
-  const data = '+232323233232';
+  const data = `BEGIN:VEVENT
+ UID:19970901T130000Z-123401@example.com
+ DTSTAMP:19970901T130000Z
+ DTSTART:19970903T163000Z
+ DTEND:19970903T190000Z
+ SUMMARY:Annual Employee Review
+ CLASS:PRIVATE
+ CATEGORIES:BUSINESS,HUMAN RESOURCES
+ END:VEVENT`;
+  const parsedString = parseScannedString(data);
   return (
     <SafeAreaView style={commonStyles.safeArea}>
-      <View flex marginT-10 padding-20 bg-white>
-        <View marginT-30>
-          <TextInput
-            text70
-            floatingPlaceholder
-            placeholder="Telephone number"
-            value={data}
-            editable={false}
-            onChangeText={() => {}}
-            disabledColor={colors.darkBlue}
-            floatingPlaceholderColor={colors.darkGray}
-          />
+      <View flex marginT-10 paddingH-20 bg-white>
+        <View>
+          <Text h1 center marginB-20>{parsedString.type}</Text>
+          { parsedString.fields.map(field => (
+            <TextInput
+              key={field.title.replace(' ', '')}
+              text70
+              floatingPlaceholder
+              placeholder={capitalizeFirstLetter(field.title)}
+              value={field.value || '--'}
+              editable={false}
+              disabledColor={colors.darkBlue}
+              floatingPlaceholderColor={colors.darkGray}
+            />
+          ))}
         </View>
       </View>
     </SafeAreaView>
