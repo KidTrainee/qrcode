@@ -102,7 +102,7 @@ const AppNavigator = createStackNavigator({
   GeneratedCode: {
     screen: GeneratedCode,
     navigationOptions: () => ({
-      title: 'New QRCode',
+      title: 'New Code',
     }),
   },
 }, {
