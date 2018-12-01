@@ -25,7 +25,7 @@ const generateQRValueFromState = (state) => {
 
   switch (codeType) {
     case codeTypesList.SMS:
-      return `SMSTO:${fieldValues[fieldTypesList.SMS_TO]}:${fieldValues[fieldTypesList.SMS_MESSAGE]}`;
+      return `SMS:${fieldValues[fieldTypesList.SMS_TO]}:${fieldValues[fieldTypesList.SMS_MESSAGE]}`;
     case codeTypesList.WIFI:
       return `WIFI:S:${fieldValues[fieldTypesList.WIFI_SSID]};
 T:${fieldValues[fieldTypesList.WIFI_ENCRYPTION]};

@@ -41,7 +41,7 @@ export function parseScannedString(scannedString: string): {
   console.log(scannedString);
   const splittedInputString = scannedString.split(':');
   switch (scannedString.split(':')[0].toUpperCase()) {
-    case 'SMSTO':
+    case 'SMS':
       result.type = codeTypesList.SMS;
       result.fields = [
         { title: 'to', value: splittedInputString[1] || '' },

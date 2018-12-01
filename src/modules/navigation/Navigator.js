@@ -84,17 +84,17 @@ const TabNavigator = createBottomTabNavigator({
 });
 
 const AppNavigator = createStackNavigator({
-  TabNavigator: {
-    screen: TabNavigator,
-    navigationOptions: {
-      header: null,
-    }
-  },
   ScannedCode: {
     screen: ScannedCode,
     navigationOptions: ({ navigation }) => ({
       title: `Scanned Code`,
     }),
+  },
+  TabNavigator: {
+    screen: TabNavigator,
+    navigationOptions: {
+      header: null,
+    }
   },
   GeneratedCode,
 }, {

@@ -8,11 +8,11 @@ import { colors } from '../styles';
 type Props = {
   onPress: () => any,
   children: string,
-  variant: string,
-  style: any,
-  radius: number,
-  textColor: string,
-  borderColor: string,
+  variant?: string,
+  style?: any,
+  radius?: number,
+  textColor?: string,
+  borderColor?: string,
 }
 
 const Button = (props: Props) => {

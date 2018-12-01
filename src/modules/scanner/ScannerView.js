@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
   },
   flashlightButton: {
     position: 'absolute',
-    bottom: 100,
+    bottom: Platform.select({ android: 100, ios: 150 }),
     width: 100,
     height: 40,
     borderColor: colors.white,
