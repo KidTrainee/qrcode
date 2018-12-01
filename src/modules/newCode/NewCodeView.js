@@ -2,13 +2,13 @@ import React from 'react';
 import {
   SafeAreaView,
   StyleSheet,
-  Dimensions,
   ScrollView,
   TouchableOpacity, StatusBar,
 } from 'react-native';
 import {
   View,
   Text,
+  Image,
 } from 'react-native-ui-lib';
 
 import GeneratingForm from './CodeGeneratingFormComponent';
@@ -24,8 +24,6 @@ type Props = {
   activeCodeType: string,
   updateField: (string) => void,
 };
-
-const windowWidth = Dimensions.get('window').width;
 
 const codeTypes = [
   { id: 0, label: codeTypesList.TEXT, icon: '' },
@@ -46,7 +44,9 @@ export default function NewCodeView(props: Props) {
         translucent={false}
         backgroundColor={colors.primary}
       />
-      <Text h1 marginB-25>Generate Code</Text>
+      <View centerH marginB-25 marginT-10>
+        <Text h1 darkBlue>Generate Code</Text>
+      </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.typesContainer}>
         {codeTypes.map((codeType, index) => (
           <TouchableOpacity
@@ -58,7 +58,11 @@ export default function NewCodeView(props: Props) {
               codeType.label === props.activeCodeType && styles.activeCodeType,
             ]}
           >
-            <Text h3 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
+            <Image
+              assetGroup="types"
+              assetName={codeType.label !== props.activeCodeType ? 'text' : 'text-white'}
+            />
+            <Text h3 lightBlue marginT-5 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>
@@ -66,19 +70,13 @@ export default function NewCodeView(props: Props) {
         <View>
           <GeneratingForm activeCodeType={props.activeCodeType} updateField={props.updateField} />
         </View>
-        <Button
-          onPress={() => props.navigation.navigate('GeneratedCode')}
-          radius={5}
-          variant="darkGray"
-        >
-        Generate
-        </Button>
+        <Button onPress={() => props.navigation.navigate('GeneratedCode')}>generate</Button>
       </View>
     </SafeAreaView>
   );
 }
 
-const codeTypeWidth = (windowWidth - 90) / 2.5;
+const codeTypeWidth = 80;
 
 const styles = StyleSheet.create({
   viewContainer: {
@@ -99,18 +97,28 @@ const styles = StyleSheet.create({
     marginRight: 20,
     backgroundColor: colors.white,
     borderRadius: 5,
-    shadowColor: '#000000',
+    shadowColor: colors.darkBlue,
     shadowOffset: {
       width: 0,
-      height: 0,
+      height: 1,
     },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
+
+    elevation: 3,
   },
   activeCodeType: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.primaryLite,
     color: colors.white,
-    borderColor: colors.primary,
+    shadowColor: colors.primary,
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.22,
+    shadowRadius: 2.22,
+
+    elevation: 3,
   },
   formWrapper: {
     marginHorizontal: -20,

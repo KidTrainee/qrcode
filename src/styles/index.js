@@ -58,11 +58,17 @@ Assets.loadAssetsGroup('images', {
 
 Assets.loadAssetsGroup('icons', {
   plus: require('../../assets/icons/plus.png'),
+  'back-icon': require('../../assets/icons/back-icon.png'),
   history: require('../../assets/icons/history.png'),
   flashlight: require('../../assets/icons/flashlight.png'),
   'scan-area': require('../../assets/icons/scan-area.png'),
   'flashlight-on': require('../../assets/icons/flashlight-on.png'),
   'flashlight-off': require('../../assets/icons/flashlight-off.png'),
+});
+
+Assets.loadAssetsGroup('types', {
+  text: require('../../assets/icons/types/text.png'),
+  'text-white': require('../../assets/icons/types/text-white.png'),
 });
 
 Assets.loadAssetsGroup('tabbar-icons', {

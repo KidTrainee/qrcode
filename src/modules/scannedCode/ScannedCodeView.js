@@ -37,18 +37,18 @@ function openLink(url) {
 }
 
 const ShareButton = (props: { data: any }) => (
-  <Button onPress={() => Share.open({ url: props.data })}>Share</Button>
+  <Button onPress={() => Share.open({ url: props.data })}>share</Button>
 );
 const CopyButton = (props: { data: any }) => (
-  <Button onPress={() => Clipboard.setString(props.data)}>Copy</Button>
+  <Button onPress={() => Clipboard.setString(props.data)}>copy</Button>
 );
 const OpenButton = (props: { data: any, children?: string }) => (
-  <Button onPress={() => openLink(props.data)}>{props.children || 'Open'}</Button>
+  <Button onPress={() => openLink(props.data)}>{props.children || 'open'}</Button>
 );
 
 // eslint-disable-next-line no-unused-vars
 export default function ScannedCodeView(props: Props) {
-  const data = 'SMS:+12342323232:WAZAAA';// props.navigation.state.params.data || '';
+  const data = 'https://google.com';// props.navigation.state.params.data || '';
   const parsedString = parseScannedString(data);
 
   const fieldsDict = {};
@@ -76,35 +76,35 @@ export default function ScannedCodeView(props: Props) {
           ))}
         </View>
 
-        <View>
+        <View flex bottom paddingB-30>
           { parsedString.type === codeTypesList.TEXT && (
-            <View row spread>
+            <View row centerH>
               <CopyButton data={data} />
               <ShareButton data={data} />
             </View>
           )}
           { parsedString.type === codeTypesList.URL && (
-            <View row spread>
+            <View row centerH spread>
               <OpenButton data={data} />
               <CopyButton data={data} />
               <ShareButton data={data} />
             </View>
           )}
           { parsedString.type === codeTypesList.EMAIL && (
-            <View row spread>
-              <OpenButton data={data}>Send</OpenButton>
+            <View row centerH spread>
+              <OpenButton data={data}>send</OpenButton>
             </View>
           )}
           { parsedString.type === codeTypesList.TEL && (
-            <View row spread>
-              <OpenButton data={data}>Call</OpenButton>
+            <View row centerH spread>
+              <OpenButton data={data}>call</OpenButton>
               <CopyButton data={fieldsDict.number} />
               <ShareButton data={fieldsDict.number} />
             </View>
           )}
           { parsedString.type === codeTypesList.SMS && (
-            <View row spread>
-              <OpenButton data={data}>Send</OpenButton>
+            <View row centerH spread>
+              <OpenButton data={data}>send</OpenButton>
             </View>
           )}
         </View>

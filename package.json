@@ -20,6 +20,7 @@
     "react-native": "0.57.5",
     "react-native-camera": "^1.4.3",
     "react-native-gesture-handler": "^1.0.9",
+    "react-native-linear-gradient": "^2.5.2",
     "react-native-qrcode": "^0.2.7",
     "react-native-qrcode-scanner": "^1.1.0",
     "react-native-share": "^1.1.3",
