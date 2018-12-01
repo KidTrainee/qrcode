@@ -1,17 +1,16 @@
 import React from 'react';
-import { Modal, DatePickerIOS } from 'react-native';
+import { Modal, Picker } from 'react-native';
 import { View } from 'react-native-ui-lib';
-import moment from 'moment';
 
 import { Input, Button } from '../index';
 
-const DateTimePicker = props => (
+const PickerComponent = props => (
   <View>
     <Input
       key={props.key}
       placeholder={props.placeholder}
       onFocus={() => props.setModalState(true)}
-      value={props.inputValue ? moment(props.inputValue).format('DD-MM-YYYY HH:MM') : null}
+      value={props.inputValue}
     />
     <Modal
       animationType="slide"
@@ -19,11 +18,12 @@ const DateTimePicker = props => (
       visible={props.isModalOpened}
     >
       <View flex-1 centerV>
-        <DatePickerIOS
-          date={props.inputValue ? props.inputValue : new Date()}
-          onDateChange={props.handleSetValue}
-          minimumDate={props.minimumDate}
-        />
+        <Picker
+          selectedValue={props.inputValue}
+          onValueChange={itemValue => props.handleSetValue(itemValue)}
+        >
+          {props.items.map(item => <Picker.Item key={item.id} {...item} />)}
+        </Picker>
       </View>
       <View flex-0>
         <Button onPress={() => props.setModalState(false)} style={{ borderBottomWidth: 20 }}>Save</Button>
@@ -32,4 +32,4 @@ const DateTimePicker = props => (
   </View>
 );
 
-export default DateTimePicker;
+export default PickerComponent;

@@ -8,6 +8,7 @@ import { View } from 'react-native-ui-lib';
 import QRCode from 'react-native-qrcode';
 import ViewShot from 'react-native-view-shot';
 import Share from 'react-native-share';
+import moment from 'moment';
 
 import { codeTypesList, fieldTypesList } from '../newCode/NewCodeState';
 import { commonStyles } from '../../styles';
@@ -24,6 +25,16 @@ const generateQRValueFromState = (state) => {
   const { codeType, fieldValues } = state;
 
   switch (codeType) {
+    case codeTypesList.EMAIL:
+      /* eslint-disable */
+      const subject = fieldValues[fieldTypesList.EMAIL_SUBJECT];
+      const encodedSubject = encodeURIComponent(subject.trim());
+
+      const body = fieldValues[fieldTypesList.EMAIL_BODY];
+      const encodedBody = encodeURIComponent(body.trim());
+      /* eslint-enable */
+
+      return `mailto:${fieldValues[fieldTypesList.EMAIL_TO]}?subject=${encodedSubject}&body=${encodedBody}`;
     case codeTypesList.SMS:
       return `SMSTO:${fieldValues[fieldTypesList.SMS_TO]}:${fieldValues[fieldTypesList.SMS_MESSAGE]}`;
     case codeTypesList.WIFI:
@@ -45,8 +56,8 @@ END:VCARD`;
 SUMMARY:${fieldValues[fieldTypesList.EVENT_TITLE]}
 LOCATION:${fieldValues[fieldTypesList.EVENT_LOCATION]}
 DESCRIPTION:${fieldValues[fieldTypesList.EVENT_DESCRIPTION]}
-DTSTART:${fieldValues[fieldTypesList.EVENT_START]}
-DTEND:${fieldValues[fieldTypesList.EVENT_END]}
+DTSTART:${moment(fieldValues[fieldTypesList.EVENT_START]).format('YYYYMMDDThhmmss')}
+DTEND:${moment(fieldValues[fieldTypesList.EVENT_END]).format('YYYYMMDDThhmmss')}
 END:VEVENT`;
     default:
       return fieldValues[fieldTypesList.TEXT];
@@ -56,6 +67,11 @@ END:VEVENT`;
 const windowWidth = Dimensions.get('window').width;
 
 export default function GeneratedCodeView(props: Props) {
+  const navigationParams = {
+    codeType: props.navigation.getParam('codeType'),
+    fieldValues: props.navigation.getParam('fieldValues'),
+  };
+
   return (
     <SafeAreaView style={[commonStyles.safeArea, styles.viewContainer]}>
       <View flex-1 center>
@@ -64,7 +80,7 @@ export default function GeneratedCodeView(props: Props) {
         >
           <View style={{ backgroundColor: 'gray' }}>
             <QRCode
-              value={generateQRValueFromState(props.codeCreatingState)}
+              value={generateQRValueFromState(navigationParams)}
               size={windowWidth - 30}
               bgColor="black"
               fgColor="white"

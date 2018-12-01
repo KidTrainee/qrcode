@@ -3,6 +3,7 @@ import ButtonsGroup from './ButtonsGroup';
 import Button from './Button';
 import Input from './Input';
 import DateTimePicker from './DateTimePicker/DateTimePickerContaner';
+import Picker from './Picker/PickerContaner';
 
 export {
   RoundButton,
@@ -10,4 +11,5 @@ export {
   Button,
   Input,
   DateTimePicker,
+  Picker,
 };
