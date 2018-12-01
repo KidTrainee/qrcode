@@ -88,12 +88,12 @@ const AppNavigator = createStackNavigator({
     screen: TabNavigator,
     navigationOptions: {
       header: null,
-    }
+    },
   },
   ScannedCode: {
     screen: ScannedCode,
-    navigationOptions: ({ navigation }) => ({
-      title: `Scanned Code`,
+    navigationOptions: () => ({
+      title: 'Scanned Code',
     }),
   },
   GeneratedCode,

@@ -7,9 +7,8 @@ import {
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
-import { View } from 'react-native-ui-lib';
+import { View, Image } from 'react-native-ui-lib';
 import { RNCamera } from 'react-native-camera';
-import { Image } from 'react-native-ui-lib';
 
 import { commonStyles, colors } from '../../styles';
 
@@ -65,7 +64,7 @@ export default function HomeView(props: Props) {
         ) : <View flex />}
       </View>
     </SafeAreaView>
-  )
+  );
 }
 
 const styles = StyleSheet.create({

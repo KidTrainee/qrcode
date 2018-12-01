@@ -1,8 +1,8 @@
 // @flow
 
-import { codeTypesList } from '../newCode/NewCodeState';
 import vcard from 'vcard-parser';
 import _ from 'lodash';
+import { codeTypesList } from '../newCode/NewCodeState';
 
 type ScannedCodeState = {
   +items: Array<{
@@ -38,7 +38,7 @@ export function parseScannedString(scannedString: string): {
     type: codeTypesList.TEXT,
     fields: [],
   };
-  console.log(scannedString);
+
   const splittedInputString = scannedString.split(':');
   switch (scannedString.split(':')[0].toUpperCase()) {
     case 'SMS':
@@ -52,9 +52,9 @@ export function parseScannedString(scannedString: string): {
       result.type = codeTypesList.WIFI;
       const wifiInfo = convertArrayToKeyValue(splittedInputString, 1);
       result.fields = [
-        { title: 'ssid', value: wifiInfo['S'] || '' },
-        { title: 'encryption', value: wifiInfo['T'] || '' },
-        { title: 'password', value: wifiInfo['P'] || '' },
+        { title: 'ssid', value: wifiInfo.S || '' },
+        { title: 'encryption', value: wifiInfo.T || '' },
+        { title: 'password', value: wifiInfo.P || '' },
       ];
       break;
     case 'GEO':
@@ -70,11 +70,24 @@ export function parseScannedString(scannedString: string): {
       const emailString = splittedInputString[1] || '';
       const emailParams = emailString.split('?')[1] || '';
       const emailParamsArray = emailParams.split('&');
-      let emailSubject, emailBody;
-      if (emailParamsArray[0].split('=')[0].toLocaleLowerCase() === 'subject') emailSubject = emailParamsArray[0].split('=')[1];
-      if (emailParamsArray[0].split('=')[0].toLocaleLowerCase() === 'body') emailBody = emailParamsArray[0].split('=')[1];
-      if (emailParamsArray[1] && emailParamsArray[1].split('=')[0].toLocaleLowerCase() === 'subject') emailSubject = emailParamsArray[1].split('=')[1];
-      if (emailParamsArray[1] && emailParamsArray[1].split('=')[0].toLocaleLowerCase() === 'body') emailBody = emailParamsArray[1].split('=')[1];
+      let emailSubject;
+      let emailBody;
+      if (emailParamsArray[0].split('=')[0].toLocaleLowerCase() === 'subject') {
+        // eslint-disable-next-line
+        emailSubject = emailParamsArray[0].split('=')[1];
+      }
+      if (emailParamsArray[0].split('=')[0].toLocaleLowerCase() === 'body') {
+        // eslint-disable-next-line
+        emailBody = emailParamsArray[0].split('=')[1];
+      }
+      if (emailParamsArray[1] && emailParamsArray[1].split('=')[0].toLocaleLowerCase() === 'subject') {
+        // eslint-disable-next-line
+        emailSubject = emailParamsArray[1].split('=')[1];
+      }
+      if (emailParamsArray[1] && emailParamsArray[1].split('=')[0].toLocaleLowerCase() === 'body') {
+        // eslint-disable-next-line
+        emailBody = emailParamsArray[1].split('=')[1];
+      }
       result.fields = [
         { title: 'to', value: emailString.split('?')[0] || '' },
         { title: 'subject', value: emailSubject || '' },
@@ -96,7 +109,7 @@ export function parseScannedString(scannedString: string): {
             { title: 'name', value: _.get(parsedCard, 'n[0].value[1]', '') },
             { title: 'surname', value: _.get(parsedCard, 'n[0].value[0]', '') },
             { title: 'full name', value: _.get(parsedCard, 'fn[0].value', '') },
-            { title: 'phone', value: _.get(parsedCard, 'tel[0].value', '').replace('tel:', '')},
+            { title: 'phone', value: _.get(parsedCard, 'tel[0].value', '').replace('tel:', '') },
             { title: 'email', value: _.get(parsedCard, 'email[0].value', '') },
           ];
           break;
@@ -104,16 +117,18 @@ export function parseScannedString(scannedString: string): {
           result.type = codeTypesList.EVENT;
           const splittedLines = scannedString.split(/\r?\n/);
           const eventData = {};
-          splittedLines.forEach(line => {
+          splittedLines.forEach((line) => {
+          // eslint-disable-next-line no-param-reassign
             if (line[0] === ' ') line = line.slice(1);
+            // eslint-disable-next-line prefer-destructuring
             eventData[line.split(':')[0]] = line.split(':')[1];
           });
           result.fields = [
-            { title: 'title', value: eventData['SUMMARY'] || '' },
-            { title: 'location', value: eventData['LOCATION'] || '' },
-            { title: 'description', value: eventData['DESCRIPTION'] || '' },
-            { title: 'start', value: eventData['DTSTART'] || '' },
-            { title: 'end', value: eventData['DTEND'] || '' },
+            { title: 'title', value: eventData.SUMMARY || '' },
+            { title: 'location', value: eventData.LOCATION || '' },
+            { title: 'description', value: eventData.DESCRIPTION || '' },
+            { title: 'start', value: eventData.DTSTART || '' },
+            { title: 'end', value: eventData.DTEND || '' },
           ];
           break;
         default:
@@ -129,6 +144,7 @@ export function parseScannedString(scannedString: string): {
   }
 
   if (result.type === codeTypesList.TEXT) {
+    // eslint-disable-next-line
     const urlRegexp = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/);
     if (scannedString.match(urlRegexp)) {
       result.type = codeTypesList.URL;

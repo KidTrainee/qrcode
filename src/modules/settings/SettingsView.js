@@ -15,6 +15,7 @@ type Props = {
   },
 };
 
+// eslint-disable-next-line no-unused-vars
 export default function SettingsView(props: Props) {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
@@ -22,5 +23,5 @@ export default function SettingsView(props: Props) {
         <Text darkBlue h1>Settings View</Text>
       </View>
     </SafeAreaView>
-  )
+  );
 }

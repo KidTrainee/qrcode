@@ -10,14 +10,13 @@ import Share from 'react-native-share';
 import {
   View,
   Text,
-  TextField,
   TextInput,
 } from 'react-native-ui-lib';
 
 import { commonStyles, colors } from '../../styles';
 import { parseScannedString } from './ScannedCodeState';
 import { Button } from '../../components';
-import {codeTypesList} from "../newCode/NewCodeState";
+import { codeTypesList } from '../newCode/NewCodeState';
 
 type Props = {
   navigation: {
@@ -25,15 +24,15 @@ type Props = {
   },
 };
 
-const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
+const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
 
 function openLink(url) {
-  Linking.canOpenURL(url).then(supported => {
+  Linking.canOpenURL(url).then((supported) => {
     if (!supported) {
-      console.log('Can\'t handle url: ' + url);
-    } else {
-      return Linking.openURL(url);
+      console.log(`Can't handle url: ${url}`);
+      return false;
     }
+    return Linking.openURL(url);
   }).catch(err => console.error('An error occurred', err));
 }
 
@@ -47,12 +46,13 @@ const OpenButton = (props: { data: any, children?: string }) => (
   <Button onPress={() => openLink(props.data)}>{props.children || 'Open'}</Button>
 );
 
+// eslint-disable-next-line no-unused-vars
 export default function ScannedCodeView(props: Props) {
-  const data = `SMS:+12342323232:WAZAAA`;//props.navigation.state.params.data || '';
+  const data = 'SMS:+12342323232:WAZAAA';// props.navigation.state.params.data || '';
   const parsedString = parseScannedString(data);
 
   const fieldsDict = {};
-  parsedString.fields.forEach(field => {
+  parsedString.fields.forEach((field) => {
     fieldsDict[field.title.replace(' ', '')] = field.value;
   });
 
@@ -85,9 +85,9 @@ export default function ScannedCodeView(props: Props) {
           )}
           { parsedString.type === codeTypesList.URL && (
             <View row spread>
-              <OpenButton data={data}/>
-              <CopyButton data={data}/>
-              <ShareButton data={data}/>
+              <OpenButton data={data} />
+              <CopyButton data={data} />
+              <ShareButton data={data} />
             </View>
           )}
           { parsedString.type === codeTypesList.EMAIL && (
@@ -98,8 +98,8 @@ export default function ScannedCodeView(props: Props) {
           { parsedString.type === codeTypesList.TEL && (
             <View row spread>
               <OpenButton data={data}>Call</OpenButton>
-              <CopyButton data={fieldsDict['number']}/>
-              <ShareButton data={fieldsDict['number']}/>
+              <CopyButton data={fieldsDict.number} />
+              <ShareButton data={fieldsDict.number} />
             </View>
           )}
           { parsedString.type === codeTypesList.SMS && (
@@ -110,5 +110,5 @@ export default function ScannedCodeView(props: Props) {
         </View>
       </ScrollView>
     </SafeAreaView>
-  )
+  );
 }

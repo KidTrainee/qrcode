@@ -1,40 +1,44 @@
+/* eslint-disable */
 import {
   parseScannedString,
 } from './ScannedCodeState';
-import {codeTypesList, fieldTypesList} from "../newCode/NewCodeState";
+import { codeTypesList } from '../newCode/NewCodeState';
 
 describe('parseScannedString', () => {
-  it ('should return text with empty array on invalid strings', () => {
+  it('should return text with empty array on invalid strings', () => {
     expect(parseScannedString('')).toEqual({
       type: codeTypesList.TEXT,
-      fields: [],
-    })
+      fields: [{
+        title: 'text',
+        value: ''
+      }],
+    });
   });
 
-  it ('should scan sms correctly', () => {
-    expect(parseScannedString('SMSTO:smsto:smsmessage')).toEqual({
+  it('should scan sms correctly', () => {
+    expect(parseScannedString('sms:sms:smsmessage')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
         title: 'to',
-        value: 'smsto',
+        value: 'sms',
       }, {
         title: 'message',
         value: 'smsmessage',
       }],
     });
 
-    expect(parseScannedString('SMSTO:smsto:')).toEqual({
+    expect(parseScannedString('sms:sms:')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
         title: 'to',
-        value: 'smsto',
+        value: 'sms',
       }, {
         title: 'message',
         value: '',
       }],
     });
 
-    expect(parseScannedString('SMSTO::')).toEqual({
+    expect(parseScannedString('sms::')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
         title: 'to',
@@ -45,7 +49,7 @@ describe('parseScannedString', () => {
       }],
     });
 
-    expect(parseScannedString('SMSTO')).toEqual({
+    expect(parseScannedString('sms')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
         title: 'to',
@@ -57,7 +61,7 @@ describe('parseScannedString', () => {
     });
   });
 
-  it ('should scan wifi correctly', () => {
+  it('should scan wifi correctly', () => {
     expect(parseScannedString('WIFI:S:WIFI_SSID:T:WIFI_ENCRYPTION:P:WIFI_PASSWORD')).toEqual({
       type: codeTypesList.WIFI,
       fields: [{
@@ -115,7 +119,7 @@ describe('parseScannedString', () => {
     });
   });
 
-  it ('should scan geo correctly', () => {
+  it('should scan geo correctly', () => {
     expect(parseScannedString('geo:GEO_LONG,GEO_LAT')).toEqual({
       type: codeTypesList.GEO,
       fields: [{
@@ -161,7 +165,7 @@ describe('parseScannedString', () => {
     });
   });
 
-  it ('should scan email correctly', () => {
+  it('should scan email correctly', () => {
     expect(parseScannedString('mailto:mail@example.com?subject=Your Subject&body=Body paragraph')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
@@ -219,7 +223,7 @@ describe('parseScannedString', () => {
     });
   });
 
-  it ('should scan telephone correctly', () => {
+  it('should scan telephone correctly', () => {
     expect(parseScannedString('tel:telephone_number')).toEqual({
       type: codeTypesList.TEL,
       fields: [{
@@ -237,7 +241,7 @@ describe('parseScannedString', () => {
     });
   });
 
-  it ('should scan contact correctly', () => {
+  it('should scan contact correctly', () => {
     expect(parseScannedString(`BEGIN:VCARD
 VERSION:4.0
 N:CONTACT_SURNAME;CONTACT_NAME;;;
@@ -252,7 +256,7 @@ END:VCARD`)).toEqual({
       }, {
         title: 'surname',
         value: 'CONTACT_SURNAME',
-      },{
+      }, {
         title: 'full name',
         value: 'CONTACT_NAME CONTACT_SURNAME',
       }, {
@@ -279,24 +283,24 @@ EMAIL:forrestgump@example.com
 REV:20080424T195243Z
 x-qq:21588891
 END:VCARD`)).toEqual({
-          type: codeTypesList.CONTACT,
-          fields: [{
-            title: 'name',
-            value: 'Forrest',
-          }, {
-            title: 'surname',
-            value: 'Gump',
-          },{
-            title: 'full name',
-            value: 'Forrest Gump',
-          }, {
-            title: 'phone',
-            value: '+1-111-555-1212',
-          }, {
-            title: 'email',
-            value: 'forrestgump@example.com',
-          }],
-        });
+      type: codeTypesList.CONTACT,
+      fields: [{
+        title: 'name',
+        value: 'Forrest',
+      }, {
+        title: 'surname',
+        value: 'Gump',
+      }, {
+        title: 'full name',
+        value: 'Forrest Gump',
+      }, {
+        title: 'phone',
+        value: '+1-111-555-1212',
+      }, {
+        title: 'email',
+        value: 'forrestgump@example.com',
+      }],
+    });
 
     expect(parseScannedString(`BEGIN:VCARD
 VERSION:4.0
@@ -308,7 +312,7 @@ END:VCARD`)).toEqual({
       }, {
         title: 'surname',
         value: '',
-      },{
+      }, {
         title: 'full name',
         value: '',
       }, {
@@ -321,7 +325,7 @@ END:VCARD`)).toEqual({
     });
   });
 
-  it ('should scan event correctly', () => {
+  it('should scan event correctly', () => {
     expect(parseScannedString(`BEGIN:VEVENT
 SUMMARY:EVENT_TITLE
 LOCATION:EVENT_LOCATION
@@ -336,7 +340,7 @@ END:VEVENT`)).toEqual({
       }, {
         title: 'location',
         value: 'EVENT_LOCATION',
-      },{
+      }, {
         title: 'description',
         value: 'EVENT_DESCRIPTION',
       }, {
@@ -357,7 +361,7 @@ END:VEVENT`)).toEqual({
       }, {
         title: 'location',
         value: '',
-      },{
+      }, {
         title: 'description',
         value: '',
       }, {
