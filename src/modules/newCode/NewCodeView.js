@@ -4,7 +4,7 @@ import {
   StyleSheet,
   Dimensions,
   ScrollView,
-  TouchableOpacity,
+  TouchableOpacity, StatusBar,
 } from 'react-native';
 import {
   View,
@@ -42,6 +42,10 @@ const codeTypes = [
 export default function NewCodeView(props: Props) {
   return (
     <SafeAreaView style={[commonStyles.safeArea, styles.viewContainer]}>
+      <StatusBar
+        translucent={false}
+        backgroundColor={colors.primary}
+      />
       <Text h1 marginB-25>Generate Code</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.typesContainer}>
         {codeTypes.map((codeType, index) => (

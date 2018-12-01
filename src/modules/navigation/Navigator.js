@@ -4,6 +4,7 @@ import {
   createAppContainer,
   createBottomTabNavigator,
 } from 'react-navigation';
+import { Platform } from 'react-native';
 import {
   Image,
 } from 'react-native-ui-lib';
@@ -75,22 +76,25 @@ const TabNavigator = createBottomTabNavigator({
       shadowRadius: 2.22,
       paddingTop: 5,
       elevation: 3,
+      ...Platform.OS === 'android' && {
+        paddingBottom: 5,
+      },
     },
   },
 });
 
 const AppNavigator = createStackNavigator({
-  ScannedCode: {
-    screen: ScannedCode,
-    navigationOptions: ({ navigation }) => ({
-      title: `Scanned Code`,
-    }),
-  },
   TabNavigator: {
     screen: TabNavigator,
     navigationOptions: {
       header: null,
     }
+  },
+  ScannedCode: {
+    screen: ScannedCode,
+    navigationOptions: ({ navigation }) => ({
+      title: `Scanned Code`,
+    }),
   },
   GeneratedCode,
 }, {

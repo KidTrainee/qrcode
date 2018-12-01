@@ -38,9 +38,8 @@ export function parseScannedString(scannedString: string): {
     type: codeTypesList.TEXT,
     fields: [],
   };
-
+  console.log(scannedString);
   const splittedInputString = scannedString.split(':');
-
   switch (scannedString.split(':')[0].toUpperCase()) {
     case 'SMSTO':
       result.type = codeTypesList.SMS;
@@ -124,12 +123,18 @@ export function parseScannedString(scannedString: string): {
     }
     default:
       result.type = codeTypesList.TEXT;
+      result.fields = [
+        { title: 'text', value: scannedString },
+      ];
   }
 
   if (result.type === codeTypesList.TEXT) {
     const urlRegexp = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/);
     if (scannedString.match(urlRegexp)) {
       result.type = codeTypesList.URL;
+      result.fields = [
+        { title: 'link', value: scannedString },
+      ];
     }
   }
 

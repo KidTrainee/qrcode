@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   SafeAreaView,
+  StatusBar,
 } from 'react-native';
 import {
   View,
@@ -21,18 +22,11 @@ type Props = {
 const capitalizeFirstLetter = (string) => string.charAt(0).toUpperCase() + string.slice(1);
 
 export default function ScannedCodeView(props: Props) {
-  const data = `BEGIN:VEVENT
- UID:19970901T130000Z-123401@example.com
- DTSTAMP:19970901T130000Z
- DTSTART:19970903T163000Z
- DTEND:19970903T190000Z
- SUMMARY:Annual Employee Review
- CLASS:PRIVATE
- CATEGORIES:BUSINESS,HUMAN RESOURCES
- END:VEVENT`;
+  const data = props.navigation.state.params.data || '';
   const parsedString = parseScannedString(data);
   return (
     <SafeAreaView style={commonStyles.safeArea}>
+      <StatusBar translucent={false} backgroundColor={colors.primary} />
       <View flex marginT-10 paddingH-20 bg-white>
         <View>
           <Text h1 center marginB-20>{parsedString.type}</Text>

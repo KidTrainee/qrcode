@@ -12,17 +12,12 @@ export default compose(
       onCodeScanned: props => (codeData: { data: string }) => {
         props.navigation.navigate('ScannedCode', codeData);
       },
-      closeModal: props => () => props.setIsModalOpened(false),
     }),
   lifecycle({
     componentDidMount() {
       const { navigation } = this.props;
-      navigation.addListener('willFocus', () =>
-        this.props.setFocusedScreen(true)
-      );
-      navigation.addListener('willBlur', () =>
-        this.props.setFocusedScreen(false)
-      );
+      navigation.addListener('willFocus', () => this.props.setFocusedScreen(true));
+      navigation.addListener('willBlur', () => this.props.setFocusedScreen(false));
     }
   }),
 )(ScannerView);
