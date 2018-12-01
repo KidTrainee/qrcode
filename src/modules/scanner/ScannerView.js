@@ -31,7 +31,7 @@ export default function HomeView(props: Props) {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
       <StatusBar
-        backgroundColor={colors.primary}
+        backgroundColor={colors.lightBlue}
       />
       <View flex>
         { props.focusedScreen ? (

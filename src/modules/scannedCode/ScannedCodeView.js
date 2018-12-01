@@ -48,7 +48,7 @@ const OpenButton = (props: { data: any, children?: string }) => (
 
 // eslint-disable-next-line no-unused-vars
 export default function ScannedCodeView(props: Props) {
-  const data = 'https://google.com';// props.navigation.state.params.data || '';
+  const data = props.navigation.state.params.data || '';
   const parsedString = parseScannedString(data);
 
   const fieldsDict = {};
@@ -58,7 +58,7 @@ export default function ScannedCodeView(props: Props) {
 
   return (
     <SafeAreaView style={commonStyles.safeArea}>
-      <StatusBar translucent={false} backgroundColor={colors.primary} />
+      <StatusBar translucent={false} backgroundColor={colors.lightBlue} />
       <ScrollView contentContainerStyle={{ flex: 1, marginTop: 20, paddingHorizontal: 20 }}>
         <View>
           <Text h1 center marginB-20>{parsedString.type}</Text>

@@ -78,7 +78,7 @@ const TabNavigator = createBottomTabNavigator({
       shadowOpacity: 0.22,
       shadowRadius: 2.22,
       paddingTop: 5,
-      elevation: 3,
+      elevation: 5,
       ...Platform.OS === 'android' && {
         paddingBottom: 5,
       },

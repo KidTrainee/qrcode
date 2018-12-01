@@ -42,7 +42,7 @@ export default function NewCodeView(props: Props) {
     <SafeAreaView style={[commonStyles.safeArea, styles.viewContainer]}>
       <StatusBar
         translucent={false}
-        backgroundColor={colors.primary}
+        backgroundColor={colors.lightBlue}
       />
       <View centerH marginB-25 marginT-10>
         <Text h1 darkBlue>Generate Code</Text>

@@ -63,12 +63,11 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
-
-    elevation: 3,
   },
   button: {
     padding: 20,
     borderRadius: 50,
+    elevation: 1,
   },
   buttonText: {
     color: colors.white,
