@@ -13,6 +13,7 @@ import History from '../history/HistoryViewContainer';
 import NewCode from '../newCode/NewCodeViewContainer';
 import Settings from '../settings/SettingViewContainer';
 import GeneratedCode from '../generatedCode/GeneratedCodeViewContainer';
+import ScannedCode from '../scannedCode/ScannedCodeViewContainer';
 
 const TabNavigator = createBottomTabNavigator({
   Scanner,
@@ -79,10 +80,21 @@ const TabNavigator = createBottomTabNavigator({
 });
 
 const AppNavigator = createStackNavigator({
-  TabNavigator,
+  ScannedCode: {
+    screen: ScannedCode,
+    navigationOptions: ({ navigation }) => ({
+      title: `Scanned Code`,
+    }),
+  },
+  TabNavigator: {
+    screen: TabNavigator,
+    navigationOptions: {
+      header: null,
+    }
+  },
   GeneratedCode,
 }, {
-  headerMode: 'none',
+  initialRoute: 'TabNavigator',
 });
 
 const AppContainer = createAppContainer(AppNavigator);

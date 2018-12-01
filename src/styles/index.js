@@ -61,6 +61,8 @@ Assets.loadAssetsGroup('icons', {
   history: require('../../assets/icons/history.png'),
   flashlight: require('../../assets/icons/flashlight.png'),
   'scan-area': require('../../assets/icons/scan-area.png'),
+  'flashlight-on': require('../../assets/icons/flashlight-on.png'),
+  'flashlight-off': require('../../assets/icons/flashlight-off.png'),
 });
 
 Assets.loadAssetsGroup('tabbar-icons', {
