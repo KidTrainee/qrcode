@@ -1,4 +1,6 @@
 <resources>
     <color name="white">#FFF</color>
     <color name="primary">#FC6821</color>
+    <color name="lightGray">#D3D7E0</color>
+    <color name="lightBlue">#8890A6</color>
 </resources>
