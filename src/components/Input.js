@@ -1,9 +1,14 @@
+// @flow
 import React from 'react';
 import { TextInput, StyleSheet } from 'react-native';
 
 import { colors } from '../styles';
 
-const Input = props => (
+type Props = {
+  style: any
+};
+
+const Input = (props: Props) => (
   <TextInput
     style={[styles.textInput, props.style]}
     {...props}

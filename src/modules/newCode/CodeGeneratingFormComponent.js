@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 import { View } from 'react-native-ui-lib';
 
 import { codeTypesList, fieldTypesList } from './NewCodeState';
-import { Input, DateTimePicker, Picker } from '../../components';
+import { Input, Picker } from '../../components';
 
 type Props = {
   activeCodeType: string,
@@ -87,13 +87,15 @@ const CodeGeneratingForm = (props: Props) => {
           {generateTextInput(17, text => props.updateField(fieldTypesList.EVENT_LOCATION, text), 'Location')}
           <View row>
             <View flex style={styles.textInputMargin}>
-              <DateTimePicker
+              <Picker
+                type="datetime"
                 placeholder="Start"
                 onSetValue={text => props.updateField(fieldTypesList.EVENT_START, text)}
               />
             </View>
             <View flex>
-              <DateTimePicker
+              <Picker
+                type="datetime"
                 placeholder="End"
                 minimumDate={props.fieldValues[fieldTypesList.EVENT_START]
                   && props.fieldValues[fieldTypesList.EVENT_START]}

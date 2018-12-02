@@ -10,5 +10,8 @@ export default compose(
       props.onSetValue(value);
       props.setInputValue(value);
     },
+    toggleModal: props => () => {
+      props.setModalState(!props.isModalOpened);
+    },
   }),
 )(PickerView);

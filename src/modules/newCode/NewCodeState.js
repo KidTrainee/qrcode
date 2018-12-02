@@ -1,3 +1,5 @@
+// @flow
+
 export const fieldTypesList = {
   EMAIL_TO: 'email_to',
   EMAIL_SUBJECT: 'email_subject',
@@ -42,7 +44,7 @@ type Action = {
 
 const initialState: NewCodeState = {};
 
-export default function SettingsReducer(state: NewCodeState = initialState, action: Action): NewCodeState {
+export default function NewCodeReducer(state: NewCodeState = initialState, action: Action): NewCodeState {
   switch (action.type) {
     default:
       return state;
