@@ -1,7 +1,12 @@
 // @flow
 import { codeTypesList, fieldTypesList } from '../newCode/NewCodeState';
 
-export const generateQRValueFromState = (state) => {
+type State = {
+  codeType: string,
+  fieldValues: any,
+};
+
+export const generateQRValueFromState = (state: State) => {
   const { codeType, fieldValues } = state;
 
   switch (codeType) {

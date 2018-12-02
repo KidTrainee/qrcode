@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { generateQRValueFromState } from './GeneratedCodeState';
-import { codeTypesList, fieldTypesList  } from '../newCode/newCodeState';
+import { codeTypesList, fieldTypesList  } from '../newCode/NewCodeState';
 
 describe('generateQRValueFromState', () => {
   it('should handle empty values with all code types', () => {
