@@ -1,4 +1,5 @@
 /* eslint-disable */
+import moment from 'moment';
 import { generateQRValueFromState } from './GeneratedCodeState';
 import { codeTypesList, fieldTypesList  } from '../newCode/NewCodeState';
 
@@ -47,6 +48,14 @@ END:VEVENT`);
       })).toEqual(`WIFI:S:;
 T:;
 P:;;`);
+
+    expect(generateQRValueFromState({
+      codeType: codeTypesList.EMAIL,
+      fieldValues: {}
+    })).toEqual(`
+MATMSG:TO:;
+SUB:;
+BODY:;`);
   });
 
   it('should return plain text from TEXT code type', () => {
@@ -95,40 +104,22 @@ END:VCARD`);
   })
 
   it('should return valid qr from EVENT code type', () => {
+    const date = Date.now();
     expect(generateQRValueFromState({
       codeType: codeTypesList.EVENT,
       fieldValues: {
         [fieldTypesList.EVENT_TITLE]: 'Party',
         [fieldTypesList.EVENT_DESCRIPTION]: 'Epic Mega Hard Party with tons of alcohol',
         [fieldTypesList.EVENT_LOCATION]: 'Minsk, Amuratorskaya 4, 409',
-        [fieldTypesList.EVENT_START]: 'datestring',
-        [fieldTypesList.EVENT_END]: 'datestring',
+        [fieldTypesList.EVENT_START]: date,
+        [fieldTypesList.EVENT_END]: date,
       }
     })).toEqual(`BEGIN:VEVENT
 SUMMARY:Party
 LOCATION:Minsk, Amuratorskaya 4, 409
 DESCRIPTION:Epic Mega Hard Party with tons of alcohol
-DTSTART:datestring
-DTEND:datestring
-END:VEVENT`);
-  })
-
-  it('should return valid qr from EVENT code type', () => {
-    expect(generateQRValueFromState({
-      codeType: codeTypesList.EVENT,
-      fieldValues: {
-        [fieldTypesList.EVENT_TITLE]: 'Party',
-        [fieldTypesList.EVENT_DESCRIPTION]: 'Epic Mega Hard Party with tons of alcohol',
-        [fieldTypesList.EVENT_LOCATION]: 'Minsk, Amuratorskaya 4, 409',
-        [fieldTypesList.EVENT_START]: 'datestring',
-        [fieldTypesList.EVENT_END]: 'datestring',
-      }
-    })).toEqual(`BEGIN:VEVENT
-SUMMARY:Party
-LOCATION:Minsk, Amuratorskaya 4, 409
-DESCRIPTION:Epic Mega Hard Party with tons of alcohol
-DTSTART:datestring
-DTEND:datestring
+DTSTART:${moment(date).format('YYYYMMDDThhmmss')}
+DTEND:${moment(date).format('YYYYMMDDThhmmss')}
 END:VEVENT`);
   })
 
@@ -163,5 +154,19 @@ END:VEVENT`);
     })).toEqual(`WIFI:S:FREE_WIFI;
 T:WPA;
 P:12345678;;`);
+  })
+
+  it('should return valid qr from EMAIL code type', () => {
+    expect(generateQRValueFromState({
+      codeType: codeTypesList.EMAIL,
+      fieldValues: {
+        [fieldTypesList.EMAIL_TO]: 'johndoe@gmail.com',
+        [fieldTypesList.EMAIL_SUBJECT]: 'Design',
+        [fieldTypesList.EMAIL_BODY]: 'We are fucked up',
+      }
+    })).toEqual(`
+MATMSG:TO:johndoe@gmail.com;
+SUB:Design;
+BODY:We are fucked up;`);
   })
 });

@@ -8,7 +8,6 @@ import { View } from 'react-native-ui-lib';
 import QRCode from 'react-native-qrcode';
 import ViewShot from 'react-native-view-shot';
 import Share from 'react-native-share';
-import moment from 'moment';
 
 import { generateQRValueFromState } from './GeneratedCodeState';
 import { commonStyles } from '../../styles';
