@@ -24,15 +24,15 @@ export const fieldTypesList = {
 };
 
 export const codeTypesList = {
-  TEXT: 'Text',
-  URL: 'URL',
-  EMAIL: 'Email',
-  TEL: 'Tel',
-  CONTACT: 'Contact',
-  SMS: 'SMS',
-  GEO: 'Geo',
-  EVENT: 'Event',
-  WIFI: 'WiFi',
+  TEXT: 'text',
+  URL: 'url',
+  EMAIL: 'email',
+  TEL: 'tel',
+  CONTACT: 'contact',
+  SMS: 'sms',
+  GEO: 'geo',
+  EVENT: 'event',
+  WIFI: 'wifi',
 };
 
 type NewCodeState = {

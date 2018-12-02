@@ -1,19 +1,25 @@
-import { compose, withState, withHandlers } from 'recompose';
+import {
+  compose, withState, withHandlers, lifecycle,
+} from 'recompose';
 
 import ScannerView from './ScannerView';
 
 export default compose(
   withState('isFlashlightOn', 'setFlashlight', false),
-  withState('isModalOpened', 'setIsModalOpened', false),
-  withState('scannedData', 'setScannedData', ''),
+  withState('focusedScreen', 'setFocusedScreen', ''),
   withHandlers({
     toggleFlashlight: props => () => {
       props.setFlashlight(!props.isFlashlightOn);
     },
     onCodeScanned: props => (codeData: { data: string }) => {
-      props.setIsModalOpened(true);
-      props.setScannedData(codeData.data);
+      props.navigation.navigate('ScannedCode', codeData);
     },
-    closeModal: props => () => props.setIsModalOpened(false),
+  }),
+  lifecycle({
+    componentDidMount() {
+      const { navigation } = this.props;
+      navigation.addListener('willFocus', () => this.props.setFocusedScreen(true));
+      navigation.addListener('willBlur', () => this.props.setFocusedScreen(false));
+    },
   }),
 )(ScannerView);

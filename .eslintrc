@@ -25,6 +25,8 @@
     "no-return-assign": "off",
     "operator-linebreak": "off",
     "react/jsx-one-expression-per-line": "off",
-    "react/destructuring-assignment": "off"
+    "react/destructuring-assignment": "off",
+    "react/require-default-props": "off",
+    "no-case-declarations": "off"
   }
 }
