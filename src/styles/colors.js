@@ -1,3 +1,7 @@
+export type ColorType = 'white' | 'black' | 'gray' | 'lightGray' | 'darkGray' |
+  'textGray' | 'darkBlue' | 'lightBlue' | 'red' | 'yellow' | 'lightenRed' | 'blue' |
+  'primary' | 'primaryLite' | 'primaryGradientStart' | 'primaryGradientEnd';
+
 export default {
   white: '#FFFFFF',
   black: '#000000',
@@ -13,4 +17,6 @@ export default {
   blue: '#55ABEA',
   primary: '#FC6821',
   primaryLite: '#F99840',
+  primaryGradientStart: '#FFB36F',
+  primaryGradientEnd: '#FF7B3C',
 };

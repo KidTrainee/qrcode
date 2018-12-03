@@ -8,10 +8,17 @@ import { Input, Picker } from '../../components';
 
 type Props = {
   activeCodeType: string,
-  updateField: (string) => void,
+  updateField: (string, string) => void,
+  fieldValues: any,
 }
 
-const generateTextInput = (key, onChange, placeholder, keyboardType, secureTextEntry) => (
+const generateTextInput = (
+  key: number,
+  onChange: (string) => void,
+  placeholder: string,
+  keyboardType: string = 'default',
+  secureTextEntry: boolean = false,
+) => (
   <Input
     key={key}
     onChangeText={onChange}
@@ -20,6 +27,7 @@ const generateTextInput = (key, onChange, placeholder, keyboardType, secureTextE
     secureTextEntry={secureTextEntry}
   />
 );
+
 const CodeGeneratingForm = (props: Props) => {
   switch (props.activeCodeType) {
     case codeTypesList.URL:
@@ -54,7 +62,9 @@ const CodeGeneratingForm = (props: Props) => {
               { id: 3, label: 'WPA/WPA2', value: 'WPA' },
             ]}
           />
-          {generateTextInput(7, text => props.updateField(fieldTypesList.WIFI_PASSWORD, text), 'Password', null, true)}
+          {generateTextInput(
+            7, text => props.updateField(fieldTypesList.WIFI_PASSWORD, text), 'Password', 'default', true,
+          )}
         </View>
       );
     case codeTypesList.GEO:

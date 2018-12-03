@@ -1,4 +1,3 @@
-
 // @flow
 import React from 'react';
 import { Modal, Picker, DatePickerIOS } from 'react-native';
@@ -7,18 +6,48 @@ import moment from 'moment';
 
 import { Input, Button } from '../index';
 
-type Props = {
-  type: string,
-  key: number,
-  placeholder: string,
-  toggleModal: () => void,
-  inputValue: string,
-  isModalOpened: boolean,
-  handleSetValue: (string) => void,
-  minimumDate: any,
-}
+/**
+ * Props type for PickerComponent
+ */
+export type PickerProps = {
+  /**
+   * Picker type
+   */
+  type: 'datetime' | 'picker',
 
-const PickerComponent = (props: Props) => (
+  /**
+   * Unique key to identify the picker
+   */
+  key: number,
+
+  /**
+   * Placeholder to display on the input.
+   * @default Value
+   */
+  placeholder?: string,
+
+  toggleModal: () => void,
+  setModalState: () => void,
+  isModalOpened: boolean,
+
+  /**
+   * Function to handle inputValue change
+   */
+  handleSetValue: (Date) => void,
+  setInputValue: (string) => void,
+  inputValue: Date,
+
+  minimumDate: any,
+
+  /**
+   * Callback it value has set
+   */
+  onSetValue: (string) => void,
+
+  items?: Array<any>,
+};
+
+const PickerComponent = (props: PickerProps) => (
   <View>
     <Input
       key={props.key}
@@ -47,7 +76,7 @@ const PickerComponent = (props: Props) => (
               selectedValue={props.inputValue}
               onValueChange={props.handleSetValue}
             >
-              {props.items.map(item => <Picker.Item key={item.id} {...item} />)}
+              {props.items && props.items.map(item => <Picker.Item key={item.id} {...item} />)}
             </Picker>
           )
         }
@@ -56,5 +85,9 @@ const PickerComponent = (props: Props) => (
     </Modal>
   </View>
 );
+
+PickerComponent.defaultProps = {
+  placeholder: 'Value',
+};
 
 export default PickerComponent;

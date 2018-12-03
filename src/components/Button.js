@@ -5,19 +5,19 @@ import { Text } from 'react-native-ui-lib';
 import LinearGradient from 'react-native-linear-gradient';
 
 import { colors } from '../styles';
+import type { ColorType } from '../styles/colors';
 
-type Props = {
+type ButtonProps = {
   onPress: () => any,
   children: string,
-  variant?: string,
+  variant?: ColorType,
   style?: any,
   radius?: number,
   textColor?: string,
-  borderColor?: string,
 }
 
-const Button = (props: Props) => {
-  const variant = colors[props.variant] ? colors[props.variant] : colors.primary;
+const Button = (props: ButtonProps) => {
+  const variant = colors[props.variant];
   return (
     <TouchableOpacity
       onPress={props.onPress}
@@ -32,7 +32,7 @@ const Button = (props: Props) => {
           x: 1,
           y: 0,
         }}
-        colors={['#FFB36F', '#FF7B3C']}
+        colors={[colors.primaryGradientStart, colors.primaryGradientEnd]}
         style={[
           styles.button,
           { backgroundColor: variant },
@@ -52,6 +52,10 @@ const Button = (props: Props) => {
       </LinearGradient>
     </TouchableOpacity>
   );
+};
+
+Button.defaultProps = {
+  variant: 'primary',
 };
 
 const styles = StyleSheet.create({
