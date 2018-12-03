@@ -12,7 +12,12 @@ type Action = {
 
 const initialState: ScannedCodeState = {};
 
-export function convertArrayToKeyValue(array: Array<any>, startIndex: number = 0): any {
+/**
+ * Converts [1, 'one', 2, 'two'] to {1: 'one', 2: 'two'}
+ * @param array elements array
+ * @param startIndex starts from the given index
+ */
+export function convertArrayToKeyValue(array: Array<number|string>, startIndex: number = 0): any {
   const keyValue = {};
   for (let i = startIndex, j = startIndex + 1; array[i] || array[j]; i += 2, j += 2) {
     if (array[i] && array[j]) keyValue[array[i]] = array[j];
@@ -94,39 +99,41 @@ export function parseScannedString(scannedString: string): {
       ];
       break;
     case 'BEGIN': {
-      switch (scannedString.split(/\r?\n/)[0]) {
-        case 'BEGIN:VCARD':
-          result.type = codeTypesList.CONTACT;
-          const parsedCard = vcard.parse(scannedString);
-          result.fields = [
-            { title: 'name', value: _.get(parsedCard, 'n[0].value[1]', '') },
-            { title: 'surname', value: _.get(parsedCard, 'n[0].value[0]', '') },
-            { title: 'full name', value: _.get(parsedCard, 'fn[0].value', '') },
-            { title: 'phone', value: _.get(parsedCard, 'tel[0].value', '').replace('tel:', '') },
-            { title: 'email', value: _.get(parsedCard, 'email[0].value', '') },
-          ];
-          break;
-        case 'BEGIN:VEVENT':
-          result.type = codeTypesList.EVENT;
-          const splittedLines = scannedString.split(/\r?\n/);
-          const eventData = {};
-          splittedLines.forEach((line) => {
-          // eslint-disable-next-line no-param-reassign
-            if (line[0] === ' ') line = line.slice(1);
-            // eslint-disable-next-line prefer-destructuring
-            eventData[line.split(':')[0]] = line.split(':')[1];
-          });
-          result.fields = [
-            { title: 'title', value: eventData.SUMMARY || '' },
-            { title: 'location', value: eventData.LOCATION || '' },
-            { title: 'description', value: eventData.DESCRIPTION || '' },
-            { title: 'start', value: eventData.DTSTART || '' },
-            { title: 'end', value: eventData.DTEND || '' },
-          ];
-          break;
-        default:
-          result.type = codeTypesList.TEXT;
+      if (scannedString.indexOf('BEGIN:VCARD') > -1) {
+        result.type = codeTypesList.CONTACT;
+        const parsedCard = vcard.parse(scannedString);
+        result.fields = [
+          { title: 'name', value: _.get(parsedCard, 'n[0].value[1]', '') },
+          { title: 'surname', value: _.get(parsedCard, 'n[0].value[0]', '') },
+          { title: 'full name', value: _.get(parsedCard, 'fn[0].value', '') },
+          { title: 'phone', value: _.get(parsedCard, 'tel[0].value', '').replace('tel:', '') },
+          { title: 'email', value: _.get(parsedCard, 'email[0].value', '') },
+        ];
+        break;
       }
+      if (scannedString.indexOf('BEGIN:VEVENT') > -1) {
+        result.type = codeTypesList.EVENT;
+        const splittedLines = scannedString.split(/\r?\n/);
+        const eventData = {};
+        splittedLines.forEach((line) => {
+          // eslint-disable-next-line no-param-reassign
+          if (line[0] === ' ') line = line.slice(1);
+          // eslint-disable-next-line prefer-destructuring
+          eventData[line.split(':')[0]] = line.split(':')[1];
+        });
+        result.fields = [
+          { title: 'title', value: eventData.SUMMARY || '' },
+          { title: 'location', value: eventData.LOCATION || '' },
+          { title: 'description', value: eventData.DESCRIPTION || '' },
+          { title: 'start', value: eventData.DTSTART || '' },
+          { title: 'end', value: eventData.DTEND || '' },
+        ];
+        break;
+      }
+      result.type = codeTypesList.TEXT;
+      result.fields = [
+        { title: 'text', value: scannedString },
+      ];
       break;
     }
     default:

@@ -1,8 +1,19 @@
 /* eslint-disable */
 import {
   parseScannedString,
+  convertArrayToKeyValue,
 } from './ScannedCodeState';
+import ScannedCodeReducer from './ScannedCodeState';
 import { codeTypesList } from '../newCode/NewCodeState';
+
+describe('convertArrayToKeyValue', () => {
+  it ('should convert correctly', () => {
+    expect(convertArrayToKeyValue(['one', 'two', 'three', 'four'])).toEqual({
+      one: 'two',
+      three: 'four',
+    });
+  });
+});
 
 describe('parseScannedString', () => {
   it('should return text with empty array on invalid strings', () => {
@@ -11,6 +22,22 @@ describe('parseScannedString', () => {
       fields: [{
         title: 'text',
         value: ''
+      }],
+    });
+
+    expect(parseScannedString('phs:')).toEqual({
+      type: codeTypesList.TEXT,
+      fields: [{
+        title: 'text',
+        value: 'phs:'
+      }],
+    });
+
+    expect(parseScannedString('begin:random')).toEqual({
+      type: codeTypesList.TEXT,
+      fields: [{
+        title: 'text',
+        value: 'begin:random'
       }],
     });
   });
@@ -180,6 +207,20 @@ describe('parseScannedString', () => {
       }],
     });
 
+    expect(parseScannedString('mailto:mail@example.com?body=Body paragraph&subject=Your Subject')).toEqual({
+      type: codeTypesList.EMAIL,
+      fields: [{
+        title: 'to',
+        value: 'mail@example.com',
+      }, {
+        title: 'subject',
+        value: 'Your Subject',
+      }, {
+        title: 'body',
+        value: 'Body paragraph',
+      }],
+    });
+
     expect(parseScannedString('mailto:mail@example.com?subject=Your Subject')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
@@ -237,6 +278,24 @@ describe('parseScannedString', () => {
       fields: [{
         title: 'number',
         value: '',
+      }],
+    });
+  });
+
+  it('should scan email links correctly', () => {
+    expect(parseScannedString('https://insiderdev.com')).toEqual({
+      type: codeTypesList.URL,
+      fields: [{
+        title: 'link',
+        value: 'https://insiderdev.com',
+      }],
+    });
+
+    expect(parseScannedString('http://insiderdev.com')).toEqual({
+      type: codeTypesList.URL,
+      fields: [{
+        title: 'link',
+        value: 'http://insiderdev.com',
       }],
     });
   });
@@ -372,5 +431,11 @@ END:VEVENT`)).toEqual({
         value: '',
       }],
     });
+  });
+});
+
+describe('ScannedCodeReducer', () => {
+  it('should return the same state on random action', () => {
+    expect(ScannedCodeReducer({ one: 'two' }, { type: 'random' })).toEqual({ one: 'two' });
   });
 });
