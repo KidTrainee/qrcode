@@ -5,12 +5,12 @@ import { TextInput, StyleSheet } from 'react-native';
 import { colors } from '../styles';
 
 type Props = {
-  style: any
+  style?: any
 };
 
 const Input = (props: Props) => (
   <TextInput
-    style={[styles.textInput, props.style]}
+    style={[styles.textInput, props.style && props.style]}
     {...props}
   />
 );
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     backgroundColor: colors.white,
     borderRadius: 5,
-    shadowColor: '#000000',
+    shadowColor: colors.darkBlue,
     shadowOffset: {
       width: 0,
       height: 0,

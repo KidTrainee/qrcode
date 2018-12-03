@@ -4,21 +4,15 @@ import vcard from 'vcard-parser';
 import _ from 'lodash';
 import { codeTypesList } from '../newCode/NewCodeState';
 
-type ScannedCodeState = {
-  +items: Array<{
-    content: string,
-  }>,
-};
+type ScannedCodeState = {};
 
 type Action = {
   type: string, payload: any,
 };
 
-const initialState: ScannedCodeState = {
-  items: [],
-};
+const initialState: ScannedCodeState = {};
 
-export function convertArrayToKeyValue(array, startIndex = 0) {
+export function convertArrayToKeyValue(array: Array<any>, startIndex: number = 0): any {
   const keyValue = {};
   for (let i = startIndex, j = startIndex + 1; array[i] || array[j]; i += 2, j += 2) {
     if (array[i] && array[j]) keyValue[array[i]] = array[j];
@@ -27,8 +21,7 @@ export function convertArrayToKeyValue(array, startIndex = 0) {
 }
 
 export function parseScannedString(scannedString: string): {
-  type: codeTypesList.CONTACT | codeTypesList.EMAIL | codeTypesList.EVENT | codeTypesList.GEO |
-    codeTypesList.SMS | codeTypesList.TEL | codeTypesList.TEXT | codeTypesList.URL | codeTypesList.WIFI,
+  type: string,
   fields: Array<{
     title: string,
     value: string,

@@ -7,7 +7,8 @@ type State = {
   fieldValues: any,
 };
 
-export const generateQRValueFromState = (state: State) => {
+// TODO: Refactor this (why called *fromState?)
+export const generateQRValueFromState = (state: State): string => {
   const { codeType, fieldValues } = state;
 
   switch (codeType) {
@@ -51,11 +52,7 @@ END:VEVENT`;
   }
 };
 
-type GeneratedCodeState = {
-  +items: Array<{
-    content: string,
-  }>,
-};
+type GeneratedCodeState = {};
 
 type Action = {
   type: string, payload: any,
