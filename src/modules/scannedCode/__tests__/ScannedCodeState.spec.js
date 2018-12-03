@@ -2,9 +2,9 @@
 import {
   parseScannedString,
   convertArrayToKeyValue,
-} from './ScannedCodeState';
-import ScannedCodeReducer from './ScannedCodeState';
-import { codeTypesList } from '../newCode/NewCodeState';
+} from './../ScannedCodeState';
+import ScannedCodeReducer from '../ScannedCodeState';
+import { codeTypesList } from '../../newCode/NewCodeState';
 
 describe('convertArrayToKeyValue', () => {
   it ('should convert correctly', () => {

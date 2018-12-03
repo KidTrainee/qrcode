@@ -17,7 +17,7 @@ const initialState: ScannedCodeState = {};
  * @param array elements array
  * @param startIndex starts from the given index
  */
-export function convertArrayToKeyValue(array: Array<number|string>, startIndex: number = 0): any {
+export function convertArrayToKeyValue(array: Array<any>, startIndex: number = 0): any {
   const keyValue = {};
   for (let i = startIndex, j = startIndex + 1; array[i] || array[j]; i += 2, j += 2) {
     if (array[i] && array[j]) keyValue[array[i]] = array[j];

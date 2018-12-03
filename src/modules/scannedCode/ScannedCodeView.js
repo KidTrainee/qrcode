@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import {
   SafeAreaView,
@@ -5,8 +6,8 @@ import {
   ScrollView,
   Clipboard,
   Linking,
+  Share,
 } from 'react-native';
-import Share from 'react-native-share';
 import {
   View,
   Text,
@@ -21,28 +22,32 @@ import { codeTypesList } from '../newCode/NewCodeState';
 type Props = {
   navigation: {
     navigate: (string) => void,
+    state: {
+      params: {
+        data: any,
+      }
+    }
   },
 };
 
-const capitalizeFirstLetter = string => string.charAt(0).toUpperCase() + string.slice(1);
+export const capitalizeFirstLetter = (string: string): string => string.charAt(0).toUpperCase() + string.slice(1);
 
-function openLink(url) {
-  Linking.canOpenURL(url).then((supported) => {
+function openLink(url: string): Promise<any> {
+  return Linking.canOpenURL(url).then((supported) => {
     if (!supported) {
-      console.log(`Can't handle url: ${url}`);
-      return false;
+      throw Error('Not supported');
     }
     return Linking.openURL(url);
-  }).catch(err => console.error('An error occurred', err));
+  }).catch();
 }
 
-const ShareButton = (props: { data: any }) => (
-  <Button onPress={() => Share.open({ url: props.data })}>share</Button>
+export const ShareButton = (props: { data: any }) => (
+  <Button onPress={() => Share.share({ message: props.data })}>share</Button>
 );
-const CopyButton = (props: { data: any }) => (
+export const CopyButton = (props: { data: any }) => (
   <Button onPress={() => Clipboard.setString(props.data)}>copy</Button>
 );
-const OpenButton = (props: { data: any, children?: string }) => (
+export const OpenButton = (props: { data: any, children?: string }) => (
   <Button onPress={() => openLink(props.data)}>{props.children || 'open'}</Button>
 );
 
