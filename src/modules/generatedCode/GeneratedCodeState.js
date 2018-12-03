@@ -1,4 +1,5 @@
 // @flow
+import moment from 'moment';
 import { codeTypesList, fieldTypesList } from '../newCode/NewCodeState';
 
 type State = {
@@ -10,6 +11,11 @@ export const generateQRValueFromState = (state: State) => {
   const { codeType, fieldValues } = state;
 
   switch (codeType) {
+    case codeTypesList.EMAIL:
+      return `
+MATMSG:TO:${fieldValues[fieldTypesList.EMAIL_TO] || ''};
+SUB:${fieldValues[fieldTypesList.EMAIL_SUBJECT] || ''};
+BODY:${fieldValues[fieldTypesList.EMAIL_BODY] || ''};`;
     case codeTypesList.SMS:
       return `SMS:${fieldValues[fieldTypesList.SMS_TO] || ''}:${fieldValues[fieldTypesList.SMS_MESSAGE] || ''}`;
     case codeTypesList.WIFI:
@@ -31,8 +37,14 @@ END:VCARD`;
 SUMMARY:${fieldValues[fieldTypesList.EVENT_TITLE] || ''}
 LOCATION:${fieldValues[fieldTypesList.EVENT_LOCATION] || ''}
 DESCRIPTION:${fieldValues[fieldTypesList.EVENT_DESCRIPTION] || ''}
-DTSTART:${fieldValues[fieldTypesList.EVENT_START] || ''}
-DTEND:${fieldValues[fieldTypesList.EVENT_END] || ''}
+DTSTART:${fieldValues[fieldTypesList.EVENT_START]
+    ? moment(fieldValues[fieldTypesList.EVENT_START]).format('YYYYMMDDThhmmss')
+    : ''
+}
+DTEND:${fieldValues[fieldTypesList.EVENT_START]
+    ? moment(fieldValues[fieldTypesList.EVENT_END]).format('YYYYMMDDThhmmss')
+    : ''
+}
 END:VEVENT`;
     default:
       return fieldValues[fieldTypesList.TEXT] || '';

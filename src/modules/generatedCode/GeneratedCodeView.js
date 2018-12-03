@@ -23,6 +23,11 @@ type Props = {
 const windowWidth = Dimensions.get('window').width;
 
 export default function GeneratedCodeView(props: Props) {
+  const navigationParams = {
+    codeType: props.navigation.getParam('codeType'),
+    fieldValues: props.navigation.getParam('fieldValues'),
+  };
+
   return (
     <SafeAreaView style={[commonStyles.safeArea, styles.viewContainer]}>
       <View flex-1 center>
@@ -31,7 +36,7 @@ export default function GeneratedCodeView(props: Props) {
         >
           <View style={{ backgroundColor: 'gray' }}>
             <QRCode
-              value={generateQRValueFromState(props.codeCreatingState)}
+              value={generateQRValueFromState(navigationParams)}
               size={windowWidth - 30}
               bgColor="black"
               fgColor="white"

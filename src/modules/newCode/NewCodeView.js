@@ -23,6 +23,7 @@ type Props = {
   },
   activeCodeType: string,
   updateField: (string) => void,
+  changeCodeType: (string, string) => void,
 };
 
 const codeTypes = [
@@ -68,9 +69,22 @@ export default function NewCodeView(props: Props) {
       </ScrollView>
       <View flex-1 style={styles.formWrapper}>
         <View>
-          <GeneratingForm activeCodeType={props.activeCodeType} updateField={props.updateField} />
+          <GeneratingForm
+            activeCodeType={props.activeCodeType}
+            updateField={props.updateField}
+            fieldValues={props.fieldValues}
+          />
         </View>
-        <Button onPress={() => props.navigation.navigate('GeneratedCode')}>generate</Button>
+        <Button
+          onPress={() => props.navigation.navigate(
+            'GeneratedCode',
+            { codeType: props.activeCodeType, fieldValues: props.fieldValues },
+          )}
+          radius={5}
+          variant="darkGray"
+        >
+        Generate
+        </Button>
       </View>
     </SafeAreaView>
   );

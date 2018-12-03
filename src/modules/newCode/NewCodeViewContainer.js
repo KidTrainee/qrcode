@@ -1,25 +1,21 @@
-import { connect } from 'react-redux';
-import { compose, withHandlers } from 'recompose';
+import { compose, withState, withHandlers } from 'recompose';
 
-import { clearValues, updateField, setCodeType } from './NewCodeState';
-
+import { codeTypesList } from './NewCodeState';
 import NewCodeView from './NewCodeView';
 
 export default compose(
-  connect(
-    state => ({
-      activeCodeType: state.newCode.codeType,
-    }),
-    dispatch => ({
-      clearValues: () => dispatch(clearValues()),
-      updateField: (field, value) => dispatch(updateField(field, value)),
-      setCodeType: type => dispatch(setCodeType(type)),
-    }),
-  ),
+  withState('activeCodeType', 'setCodeType', codeTypesList.TEXT),
+  withState('fieldValues', 'setFielsValues', {}),
   withHandlers({
+    updateField: props => (field, value) => {
+      props.setFielsValues({
+        ...props.fieldValues,
+        [field]: value,
+      });
+    },
     changeCodeType: props => (nextCodeType) => {
       props.setCodeType(nextCodeType);
-      props.clearValues();
+      props.setFielsValues({});
     },
   }),
 )(NewCodeView);

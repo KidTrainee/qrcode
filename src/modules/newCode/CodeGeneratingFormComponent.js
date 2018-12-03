@@ -1,23 +1,23 @@
 // @flow
 import React from 'react';
-import { TextInput, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { View } from 'react-native-ui-lib';
 
 import { codeTypesList, fieldTypesList } from './NewCodeState';
-import { colors } from '../../styles';
+import { Input, Picker } from '../../components';
 
 type Props = {
   activeCodeType: string,
   updateField: (string) => void,
 }
 
-const generateTextInput = (key, onChange, placeholder, keyboardType) => (
-  <TextInput
+const generateTextInput = (key, onChange, placeholder, keyboardType, secureTextEntry) => (
+  <Input
     key={key}
     onChangeText={onChange}
-    style={styles.textInput}
     placeholder={placeholder}
     keyboardType={keyboardType}
+    secureTextEntry={secureTextEntry}
   />
 );
 const CodeGeneratingForm = (props: Props) => {
@@ -25,7 +25,13 @@ const CodeGeneratingForm = (props: Props) => {
     case codeTypesList.URL:
       return generateTextInput(0, text => props.updateField(fieldTypesList.TEXT, text), 'URL');
     case codeTypesList.EMAIL:
-      return generateTextInput(1, text => props.updateField(fieldTypesList.TEXT, `mailto:${text}`), 'Email');
+      return (
+        <View>
+          {generateTextInput(1, text => props.updateField(fieldTypesList.EMAIL_TO, text), 'To')}
+          {generateTextInput(21, text => props.updateField(fieldTypesList.EMAIL_SUBJECT, text), 'Subject')}
+          {generateTextInput(22, text => props.updateField(fieldTypesList.EMAIL_BODY, text), 'Message')}
+        </View>
+      );
     case codeTypesList.TEL:
       return generateTextInput(2, text => props.updateField(fieldTypesList.TEXT, `tel:${text}`), 'Tel', 'numeric');
     case codeTypesList.SMS:
@@ -39,19 +45,23 @@ const CodeGeneratingForm = (props: Props) => {
       return (
         <View>
           {generateTextInput(5, text => props.updateField(fieldTypesList.WIFI_SSID, text), 'SSID')}
-          {generateTextInput(
-            6,
-            text => props.updateField(fieldTypesList.WIFI_ENCRYPTION, text),
-            'Encryption (WPA or WEP)',
-          )}
-          {generateTextInput(7, text => props.updateField(fieldTypesList.WIFI_PASSWORD, text), 'Password')}
+          <Picker
+            placeholder="Encryption"
+            onSetValue={text => props.updateField(fieldTypesList.WIFI_ENCRYPTION, text)}
+            items={[
+              { id: 1, label: 'None', value: '' },
+              { id: 2, label: 'WEP', value: 'WEP' },
+              { id: 3, label: 'WPA/WPA2', value: 'WPA' },
+            ]}
+          />
+          {generateTextInput(7, text => props.updateField(fieldTypesList.WIFI_PASSWORD, text), 'Password', null, true)}
         </View>
       );
     case codeTypesList.GEO:
       return (
         <View>
-          {generateTextInput(8, text => props.updateField(fieldTypesList.GEO_LONG, text), 'Long')}
-          {generateTextInput(9, text => props.updateField(fieldTypesList.GEO_LAT, text), 'Lat')}
+          {generateTextInput(8, text => props.updateField(fieldTypesList.GEO_LONG, text), 'Long', 'numeric')}
+          {generateTextInput(9, text => props.updateField(fieldTypesList.GEO_LAT, text), 'Lat', 'numeric')}
         </View>
       );
     case codeTypesList.CONTACT:
@@ -67,21 +77,30 @@ const CodeGeneratingForm = (props: Props) => {
           </View>
           {generateTextInput(12, text => props.updateField(fieldTypesList.CONTACT_PHONE, text), 'Phone')}
           {generateTextInput(13, text => props.updateField(fieldTypesList.CONTACT_EMAIL, text), 'Email')}
-          {generateTextInput(14, text => props.updateField(fieldTypesList.CONTACT_ADDRESS, text), 'Address')}
         </View>
       );
     case codeTypesList.EVENT:
       return (
         <View>
-          {generateTextInput(15, text => props.updateField(fieldTypesList.EVENT, text), 'Title')}
+          {generateTextInput(15, text => props.updateField(fieldTypesList.EVENT_TITLE, text), 'Title')}
           {generateTextInput(16, text => props.updateField(fieldTypesList.EVENT_DESCRIPTION, text), 'Description')}
           {generateTextInput(17, text => props.updateField(fieldTypesList.EVENT_LOCATION, text), 'Location')}
           <View row>
             <View flex style={styles.textInputMargin}>
-              {generateTextInput(18, text => props.updateField(fieldTypesList.EVENT_START, text), 'Start')}
+              <Picker
+                type="datetime"
+                placeholder="Start"
+                onSetValue={text => props.updateField(fieldTypesList.EVENT_START, text)}
+              />
             </View>
             <View flex>
-              {generateTextInput(19, text => props.updateField(fieldTypesList.EVENT_END, text), 'End')}
+              <Picker
+                type="datetime"
+                placeholder="End"
+                minimumDate={props.fieldValues[fieldTypesList.EVENT_START]
+                  && props.fieldValues[fieldTypesList.EVENT_START]}
+                onSetValue={text => props.updateField(fieldTypesList.EVENT_END, text)}
+              />
             </View>
           </View>
         </View>
@@ -92,23 +111,6 @@ const CodeGeneratingForm = (props: Props) => {
 };
 
 const styles = StyleSheet.create({
-  textInput: {
-    flexGrow: 1,
-    backgroundColor: colors.white,
-    borderRadius: 5,
-    shadowColor: colors.darkBlue,
-    shadowOffset: {
-      width: 0,
-      height: 1,
-    },
-    shadowOpacity: 0.21,
-    shadowRadius: 1.41,
-
-    elevation: 2,
-    padding: 20,
-    color: colors.darkGray,
-    marginBottom: 15,
-  },
   textInputMargin: {
     marginRight: 20,
   },
