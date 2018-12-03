@@ -53,7 +53,16 @@
     "preset": "react-native",
     "transform": {
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
-    }
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!android/**",
+      "!ios/**",
+      "!assets/**"
+    ],
+    "coverageDirectory": "jest_coverage"
   },
   "rnpm": {
     "assets": [
