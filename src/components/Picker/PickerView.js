@@ -44,7 +44,10 @@ export type PickerProps = {
    */
   onSetValue: (string) => void,
 
-  items?: Array<any>,
+  items?: Array<{
+    id: number,
+    label: string,
+  }>,
 };
 
 const PickerComponent = (props: PickerProps) => (

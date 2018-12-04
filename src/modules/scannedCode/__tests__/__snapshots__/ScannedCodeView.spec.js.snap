@@ -185,3 +185,645 @@ ShallowWrapper {
   },
 }
 `;
+
+exports[`ScannedCode renders as expected 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ScannedCodeView
+    navigation={
+      Object {
+        "state": Object {
+          "params": Object {
+            "data": "hello",
+          },
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <StatusBar
+          animated={false}
+          backgroundColor="#8890A6"
+          showHideTransition="fade"
+          translucent={false}
+        />,
+        <ScrollView
+          contentContainerStyle={
+            Object {
+              "flex": 1,
+              "marginTop": 20,
+              "paddingHorizontal": 20,
+            }
+          }
+        >
+          <View
+            useNativeDriver={true}
+          >
+            <Text
+              center={true}
+              h1={true}
+              marginB-20={true}
+              useNativeDriver={true}
+            >
+              text
+            </Text>
+            <TextInput
+              disabledColor="#2E374D"
+              editable={false}
+              enableErrors={true}
+              floatingPlaceholder={true}
+              floatingPlaceholderColor="#626262"
+              placeholder="Text"
+              placeholderTextColor="#858F96"
+              text70={true}
+              value="hello"
+            />
+          </View>
+          <View
+            bottom={true}
+            flex={true}
+            paddingB-30={true}
+            useNativeDriver={true}
+          >
+            <View
+              centerH={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <CopyButton
+                data="hello"
+              />
+              <ShareButton
+                data="hello"
+              />
+            </View>
+          </View>
+        </ScrollView>,
+      ],
+      "style": Object {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "animated": false,
+          "backgroundColor": "#8890A6",
+          "showHideTransition": "fade",
+          "translucent": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <View
+              useNativeDriver={true}
+            >
+              <Text
+                center={true}
+                h1={true}
+                marginB-20={true}
+                useNativeDriver={true}
+              >
+                text
+              </Text>
+              <TextInput
+                disabledColor="#2E374D"
+                editable={false}
+                enableErrors={true}
+                floatingPlaceholder={true}
+                floatingPlaceholderColor="#626262"
+                placeholder="Text"
+                placeholderTextColor="#858F96"
+                text70={true}
+                value="hello"
+              />
+            </View>,
+            <View
+              bottom={true}
+              flex={true}
+              paddingB-30={true}
+              useNativeDriver={true}
+            >
+              <View
+                centerH={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <CopyButton
+                  data="hello"
+                />
+                <ShareButton
+                  data="hello"
+                />
+              </View>
+            </View>,
+          ],
+          "contentContainerStyle": Object {
+            "flex": 1,
+            "marginTop": 20,
+            "paddingHorizontal": 20,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Text
+                  center={true}
+                  h1={true}
+                  marginB-20={true}
+                  useNativeDriver={true}
+                >
+                  text
+                </Text>,
+                Array [
+                  <TextInput
+                    disabledColor="#2E374D"
+                    editable={false}
+                    enableErrors={true}
+                    floatingPlaceholder={true}
+                    floatingPlaceholderColor="#626262"
+                    placeholder="Text"
+                    placeholderTextColor="#858F96"
+                    text70={true}
+                    value="hello"
+                  />,
+                ],
+              ],
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "center": true,
+                  "children": "text",
+                  "h1": true,
+                  "marginB-20": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": "text",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "text",
+                "nodeType": "class",
+                "props": Object {
+                  "disabledColor": "#2E374D",
+                  "editable": false,
+                  "enableErrors": true,
+                  "floatingPlaceholder": true,
+                  "floatingPlaceholderColor": "#626262",
+                  "placeholder": "Text",
+                  "placeholderTextColor": "#858F96",
+                  "text70": true,
+                  "value": "hello",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bottom": true,
+              "children": Array [
+                <View
+                  centerH={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <CopyButton
+                    data="hello"
+                  />
+                  <ShareButton
+                    data="hello"
+                  />
+                </View>,
+                false,
+                false,
+                false,
+                false,
+              ],
+              "flex": true,
+              "paddingB-30": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "centerH": true,
+                  "children": Array [
+                    <CopyButton
+                      data="hello"
+                    />,
+                    <ShareButton
+                      data="hello"
+                    />,
+                  ],
+                  "row": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "data": "hello",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "data": "hello",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              false,
+              false,
+              false,
+              false,
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [MockFunction],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <StatusBar
+            animated={false}
+            backgroundColor="#8890A6"
+            showHideTransition="fade"
+            translucent={false}
+          />,
+          <ScrollView
+            contentContainerStyle={
+              Object {
+                "flex": 1,
+                "marginTop": 20,
+                "paddingHorizontal": 20,
+              }
+            }
+          >
+            <View
+              useNativeDriver={true}
+            >
+              <Text
+                center={true}
+                h1={true}
+                marginB-20={true}
+                useNativeDriver={true}
+              >
+                text
+              </Text>
+              <TextInput
+                disabledColor="#2E374D"
+                editable={false}
+                enableErrors={true}
+                floatingPlaceholder={true}
+                floatingPlaceholderColor="#626262"
+                placeholder="Text"
+                placeholderTextColor="#858F96"
+                text70={true}
+                value="hello"
+              />
+            </View>
+            <View
+              bottom={true}
+              flex={true}
+              paddingB-30={true}
+              useNativeDriver={true}
+            >
+              <View
+                centerH={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <CopyButton
+                  data="hello"
+                />
+                <ShareButton
+                  data="hello"
+                />
+              </View>
+            </View>
+          </ScrollView>,
+        ],
+        "style": Object {
+          "backgroundColor": "#FFFFFF",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "animated": false,
+            "backgroundColor": "#8890A6",
+            "showHideTransition": "fade",
+            "translucent": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <View
+                useNativeDriver={true}
+              >
+                <Text
+                  center={true}
+                  h1={true}
+                  marginB-20={true}
+                  useNativeDriver={true}
+                >
+                  text
+                </Text>
+                <TextInput
+                  disabledColor="#2E374D"
+                  editable={false}
+                  enableErrors={true}
+                  floatingPlaceholder={true}
+                  floatingPlaceholderColor="#626262"
+                  placeholder="Text"
+                  placeholderTextColor="#858F96"
+                  text70={true}
+                  value="hello"
+                />
+              </View>,
+              <View
+                bottom={true}
+                flex={true}
+                paddingB-30={true}
+                useNativeDriver={true}
+              >
+                <View
+                  centerH={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <CopyButton
+                    data="hello"
+                  />
+                  <ShareButton
+                    data="hello"
+                  />
+                </View>
+              </View>,
+            ],
+            "contentContainerStyle": Object {
+              "flex": 1,
+              "marginTop": 20,
+              "paddingHorizontal": 20,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Text
+                    center={true}
+                    h1={true}
+                    marginB-20={true}
+                    useNativeDriver={true}
+                  >
+                    text
+                  </Text>,
+                  Array [
+                    <TextInput
+                      disabledColor="#2E374D"
+                      editable={false}
+                      enableErrors={true}
+                      floatingPlaceholder={true}
+                      floatingPlaceholderColor="#626262"
+                      placeholder="Text"
+                      placeholderTextColor="#858F96"
+                      text70={true}
+                      value="hello"
+                    />,
+                  ],
+                ],
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "center": true,
+                    "children": "text",
+                    "h1": true,
+                    "marginB-20": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": "text",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "text",
+                  "nodeType": "class",
+                  "props": Object {
+                    "disabledColor": "#2E374D",
+                    "editable": false,
+                    "enableErrors": true,
+                    "floatingPlaceholder": true,
+                    "floatingPlaceholderColor": "#626262",
+                    "placeholder": "Text",
+                    "placeholderTextColor": "#858F96",
+                    "text70": true,
+                    "value": "hello",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bottom": true,
+                "children": Array [
+                  <View
+                    centerH={true}
+                    row={true}
+                    useNativeDriver={true}
+                  >
+                    <CopyButton
+                      data="hello"
+                    />
+                    <ShareButton
+                      data="hello"
+                    />
+                  </View>,
+                  false,
+                  false,
+                  false,
+                  false,
+                ],
+                "flex": true,
+                "paddingB-30": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "centerH": true,
+                    "children": Array [
+                      <CopyButton
+                        data="hello"
+                      />,
+                      <ShareButton
+                        data="hello"
+                      />,
+                    ],
+                    "row": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "data": "hello",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "data": "hello",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                false,
+                false,
+                false,
+                false,
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [MockFunction],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

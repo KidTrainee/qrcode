@@ -1,6 +1,8 @@
 
 /* eslint-disable no-undef */
 import React from 'react';
+import { Linking } from 'react-native';
+import sinon from 'sinon';
 import Enzyme from 'enzyme';
 
 import {
@@ -8,7 +10,15 @@ import {
   CopyButton,
   OpenButton,
   capitalizeFirstLetter,
+  openLink,
 } from '../ScannedCodeView';
+
+import ScannedCode from '../ScannedCodeViewContainer';
+
+jest.mock('Linking', () => ({
+  openURL: jest.fn(),
+  canOpenURL: valid => (new Promise(resolve => (valid ? resolve(true) : resolve(false)))),
+}));
 
 describe('ScannedCode => ShareButton', () => {
   it('renders as expected', () => {
@@ -48,5 +58,31 @@ describe('capitalizeFirstLetter', () => {
     expect(capitalizeFirstLetter('hello world')).toBe('Hello world');
     expect(capitalizeFirstLetter('Hello world')).toBe('Hello world');
     expect(capitalizeFirstLetter('')).toBe('');
+  });
+});
+
+describe('openLink', () => {
+  it('should work properly', () => {
+    const linkingOpenURLSpy = sinon.spy(Linking, 'openURL');
+    openLink(true).then(() => {
+      expect(linkingOpenURLSpy.calledWith('https://google.com')).toBe(true);
+    });
+  });
+});
+
+describe('ScannedCode', () => {
+  it('renders as expected', () => {
+    const wrapper = Enzyme.shallow(
+      <ScannedCode
+        navigation={{
+          state: {
+            params: {
+              data: 'hello',
+            },
+          },
+        }}
+      />,
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 });
