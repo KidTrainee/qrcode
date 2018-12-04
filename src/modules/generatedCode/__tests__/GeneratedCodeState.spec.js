@@ -1,7 +1,10 @@
 /* eslint-disable */
 import moment from 'moment';
-import { generateQRValueFromState } from './GeneratedCodeState';
-import { codeTypesList, fieldTypesList  } from '../newCode/NewCodeState';
+import GeneratedCodeReducer, {
+  generateQRValueFromState,
+  initialState,
+} from '../GeneratedCodeState';
+import { codeTypesList, fieldTypesList  } from '../../newCode/NewCodeState';
 
 describe('generateQRValueFromState', () => {
   it('should handle empty values with all code types', () => {
@@ -154,7 +157,7 @@ END:VEVENT`);
     })).toEqual(`WIFI:S:FREE_WIFI;
 T:WPA;
 P:12345678;;`);
-  })
+  });
 
   it('should return valid qr from EMAIL code type', () => {
     expect(generateQRValueFromState({
@@ -169,4 +172,18 @@ MATMSG:TO:johndoe@gmail.com;
 SUB:Design;
 BODY:We are fucked up;`);
   })
+});
+
+describe('GeneratedCodeReducer', () => {
+  let reducerInitialState = initialState;
+  beforeEach(() => {
+    reducerInitialState = initialState;
+  });
+
+
+  it('should not change state on random action', () => {
+    expect(GeneratedCodeReducer(reducerInitialState, { type: 'random' })).toEqual({
+      ...initialState,
+    });
+  });
 });

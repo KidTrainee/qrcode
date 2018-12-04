@@ -8,11 +8,11 @@ type ActionType = {
   payload?: any,
 };
 
-const initialState: AppStateType = {
+export const initialState: AppStateType = {
   isFirstOpen: true,
 };
 
-const SET_FIRST_OPEN = 'ActionType/SET_FIRST_OPEN';
+export const SET_FIRST_OPEN = 'ActionType/SET_FIRST_OPEN';
 
 export function setAppOpened(): ActionType {
   return {

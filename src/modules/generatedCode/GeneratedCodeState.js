@@ -58,7 +58,7 @@ type Action = {
   type: string, payload: any,
 };
 
-const initialState: GeneratedCodeState = {};
+export const initialState: GeneratedCodeState = {};
 
 export default function GeneratedReducer(state: GeneratedCodeState = initialState, action: Action): GeneratedCodeState {
   switch (action.type) {

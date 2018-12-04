@@ -8,11 +8,10 @@ import colors from './colors';
 import fonts from './fonts';
 import commonStyles from './common';
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 // Guideline sizes are based on standard ~5" screen mobile device
 const guidelineBaseWidth: number = 350;
-const guidelineBaseHeight: number = 680;
 
 Colors.loadColors(colors);
 
@@ -83,14 +82,10 @@ Assets.loadAssetsGroup('tabbar-icons', {
 });
 
 const scale = (size: number): number => width / guidelineBaseWidth * size;
-const verticalScale = (size: number): number => height / guidelineBaseHeight * size;
-const moderateScale = (size: number, factor: number = 0.5): number => size + (scale(size) - size) * factor;
 
 export {
   colors,
   fonts,
   scale,
-  verticalScale,
-  moderateScale,
   commonStyles,
 };

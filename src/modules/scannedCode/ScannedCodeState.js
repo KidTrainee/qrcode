@@ -1,5 +1,4 @@
 // @flow
-
 import vcard from 'vcard-parser';
 import _ from 'lodash';
 import { codeTypesList } from '../newCode/NewCodeState';
@@ -32,7 +31,13 @@ export function parseScannedString(scannedString: string): {
     value: string,
   }>
 } {
-  const result = {
+  const result: {
+    type: string,
+    fields: Array<{
+      title: string,
+      value: string,
+    }>
+  } = {
     type: codeTypesList.TEXT,
     fields: [],
   };

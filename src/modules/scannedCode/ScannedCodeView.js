@@ -32,10 +32,10 @@ type Props = {
 
 export const capitalizeFirstLetter = (string: string): string => string.charAt(0).toUpperCase() + string.slice(1);
 
-function openLink(url: string): Promise<any> {
+export function openLink(url: string): Promise<any> {
   return Linking.canOpenURL(url).then((supported) => {
     if (!supported) {
-      throw Error('Not supported');
+      return false;
     }
     return Linking.openURL(url);
   }).catch();
