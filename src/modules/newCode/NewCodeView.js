@@ -3,7 +3,10 @@ import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
-  TouchableOpacity, StatusBar,
+  TouchableOpacity,
+  StatusBar,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from 'react-native';
 import {
   View,
@@ -67,25 +70,27 @@ export default function NewCodeView(props: Props) {
           </TouchableOpacity>
         ))}
       </ScrollView>
-      <View flex-1 style={styles.formWrapper}>
-        <View>
-          <GeneratingForm
-            activeCodeType={props.activeCodeType}
-            updateField={props.updateField}
-            fieldValues={props.fieldValues}
-          />
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <View flex-1 style={styles.formWrapper}>
+          <View>
+            <GeneratingForm
+              activeCodeType={props.activeCodeType}
+              updateField={props.updateField}
+              fieldValues={props.fieldValues}
+            />
+          </View>
+          <Button
+            onPress={() => props.navigation.navigate(
+              'GeneratedCode',
+              { codeType: props.activeCodeType, fieldValues: props.fieldValues },
+            )}
+            radius={5}
+            variant="darkGray"
+          >
+          Generate
+          </Button>
         </View>
-        <Button
-          onPress={() => props.navigation.navigate(
-            'GeneratedCode',
-            { codeType: props.activeCodeType, fieldValues: props.fieldValues },
-          )}
-          radius={5}
-          variant="darkGray"
-        >
-        Generate
-        </Button>
-      </View>
+      </TouchableWithoutFeedback>
     </SafeAreaView>
   );
 }
@@ -122,7 +127,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   activeCodeType: {
-    backgroundColor: colors.primaryLite,
+    backgroundColor: colors.primaryGradientStart,
     color: colors.white,
     shadowColor: colors.primary,
     shadowOffset: {

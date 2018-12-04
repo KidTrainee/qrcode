@@ -5,14 +5,14 @@ import GeneratedCodeView from './GeneratedCodeView';
 
 export default compose(
   withHandlers(() => {
-    let _cameraRef = null;
+    let _qrcodeRef = null;
     return {
-      updateCameraRef: () => (ref) => {
-        _cameraRef = ref;
+      updateQrcodeRef: () => (ref) => {
+        _qrcodeRef = ref;
       },
       handleShareButtonClick: () => (shareInstance) => {
-        _cameraRef.capture().then((uri) => {
-          shareInstance.open({ url: `file://${uri}` });
+        _qrcodeRef.toDataURL((data) => {
+          shareInstance.open({ url: `data:image/png;base64,${data}` });
         });
       },
     };
