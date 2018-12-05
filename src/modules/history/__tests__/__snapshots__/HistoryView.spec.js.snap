@@ -1,0 +1,1613 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`History View should render with array of items 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <HistoryView
+    items={
+      Array [
+        Object {
+          "data": "qrcode",
+          "date": "2017-09-15T14:30:00.000Z",
+          "id": 1,
+        },
+      ]
+    }
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    removeItemFromHistory={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <StatusBar
+          animated={false}
+          backgroundColor="#8890A6"
+          showHideTransition="fade"
+          translucent={false}
+        />,
+        <View
+          centerH={true}
+          marginB-25={true}
+          marginT-10={true}
+          useNativeDriver={true}
+        >
+          <Text
+            darkBlue={true}
+            h1={true}
+            useNativeDriver={true}
+          >
+            History
+          </Text>
+        </View>,
+        <ScrollView
+          style={
+            Object {
+              "paddingHorizontal": 15,
+            }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#FFFFFF",
+                "flexDirection": "row",
+                "marginVertical": 15,
+              }
+            }
+          >
+            <LinearGradient
+              colors={
+                Array [
+                  "#FFB36F",
+                  "#FF7B3C",
+                ]
+              }
+              end={
+                Object {
+                  "x": 1,
+                  "y": 0,
+                }
+              }
+              start={
+                Object {
+                  "x": 0,
+                  "y": 1,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderRadius": 30,
+                  "height": 60,
+                  "justifyContent": "center",
+                  "width": 60,
+                }
+              }
+            >
+              <Image
+                assetGroup="types"
+                assetName="text-white"
+              />
+            </LinearGradient>
+            <View
+              flex-1={true}
+              paddingH-15={true}
+              useNativeDriver={true}
+            >
+              <View
+                centerV={true}
+                row={true}
+                spread={true}
+                useNativeDriver={true}
+              >
+                <Text
+                  h3={true}
+                  marginB-5={true}
+                  marginR-15={true}
+                  numberOfLines={1}
+                  useNativeDriver={true}
+                >
+                  qrcode
+                </Text>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "height": 25,
+                      "justifyContent": "center",
+                      "position": "absolute",
+                      "right": -25,
+                      "width": 25,
+                    }
+                  }
+                >
+                  <Image
+                    assetGroup="icons"
+                    assetName="delete"
+                  />
+                </TouchableOpacity>
+              </View>
+              <Text
+                gray={true}
+                useNativeDriver={true}
+              >
+                15.09.2017
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </ScrollView>,
+      ],
+      "style": Object {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "animated": false,
+          "backgroundColor": "#8890A6",
+          "showHideTransition": "fade",
+          "translucent": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "centerH": true,
+          "children": <Text
+            darkBlue={true}
+            h1={true}
+            useNativeDriver={true}
+          >
+            History
+          </Text>,
+          "marginB-25": true,
+          "marginT-10": true,
+          "useNativeDriver": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "History",
+            "darkBlue": true,
+            "h1": true,
+            "useNativeDriver": true,
+          },
+          "ref": null,
+          "rendered": "History",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            false,
+            Array [
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFFFFF",
+                    "flexDirection": "row",
+                    "marginVertical": 15,
+                  }
+                }
+              >
+                <LinearGradient
+                  colors={
+                    Array [
+                      "#FFB36F",
+                      "#FF7B3C",
+                    ]
+                  }
+                  end={
+                    Object {
+                      "x": 1,
+                      "y": 0,
+                    }
+                  }
+                  start={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderRadius": 30,
+                      "height": 60,
+                      "justifyContent": "center",
+                      "width": 60,
+                    }
+                  }
+                >
+                  <Image
+                    assetGroup="types"
+                    assetName="text-white"
+                  />
+                </LinearGradient>
+                <View
+                  flex-1={true}
+                  paddingH-15={true}
+                  useNativeDriver={true}
+                >
+                  <View
+                    centerV={true}
+                    row={true}
+                    spread={true}
+                    useNativeDriver={true}
+                  >
+                    <Text
+                      h3={true}
+                      marginB-5={true}
+                      marginR-15={true}
+                      numberOfLines={1}
+                      useNativeDriver={true}
+                    >
+                      qrcode
+                    </Text>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 25,
+                          "justifyContent": "center",
+                          "position": "absolute",
+                          "right": -25,
+                          "width": 25,
+                        }
+                      }
+                    >
+                      <Image
+                        assetGroup="icons"
+                        assetName="delete"
+                      />
+                    </TouchableOpacity>
+                  </View>
+                  <Text
+                    gray={true}
+                    useNativeDriver={true}
+                  >
+                    15.09.2017
+                  </Text>
+                </View>
+              </TouchableOpacity>,
+            ],
+          ],
+          "style": Object {
+            "paddingHorizontal": 15,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          false,
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "class",
+            "props": Object {
+              "activeOpacity": 0.2,
+              "children": Array [
+                <LinearGradient
+                  colors={
+                    Array [
+                      "#FFB36F",
+                      "#FF7B3C",
+                    ]
+                  }
+                  end={
+                    Object {
+                      "x": 1,
+                      "y": 0,
+                    }
+                  }
+                  start={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "borderRadius": 30,
+                      "height": 60,
+                      "justifyContent": "center",
+                      "width": 60,
+                    }
+                  }
+                >
+                  <Image
+                    assetGroup="types"
+                    assetName="text-white"
+                  />
+                </LinearGradient>,
+                <View
+                  flex-1={true}
+                  paddingH-15={true}
+                  useNativeDriver={true}
+                >
+                  <View
+                    centerV={true}
+                    row={true}
+                    spread={true}
+                    useNativeDriver={true}
+                  >
+                    <Text
+                      h3={true}
+                      marginB-5={true}
+                      marginR-15={true}
+                      numberOfLines={1}
+                      useNativeDriver={true}
+                    >
+                      qrcode
+                    </Text>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 25,
+                          "justifyContent": "center",
+                          "position": "absolute",
+                          "right": -25,
+                          "width": 25,
+                        }
+                      }
+                    >
+                      <Image
+                        assetGroup="icons"
+                        assetName="delete"
+                      />
+                    </TouchableOpacity>
+                  </View>
+                  <Text
+                    gray={true}
+                    useNativeDriver={true}
+                  >
+                    15.09.2017
+                  </Text>
+                </View>,
+              ],
+              "onPress": [Function],
+              "style": Object {
+                "alignItems": "center",
+                "backgroundColor": "#FFFFFF",
+                "flexDirection": "row",
+                "marginVertical": 15,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Image
+                    assetGroup="types"
+                    assetName="text-white"
+                  />,
+                  "colors": Array [
+                    "#FFB36F",
+                    "#FF7B3C",
+                  ],
+                  "end": Object {
+                    "x": 1,
+                    "y": 0,
+                  },
+                  "start": Object {
+                    "x": 0,
+                    "y": 1,
+                  },
+                  "style": Object {
+                    "alignItems": "center",
+                    "borderRadius": 30,
+                    "height": 60,
+                    "justifyContent": "center",
+                    "width": 60,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "assetGroup": "types",
+                    "assetName": "text-white",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <View
+                      centerV={true}
+                      row={true}
+                      spread={true}
+                      useNativeDriver={true}
+                    >
+                      <Text
+                        h3={true}
+                        marginB-5={true}
+                        marginR-15={true}
+                        numberOfLines={1}
+                        useNativeDriver={true}
+                      >
+                        qrcode
+                      </Text>
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 25,
+                            "justifyContent": "center",
+                            "position": "absolute",
+                            "right": -25,
+                            "width": 25,
+                          }
+                        }
+                      >
+                        <Image
+                          assetGroup="icons"
+                          assetName="delete"
+                        />
+                      </TouchableOpacity>
+                    </View>,
+                    <Text
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      15.09.2017
+                    </Text>,
+                  ],
+                  "flex-1": true,
+                  "paddingH-15": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "centerV": true,
+                      "children": Array [
+                        <Text
+                          h3={true}
+                          marginB-5={true}
+                          marginR-15={true}
+                          numberOfLines={1}
+                          useNativeDriver={true}
+                        >
+                          qrcode
+                        </Text>,
+                        <TouchableOpacity
+                          activeOpacity={0.2}
+                          onPress={[Function]}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "height": 25,
+                              "justifyContent": "center",
+                              "position": "absolute",
+                              "right": -25,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Image
+                            assetGroup="icons"
+                            assetName="delete"
+                          />
+                        </TouchableOpacity>,
+                      ],
+                      "row": true,
+                      "spread": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": Array [
+                            "qrcode",
+                            false,
+                          ],
+                          "h3": true,
+                          "marginB-5": true,
+                          "marginR-15": true,
+                          "numberOfLines": 1,
+                          "useNativeDriver": true,
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "qrcode",
+                          false,
+                        ],
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "activeOpacity": 0.2,
+                          "children": <Image
+                            assetGroup="icons"
+                            assetName="delete"
+                          />,
+                          "onPress": [Function],
+                          "style": Object {
+                            "alignItems": "center",
+                            "height": 25,
+                            "justifyContent": "center",
+                            "position": "absolute",
+                            "right": -25,
+                            "width": 25,
+                          },
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "assetGroup": "icons",
+                            "assetName": "delete",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "15.09.2017",
+                      "gray": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "15.09.2017",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [MockFunction],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <StatusBar
+            animated={false}
+            backgroundColor="#8890A6"
+            showHideTransition="fade"
+            translucent={false}
+          />,
+          <View
+            centerH={true}
+            marginB-25={true}
+            marginT-10={true}
+            useNativeDriver={true}
+          >
+            <Text
+              darkBlue={true}
+              h1={true}
+              useNativeDriver={true}
+            >
+              History
+            </Text>
+          </View>,
+          <ScrollView
+            style={
+              Object {
+                "paddingHorizontal": 15,
+              }
+            }
+          >
+            <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "marginVertical": 15,
+                }
+              }
+            >
+              <LinearGradient
+                colors={
+                  Array [
+                    "#FFB36F",
+                    "#FF7B3C",
+                  ]
+                }
+                end={
+                  Object {
+                    "x": 1,
+                    "y": 0,
+                  }
+                }
+                start={
+                  Object {
+                    "x": 0,
+                    "y": 1,
+                  }
+                }
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "borderRadius": 30,
+                    "height": 60,
+                    "justifyContent": "center",
+                    "width": 60,
+                  }
+                }
+              >
+                <Image
+                  assetGroup="types"
+                  assetName="text-white"
+                />
+              </LinearGradient>
+              <View
+                flex-1={true}
+                paddingH-15={true}
+                useNativeDriver={true}
+              >
+                <View
+                  centerV={true}
+                  row={true}
+                  spread={true}
+                  useNativeDriver={true}
+                >
+                  <Text
+                    h3={true}
+                    marginB-5={true}
+                    marginR-15={true}
+                    numberOfLines={1}
+                    useNativeDriver={true}
+                  >
+                    qrcode
+                  </Text>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "height": 25,
+                        "justifyContent": "center",
+                        "position": "absolute",
+                        "right": -25,
+                        "width": 25,
+                      }
+                    }
+                  >
+                    <Image
+                      assetGroup="icons"
+                      assetName="delete"
+                    />
+                  </TouchableOpacity>
+                </View>
+                <Text
+                  gray={true}
+                  useNativeDriver={true}
+                >
+                  15.09.2017
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </ScrollView>,
+        ],
+        "style": Object {
+          "backgroundColor": "#FFFFFF",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "animated": false,
+            "backgroundColor": "#8890A6",
+            "showHideTransition": "fade",
+            "translucent": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "centerH": true,
+            "children": <Text
+              darkBlue={true}
+              h1={true}
+              useNativeDriver={true}
+            >
+              History
+            </Text>,
+            "marginB-25": true,
+            "marginT-10": true,
+            "useNativeDriver": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "History",
+              "darkBlue": true,
+              "h1": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              false,
+              Array [
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFFFFF",
+                      "flexDirection": "row",
+                      "marginVertical": 15,
+                    }
+                  }
+                >
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#FFB36F",
+                        "#FF7B3C",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "borderRadius": 30,
+                        "height": 60,
+                        "justifyContent": "center",
+                        "width": 60,
+                      }
+                    }
+                  >
+                    <Image
+                      assetGroup="types"
+                      assetName="text-white"
+                    />
+                  </LinearGradient>
+                  <View
+                    flex-1={true}
+                    paddingH-15={true}
+                    useNativeDriver={true}
+                  >
+                    <View
+                      centerV={true}
+                      row={true}
+                      spread={true}
+                      useNativeDriver={true}
+                    >
+                      <Text
+                        h3={true}
+                        marginB-5={true}
+                        marginR-15={true}
+                        numberOfLines={1}
+                        useNativeDriver={true}
+                      >
+                        qrcode
+                      </Text>
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 25,
+                            "justifyContent": "center",
+                            "position": "absolute",
+                            "right": -25,
+                            "width": 25,
+                          }
+                        }
+                      >
+                        <Image
+                          assetGroup="icons"
+                          assetName="delete"
+                        />
+                      </TouchableOpacity>
+                    </View>
+                    <Text
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      15.09.2017
+                    </Text>
+                  </View>
+                </TouchableOpacity>,
+              ],
+            ],
+            "style": Object {
+              "paddingHorizontal": 15,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            false,
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "class",
+              "props": Object {
+                "activeOpacity": 0.2,
+                "children": Array [
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#FFB36F",
+                        "#FF7B3C",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "borderRadius": 30,
+                        "height": 60,
+                        "justifyContent": "center",
+                        "width": 60,
+                      }
+                    }
+                  >
+                    <Image
+                      assetGroup="types"
+                      assetName="text-white"
+                    />
+                  </LinearGradient>,
+                  <View
+                    flex-1={true}
+                    paddingH-15={true}
+                    useNativeDriver={true}
+                  >
+                    <View
+                      centerV={true}
+                      row={true}
+                      spread={true}
+                      useNativeDriver={true}
+                    >
+                      <Text
+                        h3={true}
+                        marginB-5={true}
+                        marginR-15={true}
+                        numberOfLines={1}
+                        useNativeDriver={true}
+                      >
+                        qrcode
+                      </Text>
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 25,
+                            "justifyContent": "center",
+                            "position": "absolute",
+                            "right": -25,
+                            "width": 25,
+                          }
+                        }
+                      >
+                        <Image
+                          assetGroup="icons"
+                          assetName="delete"
+                        />
+                      </TouchableOpacity>
+                    </View>
+                    <Text
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      15.09.2017
+                    </Text>
+                  </View>,
+                ],
+                "onPress": [Function],
+                "style": Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "flexDirection": "row",
+                  "marginVertical": 15,
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <Image
+                      assetGroup="types"
+                      assetName="text-white"
+                    />,
+                    "colors": Array [
+                      "#FFB36F",
+                      "#FF7B3C",
+                    ],
+                    "end": Object {
+                      "x": 1,
+                      "y": 0,
+                    },
+                    "start": Object {
+                      "x": 0,
+                      "y": 1,
+                    },
+                    "style": Object {
+                      "alignItems": "center",
+                      "borderRadius": 30,
+                      "height": 60,
+                      "justifyContent": "center",
+                      "width": 60,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "assetGroup": "types",
+                      "assetName": "text-white",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <View
+                        centerV={true}
+                        row={true}
+                        spread={true}
+                        useNativeDriver={true}
+                      >
+                        <Text
+                          h3={true}
+                          marginB-5={true}
+                          marginR-15={true}
+                          numberOfLines={1}
+                          useNativeDriver={true}
+                        >
+                          qrcode
+                        </Text>
+                        <TouchableOpacity
+                          activeOpacity={0.2}
+                          onPress={[Function]}
+                          style={
+                            Object {
+                              "alignItems": "center",
+                              "height": 25,
+                              "justifyContent": "center",
+                              "position": "absolute",
+                              "right": -25,
+                              "width": 25,
+                            }
+                          }
+                        >
+                          <Image
+                            assetGroup="icons"
+                            assetName="delete"
+                          />
+                        </TouchableOpacity>
+                      </View>,
+                      <Text
+                        gray={true}
+                        useNativeDriver={true}
+                      >
+                        15.09.2017
+                      </Text>,
+                    ],
+                    "flex-1": true,
+                    "paddingH-15": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "centerV": true,
+                        "children": Array [
+                          <Text
+                            h3={true}
+                            marginB-5={true}
+                            marginR-15={true}
+                            numberOfLines={1}
+                            useNativeDriver={true}
+                          >
+                            qrcode
+                          </Text>,
+                          <TouchableOpacity
+                            activeOpacity={0.2}
+                            onPress={[Function]}
+                            style={
+                              Object {
+                                "alignItems": "center",
+                                "height": 25,
+                                "justifyContent": "center",
+                                "position": "absolute",
+                                "right": -25,
+                                "width": 25,
+                              }
+                            }
+                          >
+                            <Image
+                              assetGroup="icons"
+                              assetName="delete"
+                            />
+                          </TouchableOpacity>,
+                        ],
+                        "row": true,
+                        "spread": true,
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": Array [
+                              "qrcode",
+                              false,
+                            ],
+                            "h3": true,
+                            "marginB-5": true,
+                            "marginR-15": true,
+                            "numberOfLines": 1,
+                            "useNativeDriver": true,
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "qrcode",
+                            false,
+                          ],
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "activeOpacity": 0.2,
+                            "children": <Image
+                              assetGroup="icons"
+                              assetName="delete"
+                            />,
+                            "onPress": [Function],
+                            "style": Object {
+                              "alignItems": "center",
+                              "height": 25,
+                              "justifyContent": "center",
+                              "position": "absolute",
+                              "right": -25,
+                              "width": 25,
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "assetGroup": "icons",
+                              "assetName": "delete",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": [Function],
+                        },
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "15.09.2017",
+                        "gray": true,
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": "15.09.2017",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [MockFunction],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`History View should render without items 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <HistoryView
+    items={Array []}
+    navigation={
+      Object {
+        "navigate": [Function],
+      }
+    }
+    removeItemFromHistory={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <StatusBar
+          animated={false}
+          backgroundColor="#8890A6"
+          showHideTransition="fade"
+          translucent={false}
+        />,
+        <View
+          centerH={true}
+          marginB-25={true}
+          marginT-10={true}
+          useNativeDriver={true}
+        >
+          <Text
+            darkBlue={true}
+            h1={true}
+            useNativeDriver={true}
+          >
+            History
+          </Text>
+        </View>,
+        <ScrollView
+          style={
+            Object {
+              "paddingHorizontal": 15,
+            }
+          }
+        >
+          <Text
+            center={true}
+            gray={true}
+            marginT-20={true}
+            useNativeDriver={true}
+          >
+            You don't have any scanned code
+          </Text>
+        </ScrollView>,
+      ],
+      "style": Object {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "animated": false,
+          "backgroundColor": "#8890A6",
+          "showHideTransition": "fade",
+          "translucent": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "centerH": true,
+          "children": <Text
+            darkBlue={true}
+            h1={true}
+            useNativeDriver={true}
+          >
+            History
+          </Text>,
+          "marginB-25": true,
+          "marginT-10": true,
+          "useNativeDriver": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "History",
+            "darkBlue": true,
+            "h1": true,
+            "useNativeDriver": true,
+          },
+          "ref": null,
+          "rendered": "History",
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Text
+              center={true}
+              gray={true}
+              marginT-20={true}
+              useNativeDriver={true}
+            >
+              You don't have any scanned code
+            </Text>,
+            Array [],
+          ],
+          "style": Object {
+            "paddingHorizontal": 15,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "center": true,
+              "children": "You don't have any scanned code",
+              "gray": true,
+              "marginT-20": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": "You don't have any scanned code",
+            "type": [Function],
+          },
+        ],
+        "type": [MockFunction],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <StatusBar
+            animated={false}
+            backgroundColor="#8890A6"
+            showHideTransition="fade"
+            translucent={false}
+          />,
+          <View
+            centerH={true}
+            marginB-25={true}
+            marginT-10={true}
+            useNativeDriver={true}
+          >
+            <Text
+              darkBlue={true}
+              h1={true}
+              useNativeDriver={true}
+            >
+              History
+            </Text>
+          </View>,
+          <ScrollView
+            style={
+              Object {
+                "paddingHorizontal": 15,
+              }
+            }
+          >
+            <Text
+              center={true}
+              gray={true}
+              marginT-20={true}
+              useNativeDriver={true}
+            >
+              You don't have any scanned code
+            </Text>
+          </ScrollView>,
+        ],
+        "style": Object {
+          "backgroundColor": "#FFFFFF",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "animated": false,
+            "backgroundColor": "#8890A6",
+            "showHideTransition": "fade",
+            "translucent": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "centerH": true,
+            "children": <Text
+              darkBlue={true}
+              h1={true}
+              useNativeDriver={true}
+            >
+              History
+            </Text>,
+            "marginB-25": true,
+            "marginT-10": true,
+            "useNativeDriver": true,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "History",
+              "darkBlue": true,
+              "h1": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Text
+                center={true}
+                gray={true}
+                marginT-20={true}
+                useNativeDriver={true}
+              >
+                You don't have any scanned code
+              </Text>,
+              Array [],
+            ],
+            "style": Object {
+              "paddingHorizontal": 15,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "center": true,
+                "children": "You don't have any scanned code",
+                "gray": true,
+                "marginT-20": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": "You don't have any scanned code",
+              "type": [Function],
+            },
+          ],
+          "type": [MockFunction],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -26,19 +26,19 @@ type Props = {
   },
   activeCodeType: string,
   updateField: (string) => void,
-  changeCodeType: (string, string) => void,
+  changeCodeType: (string) => void,
 };
 
-const codeTypes = [
-  { id: 0, label: codeTypesList.TEXT, icon: '' },
-  { id: 1, label: codeTypesList.URL, icon: '' },
-  { id: 2, label: codeTypesList.EMAIL, icon: '' },
-  { id: 3, label: codeTypesList.TEL, icon: '' },
-  { id: 4, label: codeTypesList.CONTACT, icon: '' },
-  { id: 5, label: codeTypesList.SMS, icon: '' },
-  { id: 6, label: codeTypesList.GEO, icon: '' },
-  { id: 7, label: codeTypesList.EVENT, icon: '' },
-  { id: 8, label: codeTypesList.WIFI, icon: '' },
+export const codeTypes = [
+  { id: 0, label: codeTypesList.TEXT, icon: 'text' },
+  { id: 1, label: codeTypesList.URL, icon: 'text' },
+  { id: 2, label: codeTypesList.EMAIL, icon: 'text' },
+  { id: 3, label: codeTypesList.TEL, icon: 'text' },
+  { id: 4, label: codeTypesList.CONTACT, icon: 'text' },
+  { id: 5, label: codeTypesList.SMS, icon: 'text' },
+  { id: 6, label: codeTypesList.GEO, icon: 'text' },
+  { id: 7, label: codeTypesList.EVENT, icon: 'text' },
+  { id: 8, label: codeTypesList.WIFI, icon: 'text' },
 ];
 
 export default function NewCodeView(props: Props) {
@@ -65,7 +65,7 @@ export default function NewCodeView(props: Props) {
           >
             <Image
               assetGroup="types"
-              assetName={codeType.label !== props.activeCodeType ? 'text' : 'text-white'}
+              assetName={codeType.label !== props.activeCodeType ? codeType.icon : `${codeType.icon}-white`}
             />
             <Text h3 lightBlue marginT-5 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
           </TouchableOpacity>
@@ -138,7 +138,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
-
     elevation: 3,
   },
   formWrapper: {

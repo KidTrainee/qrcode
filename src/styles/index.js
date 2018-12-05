@@ -63,6 +63,7 @@ Assets.loadAssetsGroup('icons', {
   'scan-area': require('../../assets/icons/scan-area.png'),
   'flashlight-on': require('../../assets/icons/flashlight-on.png'),
   'flashlight-off': require('../../assets/icons/flashlight-off.png'),
+  delete: require('../../assets/icons/delete.png'),
 });
 
 Assets.loadAssetsGroup('types', {
