@@ -47,18 +47,32 @@ export default function HomeView(props: Props) {
               resizeMode="contain"
               assetGroup="icons"
               assetName="scan-area"
+              testID="image:code-scan-area"
             />
 
             <TouchableOpacity
               onPress={props.toggleFlashlight}
               style={[styles.flashlightButton, props.isFlashlightOn && styles.flashlightButtonOn]}
+              testID="button:flashlight"
             >
-              <Image
-                style={styles.flashlightIcon}
-                resizeMode="contain"
-                assetGroup="icons"
-                assetName={props.isFlashlightOn ? 'flashlight-on' : 'flashlight-off'}
-              />
+              {props.isFlashlightOn && (
+                <Image
+                  testID="image:flashlight-icon-on"
+                  style={styles.flashlightIcon}
+                  resizeMode="contain"
+                  assetGroup="icons"
+                  assetName="flashlight-on"
+                />
+              )}
+              {!props.isFlashlightOn && (
+                <Image
+                  testID="image:flashlight-icon-off"
+                  style={styles.flashlightIcon}
+                  resizeMode="contain"
+                  assetGroup="icons"
+                  assetName="flashlight-off"
+                />
+              )}
             </TouchableOpacity>
           </RNCamera>
         ) : <View flex />}

@@ -49,11 +49,12 @@ export default function NewCodeView(props: Props) {
         backgroundColor={colors.lightBlue}
       />
       <View centerH marginB-25 marginT-10>
-        <Text h1 darkBlue>Generate Code</Text>
+        <Text h1 darkBlue testID="label:generate-code">Generate Code</Text>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.typesContainer}>
         {codeTypes.map((codeType, index) => (
           <TouchableOpacity
+            testID={`button:codeType-${codeType.label}`}
             key={codeType.id}
             onPress={() => props.changeCodeType(codeType.label)}
             style={[
@@ -80,6 +81,7 @@ export default function NewCodeView(props: Props) {
             />
           </View>
           <Button
+            testID="button:generate"
             onPress={() => props.navigation.navigate(
               'GeneratedCode',
               { codeType: props.activeCodeType, fieldValues: props.fieldValues },
@@ -87,7 +89,7 @@ export default function NewCodeView(props: Props) {
             radius={5}
             variant="darkGray"
           >
-          Generate
+            Generate
           </Button>
         </View>
       </TouchableWithoutFeedback>

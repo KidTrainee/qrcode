@@ -14,12 +14,14 @@ type ButtonProps = {
   style?: any,
   radius?: number,
   textColor?: string,
+  testID?: string,
 }
 
 const Button = (props: ButtonProps) => {
   const variant = colors[props.variant];
   return (
     <TouchableOpacity
+      testID={props.testID}
       onPress={props.onPress}
       style={styles.buttonContainer}
     >

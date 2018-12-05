@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react- react-dom;native/local-cli/cli.js start",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
     "test:update": "jest -u",
     "test:coverage": "jest --coverage",
@@ -37,8 +37,10 @@
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0",
+    "babel-core": "^7.0.0-bridge",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
+    "detox": "^9.1.2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.9.0",
@@ -70,11 +72,32 @@
     "coverageDirectory": "jest_coverage",
     "setupFiles": [
       "./jest-setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/e2e/"
     ]
   },
   "rnpm": {
     "assets": [
       "./assets/fonts/"
     ]
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/qrcode.app",
+        "build": "xcodebuild -UseModernBuildSystem=NO -project ios/qrcode.xcodeproj -scheme qrcode -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone XS"
+      },
+      "ios.sim.release": {
+        "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/qrcode.app",
+        "build": "xcodebuild -UseModernBuildSystem=NO -project ios/qrcode.xcodeproj -scheme qrcode -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "name": "iPhone 7"
+      }
+    },
+    "test-runner": "jest"
   }
 }
