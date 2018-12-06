@@ -11,7 +11,9 @@
     "run:android": "react-native run-android",
     "lint": "./node_modules/eslint/bin/eslint.js src",
     "lint:fix": "./node_modules/eslint/bin/eslint.js src --fix",
-    "flow": "./node_modules/flow-bin/cli.js"
+    "flow": "./node_modules/flow-bin/cli.js",
+    "e2e:build": "detox build --configuration ios.sim.debug",
+    "e2e:test": "detox test --configuration ios.sim.debug"
   },
   "dependencies": {
     "lodash": "^4.17.11",

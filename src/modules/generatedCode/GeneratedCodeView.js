@@ -34,6 +34,7 @@ export default function GeneratedCodeView(props: Props) {
       <View flex-1 center>
         <View style={{ backgroundColor: 'gray' }}>
           <QRCode
+            testID="view:qrcode"
             value={codeValue.length > 0 ? codeValue : ' '}
             size={windowWidth - 30}
             getRef={ref => props.updateQrcodeRef(ref)}
@@ -42,15 +43,17 @@ export default function GeneratedCodeView(props: Props) {
         <View marginT-20 row>
           <View flex style={{ marginRight: 20 }}>
             <Button
+              testID="button:share"
               onPress={() => props.handleShareButtonClick(Share)}
               radius={5}
               style={{ flexGrow: 1 }}
             >
-            Share
+              Share
             </Button>
           </View>
           <View flex>
             <Button
+              testID="button:customize"
               variant="white"
               radius={5}
               style={{ flexGrow: 1 }}

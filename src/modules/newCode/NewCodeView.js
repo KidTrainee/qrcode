@@ -51,7 +51,12 @@ export default function NewCodeView(props: Props) {
       <View centerH marginB-25 marginT-10>
         <Text h1 darkBlue testID="label:generate-code">Generate Code</Text>
       </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.typesContainer}>
+      <ScrollView
+        testID="scroll:code-type"
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.typesContainer}
+      >
         {codeTypes.map((codeType, index) => (
           <TouchableOpacity
             testID={`button:codeType-${codeType.label}`}
@@ -71,7 +76,7 @@ export default function NewCodeView(props: Props) {
           </TouchableOpacity>
         ))}
       </ScrollView>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <TouchableWithoutFeedback testID="touchable:hideKeyboard" onPress={Keyboard.dismiss}>
         <View flex-1 style={styles.formWrapper}>
           <View>
             <GeneratingForm

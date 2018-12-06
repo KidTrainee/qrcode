@@ -20,11 +20,14 @@ const generateTextInput = (
   secureTextEntry: boolean = false,
 ) => (
   <Input
+    testID={`input:${placeholder.toLocaleLowerCase().replace(' ', '-')}`}
     key={key}
     onChangeText={onChange}
     placeholder={placeholder}
     keyboardType={keyboardType}
     secureTextEntry={secureTextEntry}
+    autoCapitalize="none"
+    autoCorrect={false}
   />
 );
 

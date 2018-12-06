@@ -113,7 +113,7 @@ const AppNavigator = createStackNavigator({
       fontFamily: 'Muli',
     },
     headerLeft: ({ onPress }) => (
-      <TouchableOpacity onPress={onPress} style={{ paddingLeft: 20 }}>
+      <TouchableOpacity testID="button:back" onPress={onPress} style={{ paddingLeft: 20 }}>
         <Image assetGroup="icons" assetName="back-icon" style={{ height: 15 }} resizeMode="contain" />
       </TouchableOpacity>
     ),
