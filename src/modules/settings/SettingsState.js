@@ -1,21 +1,45 @@
 // @flow
 
+export const SET_SETTING_VALUE = 'CHANGE_SETTING_VALUE';
+
 type SettingsState = {
-  +items: Array<{
-    content: string,
-  }>,
+  backgroundColor: string,
+  foregroundColor: string,
+  batch: boolean,
+  vibrate: boolean,
+  beep: boolean,
+  history: boolean,
+  duplicate: boolean,
 };
 
 type Action = {
   type: string, payload: any,
 };
 
-const initialState: SettingsState = {
-  items: [],
+export const initialState: SettingsState = {
+  backgroundColor: '#ffffff',
+  foregroundColor: '#000000',
+  batch: false,
+  vibrate: true,
+  beep: true,
+  history: true,
+  duplicate: true,
 };
+
+export function setSettingValue(data: { setting: string, value: any }) {
+  return {
+    type: SET_SETTING_VALUE,
+    payload: data,
+  };
+}
 
 export default function SettingsReducer(state: SettingsState = initialState, action: Action): SettingsState {
   switch (action.type) {
+    case SET_SETTING_VALUE:
+      return {
+        ...state,
+        [action.payload.setting]: action.payload.value,
+      };
     default:
       return state;
   }
