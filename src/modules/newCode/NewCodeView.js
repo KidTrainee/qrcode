@@ -8,6 +8,7 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import {
   View,
   Text,
@@ -76,28 +77,39 @@ export default function NewCodeView(props: Props) {
           </TouchableOpacity>
         ))}
       </ScrollView>
-      <TouchableWithoutFeedback testID="touchable:hideKeyboard" onPress={Keyboard.dismiss}>
-        <View flex-1 style={styles.formWrapper}>
-          <View>
-            <GeneratingForm
-              activeCodeType={props.activeCodeType}
-              updateField={props.updateField}
-              fieldValues={props.fieldValues}
-            />
+      <KeyboardAwareScrollView
+        viewIsInsideTabBar
+        extraScrollHeight={-50}
+        style={{ paddingHorizontal: 5, flex: 1, marginBottom: -20 }}
+        bounces={false}
+        showsVerticalScrollIndicator={false}
+      >
+        <TouchableWithoutFeedback style={{ flex: 1 }} testID="touchable:hideKeyboard" onPress={Keyboard.dismiss}>
+          <View flex-1 style={styles.formWrapper}>
+            <View>
+              <GeneratingForm
+                activeCodeType={props.activeCodeType}
+                updateField={props.updateField}
+                fieldValues={props.fieldValues}
+              />
+            </View>
           </View>
-          <Button
-            testID="button:generate"
-            onPress={() => props.navigation.navigate(
-              'GeneratedCode',
-              { codeType: props.activeCodeType, fieldValues: props.fieldValues },
-            )}
-            radius={5}
-            variant="darkGray"
-          >
-            Generate
-          </Button>
-        </View>
-      </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback>
+      </KeyboardAwareScrollView>
+      <Button
+        testID="button:generate"
+        onPress={() => props.navigation.navigate(
+          'GeneratedCode',
+          { codeType: props.activeCodeType, fieldValues: props.fieldValues },
+        )}
+        radius={5}
+        variant="darkGray"
+        style={{
+          marginBottom: 10,
+        }}
+      >
+        Generate
+      </Button>
     </SafeAreaView>
   );
 }
@@ -146,9 +158,9 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   formWrapper: {
-    marginHorizontal: -20,
-    paddingHorizontal: 20,
-    paddingVertical: 30,
+    marginHorizontal: -25,
+    paddingHorizontal: 25,
+    paddingTop: 20,
     justifyContent: 'space-between',
   },
 });
