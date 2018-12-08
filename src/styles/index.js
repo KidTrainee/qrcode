@@ -53,6 +53,7 @@ Typography.loadTypographies({
 
 Assets.loadAssetsGroup('images', {
   'bottom-bar-background': require('../../assets/images/bottom_bar_background.png'),
+  pricing: require('../../assets/images/pricing.png'),
 });
 
 Assets.loadAssetsGroup('icons', {
@@ -64,6 +65,7 @@ Assets.loadAssetsGroup('icons', {
   'flashlight-on': require('../../assets/icons/flashlight-on.png'),
   'flashlight-off': require('../../assets/icons/flashlight-off.png'),
   delete: require('../../assets/icons/delete.png'),
+  check: require('../../assets/icons/check.png'),
 });
 
 Assets.loadAssetsGroup('types', {

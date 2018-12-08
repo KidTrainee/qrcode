@@ -18,6 +18,7 @@ import NewCode from '../newCode/NewCodeViewContainer';
 import Settings from '../settings/SettingViewContainer';
 import GeneratedCode from '../generatedCode/GeneratedCodeViewContainer';
 import ScannedCode from '../scannedCode/ScannedCodeViewContainer';
+import Pricing from '../pricing/PricingViewContainer';
 
 const TabNavigator = createBottomTabNavigator({
   Scanner,
@@ -103,6 +104,12 @@ const AppNavigator = createStackNavigator({
     screen: GeneratedCode,
     navigationOptions: () => ({
       title: 'New Code',
+    }),
+  },
+  Pricing: {
+    screen: Pricing,
+    navigationOptions: () => ({
+      title: 'Pricing',
     }),
   },
 }, {
