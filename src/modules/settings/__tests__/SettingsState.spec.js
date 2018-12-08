@@ -27,6 +27,8 @@ describe('SettingsState Reducer', () => {
     const newState = Reducer(initialState, setSettingValue(data));
 
     expect(newState.batch).toBe(true);
+    expect(newState.history).toBe(true);
+    expect(newState.duplicate).toBe(false);
   });
 
   it('should not handle random action', () => {

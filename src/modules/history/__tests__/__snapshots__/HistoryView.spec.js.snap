@@ -42,8 +42,10 @@ ShallowWrapper {
         />,
         <View
           centerH={true}
+          centerV={true}
           marginB-25={true}
           marginT-10={true}
+          row={true}
           useNativeDriver={true}
         >
           <Text
@@ -184,32 +186,40 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "centerH": true,
-          "children": <Text
-            darkBlue={true}
-            h1={true}
-            useNativeDriver={true}
-          >
-            History
-          </Text>,
+          "centerV": true,
+          "children": Array [
+            <Text
+              darkBlue={true}
+              h1={true}
+              useNativeDriver={true}
+            >
+              History
+            </Text>,
+            false,
+          ],
           "marginB-25": true,
           "marginT-10": true,
+          "row": true,
           "useNativeDriver": true,
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "History",
-            "darkBlue": true,
-            "h1": true,
-            "useNativeDriver": true,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "History",
+              "darkBlue": true,
+              "h1": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": "History",
-          "type": [Function],
-        },
+          false,
+        ],
         "type": [Function],
       },
       Object {
@@ -662,8 +672,10 @@ ShallowWrapper {
           />,
           <View
             centerH={true}
+            centerV={true}
             marginB-25={true}
             marginT-10={true}
+            row={true}
             useNativeDriver={true}
           >
             <Text
@@ -804,32 +816,40 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "centerH": true,
-            "children": <Text
-              darkBlue={true}
-              h1={true}
-              useNativeDriver={true}
-            >
-              History
-            </Text>,
+            "centerV": true,
+            "children": Array [
+              <Text
+                darkBlue={true}
+                h1={true}
+                useNativeDriver={true}
+              >
+                History
+              </Text>,
+              false,
+            ],
             "marginB-25": true,
             "marginT-10": true,
+            "row": true,
             "useNativeDriver": true,
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "History",
-              "darkBlue": true,
-              "h1": true,
-              "useNativeDriver": true,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "History",
+                "darkBlue": true,
+                "h1": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": "History",
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": "History",
-            "type": [Function],
-          },
+            false,
+          ],
           "type": [Function],
         },
         Object {
@@ -1322,8 +1342,10 @@ ShallowWrapper {
         />,
         <View
           centerH={true}
+          centerV={true}
           marginB-25={true}
           marginT-10={true}
+          row={true}
           useNativeDriver={true}
         >
           <Text
@@ -1378,32 +1400,40 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "centerH": true,
-          "children": <Text
-            darkBlue={true}
-            h1={true}
-            useNativeDriver={true}
-          >
-            History
-          </Text>,
+          "centerV": true,
+          "children": Array [
+            <Text
+              darkBlue={true}
+              h1={true}
+              useNativeDriver={true}
+            >
+              History
+            </Text>,
+            false,
+          ],
           "marginB-25": true,
           "marginT-10": true,
+          "row": true,
           "useNativeDriver": true,
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "History",
-            "darkBlue": true,
-            "h1": true,
-            "useNativeDriver": true,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "History",
+              "darkBlue": true,
+              "h1": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": "History",
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": "History",
-          "type": [Function],
-        },
+          false,
+        ],
         "type": [Function],
       },
       Object {
@@ -1464,8 +1494,10 @@ ShallowWrapper {
           />,
           <View
             centerH={true}
+            centerV={true}
             marginB-25={true}
             marginT-10={true}
+            row={true}
             useNativeDriver={true}
           >
             <Text
@@ -1520,32 +1552,40 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "centerH": true,
-            "children": <Text
-              darkBlue={true}
-              h1={true}
-              useNativeDriver={true}
-            >
-              History
-            </Text>,
+            "centerV": true,
+            "children": Array [
+              <Text
+                darkBlue={true}
+                h1={true}
+                useNativeDriver={true}
+              >
+                History
+              </Text>,
+              false,
+            ],
             "marginB-25": true,
             "marginT-10": true,
+            "row": true,
             "useNativeDriver": true,
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "History",
-              "darkBlue": true,
-              "h1": true,
-              "useNativeDriver": true,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "History",
+                "darkBlue": true,
+                "h1": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": "History",
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": "History",
-            "type": [Function],
-          },
+            false,
+          ],
           "type": [Function],
         },
         Object {

@@ -21,6 +21,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "disabled": undefined,
       "onValueChange": [Function],
       "testID": "switch",
       "value": true,
@@ -35,6 +36,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "disabled": undefined,
         "onValueChange": [Function],
         "testID": "switch",
         "value": true,
@@ -216,18 +218,44 @@ ShallowWrapper {
                   spread={true}
                   useNativeDriver={true}
                 >
-                  <Text
-                    h2={true}
-                    marginB-5={true}
-                    style={
-                      Object {
-                        "fontWeight": "300",
-                      }
-                    }
+                  <View
+                    centerV={true}
+                    row={true}
                     useNativeDriver={true}
                   >
-                    Background color
-                  </Text>
+                    <Text
+                      h2={true}
+                      marginB-5={true}
+                      style={
+                        Object {
+                          "fontWeight": "300",
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      Background color
+                    </Text>
+                    <View
+                      br20={true}
+                      marginB-4={true}
+                      marginL-5={true}
+                      paddingH-3={true}
+                      paddingV-1={true}
+                      style={
+                        Object {
+                          "backgroundColor": "#e32d2f",
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      <Text
+                        useNativeDriver={true}
+                        white={true}
+                      >
+                        Pro
+                      </Text>
+                    </View>
+                  </View>
                   <TouchableOpacity
                     activeOpacity={0.2}
                     onPress={[Function]}
@@ -264,18 +292,44 @@ ShallowWrapper {
                   spread={true}
                   useNativeDriver={true}
                 >
-                  <Text
-                    h2={true}
-                    marginB-5={true}
-                    style={
-                      Object {
-                        "fontWeight": "300",
-                      }
-                    }
+                  <View
+                    centerV={true}
+                    row={true}
                     useNativeDriver={true}
                   >
-                    Foreground color
-                  </Text>
+                    <Text
+                      h2={true}
+                      marginB-5={true}
+                      style={
+                        Object {
+                          "fontWeight": "300",
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      Foreground color
+                    </Text>
+                    <View
+                      br20={true}
+                      marginB-4={true}
+                      marginL-5={true}
+                      paddingH-3={true}
+                      paddingV-1={true}
+                      style={
+                        Object {
+                          "backgroundColor": "#e32d2f",
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      <Text
+                        useNativeDriver={true}
+                        white={true}
+                      >
+                        Pro
+                      </Text>
+                    </View>
+                  </View>
                   <TouchableOpacity
                     activeOpacity={0.2}
                     onPress={[Function]}
@@ -346,18 +400,44 @@ ShallowWrapper {
                   spread={true}
                   useNativeDriver={true}
                 >
-                  <Text
-                    h2={true}
-                    marginB-5={true}
-                    style={
-                      Object {
-                        "fontWeight": "300",
-                      }
-                    }
+                  <View
+                    centerV={true}
+                    row={true}
                     useNativeDriver={true}
                   >
-                    Batch scan
-                  </Text>
+                    <Text
+                      h2={true}
+                      marginB-5={true}
+                      style={
+                        Object {
+                          "fontWeight": "300",
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      Batch scan
+                    </Text>
+                    <View
+                      br20={true}
+                      marginB-4={true}
+                      marginL-5={true}
+                      paddingH-3={true}
+                      paddingV-1={true}
+                      style={
+                        Object {
+                          "backgroundColor": "#e32d2f",
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      <Text
+                        useNativeDriver={true}
+                        white={true}
+                      >
+                        Pro
+                      </Text>
+                    </View>
+                  </View>
                   <SettingSwitch
                     name="batch"
                     onChange={[Function]}
@@ -467,6 +547,7 @@ ShallowWrapper {
                     History
                   </Text>
                   <SettingSwitch
+                    disabled={true}
                     name="history"
                     onChange={[Function]}
                     value={false}
@@ -503,6 +584,7 @@ ShallowWrapper {
                     Duplicate scans
                   </Text>
                   <SettingSwitch
+                    disabled={true}
                     name="duplicate"
                     onChange={[Function]}
                     value={false}
@@ -721,18 +803,44 @@ ShallowWrapper {
                     spread={true}
                     useNativeDriver={true}
                   >
-                    <Text
-                      h2={true}
-                      marginB-5={true}
-                      style={
-                        Object {
-                          "fontWeight": "300",
-                        }
-                      }
+                    <View
+                      centerV={true}
+                      row={true}
                       useNativeDriver={true}
                     >
-                      Background color
-                    </Text>
+                      <Text
+                        h2={true}
+                        marginB-5={true}
+                        style={
+                          Object {
+                            "fontWeight": "300",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Background color
+                      </Text>
+                      <View
+                        br20={true}
+                        marginB-4={true}
+                        marginL-5={true}
+                        paddingH-3={true}
+                        paddingV-1={true}
+                        style={
+                          Object {
+                            "backgroundColor": "#e32d2f",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        <Text
+                          useNativeDriver={true}
+                          white={true}
+                        >
+                          Pro
+                        </Text>
+                      </View>
+                    </View>
                     <TouchableOpacity
                       activeOpacity={0.2}
                       onPress={[Function]}
@@ -769,18 +877,44 @@ ShallowWrapper {
                     spread={true}
                     useNativeDriver={true}
                   >
-                    <Text
-                      h2={true}
-                      marginB-5={true}
-                      style={
-                        Object {
-                          "fontWeight": "300",
-                        }
-                      }
+                    <View
+                      centerV={true}
+                      row={true}
                       useNativeDriver={true}
                     >
-                      Foreground color
-                    </Text>
+                      <Text
+                        h2={true}
+                        marginB-5={true}
+                        style={
+                          Object {
+                            "fontWeight": "300",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Foreground color
+                      </Text>
+                      <View
+                        br20={true}
+                        marginB-4={true}
+                        marginL-5={true}
+                        paddingH-3={true}
+                        paddingV-1={true}
+                        style={
+                          Object {
+                            "backgroundColor": "#e32d2f",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        <Text
+                          useNativeDriver={true}
+                          white={true}
+                        >
+                          Pro
+                        </Text>
+                      </View>
+                    </View>
                     <TouchableOpacity
                       activeOpacity={0.2}
                       onPress={[Function]}
@@ -851,18 +985,44 @@ ShallowWrapper {
                     spread={true}
                     useNativeDriver={true}
                   >
-                    <Text
-                      h2={true}
-                      marginB-5={true}
-                      style={
-                        Object {
-                          "fontWeight": "300",
-                        }
-                      }
+                    <View
+                      centerV={true}
+                      row={true}
                       useNativeDriver={true}
                     >
-                      Batch scan
-                    </Text>
+                      <Text
+                        h2={true}
+                        marginB-5={true}
+                        style={
+                          Object {
+                            "fontWeight": "300",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Batch scan
+                      </Text>
+                      <View
+                        br20={true}
+                        marginB-4={true}
+                        marginL-5={true}
+                        paddingH-3={true}
+                        paddingV-1={true}
+                        style={
+                          Object {
+                            "backgroundColor": "#e32d2f",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        <Text
+                          useNativeDriver={true}
+                          white={true}
+                        >
+                          Pro
+                        </Text>
+                      </View>
+                    </View>
                     <SettingSwitch
                       name="batch"
                       onChange={[Function]}
@@ -972,6 +1132,7 @@ ShallowWrapper {
                       History
                     </Text>
                     <SettingSwitch
+                      disabled={true}
                       name="history"
                       onChange={[Function]}
                       value={false}
@@ -1008,6 +1169,7 @@ ShallowWrapper {
                       Duplicate scans
                     </Text>
                     <SettingSwitch
+                      disabled={true}
                       name="duplicate"
                       onChange={[Function]}
                       value={false}
@@ -1226,18 +1388,44 @@ ShallowWrapper {
                       spread={true}
                       useNativeDriver={true}
                     >
-                      <Text
-                        h2={true}
-                        marginB-5={true}
-                        style={
-                          Object {
-                            "fontWeight": "300",
-                          }
-                        }
+                      <View
+                        centerV={true}
+                        row={true}
                         useNativeDriver={true}
                       >
-                        Background color
-                      </Text>
+                        <Text
+                          h2={true}
+                          marginB-5={true}
+                          style={
+                            Object {
+                              "fontWeight": "300",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          Background color
+                        </Text>
+                        <View
+                          br20={true}
+                          marginB-4={true}
+                          marginL-5={true}
+                          paddingH-3={true}
+                          paddingV-1={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#e32d2f",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          <Text
+                            useNativeDriver={true}
+                            white={true}
+                          >
+                            Pro
+                          </Text>
+                        </View>
+                      </View>
                       <TouchableOpacity
                         activeOpacity={0.2}
                         onPress={[Function]}
@@ -1274,18 +1462,44 @@ ShallowWrapper {
                       spread={true}
                       useNativeDriver={true}
                     >
-                      <Text
-                        h2={true}
-                        marginB-5={true}
-                        style={
-                          Object {
-                            "fontWeight": "300",
-                          }
-                        }
+                      <View
+                        centerV={true}
+                        row={true}
                         useNativeDriver={true}
                       >
-                        Foreground color
-                      </Text>
+                        <Text
+                          h2={true}
+                          marginB-5={true}
+                          style={
+                            Object {
+                              "fontWeight": "300",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          Foreground color
+                        </Text>
+                        <View
+                          br20={true}
+                          marginB-4={true}
+                          marginL-5={true}
+                          paddingH-3={true}
+                          paddingV-1={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#e32d2f",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          <Text
+                            useNativeDriver={true}
+                            white={true}
+                          >
+                            Pro
+                          </Text>
+                        </View>
+                      </View>
                       <TouchableOpacity
                         activeOpacity={0.2}
                         onPress={[Function]}
@@ -1350,18 +1564,44 @@ ShallowWrapper {
                         spread={true}
                         useNativeDriver={true}
                       >
-                        <Text
-                          h2={true}
-                          marginB-5={true}
-                          style={
-                            Object {
-                              "fontWeight": "300",
-                            }
-                          }
+                        <View
+                          centerV={true}
+                          row={true}
                           useNativeDriver={true}
                         >
-                          Background color
-                        </Text>
+                          <Text
+                            h2={true}
+                            marginB-5={true}
+                            style={
+                              Object {
+                                "fontWeight": "300",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            Background color
+                          </Text>
+                          <View
+                            br20={true}
+                            marginB-4={true}
+                            marginL-5={true}
+                            paddingH-3={true}
+                            paddingV-1={true}
+                            style={
+                              Object {
+                                "backgroundColor": "#e32d2f",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            <Text
+                              useNativeDriver={true}
+                              white={true}
+                            >
+                              Pro
+                            </Text>
+                          </View>
+                        </View>
                         <TouchableOpacity
                           activeOpacity={0.2}
                           onPress={[Function]}
@@ -1398,18 +1638,44 @@ ShallowWrapper {
                         spread={true}
                         useNativeDriver={true}
                       >
-                        <Text
-                          h2={true}
-                          marginB-5={true}
-                          style={
-                            Object {
-                              "fontWeight": "300",
-                            }
-                          }
+                        <View
+                          centerV={true}
+                          row={true}
                           useNativeDriver={true}
                         >
-                          Foreground color
-                        </Text>
+                          <Text
+                            h2={true}
+                            marginB-5={true}
+                            style={
+                              Object {
+                                "fontWeight": "300",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            Foreground color
+                          </Text>
+                          <View
+                            br20={true}
+                            marginB-4={true}
+                            marginL-5={true}
+                            paddingH-3={true}
+                            paddingV-1={true}
+                            style={
+                              Object {
+                                "backgroundColor": "#e32d2f",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            <Text
+                              useNativeDriver={true}
+                              white={true}
+                            >
+                              Pro
+                            </Text>
+                          </View>
+                        </View>
                         <TouchableOpacity
                           activeOpacity={0.2}
                           onPress={[Function]}
@@ -1467,18 +1733,44 @@ ShallowWrapper {
                           spread={true}
                           useNativeDriver={true}
                         >
-                          <Text
-                            h2={true}
-                            marginB-5={true}
-                            style={
-                              Object {
-                                "fontWeight": "300",
-                              }
-                            }
+                          <View
+                            centerV={true}
+                            row={true}
                             useNativeDriver={true}
                           >
-                            Background color
-                          </Text>
+                            <Text
+                              h2={true}
+                              marginB-5={true}
+                              style={
+                                Object {
+                                  "fontWeight": "300",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              Background color
+                            </Text>
+                            <View
+                              br20={true}
+                              marginB-4={true}
+                              marginL-5={true}
+                              paddingH-3={true}
+                              paddingV-1={true}
+                              style={
+                                Object {
+                                  "backgroundColor": "#e32d2f",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              <Text
+                                useNativeDriver={true}
+                                white={true}
+                              >
+                                Pro
+                              </Text>
+                            </View>
+                          </View>
                           <TouchableOpacity
                             activeOpacity={0.2}
                             onPress={[Function]}
@@ -1517,18 +1809,44 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": Array [
-                            <Text
-                              h2={true}
-                              marginB-5={true}
-                              style={
-                                Object {
-                                  "fontWeight": "300",
-                                }
-                              }
+                            <View
+                              centerV={true}
+                              row={true}
                               useNativeDriver={true}
                             >
-                              Background color
-                            </Text>,
+                              <Text
+                                h2={true}
+                                marginB-5={true}
+                                style={
+                                  Object {
+                                    "fontWeight": "300",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                Background color
+                              </Text>
+                              <View
+                                br20={true}
+                                marginB-4={true}
+                                marginL-5={true}
+                                paddingH-3={true}
+                                paddingV-1={true}
+                                style={
+                                  Object {
+                                    "backgroundColor": "#e32d2f",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                <Text
+                                  useNativeDriver={true}
+                                  white={true}
+                                >
+                                  Pro
+                                </Text>
+                              </View>
+                            </View>,
                             <TouchableOpacity
                               activeOpacity={0.2}
                               onPress={[Function]}
@@ -1560,16 +1878,101 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "children": "Background color",
-                              "h2": true,
-                              "marginB-5": true,
-                              "style": Object {
-                                "fontWeight": "300",
-                              },
+                              "centerV": true,
+                              "children": Array [
+                                <Text
+                                  h2={true}
+                                  marginB-5={true}
+                                  style={
+                                    Object {
+                                      "fontWeight": "300",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  Background color
+                                </Text>,
+                                <View
+                                  br20={true}
+                                  marginB-4={true}
+                                  marginL-5={true}
+                                  paddingH-3={true}
+                                  paddingV-1={true}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#e32d2f",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>
+                                </View>,
+                              ],
+                              "row": true,
                               "useNativeDriver": true,
                             },
                             "ref": null,
-                            "rendered": "Background color",
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "children": "Background color",
+                                  "h2": true,
+                                  "marginB-5": true,
+                                  "style": Object {
+                                    "fontWeight": "300",
+                                  },
+                                  "useNativeDriver": true,
+                                },
+                                "ref": null,
+                                "rendered": "Background color",
+                                "type": [Function],
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "br20": true,
+                                  "children": <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>,
+                                  "marginB-4": true,
+                                  "marginL-5": true,
+                                  "paddingH-3": true,
+                                  "paddingV-1": true,
+                                  "style": Object {
+                                    "backgroundColor": "#e32d2f",
+                                  },
+                                  "useNativeDriver": true,
+                                },
+                                "ref": null,
+                                "rendered": Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "children": "Pro",
+                                    "useNativeDriver": true,
+                                    "white": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": "Pro",
+                                  "type": [Function],
+                                },
+                                "type": [Function],
+                              },
+                            ],
                             "type": [Function],
                           },
                           Object {
@@ -1627,18 +2030,44 @@ ShallowWrapper {
                           spread={true}
                           useNativeDriver={true}
                         >
-                          <Text
-                            h2={true}
-                            marginB-5={true}
-                            style={
-                              Object {
-                                "fontWeight": "300",
-                              }
-                            }
+                          <View
+                            centerV={true}
+                            row={true}
                             useNativeDriver={true}
                           >
-                            Foreground color
-                          </Text>
+                            <Text
+                              h2={true}
+                              marginB-5={true}
+                              style={
+                                Object {
+                                  "fontWeight": "300",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              Foreground color
+                            </Text>
+                            <View
+                              br20={true}
+                              marginB-4={true}
+                              marginL-5={true}
+                              paddingH-3={true}
+                              paddingV-1={true}
+                              style={
+                                Object {
+                                  "backgroundColor": "#e32d2f",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              <Text
+                                useNativeDriver={true}
+                                white={true}
+                              >
+                                Pro
+                              </Text>
+                            </View>
+                          </View>
                           <TouchableOpacity
                             activeOpacity={0.2}
                             onPress={[Function]}
@@ -1677,18 +2106,44 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": Array [
-                            <Text
-                              h2={true}
-                              marginB-5={true}
-                              style={
-                                Object {
-                                  "fontWeight": "300",
-                                }
-                              }
+                            <View
+                              centerV={true}
+                              row={true}
                               useNativeDriver={true}
                             >
-                              Foreground color
-                            </Text>,
+                              <Text
+                                h2={true}
+                                marginB-5={true}
+                                style={
+                                  Object {
+                                    "fontWeight": "300",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                Foreground color
+                              </Text>
+                              <View
+                                br20={true}
+                                marginB-4={true}
+                                marginL-5={true}
+                                paddingH-3={true}
+                                paddingV-1={true}
+                                style={
+                                  Object {
+                                    "backgroundColor": "#e32d2f",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                <Text
+                                  useNativeDriver={true}
+                                  white={true}
+                                >
+                                  Pro
+                                </Text>
+                              </View>
+                            </View>,
                             <TouchableOpacity
                               activeOpacity={0.2}
                               onPress={[Function]}
@@ -1720,16 +2175,101 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "children": "Foreground color",
-                              "h2": true,
-                              "marginB-5": true,
-                              "style": Object {
-                                "fontWeight": "300",
-                              },
+                              "centerV": true,
+                              "children": Array [
+                                <Text
+                                  h2={true}
+                                  marginB-5={true}
+                                  style={
+                                    Object {
+                                      "fontWeight": "300",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  Foreground color
+                                </Text>,
+                                <View
+                                  br20={true}
+                                  marginB-4={true}
+                                  marginL-5={true}
+                                  paddingH-3={true}
+                                  paddingV-1={true}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#e32d2f",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>
+                                </View>,
+                              ],
+                              "row": true,
                               "useNativeDriver": true,
                             },
                             "ref": null,
-                            "rendered": "Foreground color",
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "children": "Foreground color",
+                                  "h2": true,
+                                  "marginB-5": true,
+                                  "style": Object {
+                                    "fontWeight": "300",
+                                  },
+                                  "useNativeDriver": true,
+                                },
+                                "ref": null,
+                                "rendered": "Foreground color",
+                                "type": [Function],
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "br20": true,
+                                  "children": <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>,
+                                  "marginB-4": true,
+                                  "marginL-5": true,
+                                  "paddingH-3": true,
+                                  "paddingV-1": true,
+                                  "style": Object {
+                                    "backgroundColor": "#e32d2f",
+                                  },
+                                  "useNativeDriver": true,
+                                },
+                                "ref": null,
+                                "rendered": Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "children": "Pro",
+                                    "useNativeDriver": true,
+                                    "white": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": "Pro",
+                                  "type": [Function],
+                                },
+                                "type": [Function],
+                              },
+                            ],
                             "type": [Function],
                           },
                           Object {
@@ -1825,18 +2365,44 @@ ShallowWrapper {
                       spread={true}
                       useNativeDriver={true}
                     >
-                      <Text
-                        h2={true}
-                        marginB-5={true}
-                        style={
-                          Object {
-                            "fontWeight": "300",
-                          }
-                        }
+                      <View
+                        centerV={true}
+                        row={true}
                         useNativeDriver={true}
                       >
-                        Batch scan
-                      </Text>
+                        <Text
+                          h2={true}
+                          marginB-5={true}
+                          style={
+                            Object {
+                              "fontWeight": "300",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          Batch scan
+                        </Text>
+                        <View
+                          br20={true}
+                          marginB-4={true}
+                          marginL-5={true}
+                          paddingH-3={true}
+                          paddingV-1={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#e32d2f",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          <Text
+                            useNativeDriver={true}
+                            white={true}
+                          >
+                            Pro
+                          </Text>
+                        </View>
+                      </View>
                       <SettingSwitch
                         name="batch"
                         onChange={[Function]}
@@ -1946,6 +2512,7 @@ ShallowWrapper {
                         History
                       </Text>
                       <SettingSwitch
+                        disabled={true}
                         name="history"
                         onChange={[Function]}
                         value={false}
@@ -1982,6 +2549,7 @@ ShallowWrapper {
                         Duplicate scans
                       </Text>
                       <SettingSwitch
+                        disabled={true}
                         name="duplicate"
                         onChange={[Function]}
                         value={false}
@@ -2033,18 +2601,44 @@ ShallowWrapper {
                         spread={true}
                         useNativeDriver={true}
                       >
-                        <Text
-                          h2={true}
-                          marginB-5={true}
-                          style={
-                            Object {
-                              "fontWeight": "300",
-                            }
-                          }
+                        <View
+                          centerV={true}
+                          row={true}
                           useNativeDriver={true}
                         >
-                          Batch scan
-                        </Text>
+                          <Text
+                            h2={true}
+                            marginB-5={true}
+                            style={
+                              Object {
+                                "fontWeight": "300",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            Batch scan
+                          </Text>
+                          <View
+                            br20={true}
+                            marginB-4={true}
+                            marginL-5={true}
+                            paddingH-3={true}
+                            paddingV-1={true}
+                            style={
+                              Object {
+                                "backgroundColor": "#e32d2f",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            <Text
+                              useNativeDriver={true}
+                              white={true}
+                            >
+                              Pro
+                            </Text>
+                          </View>
+                        </View>
                         <SettingSwitch
                           name="batch"
                           onChange={[Function]}
@@ -2154,6 +2748,7 @@ ShallowWrapper {
                           History
                         </Text>
                         <SettingSwitch
+                          disabled={true}
                           name="history"
                           onChange={[Function]}
                           value={false}
@@ -2190,6 +2785,7 @@ ShallowWrapper {
                           Duplicate scans
                         </Text>
                         <SettingSwitch
+                          disabled={true}
                           name="duplicate"
                           onChange={[Function]}
                           value={false}
@@ -2234,18 +2830,44 @@ ShallowWrapper {
                           spread={true}
                           useNativeDriver={true}
                         >
-                          <Text
-                            h2={true}
-                            marginB-5={true}
-                            style={
-                              Object {
-                                "fontWeight": "300",
-                              }
-                            }
+                          <View
+                            centerV={true}
+                            row={true}
                             useNativeDriver={true}
                           >
-                            Batch scan
-                          </Text>
+                            <Text
+                              h2={true}
+                              marginB-5={true}
+                              style={
+                                Object {
+                                  "fontWeight": "300",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              Batch scan
+                            </Text>
+                            <View
+                              br20={true}
+                              marginB-4={true}
+                              marginL-5={true}
+                              paddingH-3={true}
+                              paddingV-1={true}
+                              style={
+                                Object {
+                                  "backgroundColor": "#e32d2f",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              <Text
+                                useNativeDriver={true}
+                                white={true}
+                              >
+                                Pro
+                              </Text>
+                            </View>
+                          </View>
                           <SettingSwitch
                             name="batch"
                             onChange={[Function]}
@@ -2272,18 +2894,44 @@ ShallowWrapper {
                         "props": Object {
                           "centerV": true,
                           "children": Array [
-                            <Text
-                              h2={true}
-                              marginB-5={true}
-                              style={
-                                Object {
-                                  "fontWeight": "300",
-                                }
-                              }
+                            <View
+                              centerV={true}
+                              row={true}
                               useNativeDriver={true}
                             >
-                              Batch scan
-                            </Text>,
+                              <Text
+                                h2={true}
+                                marginB-5={true}
+                                style={
+                                  Object {
+                                    "fontWeight": "300",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                Batch scan
+                              </Text>
+                              <View
+                                br20={true}
+                                marginB-4={true}
+                                marginL-5={true}
+                                paddingH-3={true}
+                                paddingV-1={true}
+                                style={
+                                  Object {
+                                    "backgroundColor": "#e32d2f",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                <Text
+                                  useNativeDriver={true}
+                                  white={true}
+                                >
+                                  Pro
+                                </Text>
+                              </View>
+                            </View>,
                             <SettingSwitch
                               name="batch"
                               onChange={[Function]}
@@ -2301,16 +2949,101 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "children": "Batch scan",
-                              "h2": true,
-                              "marginB-5": true,
-                              "style": Object {
-                                "fontWeight": "300",
-                              },
+                              "centerV": true,
+                              "children": Array [
+                                <Text
+                                  h2={true}
+                                  marginB-5={true}
+                                  style={
+                                    Object {
+                                      "fontWeight": "300",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  Batch scan
+                                </Text>,
+                                <View
+                                  br20={true}
+                                  marginB-4={true}
+                                  marginL-5={true}
+                                  paddingH-3={true}
+                                  paddingV-1={true}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#e32d2f",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>
+                                </View>,
+                              ],
+                              "row": true,
                               "useNativeDriver": true,
                             },
                             "ref": null,
-                            "rendered": "Batch scan",
+                            "rendered": Array [
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "children": "Batch scan",
+                                  "h2": true,
+                                  "marginB-5": true,
+                                  "style": Object {
+                                    "fontWeight": "300",
+                                  },
+                                  "useNativeDriver": true,
+                                },
+                                "ref": null,
+                                "rendered": "Batch scan",
+                                "type": [Function],
+                              },
+                              Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "br20": true,
+                                  "children": <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>,
+                                  "marginB-4": true,
+                                  "marginL-5": true,
+                                  "paddingH-3": true,
+                                  "paddingV-1": true,
+                                  "style": Object {
+                                    "backgroundColor": "#e32d2f",
+                                  },
+                                  "useNativeDriver": true,
+                                },
+                                "ref": null,
+                                "rendered": Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "children": "Pro",
+                                    "useNativeDriver": true,
+                                    "white": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": "Pro",
+                                  "type": [Function],
+                                },
+                                "type": [Function],
+                              },
+                            ],
                             "type": [Function],
                           },
                           Object {
@@ -2619,6 +3352,7 @@ ShallowWrapper {
                             History
                           </Text>
                           <SettingSwitch
+                            disabled={true}
                             name="history"
                             onChange={[Function]}
                             value={false}
@@ -2657,6 +3391,7 @@ ShallowWrapper {
                               History
                             </Text>,
                             <SettingSwitch
+                              disabled={true}
                               name="history"
                               onChange={[Function]}
                               value={false}
@@ -2690,6 +3425,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "function",
                             "props": Object {
+                              "disabled": true,
                               "name": "history",
                               "onChange": [Function],
                               "value": false,
@@ -2743,6 +3479,7 @@ ShallowWrapper {
                             Duplicate scans
                           </Text>
                           <SettingSwitch
+                            disabled={true}
                             name="duplicate"
                             onChange={[Function]}
                             value={false}
@@ -2781,6 +3518,7 @@ ShallowWrapper {
                               Duplicate scans
                             </Text>,
                             <SettingSwitch
+                              disabled={true}
                               name="duplicate"
                               onChange={[Function]}
                               value={false}
@@ -2814,6 +3552,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "function",
                             "props": Object {
+                              "disabled": true,
                               "name": "duplicate",
                               "onChange": [Function],
                               "value": false,
@@ -3032,18 +3771,44 @@ ShallowWrapper {
                     spread={true}
                     useNativeDriver={true}
                   >
-                    <Text
-                      h2={true}
-                      marginB-5={true}
-                      style={
-                        Object {
-                          "fontWeight": "300",
-                        }
-                      }
+                    <View
+                      centerV={true}
+                      row={true}
                       useNativeDriver={true}
                     >
-                      Background color
-                    </Text>
+                      <Text
+                        h2={true}
+                        marginB-5={true}
+                        style={
+                          Object {
+                            "fontWeight": "300",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Background color
+                      </Text>
+                      <View
+                        br20={true}
+                        marginB-4={true}
+                        marginL-5={true}
+                        paddingH-3={true}
+                        paddingV-1={true}
+                        style={
+                          Object {
+                            "backgroundColor": "#e32d2f",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        <Text
+                          useNativeDriver={true}
+                          white={true}
+                        >
+                          Pro
+                        </Text>
+                      </View>
+                    </View>
                     <TouchableOpacity
                       activeOpacity={0.2}
                       onPress={[Function]}
@@ -3080,18 +3845,44 @@ ShallowWrapper {
                     spread={true}
                     useNativeDriver={true}
                   >
-                    <Text
-                      h2={true}
-                      marginB-5={true}
-                      style={
-                        Object {
-                          "fontWeight": "300",
-                        }
-                      }
+                    <View
+                      centerV={true}
+                      row={true}
                       useNativeDriver={true}
                     >
-                      Foreground color
-                    </Text>
+                      <Text
+                        h2={true}
+                        marginB-5={true}
+                        style={
+                          Object {
+                            "fontWeight": "300",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Foreground color
+                      </Text>
+                      <View
+                        br20={true}
+                        marginB-4={true}
+                        marginL-5={true}
+                        paddingH-3={true}
+                        paddingV-1={true}
+                        style={
+                          Object {
+                            "backgroundColor": "#e32d2f",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        <Text
+                          useNativeDriver={true}
+                          white={true}
+                        >
+                          Pro
+                        </Text>
+                      </View>
+                    </View>
                     <TouchableOpacity
                       activeOpacity={0.2}
                       onPress={[Function]}
@@ -3162,18 +3953,44 @@ ShallowWrapper {
                     spread={true}
                     useNativeDriver={true}
                   >
-                    <Text
-                      h2={true}
-                      marginB-5={true}
-                      style={
-                        Object {
-                          "fontWeight": "300",
-                        }
-                      }
+                    <View
+                      centerV={true}
+                      row={true}
                       useNativeDriver={true}
                     >
-                      Batch scan
-                    </Text>
+                      <Text
+                        h2={true}
+                        marginB-5={true}
+                        style={
+                          Object {
+                            "fontWeight": "300",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Batch scan
+                      </Text>
+                      <View
+                        br20={true}
+                        marginB-4={true}
+                        marginL-5={true}
+                        paddingH-3={true}
+                        paddingV-1={true}
+                        style={
+                          Object {
+                            "backgroundColor": "#e32d2f",
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        <Text
+                          useNativeDriver={true}
+                          white={true}
+                        >
+                          Pro
+                        </Text>
+                      </View>
+                    </View>
                     <SettingSwitch
                       name="batch"
                       onChange={[Function]}
@@ -3283,6 +4100,7 @@ ShallowWrapper {
                       History
                     </Text>
                     <SettingSwitch
+                      disabled={true}
                       name="history"
                       onChange={[Function]}
                       value={false}
@@ -3319,6 +4137,7 @@ ShallowWrapper {
                       Duplicate scans
                     </Text>
                     <SettingSwitch
+                      disabled={true}
                       name="duplicate"
                       onChange={[Function]}
                       value={false}
@@ -3537,18 +4356,44 @@ ShallowWrapper {
                       spread={true}
                       useNativeDriver={true}
                     >
-                      <Text
-                        h2={true}
-                        marginB-5={true}
-                        style={
-                          Object {
-                            "fontWeight": "300",
-                          }
-                        }
+                      <View
+                        centerV={true}
+                        row={true}
                         useNativeDriver={true}
                       >
-                        Background color
-                      </Text>
+                        <Text
+                          h2={true}
+                          marginB-5={true}
+                          style={
+                            Object {
+                              "fontWeight": "300",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          Background color
+                        </Text>
+                        <View
+                          br20={true}
+                          marginB-4={true}
+                          marginL-5={true}
+                          paddingH-3={true}
+                          paddingV-1={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#e32d2f",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          <Text
+                            useNativeDriver={true}
+                            white={true}
+                          >
+                            Pro
+                          </Text>
+                        </View>
+                      </View>
                       <TouchableOpacity
                         activeOpacity={0.2}
                         onPress={[Function]}
@@ -3585,18 +4430,44 @@ ShallowWrapper {
                       spread={true}
                       useNativeDriver={true}
                     >
-                      <Text
-                        h2={true}
-                        marginB-5={true}
-                        style={
-                          Object {
-                            "fontWeight": "300",
-                          }
-                        }
+                      <View
+                        centerV={true}
+                        row={true}
                         useNativeDriver={true}
                       >
-                        Foreground color
-                      </Text>
+                        <Text
+                          h2={true}
+                          marginB-5={true}
+                          style={
+                            Object {
+                              "fontWeight": "300",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          Foreground color
+                        </Text>
+                        <View
+                          br20={true}
+                          marginB-4={true}
+                          marginL-5={true}
+                          paddingH-3={true}
+                          paddingV-1={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#e32d2f",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          <Text
+                            useNativeDriver={true}
+                            white={true}
+                          >
+                            Pro
+                          </Text>
+                        </View>
+                      </View>
                       <TouchableOpacity
                         activeOpacity={0.2}
                         onPress={[Function]}
@@ -3667,18 +4538,44 @@ ShallowWrapper {
                       spread={true}
                       useNativeDriver={true}
                     >
-                      <Text
-                        h2={true}
-                        marginB-5={true}
-                        style={
-                          Object {
-                            "fontWeight": "300",
-                          }
-                        }
+                      <View
+                        centerV={true}
+                        row={true}
                         useNativeDriver={true}
                       >
-                        Batch scan
-                      </Text>
+                        <Text
+                          h2={true}
+                          marginB-5={true}
+                          style={
+                            Object {
+                              "fontWeight": "300",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          Batch scan
+                        </Text>
+                        <View
+                          br20={true}
+                          marginB-4={true}
+                          marginL-5={true}
+                          paddingH-3={true}
+                          paddingV-1={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#e32d2f",
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          <Text
+                            useNativeDriver={true}
+                            white={true}
+                          >
+                            Pro
+                          </Text>
+                        </View>
+                      </View>
                       <SettingSwitch
                         name="batch"
                         onChange={[Function]}
@@ -3788,6 +4685,7 @@ ShallowWrapper {
                         History
                       </Text>
                       <SettingSwitch
+                        disabled={true}
                         name="history"
                         onChange={[Function]}
                         value={false}
@@ -3824,6 +4722,7 @@ ShallowWrapper {
                         Duplicate scans
                       </Text>
                       <SettingSwitch
+                        disabled={true}
                         name="duplicate"
                         onChange={[Function]}
                         value={false}
@@ -4042,18 +4941,44 @@ ShallowWrapper {
                         spread={true}
                         useNativeDriver={true}
                       >
-                        <Text
-                          h2={true}
-                          marginB-5={true}
-                          style={
-                            Object {
-                              "fontWeight": "300",
-                            }
-                          }
+                        <View
+                          centerV={true}
+                          row={true}
                           useNativeDriver={true}
                         >
-                          Background color
-                        </Text>
+                          <Text
+                            h2={true}
+                            marginB-5={true}
+                            style={
+                              Object {
+                                "fontWeight": "300",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            Background color
+                          </Text>
+                          <View
+                            br20={true}
+                            marginB-4={true}
+                            marginL-5={true}
+                            paddingH-3={true}
+                            paddingV-1={true}
+                            style={
+                              Object {
+                                "backgroundColor": "#e32d2f",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            <Text
+                              useNativeDriver={true}
+                              white={true}
+                            >
+                              Pro
+                            </Text>
+                          </View>
+                        </View>
                         <TouchableOpacity
                           activeOpacity={0.2}
                           onPress={[Function]}
@@ -4090,18 +5015,44 @@ ShallowWrapper {
                         spread={true}
                         useNativeDriver={true}
                       >
-                        <Text
-                          h2={true}
-                          marginB-5={true}
-                          style={
-                            Object {
-                              "fontWeight": "300",
-                            }
-                          }
+                        <View
+                          centerV={true}
+                          row={true}
                           useNativeDriver={true}
                         >
-                          Foreground color
-                        </Text>
+                          <Text
+                            h2={true}
+                            marginB-5={true}
+                            style={
+                              Object {
+                                "fontWeight": "300",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            Foreground color
+                          </Text>
+                          <View
+                            br20={true}
+                            marginB-4={true}
+                            marginL-5={true}
+                            paddingH-3={true}
+                            paddingV-1={true}
+                            style={
+                              Object {
+                                "backgroundColor": "#e32d2f",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            <Text
+                              useNativeDriver={true}
+                              white={true}
+                            >
+                              Pro
+                            </Text>
+                          </View>
+                        </View>
                         <TouchableOpacity
                           activeOpacity={0.2}
                           onPress={[Function]}
@@ -4166,18 +5117,44 @@ ShallowWrapper {
                           spread={true}
                           useNativeDriver={true}
                         >
-                          <Text
-                            h2={true}
-                            marginB-5={true}
-                            style={
-                              Object {
-                                "fontWeight": "300",
-                              }
-                            }
+                          <View
+                            centerV={true}
+                            row={true}
                             useNativeDriver={true}
                           >
-                            Background color
-                          </Text>
+                            <Text
+                              h2={true}
+                              marginB-5={true}
+                              style={
+                                Object {
+                                  "fontWeight": "300",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              Background color
+                            </Text>
+                            <View
+                              br20={true}
+                              marginB-4={true}
+                              marginL-5={true}
+                              paddingH-3={true}
+                              paddingV-1={true}
+                              style={
+                                Object {
+                                  "backgroundColor": "#e32d2f",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              <Text
+                                useNativeDriver={true}
+                                white={true}
+                              >
+                                Pro
+                              </Text>
+                            </View>
+                          </View>
                           <TouchableOpacity
                             activeOpacity={0.2}
                             onPress={[Function]}
@@ -4214,18 +5191,44 @@ ShallowWrapper {
                           spread={true}
                           useNativeDriver={true}
                         >
-                          <Text
-                            h2={true}
-                            marginB-5={true}
-                            style={
-                              Object {
-                                "fontWeight": "300",
-                              }
-                            }
+                          <View
+                            centerV={true}
+                            row={true}
                             useNativeDriver={true}
                           >
-                            Foreground color
-                          </Text>
+                            <Text
+                              h2={true}
+                              marginB-5={true}
+                              style={
+                                Object {
+                                  "fontWeight": "300",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              Foreground color
+                            </Text>
+                            <View
+                              br20={true}
+                              marginB-4={true}
+                              marginL-5={true}
+                              paddingH-3={true}
+                              paddingV-1={true}
+                              style={
+                                Object {
+                                  "backgroundColor": "#e32d2f",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              <Text
+                                useNativeDriver={true}
+                                white={true}
+                              >
+                                Pro
+                              </Text>
+                            </View>
+                          </View>
                           <TouchableOpacity
                             activeOpacity={0.2}
                             onPress={[Function]}
@@ -4283,18 +5286,44 @@ ShallowWrapper {
                             spread={true}
                             useNativeDriver={true}
                           >
-                            <Text
-                              h2={true}
-                              marginB-5={true}
-                              style={
-                                Object {
-                                  "fontWeight": "300",
-                                }
-                              }
+                            <View
+                              centerV={true}
+                              row={true}
                               useNativeDriver={true}
                             >
-                              Background color
-                            </Text>
+                              <Text
+                                h2={true}
+                                marginB-5={true}
+                                style={
+                                  Object {
+                                    "fontWeight": "300",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                Background color
+                              </Text>
+                              <View
+                                br20={true}
+                                marginB-4={true}
+                                marginL-5={true}
+                                paddingH-3={true}
+                                paddingV-1={true}
+                                style={
+                                  Object {
+                                    "backgroundColor": "#e32d2f",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                <Text
+                                  useNativeDriver={true}
+                                  white={true}
+                                >
+                                  Pro
+                                </Text>
+                              </View>
+                            </View>
                             <TouchableOpacity
                               activeOpacity={0.2}
                               onPress={[Function]}
@@ -4333,18 +5362,44 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": Array [
-                              <Text
-                                h2={true}
-                                marginB-5={true}
-                                style={
-                                  Object {
-                                    "fontWeight": "300",
-                                  }
-                                }
+                              <View
+                                centerV={true}
+                                row={true}
                                 useNativeDriver={true}
                               >
-                                Background color
-                              </Text>,
+                                <Text
+                                  h2={true}
+                                  marginB-5={true}
+                                  style={
+                                    Object {
+                                      "fontWeight": "300",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  Background color
+                                </Text>
+                                <View
+                                  br20={true}
+                                  marginB-4={true}
+                                  marginL-5={true}
+                                  paddingH-3={true}
+                                  paddingV-1={true}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#e32d2f",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>
+                                </View>
+                              </View>,
                               <TouchableOpacity
                                 activeOpacity={0.2}
                                 onPress={[Function]}
@@ -4376,16 +5431,101 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "class",
                               "props": Object {
-                                "children": "Background color",
-                                "h2": true,
-                                "marginB-5": true,
-                                "style": Object {
-                                  "fontWeight": "300",
-                                },
+                                "centerV": true,
+                                "children": Array [
+                                  <Text
+                                    h2={true}
+                                    marginB-5={true}
+                                    style={
+                                      Object {
+                                        "fontWeight": "300",
+                                      }
+                                    }
+                                    useNativeDriver={true}
+                                  >
+                                    Background color
+                                  </Text>,
+                                  <View
+                                    br20={true}
+                                    marginB-4={true}
+                                    marginL-5={true}
+                                    paddingH-3={true}
+                                    paddingV-1={true}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#e32d2f",
+                                      }
+                                    }
+                                    useNativeDriver={true}
+                                  >
+                                    <Text
+                                      useNativeDriver={true}
+                                      white={true}
+                                    >
+                                      Pro
+                                    </Text>
+                                  </View>,
+                                ],
+                                "row": true,
                                 "useNativeDriver": true,
                               },
                               "ref": null,
-                              "rendered": "Background color",
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "children": "Background color",
+                                    "h2": true,
+                                    "marginB-5": true,
+                                    "style": Object {
+                                      "fontWeight": "300",
+                                    },
+                                    "useNativeDriver": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": "Background color",
+                                  "type": [Function],
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "br20": true,
+                                    "children": <Text
+                                      useNativeDriver={true}
+                                      white={true}
+                                    >
+                                      Pro
+                                    </Text>,
+                                    "marginB-4": true,
+                                    "marginL-5": true,
+                                    "paddingH-3": true,
+                                    "paddingV-1": true,
+                                    "style": Object {
+                                      "backgroundColor": "#e32d2f",
+                                    },
+                                    "useNativeDriver": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": Object {
+                                    "instance": null,
+                                    "key": undefined,
+                                    "nodeType": "class",
+                                    "props": Object {
+                                      "children": "Pro",
+                                      "useNativeDriver": true,
+                                      "white": true,
+                                    },
+                                    "ref": null,
+                                    "rendered": "Pro",
+                                    "type": [Function],
+                                  },
+                                  "type": [Function],
+                                },
+                              ],
                               "type": [Function],
                             },
                             Object {
@@ -4443,18 +5583,44 @@ ShallowWrapper {
                             spread={true}
                             useNativeDriver={true}
                           >
-                            <Text
-                              h2={true}
-                              marginB-5={true}
-                              style={
-                                Object {
-                                  "fontWeight": "300",
-                                }
-                              }
+                            <View
+                              centerV={true}
+                              row={true}
                               useNativeDriver={true}
                             >
-                              Foreground color
-                            </Text>
+                              <Text
+                                h2={true}
+                                marginB-5={true}
+                                style={
+                                  Object {
+                                    "fontWeight": "300",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                Foreground color
+                              </Text>
+                              <View
+                                br20={true}
+                                marginB-4={true}
+                                marginL-5={true}
+                                paddingH-3={true}
+                                paddingV-1={true}
+                                style={
+                                  Object {
+                                    "backgroundColor": "#e32d2f",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                <Text
+                                  useNativeDriver={true}
+                                  white={true}
+                                >
+                                  Pro
+                                </Text>
+                              </View>
+                            </View>
                             <TouchableOpacity
                               activeOpacity={0.2}
                               onPress={[Function]}
@@ -4493,18 +5659,44 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": Array [
-                              <Text
-                                h2={true}
-                                marginB-5={true}
-                                style={
-                                  Object {
-                                    "fontWeight": "300",
-                                  }
-                                }
+                              <View
+                                centerV={true}
+                                row={true}
                                 useNativeDriver={true}
                               >
-                                Foreground color
-                              </Text>,
+                                <Text
+                                  h2={true}
+                                  marginB-5={true}
+                                  style={
+                                    Object {
+                                      "fontWeight": "300",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  Foreground color
+                                </Text>
+                                <View
+                                  br20={true}
+                                  marginB-4={true}
+                                  marginL-5={true}
+                                  paddingH-3={true}
+                                  paddingV-1={true}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#e32d2f",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>
+                                </View>
+                              </View>,
                               <TouchableOpacity
                                 activeOpacity={0.2}
                                 onPress={[Function]}
@@ -4536,16 +5728,101 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "class",
                               "props": Object {
-                                "children": "Foreground color",
-                                "h2": true,
-                                "marginB-5": true,
-                                "style": Object {
-                                  "fontWeight": "300",
-                                },
+                                "centerV": true,
+                                "children": Array [
+                                  <Text
+                                    h2={true}
+                                    marginB-5={true}
+                                    style={
+                                      Object {
+                                        "fontWeight": "300",
+                                      }
+                                    }
+                                    useNativeDriver={true}
+                                  >
+                                    Foreground color
+                                  </Text>,
+                                  <View
+                                    br20={true}
+                                    marginB-4={true}
+                                    marginL-5={true}
+                                    paddingH-3={true}
+                                    paddingV-1={true}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#e32d2f",
+                                      }
+                                    }
+                                    useNativeDriver={true}
+                                  >
+                                    <Text
+                                      useNativeDriver={true}
+                                      white={true}
+                                    >
+                                      Pro
+                                    </Text>
+                                  </View>,
+                                ],
+                                "row": true,
                                 "useNativeDriver": true,
                               },
                               "ref": null,
-                              "rendered": "Foreground color",
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "children": "Foreground color",
+                                    "h2": true,
+                                    "marginB-5": true,
+                                    "style": Object {
+                                      "fontWeight": "300",
+                                    },
+                                    "useNativeDriver": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": "Foreground color",
+                                  "type": [Function],
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "br20": true,
+                                    "children": <Text
+                                      useNativeDriver={true}
+                                      white={true}
+                                    >
+                                      Pro
+                                    </Text>,
+                                    "marginB-4": true,
+                                    "marginL-5": true,
+                                    "paddingH-3": true,
+                                    "paddingV-1": true,
+                                    "style": Object {
+                                      "backgroundColor": "#e32d2f",
+                                    },
+                                    "useNativeDriver": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": Object {
+                                    "instance": null,
+                                    "key": undefined,
+                                    "nodeType": "class",
+                                    "props": Object {
+                                      "children": "Pro",
+                                      "useNativeDriver": true,
+                                      "white": true,
+                                    },
+                                    "ref": null,
+                                    "rendered": "Pro",
+                                    "type": [Function],
+                                  },
+                                  "type": [Function],
+                                },
+                              ],
                               "type": [Function],
                             },
                             Object {
@@ -4641,18 +5918,44 @@ ShallowWrapper {
                         spread={true}
                         useNativeDriver={true}
                       >
-                        <Text
-                          h2={true}
-                          marginB-5={true}
-                          style={
-                            Object {
-                              "fontWeight": "300",
-                            }
-                          }
+                        <View
+                          centerV={true}
+                          row={true}
                           useNativeDriver={true}
                         >
-                          Batch scan
-                        </Text>
+                          <Text
+                            h2={true}
+                            marginB-5={true}
+                            style={
+                              Object {
+                                "fontWeight": "300",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            Batch scan
+                          </Text>
+                          <View
+                            br20={true}
+                            marginB-4={true}
+                            marginL-5={true}
+                            paddingH-3={true}
+                            paddingV-1={true}
+                            style={
+                              Object {
+                                "backgroundColor": "#e32d2f",
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                            <Text
+                              useNativeDriver={true}
+                              white={true}
+                            >
+                              Pro
+                            </Text>
+                          </View>
+                        </View>
                         <SettingSwitch
                           name="batch"
                           onChange={[Function]}
@@ -4762,6 +6065,7 @@ ShallowWrapper {
                           History
                         </Text>
                         <SettingSwitch
+                          disabled={true}
                           name="history"
                           onChange={[Function]}
                           value={false}
@@ -4798,6 +6102,7 @@ ShallowWrapper {
                           Duplicate scans
                         </Text>
                         <SettingSwitch
+                          disabled={true}
                           name="duplicate"
                           onChange={[Function]}
                           value={false}
@@ -4849,18 +6154,44 @@ ShallowWrapper {
                           spread={true}
                           useNativeDriver={true}
                         >
-                          <Text
-                            h2={true}
-                            marginB-5={true}
-                            style={
-                              Object {
-                                "fontWeight": "300",
-                              }
-                            }
+                          <View
+                            centerV={true}
+                            row={true}
                             useNativeDriver={true}
                           >
-                            Batch scan
-                          </Text>
+                            <Text
+                              h2={true}
+                              marginB-5={true}
+                              style={
+                                Object {
+                                  "fontWeight": "300",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              Batch scan
+                            </Text>
+                            <View
+                              br20={true}
+                              marginB-4={true}
+                              marginL-5={true}
+                              paddingH-3={true}
+                              paddingV-1={true}
+                              style={
+                                Object {
+                                  "backgroundColor": "#e32d2f",
+                                }
+                              }
+                              useNativeDriver={true}
+                            >
+                              <Text
+                                useNativeDriver={true}
+                                white={true}
+                              >
+                                Pro
+                              </Text>
+                            </View>
+                          </View>
                           <SettingSwitch
                             name="batch"
                             onChange={[Function]}
@@ -4970,6 +6301,7 @@ ShallowWrapper {
                             History
                           </Text>
                           <SettingSwitch
+                            disabled={true}
                             name="history"
                             onChange={[Function]}
                             value={false}
@@ -5006,6 +6338,7 @@ ShallowWrapper {
                             Duplicate scans
                           </Text>
                           <SettingSwitch
+                            disabled={true}
                             name="duplicate"
                             onChange={[Function]}
                             value={false}
@@ -5050,18 +6383,44 @@ ShallowWrapper {
                             spread={true}
                             useNativeDriver={true}
                           >
-                            <Text
-                              h2={true}
-                              marginB-5={true}
-                              style={
-                                Object {
-                                  "fontWeight": "300",
-                                }
-                              }
+                            <View
+                              centerV={true}
+                              row={true}
                               useNativeDriver={true}
                             >
-                              Batch scan
-                            </Text>
+                              <Text
+                                h2={true}
+                                marginB-5={true}
+                                style={
+                                  Object {
+                                    "fontWeight": "300",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                Batch scan
+                              </Text>
+                              <View
+                                br20={true}
+                                marginB-4={true}
+                                marginL-5={true}
+                                paddingH-3={true}
+                                paddingV-1={true}
+                                style={
+                                  Object {
+                                    "backgroundColor": "#e32d2f",
+                                  }
+                                }
+                                useNativeDriver={true}
+                              >
+                                <Text
+                                  useNativeDriver={true}
+                                  white={true}
+                                >
+                                  Pro
+                                </Text>
+                              </View>
+                            </View>
                             <SettingSwitch
                               name="batch"
                               onChange={[Function]}
@@ -5088,18 +6447,44 @@ ShallowWrapper {
                           "props": Object {
                             "centerV": true,
                             "children": Array [
-                              <Text
-                                h2={true}
-                                marginB-5={true}
-                                style={
-                                  Object {
-                                    "fontWeight": "300",
-                                  }
-                                }
+                              <View
+                                centerV={true}
+                                row={true}
                                 useNativeDriver={true}
                               >
-                                Batch scan
-                              </Text>,
+                                <Text
+                                  h2={true}
+                                  marginB-5={true}
+                                  style={
+                                    Object {
+                                      "fontWeight": "300",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  Batch scan
+                                </Text>
+                                <View
+                                  br20={true}
+                                  marginB-4={true}
+                                  marginL-5={true}
+                                  paddingH-3={true}
+                                  paddingV-1={true}
+                                  style={
+                                    Object {
+                                      "backgroundColor": "#e32d2f",
+                                    }
+                                  }
+                                  useNativeDriver={true}
+                                >
+                                  <Text
+                                    useNativeDriver={true}
+                                    white={true}
+                                  >
+                                    Pro
+                                  </Text>
+                                </View>
+                              </View>,
                               <SettingSwitch
                                 name="batch"
                                 onChange={[Function]}
@@ -5117,16 +6502,101 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "class",
                               "props": Object {
-                                "children": "Batch scan",
-                                "h2": true,
-                                "marginB-5": true,
-                                "style": Object {
-                                  "fontWeight": "300",
-                                },
+                                "centerV": true,
+                                "children": Array [
+                                  <Text
+                                    h2={true}
+                                    marginB-5={true}
+                                    style={
+                                      Object {
+                                        "fontWeight": "300",
+                                      }
+                                    }
+                                    useNativeDriver={true}
+                                  >
+                                    Batch scan
+                                  </Text>,
+                                  <View
+                                    br20={true}
+                                    marginB-4={true}
+                                    marginL-5={true}
+                                    paddingH-3={true}
+                                    paddingV-1={true}
+                                    style={
+                                      Object {
+                                        "backgroundColor": "#e32d2f",
+                                      }
+                                    }
+                                    useNativeDriver={true}
+                                  >
+                                    <Text
+                                      useNativeDriver={true}
+                                      white={true}
+                                    >
+                                      Pro
+                                    </Text>
+                                  </View>,
+                                ],
+                                "row": true,
                                 "useNativeDriver": true,
                               },
                               "ref": null,
-                              "rendered": "Batch scan",
+                              "rendered": Array [
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "children": "Batch scan",
+                                    "h2": true,
+                                    "marginB-5": true,
+                                    "style": Object {
+                                      "fontWeight": "300",
+                                    },
+                                    "useNativeDriver": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": "Batch scan",
+                                  "type": [Function],
+                                },
+                                Object {
+                                  "instance": null,
+                                  "key": undefined,
+                                  "nodeType": "class",
+                                  "props": Object {
+                                    "br20": true,
+                                    "children": <Text
+                                      useNativeDriver={true}
+                                      white={true}
+                                    >
+                                      Pro
+                                    </Text>,
+                                    "marginB-4": true,
+                                    "marginL-5": true,
+                                    "paddingH-3": true,
+                                    "paddingV-1": true,
+                                    "style": Object {
+                                      "backgroundColor": "#e32d2f",
+                                    },
+                                    "useNativeDriver": true,
+                                  },
+                                  "ref": null,
+                                  "rendered": Object {
+                                    "instance": null,
+                                    "key": undefined,
+                                    "nodeType": "class",
+                                    "props": Object {
+                                      "children": "Pro",
+                                      "useNativeDriver": true,
+                                      "white": true,
+                                    },
+                                    "ref": null,
+                                    "rendered": "Pro",
+                                    "type": [Function],
+                                  },
+                                  "type": [Function],
+                                },
+                              ],
                               "type": [Function],
                             },
                             Object {
@@ -5435,6 +6905,7 @@ ShallowWrapper {
                               History
                             </Text>
                             <SettingSwitch
+                              disabled={true}
                               name="history"
                               onChange={[Function]}
                               value={false}
@@ -5473,6 +6944,7 @@ ShallowWrapper {
                                 History
                               </Text>,
                               <SettingSwitch
+                                disabled={true}
                                 name="history"
                                 onChange={[Function]}
                                 value={false}
@@ -5506,6 +6978,7 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "function",
                               "props": Object {
+                                "disabled": true,
                                 "name": "history",
                                 "onChange": [Function],
                                 "value": false,
@@ -5559,6 +7032,7 @@ ShallowWrapper {
                               Duplicate scans
                             </Text>
                             <SettingSwitch
+                              disabled={true}
                               name="duplicate"
                               onChange={[Function]}
                               value={false}
@@ -5597,6 +7071,7 @@ ShallowWrapper {
                                 Duplicate scans
                               </Text>,
                               <SettingSwitch
+                                disabled={true}
                                 name="duplicate"
                                 onChange={[Function]}
                                 value={false}
@@ -5630,6 +7105,7 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "function",
                               "props": Object {
+                                "disabled": true,
                                 "name": "duplicate",
                                 "onChange": [Function],
                                 "value": false,

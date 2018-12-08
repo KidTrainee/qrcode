@@ -2,8 +2,10 @@
 import Reducer, {
   addItemToHistory,
   removeItemFromHistory,
+  clearHistory,
   ADD_ITEM_TO_HISTORY,
-  REMOVE_ITEM_FROM_HISTORY
+  REMOVE_ITEM_FROM_HISTORY,
+  CLEAR_HISTORY,
 } from '../HistoryState';
 
 describe('HistoryState Actions', () => {
@@ -24,6 +26,11 @@ describe('HistoryState Actions', () => {
     const { payload } = removeItemFromHistory(1);
     expect(payload).toBe(1);
   })
+
+  it('should call clearHistory as expected', () => {
+    expect(clearHistory()).toHaveProperty('type', CLEAR_HISTORY);
+    expect(clearHistory()).not.toHaveProperty('payload');
+  })
 });
 
 describe('HistoryState Reducer', () => {
@@ -43,6 +50,12 @@ describe('HistoryState Reducer', () => {
   it('should handle removeItemFromHistory action', () => {
     const prevState = Reducer({ items: [] }, addItemToHistory({ data: 'qrcode'}));
     const newState = Reducer(prevState, removeItemFromHistory(prevState.items[0].id));
+
+    expect(newState.items.length).toBe(0);
+  });
+
+  it('should handle clearHistory action', () => {
+    const newState = Reducer({ items: [{}, {}, {}] }, clearHistory());
 
     expect(newState.items.length).toBe(0);
   });

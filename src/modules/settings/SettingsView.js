@@ -48,12 +48,17 @@ export const generateCodePreviewColors = (color: string) => ({
     : colors.black,
 });
 
-export const SettingSwitch = (props: {value: boolean, onChange: (string, boolean) => void, name: string}) => (
-  <Switch
-    value={props.value}
-    onValueChange={value => props.onChange(props.name, value)}
-    testID="switch"
-  />
+export const SettingSwitch = (props: {
+  value: boolean,
+  onChange: (string, boolean) => void,
+  name: string,
+  disabled?: boolean}) => (
+    <Switch
+      value={props.value}
+      onValueChange={value => props.onChange(props.name, value)}
+      disabled={props.disabled}
+      testID="switch"
+    />
 );
 
 export default function SettingsView(props: Props) {
@@ -82,7 +87,12 @@ export default function SettingsView(props: Props) {
           <View br10 paddingH-15 paddingT-25 paddingB-0 style={styles.settingBlock}>
             <View marginB-25>
               <View row spread>
-                <Text h2 marginB-5 style={styles.textNormal}>Background color</Text>
+                <View row centerV>
+                  <Text h2 marginB-5 style={styles.textNormal}>Background color</Text>
+                  <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+                    <Text white>Pro</Text>
+                  </View>
+                </View>
                 <TouchableOpacity
                   onPress={props.toggleBackgroundColorModal}
                   style={[
@@ -95,9 +105,14 @@ export default function SettingsView(props: Props) {
             </View>
             <View marginB-25>
               <View row spread>
-                <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
+                <View row centerV>
+                  <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
+                  <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+                    <Text white>Pro</Text>
+                  </View>
+                </View>
                 <TouchableOpacity
-                  onPress={props.toggleForegroundColorModal}
+                  onPress={props.goPricingPage}
                   style={[
                     styles.colorPreview,
                     generateCodePreviewColors(props.settings.foregroundColor),
@@ -113,7 +128,12 @@ export default function SettingsView(props: Props) {
           <View br10 paddingH-15 paddingT-25 paddingB-0 style={styles.settingBlock}>
             <View marginB-25>
               <View row spread centerV>
-                <Text h2 marginB-5 style={styles.textNormal}>Batch scan</Text>
+                <View row centerV>
+                  <Text h2 marginB-5 style={styles.textNormal}>Batch scan</Text>
+                  <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+                    <Text white>Pro</Text>
+                  </View>
+                </View>
                 <SettingSwitch
                   value={props.settings.batch}
                   onChange={props.setSettingValue}
@@ -150,6 +170,7 @@ export default function SettingsView(props: Props) {
                 <SettingSwitch
                   value={props.settings.history}
                   onChange={props.setSettingValue}
+                  disabled={props.settings.batch}
                   name="history"
                 />
               </View>
@@ -161,6 +182,7 @@ export default function SettingsView(props: Props) {
                 <SettingSwitch
                   value={props.settings.duplicate}
                   onChange={props.setSettingValue}
+                  disabled={props.settings.batch}
                   name="duplicate"
                 />
               </View>
@@ -219,6 +241,9 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
     elevation: 3,
+  },
+  proLabel: {
+    backgroundColor: colors.red,
   },
   colorPreview: {
     width: 25,

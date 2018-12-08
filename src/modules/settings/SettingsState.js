@@ -36,6 +36,14 @@ export function setSettingValue(data: { setting: string, value: any }) {
 export default function SettingsReducer(state: SettingsState = initialState, action: Action): SettingsState {
   switch (action.type) {
     case SET_SETTING_VALUE:
+      if (action.payload.setting === 'batch' && action.payload.value === true) {
+        return {
+          ...state,
+          history: true,
+          duplicate: false,
+          batch: true,
+        };
+      }
       return {
         ...state,
         [action.payload.setting]: action.payload.value,

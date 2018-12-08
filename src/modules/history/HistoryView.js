@@ -30,6 +30,7 @@ type Props = {
     date: Date,
   }>,
   removeItemFromHistory: (number) => void,
+  handleClearHistory: () => void,
 };
 
 export default function HistoryView(props: Props) {
@@ -39,8 +40,13 @@ export default function HistoryView(props: Props) {
         translucent={false}
         backgroundColor={colors.lightBlue}
       />
-      <View centerH marginB-25 marginT-10>
+      <View row centerH centerV marginB-25 marginT-10>
         <Text h1 darkBlue>History</Text>
+        {props.items.length > 10 && (
+          <TouchableOpacity style={styles.clearButton} onPress={props.handleClearHistory}>
+            <Text red>Clear</Text>
+          </TouchableOpacity>
+        )}
       </View>
       <ScrollView
         style={styles.historyItemsWrapper}
@@ -119,5 +125,10 @@ const styles = StyleSheet.create({
     height: 25,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  clearButton: {
+    position: 'absolute',
+    top: 10,
+    right: 15,
   },
 });
