@@ -88,7 +88,7 @@ export default function ScannedCodeView(props: Props) {
 
         <View flex bottom paddingB-30>
           { parsedString.type === codeTypesList.TEXT && (
-            <View row centerH>
+            <View row centerH style={{ justifyContent: 'space-around' }}>
               <CopyButton data={data} />
               <ShareButton data={data} />
             </View>
@@ -101,7 +101,7 @@ export default function ScannedCodeView(props: Props) {
             </View>
           )}
           { parsedString.type === codeTypesList.EMAIL && (
-            <View row centerH spread>
+            <View row centerH>
               <OpenButton data={data}>send</OpenButton>
             </View>
           )}
@@ -113,12 +113,12 @@ export default function ScannedCodeView(props: Props) {
             </View>
           )}
           { parsedString.type === codeTypesList.SMS && (
-            <View row centerH spread>
+            <View row centerH>
               <OpenButton data={data}>send</OpenButton>
             </View>
           )}
           { parsedString.type === codeTypesList.GEO && (
-            <View row centerH spread>
+            <View row centerH>
               <OpenInMaps longitude={Number(fieldsDict.longitude)} latitude={Number(fieldsDict.latitude)} />
             </View>
           )}
