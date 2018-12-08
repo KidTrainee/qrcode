@@ -1,9 +1,15 @@
+import { connect } from 'react-redux';
 import { compose, withState, withHandlers } from 'recompose';
 
 import { codeTypesList } from './NewCodeState';
 import NewCodeView from './NewCodeView';
 
 export default compose(
+  connect(
+    state => ({
+      isPro: state.app.isPro,
+    }),
+  ),
   withState('activeCodeType', 'setCodeType', codeTypesList.TEXT),
   withState('fieldValues', 'setFielsValues', {}),
   withHandlers({

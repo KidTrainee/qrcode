@@ -28,6 +28,7 @@ type Props = {
   activeCodeType: string,
   updateField: (string) => void,
   changeCodeType: (string) => void,
+  isPro: boolean,
 };
 
 export const codeTypes = [
@@ -35,11 +36,19 @@ export const codeTypes = [
   { id: 1, label: codeTypesList.URL, icon: 'text' },
   { id: 2, label: codeTypesList.EMAIL, icon: 'text' },
   { id: 3, label: codeTypesList.TEL, icon: 'text' },
-  { id: 4, label: codeTypesList.CONTACT, icon: 'text' },
   { id: 5, label: codeTypesList.SMS, icon: 'text' },
-  { id: 6, label: codeTypesList.GEO, icon: 'text' },
-  { id: 7, label: codeTypesList.EVENT, icon: 'text' },
-  { id: 8, label: codeTypesList.WIFI, icon: 'text' },
+  {
+    id: 4, label: codeTypesList.CONTACT, icon: 'text', proOnly: true,
+  },
+  {
+    id: 6, label: codeTypesList.GEO, icon: 'text', proOnly: true,
+  },
+  {
+    id: 7, label: codeTypesList.EVENT, icon: 'text', proOnly: true,
+  },
+  {
+    id: 8, label: codeTypesList.WIFI, icon: 'text', proOnly: true,
+  },
 ];
 
 export default function NewCodeView(props: Props) {
@@ -62,7 +71,10 @@ export default function NewCodeView(props: Props) {
           <TouchableOpacity
             testID={`button:codeType-${codeType.label}`}
             key={codeType.id}
-            onPress={() => props.changeCodeType(codeType.label)}
+            onPress={!props.isPro && codeType.proOnly
+              ? () => props.navigation.navigate('Pricing')
+              : () => props.changeCodeType(codeType.label)
+            }
             style={[
               styles.typeContainer,
               index === codeTypes.length - 1 && { marginRight: 40 },
@@ -74,6 +86,11 @@ export default function NewCodeView(props: Props) {
               assetName={codeType.label !== props.activeCodeType ? codeType.icon : `${codeType.icon}-white`}
             />
             <Text h3 lightBlue marginT-5 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
+            {codeType.proOnly && !props.isPro && (
+              <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+                <Text white>Pro</Text>
+              </View>
+            )}
           </TouchableOpacity>
         ))}
       </ScrollView>
@@ -128,6 +145,7 @@ const styles = StyleSheet.create({
     paddingTop: 5,
   },
   typeContainer: {
+    position: 'relative',
     alignItems: 'center',
     justifyContent: 'center',
     width: codeTypeWidth,
@@ -144,6 +162,12 @@ const styles = StyleSheet.create({
     shadowRadius: 2.22,
 
     elevation: 3,
+  },
+  proLabel: {
+    position: 'absolute',
+    right: -10,
+    top: -5,
+    backgroundColor: colors.red,
   },
   activeCodeType: {
     backgroundColor: colors.primaryGradientStart,

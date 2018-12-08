@@ -3,10 +3,13 @@ import {
   compose, withState, withHandlers, lifecycle,
 } from 'recompose';
 import { connect } from 'react-redux';
+import Sound from 'react-native-sound';
 
 import { addItemToHistory } from '../history/HistoryState';
 
 import ScannerView from './ScannerView';
+
+Sound.setCategory('Playback');
 
 export default compose(
   connect(
@@ -21,6 +24,17 @@ export default compose(
   withState('isFlashlightOn', 'setFlashlight', false),
   withState('focusedScreen', 'setFocusedScreen', ''),
   withHandlers({
+    playSound: () => () => {
+      const beep = new Sound('beep.wav', Sound.MAIN_BUNDLE, (error) => {
+        if (error) {
+          console.log('failed to load the sound');
+        } else {
+          beep.play();
+        }
+      });
+    },
+  }),
+  withHandlers({
     toggleFlashlight: props => () => {
       props.setFlashlight(!props.isFlashlightOn);
     },
@@ -31,6 +45,9 @@ export default compose(
             props.addItemToHistory(codeData);
             if (props.settings.vibrate) {
               Vibration.vibrate(200);
+            }
+            if (props.settings.beep) {
+              props.playSound();
             }
           }
         }
@@ -50,6 +67,9 @@ export default compose(
         }
         if (props.settings.vibrate) {
           Vibration.vibrate(200);
+        }
+        if (props.settings.beep) {
+          props.playSound();
         }
       }
     },

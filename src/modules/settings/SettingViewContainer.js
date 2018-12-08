@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { compose, withStateHandlers, withHandlers } from 'recompose';
 
 import { setSettingValue } from './SettingsState';
-
 import SettingsView from './SettingsView';
 
 export const enhance = compose(
   connect(
     state => ({
       settings: state.settings,
+      isPro: state.app.isPro,
     }),
     dispatch => ({
       setSettingValue: (setting, value) => dispatch(setSettingValue({ setting, value })),

@@ -31,9 +31,12 @@ type Props = {
   }>,
   removeItemFromHistory: (number) => void,
   handleClearHistory: () => void,
+  goPricingPage: () => void,
+  isPro: boolean,
 };
 
 export default function HistoryView(props: Props) {
+  const itemsToMap = props.isPro ? props.items : props.items.slice(0, 10);
   return (
     <SafeAreaView style={commonStyles.safeArea}>
       <StatusBar
@@ -52,7 +55,7 @@ export default function HistoryView(props: Props) {
         style={styles.historyItemsWrapper}
       >
         {props.items.length === 0 && <Text marginT-20 gray center>You don't have any scanned code</Text>}
-        {props.items.map((qrcode) => {
+        {itemsToMap.map((qrcode) => {
           const parsedQRCode = parseScannedString(qrcode.data);
           const foundCodeType = codeTypes.find(codeType => codeType.label === parsedQRCode.type);
           const whiteIcon = foundCodeType ? `${foundCodeType.icon}-white` : 'text-white';
@@ -96,6 +99,14 @@ export default function HistoryView(props: Props) {
             </TouchableOpacity>
           );
         })}
+        {!props.isPro && props.items.length > 10 && (
+          <TouchableOpacity style={styles.needMoreButton} onPress={props.goPricingPage}>
+            <Text gray>Need more history? Unlock with&nbsp;</Text>
+            <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4>
+              <Text white>Pro</Text>
+            </View>
+          </TouchableOpacity>
+        )}
       </ScrollView>
     </SafeAreaView>
   );
@@ -123,12 +134,20 @@ const styles = StyleSheet.create({
     right: -25,
     width: 25,
     height: 25,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
   clearButton: {
     position: 'absolute',
     top: 10,
     right: 15,
+  },
+  needMoreButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 20,
+  },
+  proLabel: {
+    backgroundColor: colors.red,
   },
 });

@@ -90,6 +90,15 @@ export default function HomeView(props: Props) {
   );
 }
 
+export function iphoneXorBigger() {
+  return (
+    Platform.OS === 'ios' &&
+    !Platform.isPad &&
+    !Platform.isTVOS &&
+    (windowHeight >= 812 || windowWidth >= 812)
+  );
+}
+
 const styles = StyleSheet.create({
   cameraPreview: {
     width: windowWidth,
@@ -105,7 +114,7 @@ const styles = StyleSheet.create({
   },
   flashlightButton: {
     position: 'absolute',
-    bottom: Platform.select({ android: 100, ios: 150 }),
+    bottom: Platform.select({ android: 100, ios: iphoneXorBigger() ? 170 : 115 }),
     width: 100,
     height: 40,
     borderColor: colors.white,

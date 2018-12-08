@@ -26,6 +26,7 @@ type Props = {
   updateQrcodeRef: (any) => void,
   handleShareButtonClick: (any) => void,
   goSettingsPage: () => void,
+  isPro: boolean,
 };
 
 const windowWidth = Dimensions.get('window').width;
@@ -57,7 +58,7 @@ export default function GeneratedCodeView(props: Props) {
               variant="white"
               radius={5}
               style={{ flexGrow: 1 }}
-              onPress={props.goSettingsPage}
+              onPress={!props.isPro ? props.goSettingsPage : props.goSettingsPage}
             >
               Customize
             </Button>

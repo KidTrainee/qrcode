@@ -39,6 +39,7 @@ type Props = {
   handleBackgroundColorPick: (string) => void,
   handleForegroundColorPick: (string) => void,
   setSettingValue: (string, any) => void,
+  isPro: boolean,
 };
 
 export const generateCodePreviewColors = (color: string) => ({
@@ -73,15 +74,17 @@ export default function SettingsView(props: Props) {
         <Text h1 darkBlue>Settings</Text>
       </View>
       <ScrollView style={styles.scrollView}>
-        <View marginB-25>
-          <View row spread>
-            <Text h2 marginB-5 style={styles.textNormal}>Pro offer</Text>
-            <TouchableOpacity onPress={props.goPricingPage}>
-              <Text h3 primary>Subscribe</Text>
-            </TouchableOpacity>
+        {!props.isPro && (
+          <View marginB-25>
+            <View row spread>
+              <Text h2 marginB-5 style={styles.textNormal}>Pro offer</Text>
+              <TouchableOpacity onPress={props.goPricingPage}>
+                <Text h3 primary>Purchase</Text>
+              </TouchableOpacity>
+            </View>
+            <Text gray>Unlock all features in application</Text>
           </View>
-          <Text gray>Unlock all features in application</Text>
-        </View>
+        )}
         <View marginB-25>
           <Text h2 marginB-10>Customization</Text>
           <View br10 paddingH-15 paddingT-25 paddingB-0 style={styles.settingBlock}>
@@ -89,12 +92,14 @@ export default function SettingsView(props: Props) {
               <View row spread>
                 <View row centerV>
                   <Text h2 marginB-5 style={styles.textNormal}>Background color</Text>
-                  <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                    <Text white>Pro</Text>
-                  </View>
+                  {!props.isPro && (
+                    <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+                      <Text white>Pro</Text>
+                    </View>
+                  )}
                 </View>
                 <TouchableOpacity
-                  onPress={props.toggleBackgroundColorModal}
+                  onPress={!props.isPro ? props.goPricingPage : props.toggleBackgroundColorModal}
                   style={[
                     styles.colorPreview,
                     generateCodePreviewColors(props.settings.backgroundColor),
@@ -107,12 +112,14 @@ export default function SettingsView(props: Props) {
               <View row spread>
                 <View row centerV>
                   <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
-                  <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                    <Text white>Pro</Text>
-                  </View>
+                  {!props.isPro && (
+                    <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+                      <Text white>Pro</Text>
+                    </View>
+                  )}
                 </View>
                 <TouchableOpacity
-                  onPress={props.goPricingPage}
+                  onPress={!props.isPro ? props.goPricingPage : props.toggleForegroundColorModal}
                   style={[
                     styles.colorPreview,
                     generateCodePreviewColors(props.settings.foregroundColor),
@@ -130,13 +137,15 @@ export default function SettingsView(props: Props) {
               <View row spread centerV>
                 <View row centerV>
                   <Text h2 marginB-5 style={styles.textNormal}>Batch scan</Text>
-                  <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                    <Text white>Pro</Text>
-                  </View>
+                  {!props.isPro && (
+                    <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+                      <Text white>Pro</Text>
+                    </View>
+                  )}
                 </View>
                 <SettingSwitch
                   value={props.settings.batch}
-                  onChange={props.setSettingValue}
+                  onChange={!props.isPro ? props.goPricingPage : props.setSettingValue}
                   name="batch"
                 />
               </View>

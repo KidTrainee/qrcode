@@ -8,6 +8,7 @@ export default compose(
   connect(
     state => ({
       settings: state.settings,
+      isPro: state.app.isPro,
     }),
   ),
   withHandlers(() => {

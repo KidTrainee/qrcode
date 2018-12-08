@@ -10,6 +10,7 @@ export default compose(
   connect(
     state => ({
       items: state.history.items,
+      isPro: state.app.isPro,
     }),
     dispatch => ({
       removeItemFromHistory: id => dispatch(removeItemFromHistory(id)),
@@ -17,6 +18,9 @@ export default compose(
     }),
   ),
   withHandlers({
+    goPricingPage: props => () => {
+      props.navigation.navigate('Pricing');
+    },
     handleClearHistory: props => () => {
       Alert.alert(
         'Are you sure?',

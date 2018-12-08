@@ -167,7 +167,7 @@ ShallowWrapper {
                   primary={true}
                   useNativeDriver={true}
                 >
-                  Subscribe
+                  Purchase
                 </Text>
               </TouchableOpacity>
             </View>
@@ -752,7 +752,7 @@ ShallowWrapper {
                     primary={true}
                     useNativeDriver={true}
                   >
-                    Subscribe
+                    Purchase
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -1225,7 +1225,7 @@ ShallowWrapper {
                       primary={true}
                       useNativeDriver={true}
                     >
-                      Subscribe
+                      Purchase
                     </Text>
                   </TouchableOpacity>
                 </View>,
@@ -1268,7 +1268,7 @@ ShallowWrapper {
                         primary={true}
                         useNativeDriver={true}
                       >
-                        Subscribe
+                        Purchase
                       </Text>
                     </TouchableOpacity>,
                   ],
@@ -1306,7 +1306,7 @@ ShallowWrapper {
                         primary={true}
                         useNativeDriver={true}
                       >
-                        Subscribe
+                        Purchase
                       </Text>,
                       "onPress": [Function],
                     },
@@ -1316,13 +1316,13 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": "Subscribe",
+                        "children": "Purchase",
                         "h3": true,
                         "primary": true,
                         "useNativeDriver": true,
                       },
                       "ref": null,
-                      "rendered": "Subscribe",
+                      "rendered": "Purchase",
                       "type": [Function],
                     },
                     "type": [Function],
@@ -3720,7 +3720,7 @@ ShallowWrapper {
                     primary={true}
                     useNativeDriver={true}
                   >
-                    Subscribe
+                    Purchase
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -4305,7 +4305,7 @@ ShallowWrapper {
                       primary={true}
                       useNativeDriver={true}
                     >
-                      Subscribe
+                      Purchase
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -4778,7 +4778,7 @@ ShallowWrapper {
                         primary={true}
                         useNativeDriver={true}
                       >
-                        Subscribe
+                        Purchase
                       </Text>
                     </TouchableOpacity>
                   </View>,
@@ -4821,7 +4821,7 @@ ShallowWrapper {
                           primary={true}
                           useNativeDriver={true}
                         >
-                          Subscribe
+                          Purchase
                         </Text>
                       </TouchableOpacity>,
                     ],
@@ -4859,7 +4859,7 @@ ShallowWrapper {
                           primary={true}
                           useNativeDriver={true}
                         >
-                          Subscribe
+                          Purchase
                         </Text>,
                         "onPress": [Function],
                       },
@@ -4869,13 +4869,13 @@ ShallowWrapper {
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": "Subscribe",
+                          "children": "Purchase",
                           "h3": true,
                           "primary": true,
                           "useNativeDriver": true,
                         },
                         "ref": null,
-                        "rendered": "Subscribe",
+                        "rendered": "Purchase",
                         "type": [Function],
                       },
                       "type": [Function],

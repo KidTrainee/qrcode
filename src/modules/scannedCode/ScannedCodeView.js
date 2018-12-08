@@ -119,7 +119,7 @@ export default function ScannedCodeView(props: Props) {
           )}
           { parsedString.type === codeTypesList.GEO && (
             <View row centerH spread>
-              <OpenInMaps longitude={fieldsDict.long} latitude={fieldsDict.lat} />
+              <OpenInMaps longitude={Number(fieldsDict.longitude)} latitude={Number(fieldsDict.latitude)} />
             </View>
           )}
         </View>
