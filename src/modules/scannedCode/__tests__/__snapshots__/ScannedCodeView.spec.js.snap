@@ -261,6 +261,11 @@ ShallowWrapper {
             <View
               centerH={true}
               row={true}
+              style={
+                Object {
+                  "justifyContent": "space-around",
+                }
+              }
               useNativeDriver={true}
             >
               <CopyButton
@@ -332,6 +337,11 @@ ShallowWrapper {
               <View
                 centerH={true}
                 row={true}
+                style={
+                  Object {
+                    "justifyContent": "space-around",
+                  }
+                }
                 useNativeDriver={true}
               >
                 <CopyButton
@@ -430,6 +440,11 @@ ShallowWrapper {
                 <View
                   centerH={true}
                   row={true}
+                  style={
+                    Object {
+                      "justifyContent": "space-around",
+                    }
+                  }
                   useNativeDriver={true}
                 >
                   <CopyButton
@@ -466,6 +481,9 @@ ShallowWrapper {
                     />,
                   ],
                   "row": true,
+                  "style": Object {
+                    "justifyContent": "space-around",
+                  },
                   "useNativeDriver": true,
                 },
                 "ref": null,
@@ -563,6 +581,11 @@ ShallowWrapper {
               <View
                 centerH={true}
                 row={true}
+                style={
+                  Object {
+                    "justifyContent": "space-around",
+                  }
+                }
                 useNativeDriver={true}
               >
                 <CopyButton
@@ -634,6 +657,11 @@ ShallowWrapper {
                 <View
                   centerH={true}
                   row={true}
+                  style={
+                    Object {
+                      "justifyContent": "space-around",
+                    }
+                  }
                   useNativeDriver={true}
                 >
                   <CopyButton
@@ -732,6 +760,11 @@ ShallowWrapper {
                   <View
                     centerH={true}
                     row={true}
+                    style={
+                      Object {
+                        "justifyContent": "space-around",
+                      }
+                    }
                     useNativeDriver={true}
                   >
                     <CopyButton
@@ -768,6 +801,9 @@ ShallowWrapper {
                       />,
                     ],
                     "row": true,
+                    "style": Object {
+                      "justifyContent": "space-around",
+                    },
                     "useNativeDriver": true,
                   },
                   "ref": null,

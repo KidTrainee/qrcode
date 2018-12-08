@@ -71,6 +71,22 @@ Assets.loadAssetsGroup('icons', {
 Assets.loadAssetsGroup('types', {
   text: require('../../assets/icons/types/text.png'),
   'text-white': require('../../assets/icons/types/text-white.png'),
+  link: require('../../assets/icons/types/link.png'),
+  'link-white': require('../../assets/icons/types/link-white.png'),
+  email: require('../../assets/icons/types/email.png'),
+  'email-white': require('../../assets/icons/types/email-white.png'),
+  phone: require('../../assets/icons/types/phone.png'),
+  'phone-white': require('../../assets/icons/types/phone-white.png'),
+  sms: require('../../assets/icons/types/sms.png'),
+  'sms-white': require('../../assets/icons/types/sms-white.png'),
+  contact: require('../../assets/icons/types/contact.png'),
+  'contact-white': require('../../assets/icons/types/contact-white.png'),
+  geo: require('../../assets/icons/types/geo.png'),
+  'geo-white': require('../../assets/icons/types/geo-white.png'),
+  event: require('../../assets/icons/types/event.png'),
+  'event-white': require('../../assets/icons/types/event-white.png'),
+  wifi: require('../../assets/icons/types/wifi.png'),
+  'wifi-white': require('../../assets/icons/types/wifi-white.png'),
 });
 
 Assets.loadAssetsGroup('tabbar-icons', {

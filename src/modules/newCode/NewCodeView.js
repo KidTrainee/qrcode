@@ -33,21 +33,21 @@ type Props = {
 
 export const codeTypes = [
   { id: 0, label: codeTypesList.TEXT, icon: 'text' },
-  { id: 1, label: codeTypesList.URL, icon: 'text' },
-  { id: 2, label: codeTypesList.EMAIL, icon: 'text' },
-  { id: 3, label: codeTypesList.TEL, icon: 'text' },
-  { id: 5, label: codeTypesList.SMS, icon: 'text' },
+  { id: 1, label: codeTypesList.URL, icon: 'link' },
+  { id: 2, label: codeTypesList.EMAIL, icon: 'email' },
+  { id: 3, label: codeTypesList.TEL, icon: 'phone' },
+  { id: 5, label: codeTypesList.SMS, icon: 'sms' },
   {
-    id: 4, label: codeTypesList.CONTACT, icon: 'text', proOnly: true,
+    id: 4, label: codeTypesList.CONTACT, icon: 'contact', proOnly: true,
   },
   {
-    id: 6, label: codeTypesList.GEO, icon: 'text', proOnly: true,
+    id: 6, label: codeTypesList.GEO, icon: 'geo', proOnly: true,
   },
   {
-    id: 7, label: codeTypesList.EVENT, icon: 'text', proOnly: true,
+    id: 7, label: codeTypesList.EVENT, icon: 'event', proOnly: true,
   },
   {
-    id: 8, label: codeTypesList.WIFI, icon: 'text', proOnly: true,
+    id: 8, label: codeTypesList.WIFI, icon: 'wifi', proOnly: true,
   },
 ];
 
