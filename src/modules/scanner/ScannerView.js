@@ -7,7 +7,7 @@ import {
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
-import { View, Image } from 'react-native-ui-lib';
+import { View, Image, Text } from 'react-native-ui-lib';
 import { RNCamera } from 'react-native-camera';
 
 import { commonStyles, colors } from '../../styles';
@@ -41,6 +41,15 @@ export default function HomeView(props: Props) {
             permissionDialogTitle="Permission to use camera"
             permissionDialogMessage="We need your permission to use your camera phone"
             onBarCodeRead={props.onCodeScanned}
+            notAuthorizedView={(
+              <View flex centerV centerH paddingH-30>
+                <Text h2 darkBlue center>Camera access has not been granted :(</Text>
+                <Text marginT-15 p center>The only thing you could do is to reinstall
+                  the app and click allow when the app will ask you for camera permissions.
+                  We promise that we use it for code scanning purposes only!
+                </Text>
+              </View>
+            )}
           >
             <Image
               style={styles.scanAreaIcon}
