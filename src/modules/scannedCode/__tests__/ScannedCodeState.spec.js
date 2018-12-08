@@ -262,6 +262,38 @@ describe('parseScannedString', () => {
         value: '',
       }],
     });
+
+    expect(parseScannedString('MATMSG:TO:email@example.com;SUB:email subject;BODY:Email text;;')).toEqual({
+      type: codeTypesList.EMAIL,
+      fields: [{
+        title: 'to',
+        value: 'email@example.com',
+      }, {
+        title: 'subject',
+        value: 'email subject',
+      }, {
+        title: 'body',
+        value: 'Email text',
+      }],
+    });
+
+    expect(parseScannedString(`MATMSG:
+TO:email@example.com;
+SUB:email subject;
+BODY:Email text;
+;`)).toEqual({
+      type: codeTypesList.EMAIL,
+      fields: [{
+        title: 'to',
+        value: 'email@example.com',
+      }, {
+        title: 'subject',
+        value: 'email subject',
+      }, {
+        title: 'body',
+        value: 'Email text',
+      }],
+    });
   });
 
   it('should scan telephone correctly', () => {

@@ -8,6 +8,7 @@ import {
   Linking,
   Share,
 } from 'react-native';
+import openMap from 'react-native-open-maps';
 import {
   View,
   Text,
@@ -49,6 +50,10 @@ export const CopyButton = (props: { data: any }) => (
 );
 export const OpenButton = (props: { data: any, children?: string }) => (
   <Button onPress={() => openLink(props.data)}>{props.children || 'open'}</Button>
+);
+
+export const OpenInMaps = (props: { longitude: number, latitude: number }) => (
+  <Button onPress={() => openMap({ latitude: props.latitude, longitude: props.longitude })}>Open in Maps</Button>
 );
 
 // eslint-disable-next-line no-unused-vars
@@ -110,6 +115,11 @@ export default function ScannedCodeView(props: Props) {
           { parsedString.type === codeTypesList.SMS && (
             <View row centerH spread>
               <OpenButton data={data}>send</OpenButton>
+            </View>
+          )}
+          { parsedString.type === codeTypesList.GEO && (
+            <View row centerH spread>
+              <OpenInMaps longitude={fieldsDict.long} latitude={fieldsDict.lat} />
             </View>
           )}
         </View>

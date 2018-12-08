@@ -38,9 +38,11 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>Your message to user when the camera is accessed for the first time</string>
+	<string>We need to use camera in order to scan cods</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need this to be able to store the image in your library</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-Bold.ttf</string>

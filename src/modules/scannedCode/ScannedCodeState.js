@@ -68,6 +68,28 @@ export function parseScannedString(scannedString: string): {
         { title: 'latitude', value: geoString.split(',')[1] || '' },
       ];
       break;
+    case 'MATMSG':
+      result.type = codeTypesList.EMAIL;
+      const parsedFields = {
+        to: '',
+        sub: '',
+        body: '',
+      };
+      const cleanedString = scannedString
+        .replace(/(\r\n\t|\n|\r\t)/gm, '')
+        .replace('MATMSG:', '')
+        .replace(';;', '');
+      const scannedValues = cleanedString.split(';');
+      scannedValues.forEach((value) => {
+        const keyValue = value.split(':');
+        parsedFields[keyValue[0].toLocaleLowerCase()] = keyValue[1] || '';
+      });
+      result.fields = [
+        { title: 'to', value: parsedFields.to },
+        { title: 'subject', value: parsedFields.sub },
+        { title: 'body', value: parsedFields.body },
+      ];
+      break;
     case 'MAILTO':
       result.type = codeTypesList.EMAIL;
       const emailString = splittedInputString[1] || '';
@@ -150,7 +172,7 @@ export function parseScannedString(scannedString: string): {
 
   if (result.type === codeTypesList.TEXT) {
     // eslint-disable-next-line
-    const urlRegexp = new RegExp(/[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/);
+    const urlRegexp = new RegExp(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/);
     if (scannedString.match(urlRegexp)) {
       result.type = codeTypesList.URL;
       result.fields = [
