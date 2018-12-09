@@ -23,6 +23,7 @@
     "react-native": "0.57.5",
     "react-native-camera": "^1.4.3",
     "react-native-color": "^0.0.10",
+    "react-native-easy-toast": "gaykov/react-native-easy-toast",
     "react-native-gesture-handler": "^1.0.9",
     "react-native-keyboard-aware-scroll-view": "^0.7.4",
     "react-native-linear-gradient": "^2.5.2",

@@ -4,15 +4,18 @@ import {
   SafeAreaView,
   StatusBar,
   ScrollView,
-  Clipboard,
   Linking,
   Share,
+  TouchableOpacity,
+  StyleSheet,
 } from 'react-native';
+import Toast from 'react-native-easy-toast';
 import openMap from 'react-native-open-maps';
 import {
   View,
   Text,
   TextInput,
+  Image,
 } from 'react-native-ui-lib';
 
 import { commonStyles, colors } from '../../styles';
@@ -29,6 +32,9 @@ type Props = {
       }
     }
   },
+  setToastRef: (any) => void,
+  copyToClipboard: (string) => any,
+  toastRef: any,
 };
 
 export const capitalizeFirstLetter = (string: string): string => string.charAt(0).toUpperCase() + string.slice(1);
@@ -45,8 +51,14 @@ export function openLink(url: string): Promise<any> {
 export const ShareButton = (props: { data: any }) => (
   <Button onPress={() => Share.share({ message: props.data })}>share</Button>
 );
-export const CopyButton = (props: { data: any }) => (
-  <Button onPress={() => Clipboard.setString(props.data)}>copy</Button>
+export const CopyButton = (props: {
+  data: any, copyToClipboard: (string) => void,
+}) => (
+  <Button
+    onPress={() => props.copyToClipboard(props.data)}
+  >
+    copy
+  </Button>
 );
 export const OpenButton = (props: { data: any, children?: string }) => (
   <Button onPress={() => openLink(props.data)}>{props.children || 'open'}</Button>
@@ -54,6 +66,26 @@ export const OpenButton = (props: { data: any, children?: string }) => (
 
 export const OpenInMaps = (props: { longitude: number, latitude: number }) => (
   <Button onPress={() => openMap({ latitude: props.latitude, longitude: props.longitude })}>Open in Maps</Button>
+);
+
+export const CustomInput = (props: any) => (
+  <View>
+    <TextInput
+      {...props}
+      floatingPlaceholderColor={colors.darkGray}
+    />
+    <TouchableOpacity
+      onPress={() => props.copyToClipboard(props.value)}
+      style={styles.customInputContainer}
+    >
+      <Image
+        style={styles.copyIcon}
+        resizeMode="contain"
+        assetGroup="icons"
+        assetName="copy"
+      />
+    </TouchableOpacity>
+  </View>
 );
 
 // eslint-disable-next-line no-unused-vars
@@ -73,7 +105,7 @@ export default function ScannedCodeView(props: Props) {
         <View>
           <Text h1 center marginB-20>{parsedString.type}</Text>
           { parsedString.fields.map(field => (
-            <TextInput
+            <CustomInput
               key={field.title.replace(' ', '')}
               text70
               floatingPlaceholder
@@ -82,6 +114,7 @@ export default function ScannedCodeView(props: Props) {
               editable={false}
               disabledColor={colors.darkBlue}
               floatingPlaceholderColor={colors.darkGray}
+              copyToClipboard={props.copyToClipboard}
             />
           ))}
         </View>
@@ -89,14 +122,14 @@ export default function ScannedCodeView(props: Props) {
         <View flex bottom paddingB-30>
           { parsedString.type === codeTypesList.TEXT && (
             <View row centerH style={{ justifyContent: 'space-around' }}>
-              <CopyButton data={data} />
+              <CopyButton copyToClipboard={props.copyToClipboard} data={data} />
               <ShareButton data={data} />
             </View>
           )}
           { parsedString.type === codeTypesList.URL && (
             <View row centerH spread>
               <OpenButton data={data} />
-              <CopyButton data={data} />
+              <CopyButton copyToClipboard={props.copyToClipboard} data={data} />
               <ShareButton data={data} />
             </View>
           )}
@@ -108,7 +141,7 @@ export default function ScannedCodeView(props: Props) {
           { parsedString.type === codeTypesList.TEL && (
             <View row centerH spread>
               <OpenButton data={data}>call</OpenButton>
-              <CopyButton data={fieldsDict.number} />
+              <CopyButton copyToClipboard={props.copyToClipboard} data={fieldsDict.number} />
               <ShareButton data={fieldsDict.number} />
             </View>
           )}
@@ -124,6 +157,30 @@ export default function ScannedCodeView(props: Props) {
           )}
         </View>
       </ScrollView>
+      <Toast
+        positionValue={300}
+        ref={(ref) => {
+          if (!props.toastRef && ref) {
+            props.setToastRef(ref);
+          }
+        }}
+        style={{ backgroundColor: colors.lightGray }}
+      />
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  customInputContainer: {
+    position: 'absolute',
+    right: 0,
+    bottom: 25,
+    height: 40,
+    width: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'transparent',
+    padding: 0,
+  },
+  copyIcon: { height: 40, width: 25 },
+});

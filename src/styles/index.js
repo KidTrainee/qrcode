@@ -66,6 +66,7 @@ Assets.loadAssetsGroup('icons', {
   'flashlight-off': require('../../assets/icons/flashlight-off.png'),
   delete: require('../../assets/icons/delete.png'),
   check: require('../../assets/icons/check.png'),
+  copy: require('../../assets/icons/copy.png'),
 });
 
 Assets.loadAssetsGroup('types', {

@@ -11,6 +11,7 @@ import {
   OpenButton,
   capitalizeFirstLetter,
   openLink,
+  CustomInput,
 } from '../ScannedCodeView';
 
 import ScannedCode from '../ScannedCodeViewContainer';
@@ -19,6 +20,50 @@ jest.mock('Linking', () => ({
   openURL: jest.fn(),
   canOpenURL: valid => (new Promise(resolve => (valid ? resolve(true) : resolve(false)))),
 }));
+
+jest.mock('Clipboard', () => ({
+  setString: jest.fn(),
+}));
+
+describe('ScannedCode => CustomInput', () => {
+  it('renders as expected', () => {
+    const wrapper = Enzyme.shallow(
+      <CustomInput
+        key="key"
+        text70
+        floatingPlaceholder
+        placeholder="Title"
+        value="string"
+        editable={false}
+        disabledColor="gray"
+        floatingPlaceholderColor="black"
+        copyToClipboard={() => {}}
+      />,
+    );
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('copies data to clipboard on click', () => {
+    const clipboardSetStringSpy = sinon.spy();
+    const wrapper = Enzyme.shallow(
+      <CustomInput
+        key="key"
+        text70
+        floatingPlaceholder
+        placeholder="Title"
+        value="string"
+        editable={false}
+        disabledColor="gray"
+        floatingPlaceholderColor="black"
+        copyToClipboard={clipboardSetStringSpy}
+      />,
+    );
+
+    const render = wrapper.dive();
+    render.find('TouchableOpacity').first().simulate('press');
+    expect(clipboardSetStringSpy.calledWith('string')).toBe(true);
+  });
+});
 
 describe('ScannedCode => ShareButton', () => {
   it('renders as expected', () => {
