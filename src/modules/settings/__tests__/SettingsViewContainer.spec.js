@@ -53,7 +53,7 @@ describe('Settings View Container', () => {
     expect(instance.instance().props.settings.foregroundColor).toBe('#ffffff');
   })
 
-  it('should handle goPricingPage call', () => {;
+  it('should handle goPricingPage call', () => {
     instance.props().goPricingPage();
 
     expect(mockFunction.mock.calls.length).toBe(1);

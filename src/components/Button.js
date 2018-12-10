@@ -42,15 +42,19 @@ const Button = (props: ButtonProps) => {
           props.style,
         ]}
       >
-        <Text
-          h2
-          style={[
-            styles.buttonText,
-            props.textColor && { color: colors[props.textColor] },
-          ]}
-        >
-          {props.children}
-        </Text>
+        {typeof props.children === 'string'
+          ? (
+            <Text
+              h2
+              style={[
+                styles.buttonText,
+                props.textColor && { color: colors[props.textColor] },
+              ]}
+            >
+              {props.children}
+            </Text>)
+          : props.children
+        }
       </LinearGradient>
     </TouchableOpacity>
   );

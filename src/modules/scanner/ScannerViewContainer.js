@@ -27,6 +27,7 @@ export default compose(
     playSound: () => () => {
       const beep = new Sound('beep.wav', Sound.MAIN_BUNDLE, (error) => {
         if (error) {
+          // eslint-disable-next-line
           console.log('failed to load the sound');
         } else {
           beep.play();

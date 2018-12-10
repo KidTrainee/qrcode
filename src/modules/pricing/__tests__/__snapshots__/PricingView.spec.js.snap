@@ -1,0 +1,2755 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pricing View should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PricingView />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <View
+        flex-1={true}
+        spread={true}
+        useNativeDriver={true}
+      >
+        <View
+          useNativeDriver={true}
+        >
+          <View
+            centerH={true}
+            marginT-25={true}
+            useNativeDriver={true}
+          >
+            <Image
+              assetGroup="images"
+              assetName="pricing"
+              resizeMode="contain"
+              style={
+                Object {
+                  "height": 220,
+                  "width": 250,
+                }
+              }
+            />
+          </View>
+          <Text
+            center={true}
+            h2={true}
+            marginB-25={true}
+            useNativeDriver={true}
+          >
+            Pro Version
+          </Text>
+          <View
+            marginB-15={true}
+            paddingH-50={true}
+            row={true}
+            useNativeDriver={true}
+          >
+            <Image
+              assetGroup="icons"
+              assetName="check"
+              resizeMode="contain"
+              style={
+                Object {
+                  "height": 16,
+                  "width": 16,
+                }
+              }
+            />
+            <Text
+              marginL-15={true}
+              useNativeDriver={true}
+            >
+              Unlimited history
+            </Text>
+          </View>
+          <View
+            marginB-15={true}
+            paddingH-50={true}
+            row={true}
+            useNativeDriver={true}
+          >
+            <Image
+              assetGroup="icons"
+              assetName="check"
+              resizeMode="contain"
+              style={
+                Object {
+                  "height": 16,
+                  "width": 16,
+                }
+              }
+            />
+            <Text
+              marginL-15={true}
+              useNativeDriver={true}
+            >
+              Codes customization
+            </Text>
+          </View>
+          <View
+            marginB-15={true}
+            paddingH-50={true}
+            row={true}
+            useNativeDriver={true}
+          >
+            <Image
+              assetGroup="icons"
+              assetName="check"
+              resizeMode="contain"
+              style={
+                Object {
+                  "height": 16,
+                  "width": 16,
+                }
+              }
+            />
+            <Text
+              marginL-15={true}
+              useNativeDriver={true}
+            >
+              Batch scan
+            </Text>
+          </View>
+          <View
+            marginB-25={true}
+            paddingH-50={true}
+            row={true}
+            useNativeDriver={true}
+          >
+            <Image
+              assetGroup="icons"
+              assetName="check"
+              resizeMode="contain"
+              style={
+                Object {
+                  "height": 16,
+                  "width": 16,
+                }
+              }
+            />
+            <Text
+              marginL-15={true}
+              useNativeDriver={true}
+            >
+              Advanced codes generation
+            </Text>
+          </View>
+          <View
+            centerH={true}
+            paddingH-50={true}
+            useNativeDriver={true}
+          >
+            <Button
+              style={
+                Object {
+                  "minWidth": "100%",
+                }
+              }
+              variant="primary"
+            >
+              Purchase for $4.99
+            </Button>
+            <View
+              marginT-10={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Text
+                gray={true}
+                style={
+                  Object {
+                    "fontSize": 14,
+                  }
+                }
+                useNativeDriver={true}
+              >
+                Also you can
+              </Text>
+              <TouchableOpacity
+                activeOpacity={0.2}
+              >
+                <Text
+                  primary={true}
+                  style={
+                    Object {
+                      "fontSize": 14,
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                   restore 
+                </Text>
+              </TouchableOpacity>
+              <Text
+                gray={true}
+                style={
+                  Object {
+                    "fontSize": 14,
+                  }
+                }
+                useNativeDriver={true}
+              >
+                your payment
+              </Text>
+            </View>
+          </View>
+        </View>
+        <View
+          centerH={true}
+          marginB-10={true}
+          paddingH-50={true}
+          useNativeDriver={true}
+        >
+          <View
+            row={true}
+            useNativeDriver={true}
+          >
+            <Text
+              gray={true}
+              text100={true}
+              useNativeDriver={true}
+            >
+              Check out the
+            </Text>
+            <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
+            >
+              <Text
+                primary={true}
+                style={
+                  Object {
+                    "fontSize": 10,
+                  }
+                }
+                useNativeDriver={true}
+              >
+                 Privacy policy 
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <Text
+            center={true}
+            gray={true}
+            text100={true}
+            useNativeDriver={true}
+          >
+            Payment will be chargered to iTunes Account at confirmation of purchase
+          </Text>
+        </View>
+      </View>,
+      "style": Object {
+        "backgroundColor": "#FFFFFF",
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <View
+            useNativeDriver={true}
+          >
+            <View
+              centerH={true}
+              marginT-25={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="images"
+                assetName="pricing"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 220,
+                    "width": 250,
+                  }
+                }
+              />
+            </View>
+            <Text
+              center={true}
+              h2={true}
+              marginB-25={true}
+              useNativeDriver={true}
+            >
+              Pro Version
+            </Text>
+            <View
+              marginB-15={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Unlimited history
+              </Text>
+            </View>
+            <View
+              marginB-15={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Codes customization
+              </Text>
+            </View>
+            <View
+              marginB-15={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Batch scan
+              </Text>
+            </View>
+            <View
+              marginB-25={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Advanced codes generation
+              </Text>
+            </View>
+            <View
+              centerH={true}
+              paddingH-50={true}
+              useNativeDriver={true}
+            >
+              <Button
+                style={
+                  Object {
+                    "minWidth": "100%",
+                  }
+                }
+                variant="primary"
+              >
+                Purchase for $4.99
+              </Button>
+              <View
+                marginT-10={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Text
+                  gray={true}
+                  style={
+                    Object {
+                      "fontSize": 14,
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                  Also you can
+                </Text>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                >
+                  <Text
+                    primary={true}
+                    style={
+                      Object {
+                        "fontSize": 14,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                     restore 
+                  </Text>
+                </TouchableOpacity>
+                <Text
+                  gray={true}
+                  style={
+                    Object {
+                      "fontSize": 14,
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                  your payment
+                </Text>
+              </View>
+            </View>
+          </View>,
+          <View
+            centerH={true}
+            marginB-10={true}
+            paddingH-50={true}
+            useNativeDriver={true}
+          >
+            <View
+              row={true}
+              useNativeDriver={true}
+            >
+              <Text
+                gray={true}
+                text100={true}
+                useNativeDriver={true}
+              >
+                Check out the
+              </Text>
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+              >
+                <Text
+                  primary={true}
+                  style={
+                    Object {
+                      "fontSize": 10,
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                   Privacy policy 
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <Text
+              center={true}
+              gray={true}
+              text100={true}
+              useNativeDriver={true}
+            >
+              Payment will be chargered to iTunes Account at confirmation of purchase
+            </Text>
+          </View>,
+        ],
+        "flex-1": true,
+        "spread": true,
+        "useNativeDriver": true,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <View
+                centerH={true}
+                marginT-25={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="images"
+                  assetName="pricing"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 220,
+                      "width": 250,
+                    }
+                  }
+                />
+              </View>,
+              <Text
+                center={true}
+                h2={true}
+                marginB-25={true}
+                useNativeDriver={true}
+              >
+                Pro Version
+              </Text>,
+              <View
+                marginB-15={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Unlimited history
+                </Text>
+              </View>,
+              <View
+                marginB-15={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Codes customization
+                </Text>
+              </View>,
+              <View
+                marginB-15={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Batch scan
+                </Text>
+              </View>,
+              <View
+                marginB-25={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Advanced codes generation
+                </Text>
+              </View>,
+              <View
+                centerH={true}
+                paddingH-50={true}
+                useNativeDriver={true}
+              >
+                <Button
+                  style={
+                    Object {
+                      "minWidth": "100%",
+                    }
+                  }
+                  variant="primary"
+                >
+                  Purchase for $4.99
+                </Button>
+                <View
+                  marginT-10={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <Text
+                    gray={true}
+                    style={
+                      Object {
+                        "fontSize": 14,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                    Also you can
+                  </Text>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                  >
+                    <Text
+                      primary={true}
+                      style={
+                        Object {
+                          "fontSize": 14,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                       restore 
+                    </Text>
+                  </TouchableOpacity>
+                  <Text
+                    gray={true}
+                    style={
+                      Object {
+                        "fontSize": 14,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                    your payment
+                  </Text>
+                </View>
+              </View>,
+            ],
+            "useNativeDriver": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "centerH": true,
+                "children": <Image
+                  assetGroup="images"
+                  assetName="pricing"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 220,
+                      "width": 250,
+                    }
+                  }
+                />,
+                "marginT-25": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "assetGroup": "images",
+                  "assetName": "pricing",
+                  "resizeMode": "contain",
+                  "style": Object {
+                    "height": 220,
+                    "width": 250,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "center": true,
+                "children": "Pro Version",
+                "h2": true,
+                "marginB-25": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": "Pro Version",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />,
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Unlimited history
+                  </Text>,
+                ],
+                "marginB-15": true,
+                "paddingH-50": true,
+                "row": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "assetGroup": "icons",
+                    "assetName": "check",
+                    "resizeMode": "contain",
+                    "style": Object {
+                      "height": 16,
+                      "width": 16,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Unlimited history",
+                    "marginL-15": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": "Unlimited history",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />,
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Codes customization
+                  </Text>,
+                ],
+                "marginB-15": true,
+                "paddingH-50": true,
+                "row": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "assetGroup": "icons",
+                    "assetName": "check",
+                    "resizeMode": "contain",
+                    "style": Object {
+                      "height": 16,
+                      "width": 16,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Codes customization",
+                    "marginL-15": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": "Codes customization",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />,
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Batch scan
+                  </Text>,
+                ],
+                "marginB-15": true,
+                "paddingH-50": true,
+                "row": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "assetGroup": "icons",
+                    "assetName": "check",
+                    "resizeMode": "contain",
+                    "style": Object {
+                      "height": 16,
+                      "width": 16,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Batch scan",
+                    "marginL-15": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": "Batch scan",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />,
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Advanced codes generation
+                  </Text>,
+                ],
+                "marginB-25": true,
+                "paddingH-50": true,
+                "row": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "assetGroup": "icons",
+                    "assetName": "check",
+                    "resizeMode": "contain",
+                    "style": Object {
+                      "height": 16,
+                      "width": 16,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Advanced codes generation",
+                    "marginL-15": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": "Advanced codes generation",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "centerH": true,
+                "children": Array [
+                  <Button
+                    style={
+                      Object {
+                        "minWidth": "100%",
+                      }
+                    }
+                    variant="primary"
+                  >
+                    Purchase for $4.99
+                  </Button>,
+                  <View
+                    marginT-10={true}
+                    row={true}
+                    useNativeDriver={true}
+                  >
+                    <Text
+                      gray={true}
+                      style={
+                        Object {
+                          "fontSize": 14,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      Also you can
+                    </Text>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                    >
+                      <Text
+                        primary={true}
+                        style={
+                          Object {
+                            "fontSize": 14,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                         restore 
+                      </Text>
+                    </TouchableOpacity>
+                    <Text
+                      gray={true}
+                      style={
+                        Object {
+                          "fontSize": 14,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      your payment
+                    </Text>
+                  </View>,
+                ],
+                "paddingH-50": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Purchase for $4.99",
+                    "onPress": undefined,
+                    "style": Object {
+                      "minWidth": "100%",
+                    },
+                    "variant": "primary",
+                  },
+                  "ref": null,
+                  "rendered": "Purchase for $4.99",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Text
+                        gray={true}
+                        style={
+                          Object {
+                            "fontSize": 14,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Also you can
+                      </Text>,
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                      >
+                        <Text
+                          primary={true}
+                          style={
+                            Object {
+                              "fontSize": 14,
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                           restore 
+                        </Text>
+                      </TouchableOpacity>,
+                      <Text
+                        gray={true}
+                        style={
+                          Object {
+                            "fontSize": 14,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        your payment
+                      </Text>,
+                    ],
+                    "marginT-10": true,
+                    "row": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Also you can",
+                        "gray": true,
+                        "style": Object {
+                          "fontSize": 14,
+                        },
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": "Also you can",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "activeOpacity": 0.2,
+                        "children": <Text
+                          primary={true}
+                          style={
+                            Object {
+                              "fontSize": 14,
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                           restore 
+                        </Text>,
+                        "onPress": undefined,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": " restore ",
+                          "primary": true,
+                          "style": Object {
+                            "fontSize": 14,
+                          },
+                          "useNativeDriver": true,
+                        },
+                        "ref": null,
+                        "rendered": " restore ",
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "your payment",
+                        "gray": true,
+                        "style": Object {
+                          "fontSize": 14,
+                        },
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": "your payment",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "centerH": true,
+            "children": Array [
+              <View
+                row={true}
+                useNativeDriver={true}
+              >
+                <Text
+                  gray={true}
+                  text100={true}
+                  useNativeDriver={true}
+                >
+                  Check out the
+                </Text>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                >
+                  <Text
+                    primary={true}
+                    style={
+                      Object {
+                        "fontSize": 10,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                     Privacy policy 
+                  </Text>
+                </TouchableOpacity>
+              </View>,
+              <Text
+                center={true}
+                gray={true}
+                text100={true}
+                useNativeDriver={true}
+              >
+                Payment will be chargered to iTunes Account at confirmation of purchase
+              </Text>,
+            ],
+            "marginB-10": true,
+            "paddingH-50": true,
+            "useNativeDriver": true,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Text
+                    gray={true}
+                    text100={true}
+                    useNativeDriver={true}
+                  >
+                    Check out the
+                  </Text>,
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                  >
+                    <Text
+                      primary={true}
+                      style={
+                        Object {
+                          "fontSize": 10,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                       Privacy policy 
+                    </Text>
+                  </TouchableOpacity>,
+                ],
+                "row": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Check out the",
+                    "gray": true,
+                    "text100": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": "Check out the",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "activeOpacity": 0.2,
+                    "children": <Text
+                      primary={true}
+                      style={
+                        Object {
+                          "fontSize": 10,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                       Privacy policy 
+                    </Text>,
+                    "onPress": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": " Privacy policy ",
+                      "primary": true,
+                      "style": Object {
+                        "fontSize": 10,
+                      },
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": " Privacy policy ",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "center": true,
+                "children": "Payment will be chargered to iTunes Account at confirmation of purchase",
+                "gray": true,
+                "text100": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": "Payment will be chargered to iTunes Account at confirmation of purchase",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <View
+          flex-1={true}
+          spread={true}
+          useNativeDriver={true}
+        >
+          <View
+            useNativeDriver={true}
+          >
+            <View
+              centerH={true}
+              marginT-25={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="images"
+                assetName="pricing"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 220,
+                    "width": 250,
+                  }
+                }
+              />
+            </View>
+            <Text
+              center={true}
+              h2={true}
+              marginB-25={true}
+              useNativeDriver={true}
+            >
+              Pro Version
+            </Text>
+            <View
+              marginB-15={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Unlimited history
+              </Text>
+            </View>
+            <View
+              marginB-15={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Codes customization
+              </Text>
+            </View>
+            <View
+              marginB-15={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Batch scan
+              </Text>
+            </View>
+            <View
+              marginB-25={true}
+              paddingH-50={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <Image
+                assetGroup="icons"
+                assetName="check"
+                resizeMode="contain"
+                style={
+                  Object {
+                    "height": 16,
+                    "width": 16,
+                  }
+                }
+              />
+              <Text
+                marginL-15={true}
+                useNativeDriver={true}
+              >
+                Advanced codes generation
+              </Text>
+            </View>
+            <View
+              centerH={true}
+              paddingH-50={true}
+              useNativeDriver={true}
+            >
+              <Button
+                style={
+                  Object {
+                    "minWidth": "100%",
+                  }
+                }
+                variant="primary"
+              >
+                Purchase for $4.99
+              </Button>
+              <View
+                marginT-10={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Text
+                  gray={true}
+                  style={
+                    Object {
+                      "fontSize": 14,
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                  Also you can
+                </Text>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                >
+                  <Text
+                    primary={true}
+                    style={
+                      Object {
+                        "fontSize": 14,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                     restore 
+                  </Text>
+                </TouchableOpacity>
+                <Text
+                  gray={true}
+                  style={
+                    Object {
+                      "fontSize": 14,
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                  your payment
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            centerH={true}
+            marginB-10={true}
+            paddingH-50={true}
+            useNativeDriver={true}
+          >
+            <View
+              row={true}
+              useNativeDriver={true}
+            >
+              <Text
+                gray={true}
+                text100={true}
+                useNativeDriver={true}
+              >
+                Check out the
+              </Text>
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+              >
+                <Text
+                  primary={true}
+                  style={
+                    Object {
+                      "fontSize": 10,
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                   Privacy policy 
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <Text
+              center={true}
+              gray={true}
+              text100={true}
+              useNativeDriver={true}
+            >
+              Payment will be chargered to iTunes Account at confirmation of purchase
+            </Text>
+          </View>
+        </View>,
+        "style": Object {
+          "backgroundColor": "#FFFFFF",
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <View
+              useNativeDriver={true}
+            >
+              <View
+                centerH={true}
+                marginT-25={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="images"
+                  assetName="pricing"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 220,
+                      "width": 250,
+                    }
+                  }
+                />
+              </View>
+              <Text
+                center={true}
+                h2={true}
+                marginB-25={true}
+                useNativeDriver={true}
+              >
+                Pro Version
+              </Text>
+              <View
+                marginB-15={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Unlimited history
+                </Text>
+              </View>
+              <View
+                marginB-15={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Codes customization
+                </Text>
+              </View>
+              <View
+                marginB-15={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Batch scan
+                </Text>
+              </View>
+              <View
+                marginB-25={true}
+                paddingH-50={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <Image
+                  assetGroup="icons"
+                  assetName="check"
+                  resizeMode="contain"
+                  style={
+                    Object {
+                      "height": 16,
+                      "width": 16,
+                    }
+                  }
+                />
+                <Text
+                  marginL-15={true}
+                  useNativeDriver={true}
+                >
+                  Advanced codes generation
+                </Text>
+              </View>
+              <View
+                centerH={true}
+                paddingH-50={true}
+                useNativeDriver={true}
+              >
+                <Button
+                  style={
+                    Object {
+                      "minWidth": "100%",
+                    }
+                  }
+                  variant="primary"
+                >
+                  Purchase for $4.99
+                </Button>
+                <View
+                  marginT-10={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <Text
+                    gray={true}
+                    style={
+                      Object {
+                        "fontSize": 14,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                    Also you can
+                  </Text>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                  >
+                    <Text
+                      primary={true}
+                      style={
+                        Object {
+                          "fontSize": 14,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                       restore 
+                    </Text>
+                  </TouchableOpacity>
+                  <Text
+                    gray={true}
+                    style={
+                      Object {
+                        "fontSize": 14,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                    your payment
+                  </Text>
+                </View>
+              </View>
+            </View>,
+            <View
+              centerH={true}
+              marginB-10={true}
+              paddingH-50={true}
+              useNativeDriver={true}
+            >
+              <View
+                row={true}
+                useNativeDriver={true}
+              >
+                <Text
+                  gray={true}
+                  text100={true}
+                  useNativeDriver={true}
+                >
+                  Check out the
+                </Text>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                >
+                  <Text
+                    primary={true}
+                    style={
+                      Object {
+                        "fontSize": 10,
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                     Privacy policy 
+                  </Text>
+                </TouchableOpacity>
+              </View>
+              <Text
+                center={true}
+                gray={true}
+                text100={true}
+                useNativeDriver={true}
+              >
+                Payment will be chargered to iTunes Account at confirmation of purchase
+              </Text>
+            </View>,
+          ],
+          "flex-1": true,
+          "spread": true,
+          "useNativeDriver": true,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <View
+                  centerH={true}
+                  marginT-25={true}
+                  useNativeDriver={true}
+                >
+                  <Image
+                    assetGroup="images"
+                    assetName="pricing"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 220,
+                        "width": 250,
+                      }
+                    }
+                  />
+                </View>,
+                <Text
+                  center={true}
+                  h2={true}
+                  marginB-25={true}
+                  useNativeDriver={true}
+                >
+                  Pro Version
+                </Text>,
+                <View
+                  marginB-15={true}
+                  paddingH-50={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Unlimited history
+                  </Text>
+                </View>,
+                <View
+                  marginB-15={true}
+                  paddingH-50={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Codes customization
+                  </Text>
+                </View>,
+                <View
+                  marginB-15={true}
+                  paddingH-50={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Batch scan
+                  </Text>
+                </View>,
+                <View
+                  marginB-25={true}
+                  paddingH-50={true}
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <Image
+                    assetGroup="icons"
+                    assetName="check"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 16,
+                        "width": 16,
+                      }
+                    }
+                  />
+                  <Text
+                    marginL-15={true}
+                    useNativeDriver={true}
+                  >
+                    Advanced codes generation
+                  </Text>
+                </View>,
+                <View
+                  centerH={true}
+                  paddingH-50={true}
+                  useNativeDriver={true}
+                >
+                  <Button
+                    style={
+                      Object {
+                        "minWidth": "100%",
+                      }
+                    }
+                    variant="primary"
+                  >
+                    Purchase for $4.99
+                  </Button>
+                  <View
+                    marginT-10={true}
+                    row={true}
+                    useNativeDriver={true}
+                  >
+                    <Text
+                      gray={true}
+                      style={
+                        Object {
+                          "fontSize": 14,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      Also you can
+                    </Text>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                    >
+                      <Text
+                        primary={true}
+                        style={
+                          Object {
+                            "fontSize": 14,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                         restore 
+                      </Text>
+                    </TouchableOpacity>
+                    <Text
+                      gray={true}
+                      style={
+                        Object {
+                          "fontSize": 14,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      your payment
+                    </Text>
+                  </View>
+                </View>,
+              ],
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "centerH": true,
+                  "children": <Image
+                    assetGroup="images"
+                    assetName="pricing"
+                    resizeMode="contain"
+                    style={
+                      Object {
+                        "height": 220,
+                        "width": 250,
+                      }
+                    }
+                  />,
+                  "marginT-25": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "assetGroup": "images",
+                    "assetName": "pricing",
+                    "resizeMode": "contain",
+                    "style": Object {
+                      "height": 220,
+                      "width": 250,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "center": true,
+                  "children": "Pro Version",
+                  "h2": true,
+                  "marginB-25": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": "Pro Version",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Image
+                      assetGroup="icons"
+                      assetName="check"
+                      resizeMode="contain"
+                      style={
+                        Object {
+                          "height": 16,
+                          "width": 16,
+                        }
+                      }
+                    />,
+                    <Text
+                      marginL-15={true}
+                      useNativeDriver={true}
+                    >
+                      Unlimited history
+                    </Text>,
+                  ],
+                  "marginB-15": true,
+                  "paddingH-50": true,
+                  "row": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "assetGroup": "icons",
+                      "assetName": "check",
+                      "resizeMode": "contain",
+                      "style": Object {
+                        "height": 16,
+                        "width": 16,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Unlimited history",
+                      "marginL-15": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Unlimited history",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Image
+                      assetGroup="icons"
+                      assetName="check"
+                      resizeMode="contain"
+                      style={
+                        Object {
+                          "height": 16,
+                          "width": 16,
+                        }
+                      }
+                    />,
+                    <Text
+                      marginL-15={true}
+                      useNativeDriver={true}
+                    >
+                      Codes customization
+                    </Text>,
+                  ],
+                  "marginB-15": true,
+                  "paddingH-50": true,
+                  "row": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "assetGroup": "icons",
+                      "assetName": "check",
+                      "resizeMode": "contain",
+                      "style": Object {
+                        "height": 16,
+                        "width": 16,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Codes customization",
+                      "marginL-15": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Codes customization",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Image
+                      assetGroup="icons"
+                      assetName="check"
+                      resizeMode="contain"
+                      style={
+                        Object {
+                          "height": 16,
+                          "width": 16,
+                        }
+                      }
+                    />,
+                    <Text
+                      marginL-15={true}
+                      useNativeDriver={true}
+                    >
+                      Batch scan
+                    </Text>,
+                  ],
+                  "marginB-15": true,
+                  "paddingH-50": true,
+                  "row": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "assetGroup": "icons",
+                      "assetName": "check",
+                      "resizeMode": "contain",
+                      "style": Object {
+                        "height": 16,
+                        "width": 16,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Batch scan",
+                      "marginL-15": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Batch scan",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Image
+                      assetGroup="icons"
+                      assetName="check"
+                      resizeMode="contain"
+                      style={
+                        Object {
+                          "height": 16,
+                          "width": 16,
+                        }
+                      }
+                    />,
+                    <Text
+                      marginL-15={true}
+                      useNativeDriver={true}
+                    >
+                      Advanced codes generation
+                    </Text>,
+                  ],
+                  "marginB-25": true,
+                  "paddingH-50": true,
+                  "row": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "assetGroup": "icons",
+                      "assetName": "check",
+                      "resizeMode": "contain",
+                      "style": Object {
+                        "height": 16,
+                        "width": 16,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Advanced codes generation",
+                      "marginL-15": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Advanced codes generation",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "centerH": true,
+                  "children": Array [
+                    <Button
+                      style={
+                        Object {
+                          "minWidth": "100%",
+                        }
+                      }
+                      variant="primary"
+                    >
+                      Purchase for $4.99
+                    </Button>,
+                    <View
+                      marginT-10={true}
+                      row={true}
+                      useNativeDriver={true}
+                    >
+                      <Text
+                        gray={true}
+                        style={
+                          Object {
+                            "fontSize": 14,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        Also you can
+                      </Text>
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                      >
+                        <Text
+                          primary={true}
+                          style={
+                            Object {
+                              "fontSize": 14,
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                           restore 
+                        </Text>
+                      </TouchableOpacity>
+                      <Text
+                        gray={true}
+                        style={
+                          Object {
+                            "fontSize": 14,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                        your payment
+                      </Text>
+                    </View>,
+                  ],
+                  "paddingH-50": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": "Purchase for $4.99",
+                      "onPress": undefined,
+                      "style": Object {
+                        "minWidth": "100%",
+                      },
+                      "variant": "primary",
+                    },
+                    "ref": null,
+                    "rendered": "Purchase for $4.99",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <Text
+                          gray={true}
+                          style={
+                            Object {
+                              "fontSize": 14,
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          Also you can
+                        </Text>,
+                        <TouchableOpacity
+                          activeOpacity={0.2}
+                        >
+                          <Text
+                            primary={true}
+                            style={
+                              Object {
+                                "fontSize": 14,
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                             restore 
+                          </Text>
+                        </TouchableOpacity>,
+                        <Text
+                          gray={true}
+                          style={
+                            Object {
+                              "fontSize": 14,
+                            }
+                          }
+                          useNativeDriver={true}
+                        >
+                          your payment
+                        </Text>,
+                      ],
+                      "marginT-10": true,
+                      "row": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Also you can",
+                          "gray": true,
+                          "style": Object {
+                            "fontSize": 14,
+                          },
+                          "useNativeDriver": true,
+                        },
+                        "ref": null,
+                        "rendered": "Also you can",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "activeOpacity": 0.2,
+                          "children": <Text
+                            primary={true}
+                            style={
+                              Object {
+                                "fontSize": 14,
+                              }
+                            }
+                            useNativeDriver={true}
+                          >
+                             restore 
+                          </Text>,
+                          "onPress": undefined,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": " restore ",
+                            "primary": true,
+                            "style": Object {
+                              "fontSize": 14,
+                            },
+                            "useNativeDriver": true,
+                          },
+                          "ref": null,
+                          "rendered": " restore ",
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "your payment",
+                          "gray": true,
+                          "style": Object {
+                            "fontSize": 14,
+                          },
+                          "useNativeDriver": true,
+                        },
+                        "ref": null,
+                        "rendered": "your payment",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "centerH": true,
+              "children": Array [
+                <View
+                  row={true}
+                  useNativeDriver={true}
+                >
+                  <Text
+                    gray={true}
+                    text100={true}
+                    useNativeDriver={true}
+                  >
+                    Check out the
+                  </Text>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                  >
+                    <Text
+                      primary={true}
+                      style={
+                        Object {
+                          "fontSize": 10,
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                       Privacy policy 
+                    </Text>
+                  </TouchableOpacity>
+                </View>,
+                <Text
+                  center={true}
+                  gray={true}
+                  text100={true}
+                  useNativeDriver={true}
+                >
+                  Payment will be chargered to iTunes Account at confirmation of purchase
+                </Text>,
+              ],
+              "marginB-10": true,
+              "paddingH-50": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Text
+                      gray={true}
+                      text100={true}
+                      useNativeDriver={true}
+                    >
+                      Check out the
+                    </Text>,
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                    >
+                      <Text
+                        primary={true}
+                        style={
+                          Object {
+                            "fontSize": 10,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                         Privacy policy 
+                      </Text>
+                    </TouchableOpacity>,
+                  ],
+                  "row": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Check out the",
+                      "gray": true,
+                      "text100": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Check out the",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "activeOpacity": 0.2,
+                      "children": <Text
+                        primary={true}
+                        style={
+                          Object {
+                            "fontSize": 10,
+                          }
+                        }
+                        useNativeDriver={true}
+                      >
+                         Privacy policy 
+                      </Text>,
+                      "onPress": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": " Privacy policy ",
+                        "primary": true,
+                        "style": Object {
+                          "fontSize": 10,
+                        },
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": " Privacy policy ",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "center": true,
+                  "children": "Payment will be chargered to iTunes Account at confirmation of purchase",
+                  "gray": true,
+                  "text100": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": "Payment will be chargered to iTunes Account at confirmation of purchase",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

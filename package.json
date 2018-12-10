@@ -25,6 +25,7 @@
     "react-native-color": "^0.0.10",
     "react-native-easy-toast": "gaykov/react-native-easy-toast",
     "react-native-gesture-handler": "^1.0.9",
+    "react-native-iap": "^2.3.21",
     "react-native-keyboard-aware-scroll-view": "^0.7.4",
     "react-native-linear-gradient": "^2.5.2",
     "react-native-open-maps": "^0.3.2",

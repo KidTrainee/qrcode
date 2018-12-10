@@ -1,14 +1,20 @@
 // @flow
 import React from 'react';
 import {
-  SafeAreaView, TouchableOpacity, StyleSheet, Linking,
+  SafeAreaView, TouchableOpacity, StyleSheet, Linking, ActivityIndicator,
 } from 'react-native';
 import { Image, View, Text } from 'react-native-ui-lib';
 
 import { Button } from '../../components';
 import commonStyles from '../../styles/common';
 
-export default function PricingView() {
+type Props = {
+  isLoading: boolean,
+  buyProVersion: () => void,
+  restorePurchases: () => void,
+};
+
+export default function PricingView(props: Props) {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
       <View flex-1 spread>
@@ -59,10 +65,17 @@ export default function PricingView() {
             <Text marginL-15>Advanced codes generation</Text>
           </View>
           <View paddingH-50 centerH>
-            <Button>Purchase for $4.99</Button>
+            <Button style={{ minWidth: '100%' }} onPress={props.buyProVersion}>
+              {props.isLoading
+                ? <ActivityIndicator color="#FFFFFF" />
+                : 'Purchase for $4.99'
+              }
+            </Button>
             <View row marginT-10>
               <Text style={styles.restoreText} gray>Also you can</Text>
-              <TouchableOpacity><Text style={styles.restoreText} primary>&nbsp;restore&nbsp;</Text></TouchableOpacity>
+              <TouchableOpacity onPress={props.restorePurchases}>
+                <Text style={styles.restoreText} primary>&nbsp;restore&nbsp;</Text>
+              </TouchableOpacity>
               <Text style={styles.restoreText} gray>your payment</Text>
             </View>
           </View>
