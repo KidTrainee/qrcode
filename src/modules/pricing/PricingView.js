@@ -25,6 +25,7 @@ export default function PricingView(props: Props) {
       <ScrollView
         showsVerticalScrollIndicator={false}
         bounces={false}
+        contentContainerStyle={{ flex: 1 }}
       >
         <View flex-1 spread>
           <View flex>

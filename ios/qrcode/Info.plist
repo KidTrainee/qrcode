@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>QRCode</string>
+	<string>QR Code</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -37,8 +37,12 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>We need this permission to be able to add calendar events from scanned codes</string>
 	<key>NSCameraUsageDescription</key>
 	<string>We need to use camera to scan codes</string>
+	<key>NSContactsUsageDescription</key>
+	<string>We need this permission to be able to save your contacts from scanned codes</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>We need this to be able to store the image in your library</string>
 	<key>UIAppFonts</key>
@@ -54,14 +58,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
-	<key>NSContactsUsageDescription</key>
-	<string>We need this permission to be able to save your contacts from scanned codes</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>NSCalendarsUsageDescription</key>
-	<string>We need this permission to be able to add calendar events from scanned codes</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
