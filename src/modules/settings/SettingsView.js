@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Switch,
+  Linking,
 } from 'react-native';
 import {
   View,
@@ -14,6 +15,7 @@ import {
 } from 'react-native-ui-lib';
 import tinycolor from 'tinycolor2';
 import { SlidersColorPicker } from 'react-native-color';
+import Rate from 'react-native-rate';
 
 import { commonStyles, colors } from '../../styles';
 
@@ -197,6 +199,28 @@ export default function SettingsView(props: Props) {
               </View>
               <Text gray marginR-50>Save duplicate scan result in history</Text>
             </View>
+          </View>
+        </View>
+        <View row marginB-25>
+          <View flex marginR-20>
+            <TouchableOpacity onPress={() => Linking.openURL('mailto:apps@insider.io?subject=QRCode')}>
+              <Text center gray>Contact us</Text>
+            </TouchableOpacity>
+          </View>
+          <View flex>
+            <TouchableOpacity>
+              <Text
+                center
+                gray
+                onPress={() => Rate.rate({
+                  AppleAppID: '1445350234',
+                  preferInApp: true,
+                  openAppStoreIfInAppFails: true,
+                })}
+              >
+                Rate us
+              </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

@@ -56,10 +56,14 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSContactsUsageDescription</key>
+	<string>We need access to contacts for completing saving action</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This app requires access to the calendar</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

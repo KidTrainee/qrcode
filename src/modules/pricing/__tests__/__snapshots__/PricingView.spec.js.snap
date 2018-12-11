@@ -23,6 +23,7 @@ ShallowWrapper {
         useNativeDriver={true}
       >
         <View
+          flex={true}
           useNativeDriver={true}
         >
           <View
@@ -123,7 +124,6 @@ ShallowWrapper {
             </Text>
           </View>
           <View
-            marginB-25={true}
             paddingH-50={true}
             row={true}
             useNativeDriver={true}
@@ -147,8 +147,13 @@ ShallowWrapper {
             </Text>
           </View>
           <View
-            centerH={true}
+            center={true}
             paddingH-50={true}
+            style={
+              Object {
+                "flexGrow": 1,
+              }
+            }
             useNativeDriver={true}
           >
             <Button
@@ -157,7 +162,6 @@ ShallowWrapper {
                   "minWidth": "100%",
                 }
               }
-              variant="primary"
             >
               Purchase for $4.99
             </Button>
@@ -263,6 +267,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <View
+            flex={true}
             useNativeDriver={true}
           >
             <View
@@ -363,7 +368,6 @@ ShallowWrapper {
               </Text>
             </View>
             <View
-              marginB-25={true}
               paddingH-50={true}
               row={true}
               useNativeDriver={true}
@@ -387,8 +391,13 @@ ShallowWrapper {
               </Text>
             </View>
             <View
-              centerH={true}
+              center={true}
               paddingH-50={true}
+              style={
+                Object {
+                  "flexGrow": 1,
+                }
+              }
               useNativeDriver={true}
             >
               <Button
@@ -397,7 +406,6 @@ ShallowWrapper {
                     "minWidth": "100%",
                   }
                 }
-                variant="primary"
               >
                 Purchase for $4.99
               </Button>
@@ -600,7 +608,6 @@ ShallowWrapper {
                 </Text>
               </View>,
               <View
-                marginB-25={true}
                 paddingH-50={true}
                 row={true}
                 useNativeDriver={true}
@@ -624,8 +631,13 @@ ShallowWrapper {
                 </Text>
               </View>,
               <View
-                centerH={true}
+                center={true}
                 paddingH-50={true}
+                style={
+                  Object {
+                    "flexGrow": 1,
+                  }
+                }
                 useNativeDriver={true}
               >
                 <Button
@@ -634,7 +646,6 @@ ShallowWrapper {
                       "minWidth": "100%",
                     }
                   }
-                  variant="primary"
                 >
                   Purchase for $4.99
                 </Button>
@@ -683,6 +694,7 @@ ShallowWrapper {
                 </View>
               </View>,
             ],
+            "flex": true,
             "useNativeDriver": true,
           },
           "ref": null,
@@ -958,7 +970,6 @@ ShallowWrapper {
                     Advanced codes generation
                   </Text>,
                 ],
-                "marginB-25": true,
                 "paddingH-50": true,
                 "row": true,
                 "useNativeDriver": true,
@@ -1003,7 +1014,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "centerH": true,
+                "center": true,
                 "children": Array [
                   <Button
                     style={
@@ -1011,7 +1022,6 @@ ShallowWrapper {
                         "minWidth": "100%",
                       }
                     }
-                    variant="primary"
                   >
                     Purchase for $4.99
                   </Button>,
@@ -1060,6 +1070,9 @@ ShallowWrapper {
                   </View>,
                 ],
                 "paddingH-50": true,
+                "style": Object {
+                  "flexGrow": 1,
+                },
                 "useNativeDriver": true,
               },
               "ref": null,
@@ -1074,7 +1087,6 @@ ShallowWrapper {
                     "style": Object {
                       "minWidth": "100%",
                     },
-                    "variant": "primary",
                   },
                   "ref": null,
                   "rendered": "Purchase for $4.99",
@@ -1384,6 +1396,7 @@ ShallowWrapper {
           useNativeDriver={true}
         >
           <View
+            flex={true}
             useNativeDriver={true}
           >
             <View
@@ -1484,7 +1497,6 @@ ShallowWrapper {
               </Text>
             </View>
             <View
-              marginB-25={true}
               paddingH-50={true}
               row={true}
               useNativeDriver={true}
@@ -1508,8 +1520,13 @@ ShallowWrapper {
               </Text>
             </View>
             <View
-              centerH={true}
+              center={true}
               paddingH-50={true}
+              style={
+                Object {
+                  "flexGrow": 1,
+                }
+              }
               useNativeDriver={true}
             >
               <Button
@@ -1518,7 +1535,6 @@ ShallowWrapper {
                     "minWidth": "100%",
                   }
                 }
-                variant="primary"
               >
                 Purchase for $4.99
               </Button>
@@ -1624,6 +1640,7 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <View
+              flex={true}
               useNativeDriver={true}
             >
               <View
@@ -1724,7 +1741,6 @@ ShallowWrapper {
                 </Text>
               </View>
               <View
-                marginB-25={true}
                 paddingH-50={true}
                 row={true}
                 useNativeDriver={true}
@@ -1748,8 +1764,13 @@ ShallowWrapper {
                 </Text>
               </View>
               <View
-                centerH={true}
+                center={true}
                 paddingH-50={true}
+                style={
+                  Object {
+                    "flexGrow": 1,
+                  }
+                }
                 useNativeDriver={true}
               >
                 <Button
@@ -1758,7 +1779,6 @@ ShallowWrapper {
                       "minWidth": "100%",
                     }
                   }
-                  variant="primary"
                 >
                   Purchase for $4.99
                 </Button>
@@ -1961,7 +1981,6 @@ ShallowWrapper {
                   </Text>
                 </View>,
                 <View
-                  marginB-25={true}
                   paddingH-50={true}
                   row={true}
                   useNativeDriver={true}
@@ -1985,8 +2004,13 @@ ShallowWrapper {
                   </Text>
                 </View>,
                 <View
-                  centerH={true}
+                  center={true}
                   paddingH-50={true}
+                  style={
+                    Object {
+                      "flexGrow": 1,
+                    }
+                  }
                   useNativeDriver={true}
                 >
                   <Button
@@ -1995,7 +2019,6 @@ ShallowWrapper {
                         "minWidth": "100%",
                       }
                     }
-                    variant="primary"
                   >
                     Purchase for $4.99
                   </Button>
@@ -2044,6 +2067,7 @@ ShallowWrapper {
                   </View>
                 </View>,
               ],
+              "flex": true,
               "useNativeDriver": true,
             },
             "ref": null,
@@ -2319,7 +2343,6 @@ ShallowWrapper {
                       Advanced codes generation
                     </Text>,
                   ],
-                  "marginB-25": true,
                   "paddingH-50": true,
                   "row": true,
                   "useNativeDriver": true,
@@ -2364,7 +2387,7 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "centerH": true,
+                  "center": true,
                   "children": Array [
                     <Button
                       style={
@@ -2372,7 +2395,6 @@ ShallowWrapper {
                           "minWidth": "100%",
                         }
                       }
-                      variant="primary"
                     >
                       Purchase for $4.99
                     </Button>,
@@ -2421,6 +2443,9 @@ ShallowWrapper {
                     </View>,
                   ],
                   "paddingH-50": true,
+                  "style": Object {
+                    "flexGrow": 1,
+                  },
                   "useNativeDriver": true,
                 },
                 "ref": null,
@@ -2435,7 +2460,6 @@ ShallowWrapper {
                       "style": Object {
                         "minWidth": "100%",
                       },
-                      "variant": "primary",
                     },
                     "ref": null,
                     "rendered": "Purchase for $4.99",

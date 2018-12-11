@@ -18,7 +18,7 @@ export default function PricingView(props: Props) {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
       <View flex-1 spread>
-        <View>
+        <View flex>
           <View centerH marginT-25>
             <Image
               assetGroup="images"
@@ -55,7 +55,7 @@ export default function PricingView(props: Props) {
             />
             <Text marginL-15>Batch scan</Text>
           </View>
-          <View row paddingH-50 marginB-25>
+          <View row paddingH-50>
             <Image
               assetGroup="icons"
               assetName="check"
@@ -64,7 +64,7 @@ export default function PricingView(props: Props) {
             />
             <Text marginL-15>Advanced codes generation</Text>
           </View>
-          <View paddingH-50 centerH>
+          <View paddingH-50 center style={{ flexGrow: 1 }}>
             <Button style={{ minWidth: '100%' }} onPress={props.buyProVersion}>
               {props.isLoading
                 ? <ActivityIndicator color="#FFFFFF" />

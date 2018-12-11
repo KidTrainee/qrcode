@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
 } from 'react-native-ui-lib';
 
+import { iphoneXorBigger } from '../scanner/ScannerView';
 import { colors } from '../../styles';
 
 import Scanner from '../scanner/ScannerViewContainer';
@@ -79,6 +80,7 @@ const TabNavigator = createBottomTabNavigator({
       shadowOpacity: 0.22,
       shadowRadius: 2.22,
       paddingTop: 5,
+      paddingBottom: iphoneXorBigger() ? 0 : 5,
       elevation: 5,
       ...Platform.OS === 'android' && {
         paddingBottom: 5,

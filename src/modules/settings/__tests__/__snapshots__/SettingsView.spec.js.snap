@@ -600,6 +600,47 @@ ShallowWrapper {
               </View>
             </View>
           </View>
+          <View
+            marginB-25={true}
+            row={true}
+            useNativeDriver={true}
+          >
+            <View
+              flex={true}
+              marginR-20={true}
+              useNativeDriver={true}
+            >
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+              >
+                <Text
+                  center={true}
+                  gray={true}
+                  useNativeDriver={true}
+                >
+                  Contact us
+                </Text>
+              </TouchableOpacity>
+            </View>
+            <View
+              flex={true}
+              useNativeDriver={true}
+            >
+              <TouchableOpacity
+                activeOpacity={0.2}
+              >
+                <Text
+                  center={true}
+                  gray={true}
+                  onPress={[Function]}
+                  useNativeDriver={true}
+                >
+                  Rate us
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </ScrollView>,
         <SlidersColorPicker
           cancelLabel="Cancel"
@@ -1183,6 +1224,47 @@ ShallowWrapper {
                     Save duplicate scan result in history
                   </Text>
                 </View>
+              </View>
+            </View>,
+            <View
+              marginB-25={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <View
+                flex={true}
+                marginR-20={true}
+                useNativeDriver={true}
+              >
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                >
+                  <Text
+                    center={true}
+                    gray={true}
+                    useNativeDriver={true}
+                  >
+                    Contact us
+                  </Text>
+                </TouchableOpacity>
+              </View>
+              <View
+                flex={true}
+                useNativeDriver={true}
+              >
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                >
+                  <Text
+                    center={true}
+                    gray={true}
+                    onPress={[Function]}
+                    useNativeDriver={true}
+                  >
+                    Rate us
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>,
           ],
@@ -3587,6 +3669,169 @@ ShallowWrapper {
             ],
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <View
+                  flex={true}
+                  marginR-20={true}
+                  useNativeDriver={true}
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                  >
+                    <Text
+                      center={true}
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      Contact us
+                    </Text>
+                  </TouchableOpacity>
+                </View>,
+                <View
+                  flex={true}
+                  useNativeDriver={true}
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                  >
+                    <Text
+                      center={true}
+                      gray={true}
+                      onPress={[Function]}
+                      useNativeDriver={true}
+                    >
+                      Rate us
+                    </Text>
+                  </TouchableOpacity>
+                </View>,
+              ],
+              "marginB-25": true,
+              "row": true,
+              "useNativeDriver": true,
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                  >
+                    <Text
+                      center={true}
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      Contact us
+                    </Text>
+                  </TouchableOpacity>,
+                  "flex": true,
+                  "marginR-20": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "activeOpacity": 0.2,
+                    "children": <Text
+                      center={true}
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      Contact us
+                    </Text>,
+                    "onPress": [Function],
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "center": true,
+                      "children": "Contact us",
+                      "gray": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Contact us",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <TouchableOpacity
+                    activeOpacity={0.2}
+                  >
+                    <Text
+                      center={true}
+                      gray={true}
+                      onPress={[Function]}
+                      useNativeDriver={true}
+                    >
+                      Rate us
+                    </Text>
+                  </TouchableOpacity>,
+                  "flex": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "activeOpacity": 0.2,
+                    "children": <Text
+                      center={true}
+                      gray={true}
+                      onPress={[Function]}
+                      useNativeDriver={true}
+                    >
+                      Rate us
+                    </Text>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "center": true,
+                      "children": "Rate us",
+                      "gray": true,
+                      "onPress": [Function],
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Rate us",
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
         ],
         "type": [MockFunction],
       },
@@ -4151,6 +4396,47 @@ ShallowWrapper {
                     Save duplicate scan result in history
                   </Text>
                 </View>
+              </View>
+            </View>
+            <View
+              marginB-25={true}
+              row={true}
+              useNativeDriver={true}
+            >
+              <View
+                flex={true}
+                marginR-20={true}
+                useNativeDriver={true}
+              >
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                >
+                  <Text
+                    center={true}
+                    gray={true}
+                    useNativeDriver={true}
+                  >
+                    Contact us
+                  </Text>
+                </TouchableOpacity>
+              </View>
+              <View
+                flex={true}
+                useNativeDriver={true}
+              >
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                >
+                  <Text
+                    center={true}
+                    gray={true}
+                    onPress={[Function]}
+                    useNativeDriver={true}
+                  >
+                    Rate us
+                  </Text>
+                </TouchableOpacity>
               </View>
             </View>
           </ScrollView>,
@@ -4736,6 +5022,47 @@ ShallowWrapper {
                       Save duplicate scan result in history
                     </Text>
                   </View>
+                </View>
+              </View>,
+              <View
+                marginB-25={true}
+                row={true}
+                useNativeDriver={true}
+              >
+                <View
+                  flex={true}
+                  marginR-20={true}
+                  useNativeDriver={true}
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                  >
+                    <Text
+                      center={true}
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      Contact us
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+                <View
+                  flex={true}
+                  useNativeDriver={true}
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                  >
+                    <Text
+                      center={true}
+                      gray={true}
+                      onPress={[Function]}
+                      useNativeDriver={true}
+                    >
+                      Rate us
+                    </Text>
+                  </TouchableOpacity>
                 </View>
               </View>,
             ],
@@ -7135,6 +7462,169 @@ ShallowWrapper {
                       "type": [Function],
                     },
                   ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <View
+                    flex={true}
+                    marginR-20={true}
+                    useNativeDriver={true}
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                    >
+                      <Text
+                        center={true}
+                        gray={true}
+                        useNativeDriver={true}
+                      >
+                        Contact us
+                      </Text>
+                    </TouchableOpacity>
+                  </View>,
+                  <View
+                    flex={true}
+                    useNativeDriver={true}
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                    >
+                      <Text
+                        center={true}
+                        gray={true}
+                        onPress={[Function]}
+                        useNativeDriver={true}
+                      >
+                        Rate us
+                      </Text>
+                    </TouchableOpacity>
+                  </View>,
+                ],
+                "marginB-25": true,
+                "row": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                    >
+                      <Text
+                        center={true}
+                        gray={true}
+                        useNativeDriver={true}
+                      >
+                        Contact us
+                      </Text>
+                    </TouchableOpacity>,
+                    "flex": true,
+                    "marginR-20": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "activeOpacity": 0.2,
+                      "children": <Text
+                        center={true}
+                        gray={true}
+                        useNativeDriver={true}
+                      >
+                        Contact us
+                      </Text>,
+                      "onPress": [Function],
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "center": true,
+                        "children": "Contact us",
+                        "gray": true,
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": "Contact us",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <TouchableOpacity
+                      activeOpacity={0.2}
+                    >
+                      <Text
+                        center={true}
+                        gray={true}
+                        onPress={[Function]}
+                        useNativeDriver={true}
+                      >
+                        Rate us
+                      </Text>
+                    </TouchableOpacity>,
+                    "flex": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "activeOpacity": 0.2,
+                      "children": <Text
+                        center={true}
+                        gray={true}
+                        onPress={[Function]}
+                        useNativeDriver={true}
+                      >
+                        Rate us
+                      </Text>,
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "center": true,
+                        "children": "Rate us",
+                        "gray": true,
+                        "onPress": [Function],
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": "Rate us",
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
                   "type": [Function],
                 },
               ],

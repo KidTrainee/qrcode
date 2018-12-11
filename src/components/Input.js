@@ -5,12 +5,17 @@ import { TextInput, StyleSheet } from 'react-native';
 import { colors } from '../styles';
 
 type Props = {
-  style?: any
+  style?: any,
+  multiline: boolean,
 };
 
 const Input = (props: Props) => (
   <TextInput
-    style={[styles.textInput, props.style && props.style]}
+    style={[
+      styles.textInput,
+      props.style && props.style,
+      props.multiline && { paddingTop: 20 },
+    ]}
     {...props}
   />
 );

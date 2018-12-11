@@ -19,12 +19,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": "copy",
+      "children": "Copy",
       "onPress": [Function],
-      "variant": "primary",
+      "radius": 5,
     },
     "ref": null,
-    "rendered": "copy",
+    "rendered": "Copy",
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -33,12 +33,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": "copy",
+        "children": "Copy",
         "onPress": [Function],
-        "variant": "primary",
+        "radius": 5,
       },
       "ref": null,
-      "rendered": "copy",
+      "rendered": "Copy",
       "type": [Function],
     },
   ],
@@ -374,12 +374,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": "open",
+      "children": "Open",
       "onPress": [Function],
-      "variant": "primary",
+      "radius": 5,
     },
     "ref": null,
-    "rendered": "open",
+    "rendered": "Open",
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -388,12 +388,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": "open",
+        "children": "Open",
         "onPress": [Function],
-        "variant": "primary",
+        "radius": 5,
       },
       "ref": null,
-      "rendered": "open",
+      "rendered": "Open",
       "type": [Function],
     },
   ],
@@ -436,12 +436,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": "share",
+      "children": "Share",
       "onPress": [Function],
-      "variant": "primary",
+      "radius": 5,
     },
     "ref": null,
-    "rendered": "share",
+    "rendered": "Share",
     "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
@@ -450,12 +450,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": "share",
+        "children": "Share",
         "onPress": [Function],
-        "variant": "primary",
+        "radius": 5,
       },
       "ref": null,
-      "rendered": "share",
+      "rendered": "Share",
       "type": [Function],
     },
   ],
@@ -482,7 +482,7 @@ ShallowWrapper {
 exports[`ScannedCode renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withState(withHandlers(lifecycle(ScannedCodeView)))
+  Symbol(enzyme.__unrendered__): <Connect(withState(withHandlers(lifecycle(ScannedCodeView))))
     navigation={
       Object {
         "state": Object {
@@ -490,6 +490,15 @@ ShallowWrapper {
             "data": "hello",
           },
         },
+      }
+    }
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
       }
     }
   />,
@@ -506,6 +515,8 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
+      "dispatch": [Function],
+      "isPro": false,
       "navigation": Object {
         "state": Object {
           "params": Object {
@@ -513,8 +524,31 @@ ShallowWrapper {
           },
         },
       },
-      "setToastRef": [Function],
-      "toastRef": null,
+      "store": Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "unsubscribe": [Function],
+      },
     },
     "ref": null,
     "rendered": null,
@@ -526,6 +560,8 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
+        "dispatch": [Function],
+        "isPro": false,
         "navigation": Object {
           "state": Object {
             "params": Object {
@@ -533,8 +569,31 @@ ShallowWrapper {
             },
           },
         },
-        "setToastRef": [Function],
-        "toastRef": null,
+        "store": Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        },
+        "storeSubscription": Subscription {
+          "listeners": Object {
+            "clear": [Function],
+            "get": [Function],
+            "notify": [Function],
+            "subscribe": [Function],
+          },
+          "onStateChange": [Function],
+          "parentSub": undefined,
+          "store": Object {
+            "dispatch": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+            Symbol(observable): [Function],
+          },
+          "unsubscribe": [Function],
+        },
       },
       "ref": null,
       "rendered": null,

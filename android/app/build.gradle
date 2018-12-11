@@ -137,6 +137,9 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-contacts')
+    compile project(':react-native-calendar-events')
+    
     compile project(':react-native-firebase')
     compile project(':react-native-iap')
     compile project(':react-native-sound')

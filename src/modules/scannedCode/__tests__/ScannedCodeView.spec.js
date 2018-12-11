@@ -15,6 +15,7 @@ import {
 } from '../ScannedCodeView';
 
 import ScannedCode from '../ScannedCodeViewContainer';
+import { store } from '../../../redux/store';
 
 jest.mock('Linking', () => ({
   openURL: jest.fn(),
@@ -119,6 +120,7 @@ describe('ScannedCode', () => {
   it('renders as expected', () => {
     const wrapper = Enzyme.shallow(
       <ScannedCode
+        store={store}
         navigation={{
           state: {
             params: {

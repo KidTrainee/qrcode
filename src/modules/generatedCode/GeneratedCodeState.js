@@ -13,10 +13,9 @@ export const generateQRValueFromState = (state: State): string => {
 
   switch (codeType) {
     case codeTypesList.EMAIL:
-      return `
-MATMSG:TO:${fieldValues[fieldTypesList.EMAIL_TO] || ''};
-SUB:${fieldValues[fieldTypesList.EMAIL_SUBJECT] || ''};
-BODY:${fieldValues[fieldTypesList.EMAIL_BODY] || ''};`;
+      return `mailto:${fieldValues[fieldTypesList.EMAIL_TO] || ''}
+?subject=${fieldValues[fieldTypesList.EMAIL_SUBJECT] || ''}
+&body=${fieldValues[fieldTypesList.EMAIL_BODY] || ''}`;
     case codeTypesList.SMS:
       return `SMS:${fieldValues[fieldTypesList.SMS_TO] || ''}:${fieldValues[fieldTypesList.SMS_MESSAGE] || ''}`;
     case codeTypesList.WIFI:

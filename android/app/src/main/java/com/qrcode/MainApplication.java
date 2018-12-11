@@ -3,6 +3,9 @@ package com.qrcode;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rt2zz.reactnativecontacts.ReactNativeContacts;
+import com.calendarevents.CalendarEventsPackage;
+import com.dooboolab.RNIap.RNIapPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import com.dooboolab.RNIap.RNIapPackage;
 import com.zmxv.RNSound.RNSoundPackage;
@@ -31,6 +34,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new ReactNativeContacts(),
+            new CalendarEventsPackage(),
+            new RNIapPackage(),
             new RNFirebasePackage(),
             new RNIapPackage(),
             new RNSoundPackage(),

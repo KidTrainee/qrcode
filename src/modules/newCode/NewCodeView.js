@@ -120,9 +120,8 @@ export default function NewCodeView(props: Props) {
           { codeType: props.activeCodeType, fieldValues: props.fieldValues },
         )}
         radius={5}
-        variant="darkGray"
         style={{
-          marginBottom: 10,
+          marginBottom: 15,
         }}
       >
         Generate

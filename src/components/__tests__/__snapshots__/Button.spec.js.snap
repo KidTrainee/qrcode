@@ -7,7 +7,6 @@ ShallowWrapper {
     onPress={null}
     radius={5}
     textColor="primary"
-    variant="primary"
   >
     hello
   </Button>,
@@ -50,9 +49,6 @@ ShallowWrapper {
               "borderRadius": 50,
               "elevation": 1,
               "padding": 20,
-            },
-            Object {
-              "backgroundColor": "#FC6821",
             },
             Object {
               "borderRadius": 5,
@@ -133,9 +129,6 @@ ShallowWrapper {
             "padding": 20,
           },
           Object {
-            "backgroundColor": "#FC6821",
-          },
-          Object {
             "borderRadius": 5,
           },
           undefined,
@@ -200,9 +193,6 @@ ShallowWrapper {
                 "borderRadius": 50,
                 "elevation": 1,
                 "padding": 20,
-              },
-              Object {
-                "backgroundColor": "#FC6821",
               },
               Object {
                 "borderRadius": 5,
@@ -281,9 +271,6 @@ ShallowWrapper {
               "borderRadius": 50,
               "elevation": 1,
               "padding": 20,
-            },
-            Object {
-              "backgroundColor": "#FC6821",
             },
             Object {
               "borderRadius": 5,

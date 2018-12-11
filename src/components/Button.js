@@ -19,6 +19,7 @@ type ButtonProps = {
 
 const Button = (props: ButtonProps) => {
   const variant = colors[props.variant];
+  const gradient = !variant ? [colors.primaryGradientStart, colors.primaryGradientEnd] : [variant, variant];
   return (
     <TouchableOpacity
       testID={props.testID}
@@ -34,10 +35,9 @@ const Button = (props: ButtonProps) => {
           x: 1,
           y: 0,
         }}
-        colors={[colors.primaryGradientStart, colors.primaryGradientEnd]}
+        colors={gradient}
         style={[
           styles.button,
-          { backgroundColor: variant },
           props.radius && { borderRadius: props.radius },
           props.style,
         ]}
@@ -58,10 +58,6 @@ const Button = (props: ButtonProps) => {
       </LinearGradient>
     </TouchableOpacity>
   );
-};
-
-Button.defaultProps = {
-  variant: 'primary',
 };
 
 const styles = StyleSheet.create({

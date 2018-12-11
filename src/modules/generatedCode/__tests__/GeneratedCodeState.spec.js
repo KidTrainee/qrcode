@@ -55,10 +55,9 @@ P:;;`);
     expect(generateQRValueFromState({
       codeType: codeTypesList.EMAIL,
       fieldValues: {}
-    })).toEqual(`
-MATMSG:TO:;
-SUB:;
-BODY:;`);
+    })).toEqual(`mailto:
+?subject=
+&body=`);
   });
 
   it('should return plain text from TEXT code type', () => {
@@ -167,10 +166,9 @@ P:12345678;;`);
         [fieldTypesList.EMAIL_SUBJECT]: 'Design',
         [fieldTypesList.EMAIL_BODY]: 'We are fucked up',
       }
-    })).toEqual(`
-MATMSG:TO:johndoe@gmail.com;
-SUB:Design;
-BODY:We are fucked up;`);
+    })).toEqual(`mailto:johndoe@gmail.com
+?subject=Design
+&body=We are fucked up`);
   })
 });
 

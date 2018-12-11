@@ -18,6 +18,7 @@ const generateTextInput = (
   placeholder: string,
   keyboardType: string = 'default',
   secureTextEntry: boolean = false,
+  multiline: boolean = false,
 ) => (
   <Input
     testID={`input:${placeholder.toLocaleLowerCase().replace(' ', '-')}`}
@@ -27,6 +28,7 @@ const generateTextInput = (
     keyboardType={keyboardType}
     secureTextEntry={secureTextEntry}
     autoCapitalize="none"
+    multiline={multiline}
     autoCorrect={false}
   />
 );
@@ -40,7 +42,14 @@ const CodeGeneratingForm = (props: Props) => {
         <View>
           {generateTextInput(1, text => props.updateField(fieldTypesList.EMAIL_TO, text), 'To')}
           {generateTextInput(21, text => props.updateField(fieldTypesList.EMAIL_SUBJECT, text), 'Subject')}
-          {generateTextInput(22, text => props.updateField(fieldTypesList.EMAIL_BODY, text), 'Message')}
+          {generateTextInput(
+            22,
+            text => props.updateField(fieldTypesList.EMAIL_BODY, text),
+            'Message',
+            'default',
+            false,
+            true)
+          }
         </View>
       );
     case codeTypesList.TEL:
@@ -49,7 +58,14 @@ const CodeGeneratingForm = (props: Props) => {
       return (
         <View>
           {generateTextInput(3, text => props.updateField(fieldTypesList.SMS_TO, text), 'Phone number')}
-          {generateTextInput(4, text => props.updateField(fieldTypesList.SMS_MESSAGE, text), 'Message')}
+          {generateTextInput(
+            4,
+            text => props.updateField(fieldTypesList.SMS_MESSAGE, text),
+            'Message',
+            'default',
+            false,
+            true)
+          }
         </View>
       );
     case codeTypesList.WIFI:
@@ -57,6 +73,7 @@ const CodeGeneratingForm = (props: Props) => {
         <View>
           {generateTextInput(5, text => props.updateField(fieldTypesList.WIFI_SSID, text), 'SSID')}
           <Picker
+            title="Pick encryption type"
             placeholder="Encryption"
             onSetValue={text => props.updateField(fieldTypesList.WIFI_ENCRYPTION, text)}
             items={[
@@ -104,6 +121,7 @@ const CodeGeneratingForm = (props: Props) => {
                 type="datetime"
                 placeholder="Start"
                 onSetValue={text => props.updateField(fieldTypesList.EVENT_START, text)}
+                title="Pick date"
               />
             </View>
             <View flex>
@@ -113,6 +131,7 @@ const CodeGeneratingForm = (props: Props) => {
                 minimumDate={props.fieldValues[fieldTypesList.EVENT_START]
                   && props.fieldValues[fieldTypesList.EVENT_START]}
                 onSetValue={text => props.updateField(fieldTypesList.EVENT_END, text)}
+                title="Pick date"
               />
             </View>
           </View>

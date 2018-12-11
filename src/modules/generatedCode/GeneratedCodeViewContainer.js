@@ -1,9 +1,12 @@
 // @flow
 import { connect } from 'react-redux';
-import { compose, withHandlers, lifecycle } from 'recompose';
+import {
+  compose, withHandlers, withStateHandlers, lifecycle,
+} from 'recompose';
 import firebase from 'react-native-firebase';
 
 import GeneratedCodeView from './GeneratedCodeView';
+import { setSettingValue } from '../settings/SettingsState';
 
 export default compose(
   connect(
@@ -11,12 +14,26 @@ export default compose(
       settings: state.settings,
       isPro: state.app.isPro,
     }),
+    dispatch => ({
+      setSettingValue: (setting, value) => dispatch(setSettingValue({ setting, value })),
+    }),
+  ),
+  withStateHandlers(
+    { isBackgroundModalVisible: false, isForegroundModalVisible: false },
+    {
+      toggleBackgroundColorModal: ({ isBackgroundModalVisible }) => () => ({
+        isBackgroundModalVisible: !isBackgroundModalVisible,
+      }),
+      toggleForegroundColorModal: ({ isForegroundModalVisible }) => () => ({
+        isForegroundModalVisible: !isForegroundModalVisible,
+      }),
+    },
   ),
   withHandlers(() => {
     let _qrcodeRef = {};
     return {
-      goSettingsPage: props => () => {
-        props.navigation.navigate('Settings');
+      goPricingPage: props => () => {
+        props.navigation.navigate('Pricing');
       },
       updateQrcodeRef: () => (ref) => {
         _qrcodeRef = ref;
@@ -25,6 +42,14 @@ export default compose(
         _qrcodeRef.toDataURL((data) => {
           shareInstance.open({ url: `data:image/png;base64,${data}` });
         });
+      },
+      handleBackgroundColorPick: props => (color) => {
+        props.setSettingValue('backgroundColor', color);
+        props.toggleBackgroundColorModal();
+      },
+      handleForegroundColorPick: props => (color) => {
+        props.setSettingValue('foregroundColor', color);
+        props.toggleForegroundColorModal();
       },
     };
   }),

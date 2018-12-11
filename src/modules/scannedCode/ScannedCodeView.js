@@ -35,6 +35,11 @@ type Props = {
   setToastRef: (any) => void,
   copyToClipboard: (string) => any,
   toastRef: any,
+  isPro: boolean,
+  goPricingPage: () => void,
+  addToCalendar: (any) => void,
+  addToContacts: (any) => void,
+  goGeneratedCodePage: () => void,
 };
 
 export const capitalizeFirstLetter = (string: string): string => string.charAt(0).toUpperCase() + string.slice(1);
@@ -49,23 +54,26 @@ export function openLink(url: string): Promise<any> {
 }
 
 export const ShareButton = (props: { data: any }) => (
-  <Button onPress={() => Share.share({ message: props.data })}>share</Button>
+  <Button radius={5} onPress={() => Share.share({ message: props.data })}>Share</Button>
 );
 export const CopyButton = (props: {
   data: any, copyToClipboard: (string) => void,
 }) => (
   <Button
+    radius={5}
     onPress={() => props.copyToClipboard(props.data)}
   >
-    copy
+    Copy
   </Button>
 );
 export const OpenButton = (props: { data: any, children?: string }) => (
-  <Button onPress={() => openLink(props.data)}>{props.children || 'open'}</Button>
+  <Button radius={5} onPress={() => openLink(props.data)}>{props.children || 'Open'}</Button>
 );
 
 export const OpenInMaps = (props: { longitude: number, latitude: number }) => (
-  <Button onPress={() => openMap({ latitude: props.latitude, longitude: props.longitude })}>Open in Maps</Button>
+  <Button radius={5} onPress={() => openMap({ latitude: props.latitude, longitude: props.longitude })}>
+    Open in Maps
+  </Button>
 );
 
 export const CustomInput = (props: any) => (
@@ -118,44 +126,92 @@ export default function ScannedCodeView(props: Props) {
             />
           ))}
         </View>
-
-        <View flex bottom paddingB-30>
+        <View flex bottom>
+          { parsedString.type === codeTypesList.EVENT && (
+            <View>
+              <Button radius={5} onPress={() => props.addToCalendar(fieldsDict)}>
+                Add to Calendar
+              </Button>
+            </View>
+          )}
           { parsedString.type === codeTypesList.TEXT && (
             <View row centerH style={{ justifyContent: 'space-around' }}>
-              <CopyButton copyToClipboard={props.copyToClipboard} data={data} />
-              <ShareButton data={data} />
+              <View flex marginR-20>
+                <CopyButton copyToClipboard={props.copyToClipboard} data={data} />
+              </View>
+              <View flex>
+                <ShareButton data={data} />
+              </View>
             </View>
           )}
           { parsedString.type === codeTypesList.URL && (
-            <View row centerH spread>
-              <OpenButton data={data} />
-              <CopyButton copyToClipboard={props.copyToClipboard} data={data} />
-              <ShareButton data={data} />
+            <View row>
+              <View flex marginR-20>
+                <OpenButton data={data} />
+              </View>
+              <View flex marginR-20>
+                <CopyButton copyToClipboard={props.copyToClipboard} data={data} />
+              </View>
+              <View flex>
+                <ShareButton data={data} />
+              </View>
             </View>
           )}
           { parsedString.type === codeTypesList.EMAIL && (
-            <View row centerH>
-              <OpenButton data={data}>send</OpenButton>
+            <View>
+              <OpenButton data={`mailto:${fieldsDict.to}?subject=${fieldsDict.subject}&body=${fieldsDict.body}`}>
+                Send
+              </OpenButton>
+            </View>
+          )}
+          { parsedString.type === codeTypesList.CONTACT && (
+            <View row>
+              <View flex marginR-20>
+                <OpenButton data={`tel:${fieldsDict.phone}`}>Сall</OpenButton>
+              </View>
+              <View flex marginR-20>
+                <OpenButton data={`mailto:${fieldsDict.email}`}>Email</OpenButton>
+              </View>
+              <View flex>
+                <Button radius={5} onPress={() => props.addToContacts(fieldsDict)}>Save</Button>
+              </View>
             </View>
           )}
           { parsedString.type === codeTypesList.TEL && (
-            <View row centerH spread>
-              <OpenButton data={data}>call</OpenButton>
-              <CopyButton copyToClipboard={props.copyToClipboard} data={fieldsDict.number} />
-              <ShareButton data={fieldsDict.number} />
+            <View row>
+              <View flex marginR-20>
+                <OpenButton data={data}>Call</OpenButton>
+              </View>
+              <View flex marginR-20>
+                <CopyButton copyToClipboard={props.copyToClipboard} data={fieldsDict.number} />
+              </View>
+              <View flex>
+                <ShareButton data={fieldsDict.number} />
+              </View>
             </View>
           )}
           { parsedString.type === codeTypesList.SMS && (
-            <View row centerH>
-              <OpenButton data={data}>send</OpenButton>
+            <View>
+              <OpenButton data={`sms:${fieldsDict.to}&body=${fieldsDict.message}`}>Send</OpenButton>
             </View>
           )}
           { parsedString.type === codeTypesList.GEO && (
-            <View row centerH>
+            <View>
               <OpenInMaps longitude={Number(fieldsDict.longitude)} latitude={Number(fieldsDict.latitude)} />
             </View>
           )}
         </View>
+        <TouchableOpacity
+          style={styles.showQrCodeButton}
+          onPress={props.isPro ? props.goGeneratedCodePage : props.goPricingPage}
+        >
+          <Text gray>Show QRCode&nbsp; {props.isPro}</Text>
+          {!props.isPro && (
+            <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4>
+              <Text white>Pro</Text>
+            </View>
+          )}
+        </TouchableOpacity>
       </ScrollView>
       <Toast
         positionValue={300}
@@ -183,4 +239,12 @@ const styles = StyleSheet.create({
     padding: 0,
   },
   copyIcon: { height: 40, width: 25 },
+  showQrCodeButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginVertical: 25,
+  },
+  proLabel: {
+    backgroundColor: colors.red,
+  },
 });

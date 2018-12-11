@@ -5020,6 +5020,10 @@ react-native-blur@^3.1.1:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-calendar-events@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/react-native-calendar-events/-/react-native-calendar-events-1.6.3.tgz#2b31faf776a6df2ba0d5ecd595fe283e51de4e5c"
+
 react-native-camera@^1.4.3:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-1.5.1.tgz#c241cc0456e5dd31f1d05812bf3d0e86fb6931a3"
@@ -5034,6 +5038,10 @@ react-native-color@^0.0.10:
     prop-types "^15.6.0"
     react-native-slider "^0.11.0"
     tinycolor2 "^1.4.1"
+
+react-native-contacts@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/react-native-contacts/-/react-native-contacts-2.2.4.tgz#6038aefdae6725073536e40bd350bcf255e48062"
 
 react-native-easy-toast@gaykov/react-native-easy-toast:
   version "1.1.0"
@@ -5100,6 +5108,10 @@ react-native-qrcode-svg@^5.1.1:
   dependencies:
     prop-types "^15.5.10"
     qrcode "^1.2.0"
+
+react-native-rate@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-rate/-/react-native-rate-1.1.6.tgz#55f087a8376fc6e5bdca02698c03662b450e3d12"
 
 react-native-safe-area-view@^0.11.0:
   version "0.11.0"

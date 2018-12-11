@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { Modal, Picker, DatePickerIOS } from 'react-native';
-import { View } from 'react-native-ui-lib';
+import { View, Text } from 'react-native-ui-lib';
 import moment from 'moment';
 
 import { Input, Button } from '../index';
@@ -48,6 +48,7 @@ export type PickerProps = {
     id: number,
     label: string,
   }>,
+  title?: string,
 };
 
 const PickerComponent = (props: PickerProps) => (
@@ -66,7 +67,8 @@ const PickerComponent = (props: PickerProps) => (
       transparent={false}
       visible={props.isModalOpened}
     >
-      <View flex-1 centerV>
+      <View paddingH-15 flex-1 centerV>
+        <Text h2 center marginB-20>{props.title}</Text>
         {props.type === 'datetime'
           ? (
             <DatePickerIOS
