@@ -482,7 +482,7 @@ ShallowWrapper {
 exports[`ScannedCode renders as expected 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withState(withHandlers(ScannedCodeView))
+  Symbol(enzyme.__unrendered__): <withState(withHandlers(lifecycle(ScannedCodeView)))
     navigation={
       Object {
         "state": Object {

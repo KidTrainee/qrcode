@@ -1,5 +1,8 @@
 import { connect } from 'react-redux';
-import { compose, withState, withHandlers } from 'recompose';
+import {
+  compose, withState, withHandlers, lifecycle,
+} from 'recompose';
+import firebase from 'react-native-firebase';
 
 import { codeTypesList } from './NewCodeState';
 import NewCodeView from './NewCodeView';
@@ -22,6 +25,11 @@ export default compose(
     changeCodeType: props => (nextCodeType) => {
       props.setCodeType(nextCodeType);
       props.setFielsValues({});
+    },
+  }),
+  lifecycle({
+    componentDidMount() {
+      firebase.analytics().setCurrentScreen('newСode', 'NewCodeView');
     },
   }),
 )(NewCodeView);

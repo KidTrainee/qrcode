@@ -89,7 +89,7 @@ describe('parseScannedString', () => {
   });
 
   it('should scan wifi correctly', () => {
-    expect(parseScannedString('WIFI:S:WIFI_SSID:T:WIFI_ENCRYPTION:P:WIFI_PASSWORD')).toEqual({
+    expect(parseScannedString('WIFI:S:WIFI_SSID;T:WIFI_ENCRYPTION;P:WIFI_PASSWORD;;')).toEqual({
       type: codeTypesList.WIFI,
       fields: [{
         title: 'ssid',
@@ -103,7 +103,7 @@ describe('parseScannedString', () => {
       }],
     });
 
-    expect(parseScannedString('WIFI:S:WIFI_SSID:T::P:')).toEqual({
+    expect(parseScannedString('WIFI:S:WIFI_SSID;T:;P:;;')).toEqual({
       type: codeTypesList.WIFI,
       fields: [{
         title: 'ssid',
@@ -117,21 +117,7 @@ describe('parseScannedString', () => {
       }],
     });
 
-    expect(parseScannedString('WIFI:S::T::P:')).toEqual({
-      type: codeTypesList.WIFI,
-      fields: [{
-        title: 'ssid',
-        value: '',
-      }, {
-        title: 'encryption',
-        value: '',
-      }, {
-        title: 'password',
-        value: '',
-      }],
-    });
-
-    expect(parseScannedString('WIFI:')).toEqual({
+    expect(parseScannedString('WIFI:S:;T:;P:;;')).toEqual({
       type: codeTypesList.WIFI,
       fields: [{
         title: 'ssid',

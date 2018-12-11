@@ -4,6 +4,7 @@ import {
 } from 'recompose';
 import { connect } from 'react-redux';
 import Sound from 'react-native-sound';
+import firebase from 'react-native-firebase';
 
 import { addItemToHistory } from '../history/HistoryState';
 
@@ -73,10 +74,12 @@ export default compose(
           props.playSound();
         }
       }
+      firebase.analytics().logEvent('scan');
     },
   }),
   lifecycle({
     componentDidMount() {
+      firebase.analytics().setCurrentScreen('scanner', 'ScannerView');
       const { navigation } = this.props;
       navigation.addListener('willFocus', () => this.props.setFocusedScreen(true));
       navigation.addListener('willBlur', () => this.props.setFocusedScreen(false));

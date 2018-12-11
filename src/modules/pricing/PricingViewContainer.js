@@ -1,6 +1,7 @@
 // @flow
 import { Platform, Alert } from 'react-native';
 import { connect } from 'react-redux';
+import firebase from 'react-native-firebase';
 import {
   compose, withState, withHandlers, lifecycle,
 } from 'recompose';
@@ -54,6 +55,7 @@ export const enhance = compose(
       try {
         await RNIap.buyProduct('io.insider.apps.qr.pro');
         props.setLoadingStatus(false);
+        firebase.analytics().logEvent('goPro');
         props.setIsPro(true);
         props.navigation.pop();
       } catch (e) {
@@ -86,6 +88,7 @@ export const enhance = compose(
   }),
   lifecycle({
     async componentDidMount() {
+      firebase.analytics().setCurrentScreen('pricing', 'PricingView');
       this.props.setLoadingStatus(true);
       // check if products are valid
       try {

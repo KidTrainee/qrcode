@@ -1,6 +1,9 @@
 // @flow
 import { connect } from 'react-redux';
-import { compose, withStateHandlers, withHandlers } from 'recompose';
+import {
+  compose, withStateHandlers, withHandlers, lifecycle,
+} from 'recompose';
+import firebase from 'react-native-firebase';
 
 import { setSettingValue } from './SettingsState';
 import SettingsView from './SettingsView';
@@ -12,7 +15,10 @@ export const enhance = compose(
       isPro: state.app.isPro,
     }),
     dispatch => ({
-      setSettingValue: (setting, value) => dispatch(setSettingValue({ setting, value })),
+      setSettingValue: (setting, value) => {
+        firebase.analytics().logEvent('toggleSettings', { setting, value });
+        dispatch(setSettingValue({ setting, value }));
+      },
     }),
   ),
   withStateHandlers(
@@ -37,6 +43,11 @@ export const enhance = compose(
     handleForegroundColorPick: props => (color) => {
       props.setSettingValue('foregroundColor', color);
       props.toggleForegroundColorModal();
+    },
+  }),
+  lifecycle({
+    componentDidMount() {
+      firebase.analytics().setCurrentScreen('settings', 'SettingsView');
     },
   }),
 );

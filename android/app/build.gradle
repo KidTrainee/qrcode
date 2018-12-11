@@ -137,6 +137,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-firebase')
     compile project(':react-native-iap')
     compile project(':react-native-sound')
     compile project(':react-native-svg')

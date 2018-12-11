@@ -53,11 +53,24 @@ export function parseScannedString(scannedString: string): {
       break;
     case 'WIFI':
       result.type = codeTypesList.WIFI;
-      const wifiInfo = convertArrayToKeyValue(splittedInputString, 1);
+      const parsedWifiFields = {
+        s: '',
+        t: '',
+        p: '',
+      };
+      const cleanedWifiString = scannedString
+        .replace(/(\r\n\t|\n|\r\t)/gm, '')
+        .replace('WIFI:', '')
+        .replace(';;', '');
+      const scannedWifiValues = cleanedWifiString.split(';');
+      scannedWifiValues.forEach((value) => {
+        const keyValue = value.split(':');
+        parsedWifiFields[keyValue[0].toLocaleLowerCase()] = keyValue[1] || '';
+      });
       result.fields = [
-        { title: 'ssid', value: wifiInfo.S || '' },
-        { title: 'encryption', value: wifiInfo.T || '' },
-        { title: 'password', value: wifiInfo.P || '' },
+        { title: 'ssid', value: parsedWifiFields.s },
+        { title: 'encryption', value: parsedWifiFields.t },
+        { title: 'password', value: parsedWifiFields.p },
       ];
       break;
     case 'GEO':

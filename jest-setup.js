@@ -6,3 +6,10 @@ import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
 NativeModules.StatusBarManager = { getHeight: jest.fn() };
+
+jest.mock('react-native-firebase', () => ({
+  analytics: jest.fn(() => ({
+    setCurrentScreen: jest.fn(),
+    logEvent: jest.fn(),
+  })),
+}));

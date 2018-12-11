@@ -27,7 +27,7 @@ describe('Pricing View Container', () => {
     expect(instance.props()).toHaveProperty('goBackWithAlert');
     expect(instance.props()).toHaveProperty('buyProVersion');
     expect(instance.props()).toHaveProperty('restorePurchases');
-  })
+  });
 
   it('should handle setLoadingStatus call', () => {
     instance.props().setLoadingStatus(true);

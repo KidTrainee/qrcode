@@ -1,7 +1,8 @@
 // @flow
 import { Alert } from 'react-native';
-import { compose, withHandlers } from 'recompose';
+import { compose, withHandlers, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
+import firebase from 'react-native-firebase';
 
 import { removeItemFromHistory, clearHistory } from './HistoryState';
 import HistoryView from './HistoryView';
@@ -31,6 +32,11 @@ export default compose(
         ],
         { cancelable: true },
       );
+    },
+  }),
+  lifecycle({
+    componentDidMount() {
+      firebase.analytics().setCurrentScreen('history', 'HistoryView');
     },
   }),
 )(HistoryView);
