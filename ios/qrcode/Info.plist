@@ -38,9 +38,7 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>We need to use camera in order to scan cods</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string/>
+	<string>We need to use camera to scan codes</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>We need this to be able to store the image in your library</string>
 	<key>UIAppFonts</key>
@@ -57,13 +55,13 @@
 		<string>armv7</string>
 	</array>
 	<key>NSContactsUsageDescription</key>
-	<string>We need access to contacts for completing saving action</string>
+	<string>We need this permission to be able to save your contacts from scanned codes</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>NSCalendarsUsageDescription</key>
-	<string>This app requires access to the calendar</string>
+	<string>We need this permission to be able to add calendar events from scanned codes</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>

@@ -86,6 +86,49 @@ describe('parseScannedString', () => {
         value: '',
       }],
     });
+    expect(parseScannedString('SMSTO:sms:smsmessage')).toEqual({
+      type: codeTypesList.SMS,
+      fields: [{
+        title: 'to',
+        value: 'sms',
+      }, {
+        title: 'message',
+        value: 'smsmessage',
+      }],
+    });
+
+    expect(parseScannedString('SMSTO:sms:')).toEqual({
+      type: codeTypesList.SMS,
+      fields: [{
+        title: 'to',
+        value: 'sms',
+      }, {
+        title: 'message',
+        value: '',
+      }],
+    });
+
+    expect(parseScannedString('SMSTO::')).toEqual({
+      type: codeTypesList.SMS,
+      fields: [{
+        title: 'to',
+        value: '',
+      }, {
+        title: 'message',
+        value: '',
+      }],
+    });
+
+    expect(parseScannedString('SMSTO')).toEqual({
+      type: codeTypesList.SMS,
+      fields: [{
+        title: 'to',
+        value: '',
+      }, {
+        title: 'message',
+        value: '',
+      }],
+    });
   });
 
   it('should scan wifi correctly', () => {

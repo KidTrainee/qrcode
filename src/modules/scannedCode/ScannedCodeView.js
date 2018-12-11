@@ -109,24 +109,31 @@ export default function ScannedCodeView(props: Props) {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
       <StatusBar translucent={false} backgroundColor={colors.lightBlue} />
-      <ScrollView contentContainerStyle={{ flex: 1, marginTop: 20, paddingHorizontal: 20 }}>
-        <View>
-          <Text h1 center marginB-20>{parsedString.type}</Text>
-          { parsedString.fields.map(field => (
-            <CustomInput
-              key={field.title.replace(' ', '')}
-              text70
-              floatingPlaceholder
-              placeholder={capitalizeFirstLetter(field.title)}
-              value={field.value || '--'}
-              editable={false}
-              disabledColor={colors.darkBlue}
-              floatingPlaceholderColor={colors.darkGray}
-              copyToClipboard={props.copyToClipboard}
-            />
-          ))}
-        </View>
-        <View flex bottom>
+      <View flex>
+        <ScrollView
+          style={{ flex: 1 }}
+          contentContainerStyle={{ marginTop: 20, paddingHorizontal: 20, paddingBottom: 20 }}
+          showsVerticalScrollIndicator={false}
+          bounces={false}
+        >
+          <View>
+            <Text h1 center marginB-20>{parsedString.type}</Text>
+            { parsedString.fields.map(field => (
+              <CustomInput
+                key={field.title.replace(' ', '')}
+                text70
+                floatingPlaceholder
+                placeholder={capitalizeFirstLetter(field.title)}
+                value={field.value || '--'}
+                editable={false}
+                disabledColor={colors.darkBlue}
+                floatingPlaceholderColor={colors.darkGray}
+                copyToClipboard={props.copyToClipboard}
+              />
+            ))}
+          </View>
+        </ScrollView>
+        <View paddingH-20>
           { parsedString.type === codeTypesList.EVENT && (
             <View>
               <Button radius={5} onPress={() => props.addToCalendar(fieldsDict)}>
@@ -200,19 +207,19 @@ export default function ScannedCodeView(props: Props) {
               <OpenInMaps longitude={Number(fieldsDict.longitude)} latitude={Number(fieldsDict.latitude)} />
             </View>
           )}
+          <TouchableOpacity
+            style={styles.showQrCodeButton}
+            onPress={props.isPro ? props.goGeneratedCodePage : props.goPricingPage}
+          >
+            <Text gray>Show QRCode&nbsp; {props.isPro}</Text>
+            {!props.isPro && (
+              <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4>
+                <Text white>Pro</Text>
+              </View>
+            )}
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity
-          style={styles.showQrCodeButton}
-          onPress={props.isPro ? props.goGeneratedCodePage : props.goPricingPage}
-        >
-          <Text gray>Show QRCode&nbsp; {props.isPro}</Text>
-          {!props.isPro && (
-            <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4>
-              <Text white>Pro</Text>
-            </View>
-          )}
-        </TouchableOpacity>
-      </ScrollView>
+      </View>
       <Toast
         positionValue={300}
         ref={(ref) => {

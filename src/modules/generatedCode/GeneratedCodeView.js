@@ -58,8 +58,8 @@ export default function GeneratedCodeView(props: Props) {
     : generateQRValueFromState(navigationParams);
   return (
     <SafeAreaView style={commonStyles.safeArea}>
-      <ScrollView>
-        <View marginT-25 padding-15 style={{ backgroundColor: props.settings.backgroundColor }}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View marginT-15 padding-15 paddingB-5 style={{ backgroundColor: props.settings.backgroundColor }}>
           <QRCode
             testID="view:qrcode"
             value={codeValue.length > 0 ? codeValue : ' '}
@@ -69,7 +69,7 @@ export default function GeneratedCodeView(props: Props) {
             backgroundColor={props.settings.backgroundColor}
           />
         </View>
-        <View marginH-15 marginB-20>
+        <View marginH-15>
           <View marginV-25>
             <View row spread>
               <View row centerV>
@@ -90,7 +90,7 @@ export default function GeneratedCodeView(props: Props) {
             </View>
             <Text gray>Codes default background color</Text>
           </View>
-          <View marginB-50>
+          <View marginB-10>
             <View row spread>
               <View row centerV>
                 <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
@@ -110,13 +110,6 @@ export default function GeneratedCodeView(props: Props) {
             </View>
             <Text gray>Codes default foreground color</Text>
           </View>
-          <Button
-            testID="button:share"
-            onPress={() => props.handleShareButtonClick(Share)}
-            radius={5}
-          >
-            Share
-          </Button>
         </View>
         <SlidersColorPicker
           visible={props.isBackgroundModalVisible}
@@ -141,6 +134,15 @@ export default function GeneratedCodeView(props: Props) {
           cancelLabel="Cancel"
         />
       </ScrollView>
+      <View padding-20>
+        <Button
+          testID="button:share"
+          onPress={() => props.handleShareButtonClick(Share)}
+          radius={5}
+        >
+          Share
+        </Button>
+      </View>
     </SafeAreaView>
   );
 }
