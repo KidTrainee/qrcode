@@ -9,6 +9,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { Image, View, Text } from 'react-native-ui-lib';
+import _ from 'lodash';
 
 import { Button } from '../../components';
 import commonStyles from '../../styles/common';
@@ -17,6 +18,7 @@ type Props = {
   isLoading: boolean,
   buyProVersion: () => void,
   restorePurchases: () => void,
+  products: Array<{ price: number }>
 };
 
 export default function PricingView(props: Props) {
@@ -78,7 +80,7 @@ export default function PricingView(props: Props) {
               <Button style={{ minWidth: '100%' }} onPress={props.buyProVersion}>
                 {props.isLoading
                   ? <ActivityIndicator color="#FFFFFF" />
-                  : 'Purchase for $4.99'
+                  : `Purchase for ${_.get(props.products, '0.price', '4.99')}$`
               }
               </Button>
               <View row marginT-10>

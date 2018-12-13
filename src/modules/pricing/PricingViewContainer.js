@@ -29,6 +29,7 @@ export const enhance = compose(
     }),
   ),
   withState('isLoading', 'setLoadingStatus', false),
+  withState('products', 'setProducts', []),
   withHandlers({
     showErrorAlert: () => () => {
       Alert.alert(
@@ -93,6 +94,7 @@ export const enhance = compose(
       // check if products are valid
       try {
         const products = await RNIap.getProducts(itemSkus);
+        this.props.setProducts(products);
         if (products.length === 0) {
           this.props.goBackWithAlert();
         }
