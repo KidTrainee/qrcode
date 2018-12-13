@@ -96,7 +96,7 @@ export default function PricingView(props: Props) {
             <View row>
               <Text gray text100>Check out the</Text>
               <TouchableOpacity onPress={() => Linking.openURL('https://apps.insider.io/policy/qrcode-ios')}>
-                <Text style={{ fontSize: 10 }} primary>&nbsp;Privacy policy&nbsp;</Text>
+                <Text style={styles.policyText} primary>&nbsp;Privacy policy&nbsp;</Text>
               </TouchableOpacity>
             </View>
             <Text center gray text100>Payment will be chargered to iTunes Account at confirmation of purchase</Text>
@@ -110,5 +110,9 @@ export default function PricingView(props: Props) {
 const styles = StyleSheet.create({
   restoreText: {
     fontSize: 14,
+  },
+  policyText: {
+    fontSize: 10,
+    lineHeight: 11,
   },
 });

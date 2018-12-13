@@ -246,6 +246,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "fontSize": 10,
+                      "lineHeight": 11,
                     }
                   }
                   useNativeDriver={true}
@@ -497,6 +498,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "fontSize": 10,
+                      "lineHeight": 11,
                     }
                   }
                   useNativeDriver={true}
@@ -742,6 +744,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "fontSize": 10,
+                        "lineHeight": 11,
                       }
                     }
                     useNativeDriver={true}
@@ -1512,6 +1515,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "fontSize": 10,
+                          "lineHeight": 11,
                         }
                       }
                       useNativeDriver={true}
@@ -1557,6 +1561,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontSize": 10,
+                            "lineHeight": 11,
                           }
                         }
                         useNativeDriver={true}
@@ -1595,6 +1600,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontSize": 10,
+                            "lineHeight": 11,
                           }
                         }
                         useNativeDriver={true}
@@ -1613,6 +1619,7 @@ ShallowWrapper {
                         "primary": true,
                         "style": Object {
                           "fontSize": 10,
+                          "lineHeight": 11,
                         },
                         "useNativeDriver": true,
                       },
@@ -1885,6 +1892,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "fontSize": 10,
+                        "lineHeight": 11,
                       }
                     }
                     useNativeDriver={true}
@@ -2136,6 +2144,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "fontSize": 10,
+                        "lineHeight": 11,
                       }
                     }
                     useNativeDriver={true}
@@ -2381,6 +2390,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "fontSize": 10,
+                          "lineHeight": 11,
                         }
                       }
                       useNativeDriver={true}
@@ -3151,6 +3161,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontSize": 10,
+                            "lineHeight": 11,
                           }
                         }
                         useNativeDriver={true}
@@ -3196,6 +3207,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontSize": 10,
+                              "lineHeight": 11,
                             }
                           }
                           useNativeDriver={true}
@@ -3234,6 +3246,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontSize": 10,
+                              "lineHeight": 11,
                             }
                           }
                           useNativeDriver={true}
@@ -3252,6 +3265,7 @@ ShallowWrapper {
                           "primary": true,
                           "style": Object {
                             "fontSize": 10,
+                            "lineHeight": 11,
                           },
                           "useNativeDriver": true,
                         },

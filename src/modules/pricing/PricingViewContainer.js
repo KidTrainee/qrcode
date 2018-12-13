@@ -11,12 +11,8 @@ import { setIsPro } from '../AppState';
 import PricingView from './PricingView';
 
 const itemSkus = Platform.select({
-  ios: [
-    'io.insider.apps.qr.pro',
-  ],
-  android: [
-    'io.insider.apps.qr.pro',
-  ],
+  ios: 'io.insider.apps.qr.pro',
+  android: 'android.test.purchased',
 });
 
 export const enhance = compose(
@@ -48,22 +44,6 @@ export const enhance = compose(
     },
   }),
   withHandlers({
-    buyProVersion: props => async () => {
-      if (props.isLoading) {
-        return;
-      }
-      props.setLoadingStatus(true);
-      try {
-        await RNIap.buyProduct('io.insider.apps.qr.pro');
-        props.setLoadingStatus(false);
-        firebase.analytics().logEvent('goPro');
-        props.setIsPro(true);
-        props.navigation.pop();
-      } catch (e) {
-        props.showErrorAlert();
-      }
-      props.setLoadingStatus(false);
-    },
     restorePurchases: props => async () => {
       if (props.isLoading) {
         return;
@@ -72,17 +52,40 @@ export const enhance = compose(
       try {
         const purchases = await RNIap.getAvailablePurchases();
         purchases.forEach((purchase) => {
-          if (purchase.productId === 'io.insider.apps.qr.pro') {
+          if (purchase.productId === itemSkus) {
             props.setIsPro(true);
             props.navigation.pop();
+            Alert.alert(
+              'Restore Successful',
+              'You successfully restored the following purchases: QRCode Pro',
+            );
           }
         });
-        Alert.alert(
-          'Restore Successful',
-          'You successfully restored the following purchases: QRCode Pro',
-        );
       } catch (e) {
         props.showErrorAlert();
+      }
+      props.setLoadingStatus(false);
+    },
+  }),
+  withHandlers({
+    buyProVersion: props => async () => {
+      if (props.isLoading) {
+        return;
+      }
+      props.setLoadingStatus(true);
+      try {
+        await RNIap.buyProduct(itemSkus);
+        props.setLoadingStatus(false);
+        firebase.analytics().logEvent('goPro');
+        props.setIsPro(true);
+        props.navigation.pop();
+      } catch (e) {
+        if (e.code === 'E_ALREADY_OWNED') {
+          props.setLoadingStatus(false);
+          props.restorePurchases();
+        } else {
+          props.showErrorAlert();
+        }
       }
       props.setLoadingStatus(false);
     },
@@ -93,7 +96,7 @@ export const enhance = compose(
       this.props.setLoadingStatus(true);
       // check if products are valid
       try {
-        const products = await RNIap.getProducts(itemSkus);
+        const products = await RNIap.getProducts([itemSkus]);
         this.props.setProducts(products);
         if (products.length === 0) {
           this.props.goBackWithAlert();
