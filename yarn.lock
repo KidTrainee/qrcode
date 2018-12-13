@@ -5137,9 +5137,9 @@ react-native-sound@^0.10.9:
   version "0.10.9"
   resolved "https://registry.yarnpkg.com/react-native-sound/-/react-native-sound-0.10.9.tgz#6b00b0f4afd017cde09fbb9d171df1b5d5b851a8"
 
-react-native-svg@^8.0.8:
-  version "8.0.8"
-  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-8.0.8.tgz#5d4c636751d9db2d98a9b3cfc4ef45c4eac65d60"
+react-native-svg@^8.0.9:
+  version "8.0.9"
+  resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-8.0.9.tgz#f4f851cd64f2940a532e9b17acb9012e657945e7"
   dependencies:
     color "^2.0.1"
     lodash "^4.16.6"

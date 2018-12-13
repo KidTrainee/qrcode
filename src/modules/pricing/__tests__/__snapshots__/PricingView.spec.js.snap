@@ -19,6 +19,11 @@ ShallowWrapper {
     "props": Object {
       "children": <ScrollView
         bounces={false}
+        contentContainerStyle={
+          Object {
+            "flex": 1,
+          }
+        }
         showsVerticalScrollIndicator={false}
       >
         <View
@@ -510,6 +515,9 @@ ShallowWrapper {
             </Text>
           </View>
         </View>,
+        "contentContainerStyle": Object {
+          "flex": 1,
+        },
         "showsVerticalScrollIndicator": false,
       },
       "ref": null,
@@ -1650,6 +1658,11 @@ ShallowWrapper {
       "props": Object {
         "children": <ScrollView
           bounces={false}
+          contentContainerStyle={
+            Object {
+              "flex": 1,
+            }
+          }
           showsVerticalScrollIndicator={false}
         >
           <View
@@ -2141,6 +2154,9 @@ ShallowWrapper {
               </Text>
             </View>
           </View>,
+          "contentContainerStyle": Object {
+            "flex": 1,
+          },
           "showsVerticalScrollIndicator": false,
         },
         "ref": null,

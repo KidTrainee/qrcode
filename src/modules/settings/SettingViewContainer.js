@@ -5,6 +5,7 @@ import {
 } from 'recompose';
 import firebase from 'react-native-firebase';
 
+import { setIsPro } from '../AppState';
 import { setSettingValue } from './SettingsState';
 import SettingsView from './SettingsView';
 
@@ -19,6 +20,7 @@ export const enhance = compose(
         firebase.analytics().logEvent('toggleSettings', { setting, value });
         dispatch(setSettingValue({ setting, value }));
       },
+      setIsPro: value => dispatch(setIsPro(value)),
     }),
   ),
   withStateHandlers(

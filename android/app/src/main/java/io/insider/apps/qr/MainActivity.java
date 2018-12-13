@@ -1,4 +1,4 @@
-package com.qrcode;
+package io.insider.apps.qr;
 
 import com.facebook.react.ReactActivity;
 
