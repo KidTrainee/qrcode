@@ -40,7 +40,8 @@ export default function HomeView(props: Props) {
             flashMode={props.isFlashlightOn ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off}
             permissionDialogTitle="Permission to use camera"
             permissionDialogMessage="We need your permission to use your camera phone"
-            onBarCodeRead={props.onCodeScanned}
+            onBarCodeRead={Platform.select({ ios: props.onCodeScanned, android: null })}
+            onGoogleVisionBarcodesDetected={Platform.select({ android: props.onCodeScanned, ios: null })}
             notAuthorizedView={(
               <View flex centerV centerH paddingH-30>
                 <Text h2 darkBlue center>Camera access has not been granted :(</Text>

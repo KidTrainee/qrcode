@@ -24,7 +24,7 @@ export function convertArrayToKeyValue(array: Array<any>, startIndex: number = 0
   return keyValue;
 }
 
-export function parseScannedString(scannedString: string): {
+export function parseScannedString(scannedString: string = ''): {
   type: string,
   fields: Array<{
     title: string,

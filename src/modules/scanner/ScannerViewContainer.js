@@ -3,6 +3,7 @@ import {
   compose, withState, withHandlers, lifecycle,
 } from 'recompose';
 import { connect } from 'react-redux';
+import _ from 'lodash';
 import Sound from 'react-native-sound';
 import firebase from 'react-native-firebase';
 
@@ -40,7 +41,17 @@ export default compose(
     toggleFlashlight: props => () => {
       props.setFlashlight(!props.isFlashlightOn);
     },
-    onCodeScanned: props => (codeData: { data: string }) => {
+    onCodeScanned: props => (codeData: {
+      data?: string,
+      barcodes?: Array<{
+        data: string,
+      }>
+    }) => {
+      if (codeData.barcodes) {
+        // I'm so sorry about the next line...
+        // eslint-disable-next-line no-param-reassign
+        codeData = { data: _.get(codeData, 'barcodes.0.data', '') };
+      }
       if (props.settings.batch) {
         if (!props.history[0] || props.history[0].data !== codeData.data) {
           if (!props.history.find(item => item.data === codeData.data)) {
