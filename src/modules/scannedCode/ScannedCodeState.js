@@ -186,7 +186,7 @@ export function parseScannedString(scannedString: string): {
 
   if (result.type === codeTypesList.TEXT) {
     // eslint-disable-next-line
-    const urlRegexp = new RegExp(/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/);
+    const urlRegexp = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/);
     if (scannedString.match(urlRegexp)) {
       result.type = codeTypesList.URL;
       result.fields = [

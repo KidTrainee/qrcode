@@ -343,7 +343,7 @@ BODY:Email text;
     });
   });
 
-  it('should scan email links correctly', () => {
+  it('should scan links correctly', () => {
     expect(parseScannedString('https://insiderdev.com')).toEqual({
       type: codeTypesList.URL,
       fields: [{
@@ -357,6 +357,22 @@ BODY:Email text;
       fields: [{
         title: 'link',
         value: 'http://insiderdev.com',
+      }],
+    });
+
+    expect(parseScannedString('https://subdomain.domain.com')).toEqual({
+      type: codeTypesList.URL,
+      fields: [{
+        title: 'link',
+        value: 'https://subdomain.domain.com',
+      }],
+    });
+
+    expect(parseScannedString('https://subdomain.domain.com?prop=one&prop2=two')).toEqual({
+      type: codeTypesList.URL,
+      fields: [{
+        title: 'link',
+        value: 'https://subdomain.domain.com?prop=one&prop2=two',
       }],
     });
   });
