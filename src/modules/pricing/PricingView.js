@@ -80,7 +80,7 @@ export default function PricingView(props: Props) {
               <Button style={{ minWidth: '100%' }} onPress={props.buyProVersion}>
                 {props.isLoading
                   ? <ActivityIndicator color="#FFFFFF" />
-                  : `Purchase for ${_.get(props.products, '0.price', '4.99')}$`
+                  : `Purchase for $${_.get(props.products, '0.price', '4.99')}`
               }
               </Button>
               <View row marginT-10>
