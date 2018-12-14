@@ -7,6 +7,7 @@ import {
   StatusBar,
   TouchableWithoutFeedback,
   Keyboard,
+  Platform,
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import {
@@ -77,9 +78,10 @@ export default function NewCodeView(props: Props) {
             }
             style={[
               styles.typeContainer,
-              index === codeTypes.length - 1 && { marginRight: 40 },
+              index === codeTypes.length - 1 && {
+                marginRight: Platform.select({ android: 30, ios: 40 }),
+              },
               codeType.label === props.activeCodeType && styles.activeCodeType,
-              { marginVertical: 5 },
             ]}
           >
             <Image
@@ -88,7 +90,7 @@ export default function NewCodeView(props: Props) {
             />
             <Text h3 lightBlue marginT-5 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
             {codeType.proOnly && !props.isPro && (
-              <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
+              <View style={styles.proLabel} paddingH-3 paddingV-1 marginB-4 marginL-5>
                 <Text white>Pro</Text>
               </View>
             )}
@@ -135,13 +137,28 @@ const codeTypeWidth = 80;
 
 const styles = StyleSheet.create({
   viewContainer: {
-    marginHorizontal: 15,
+    ...Platform.select({
+      android: {
+        paddingHorizontal: 15,
+      },
+      ios: {
+        marginHorizontal: 15,
+      },
+    }),
     justifyContent: 'flex-start',
   },
   typesContainer: {
     maxHeight: codeTypeWidth + 10, // 5px * 2 vertival padding
     marginHorizontal: -20,
-    paddingHorizontal: 20,
+    ...Platform.select({
+      ios: {
+        paddingHorizontal: 20,
+        paddingTop: 5,
+      },
+      android: {
+        paddingHorizontal: 10,
+      },
+    }),
   },
   typeContainer: {
     position: 'relative',
@@ -149,7 +166,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: codeTypeWidth,
     height: codeTypeWidth,
-    marginRight: 20,
+    ...Platform.select({
+      ios: {
+        marginRight: 20,
+      },
+      android: {
+        marginHorizontal: 10,
+        marginVertical: 5,
+      },
+    }),
     backgroundColor: colors.white,
     borderRadius: 5,
     shadowColor: colors.darkBlue,
@@ -164,8 +189,11 @@ const styles = StyleSheet.create({
   },
   proLabel: {
     position: 'absolute',
-    right: -10,
-    top: -5,
+    right: Platform.select({ android: 0, ios: -10 }),
+    top: Platform.select({ android: 0, ios: -5 }),
+    borderRadius: Platform.select({ android: 0, ios: 5 }),
+    borderBottomLeftRadius: 5,
+    borderTopRightRadius: 5,
     backgroundColor: colors.red,
   },
   activeCodeType: {

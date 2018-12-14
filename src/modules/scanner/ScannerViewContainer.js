@@ -1,4 +1,4 @@
-import { Vibration } from 'react-native';
+import { Vibration, InteractionManager } from 'react-native';
 import {
   compose, withState, withHandlers, lifecycle,
 } from 'recompose';
@@ -25,6 +25,7 @@ export default compose(
   ),
   withState('isFlashlightOn', 'setFlashlight', false),
   withState('focusedScreen', 'setFocusedScreen', ''),
+  withState('lastScannedCode', 'setLastScannedCode', null),
   withHandlers({
     playSound: () => () => {
       const beep = new Sound('beep.wav', Sound.MAIN_BUNDLE, (error) => {
@@ -52,6 +53,12 @@ export default compose(
         // eslint-disable-next-line no-param-reassign
         codeData = { data: _.get(codeData, 'barcodes.0.data', '') };
       }
+      if (props.lastScannedCode === codeData.data) return;
+      props.setLastScannedCode(codeData.data);
+      setTimeout(() => {
+        props.setLastScannedCode('');
+      }, 2000);
+
       if (props.settings.batch) {
         if (!props.history[0] || props.history[0].data !== codeData.data) {
           if (!props.history.find(item => item.data === codeData.data)) {
@@ -92,8 +99,12 @@ export default compose(
     componentDidMount() {
       firebase.analytics().setCurrentScreen('scanner', 'ScannerView');
       const { navigation } = this.props;
-      navigation.addListener('willFocus', () => this.props.setFocusedScreen(true));
-      navigation.addListener('willBlur', () => this.props.setFocusedScreen(false));
+      navigation.addListener('willFocus', () => {
+        InteractionManager.runAfterInteractions(() => this.props.setFocusedScreen(true));
+      });
+      navigation.addListener('willBlur', () => {
+        InteractionManager.runAfterInteractions(() => this.props.setFocusedScreen(false));
+      });
     },
   }),
 )(ScannerView);

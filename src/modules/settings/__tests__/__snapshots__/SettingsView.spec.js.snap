@@ -24,6 +24,11 @@ ShallowWrapper {
       "disabled": undefined,
       "onValueChange": [Function],
       "testID": "switch",
+      "thumbColor": "#FF7B3C",
+      "trackColor": Object {
+        "false": "#D3D7E0",
+        "true": "#FF7B3C",
+      },
       "value": true,
     },
     "ref": null,
@@ -39,6 +44,11 @@ ShallowWrapper {
         "disabled": undefined,
         "onValueChange": [Function],
         "testID": "switch",
+        "thumbColor": "#FF7B3C",
+        "trackColor": Object {
+          "false": "#D3D7E0",
+          "true": "#FF7B3C",
+        },
         "value": true,
       },
       "ref": null,
@@ -130,12 +140,13 @@ ShallowWrapper {
           </Text>
         </View>,
         <ScrollView
-          style={
+          contentContainerStyle={
             Object {
-              "marginHorizontal": -15,
               "paddingHorizontal": 15,
             }
           }
+          showsVerticalScrollIndicator={false}
+          style={Object {}}
         >
           <View
             marginB-25={true}
@@ -146,21 +157,39 @@ ShallowWrapper {
               spread={true}
               useNativeDriver={true}
             >
-              <Text
-                h2={true}
-                marginB-5={true}
-                style={
-                  Object {
-                    "fontWeight": "300",
-                  }
-                }
+              <View
+                flex={true}
                 useNativeDriver={true}
               >
-                Pro offer
-              </Text>
+                <Text
+                  h2={true}
+                  marginB-5={true}
+                  style={
+                    Object {
+                      "fontWeight": "300",
+                    }
+                  }
+                  useNativeDriver={true}
+                >
+                  Pro offer
+                </Text>
+                <Text
+                  defaultLight={true}
+                  gray={true}
+                  useNativeDriver={true}
+                >
+                  Unlock all features in application
+                </Text>
+              </View>
               <TouchableOpacity
                 activeOpacity={0.2}
                 onPress={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                  }
+                }
               >
                 <Text
                   h3={true}
@@ -171,12 +200,6 @@ ShallowWrapper {
                 </Text>
               </TouchableOpacity>
             </View>
-            <Text
-              gray={true}
-              useNativeDriver={true}
-            >
-              Unlock all features in application
-            </Text>
           </View>
           <View
             marginB-25={true}
@@ -249,6 +272,7 @@ ShallowWrapper {
                       useNativeDriver={true}
                     >
                       <Text
+                        default={true}
                         useNativeDriver={true}
                         white={true}
                       >
@@ -277,6 +301,7 @@ ShallowWrapper {
                   />
                 </View>
                 <Text
+                  defaultLight={true}
                   gray={true}
                   useNativeDriver={true}
                 >
@@ -323,6 +348,7 @@ ShallowWrapper {
                       useNativeDriver={true}
                     >
                       <Text
+                        default={true}
                         useNativeDriver={true}
                         white={true}
                       >
@@ -351,6 +377,7 @@ ShallowWrapper {
                   />
                 </View>
                 <Text
+                  defaultLight={true}
                   gray={true}
                   useNativeDriver={true}
                 >
@@ -431,6 +458,7 @@ ShallowWrapper {
                       useNativeDriver={true}
                     >
                       <Text
+                        default={true}
                         useNativeDriver={true}
                         white={true}
                       >
@@ -445,6 +473,7 @@ ShallowWrapper {
                   />
                 </View>
                 <Text
+                  defaultLight={true}
                   gray={true}
                   marginR-50={true}
                   useNativeDriver={true}
@@ -481,6 +510,7 @@ ShallowWrapper {
                   />
                 </View>
                 <Text
+                  defaultLight={true}
                   gray={true}
                   marginR-50={true}
                   useNativeDriver={true}
@@ -517,6 +547,7 @@ ShallowWrapper {
                   />
                 </View>
                 <Text
+                  defaultLight={true}
                   gray={true}
                   marginR-50={true}
                   useNativeDriver={true}
@@ -554,6 +585,7 @@ ShallowWrapper {
                   />
                 </View>
                 <Text
+                  defaultLight={true}
                   gray={true}
                   marginR-50={true}
                   useNativeDriver={true}
@@ -591,6 +623,7 @@ ShallowWrapper {
                   />
                 </View>
                 <Text
+                  defaultLight={true}
                   gray={true}
                   marginR-50={true}
                   useNativeDriver={true}
@@ -616,6 +649,7 @@ ShallowWrapper {
               >
                 <Text
                   center={true}
+                  default={true}
                   gray={true}
                   useNativeDriver={true}
                 >
@@ -632,6 +666,7 @@ ShallowWrapper {
               >
                 <Text
                   center={true}
+                  default={true}
                   gray={true}
                   onPress={[Function]}
                   useNativeDriver={true}
@@ -701,10 +736,9 @@ ShallowWrapper {
         Object {
           "backgroundColor": "#FFFFFF",
           "flex": 1,
+          "paddingTop": 0,
         },
-        Object {
-          "marginHorizontal": 15,
-        },
+        Object {},
       ],
     },
     "ref": null,
@@ -772,21 +806,39 @@ ShallowWrapper {
                 spread={true}
                 useNativeDriver={true}
               >
-                <Text
-                  h2={true}
-                  marginB-5={true}
-                  style={
-                    Object {
-                      "fontWeight": "300",
-                    }
-                  }
+                <View
+                  flex={true}
                   useNativeDriver={true}
                 >
-                  Pro offer
-                </Text>
+                  <Text
+                    h2={true}
+                    marginB-5={true}
+                    style={
+                      Object {
+                        "fontWeight": "300",
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                    Pro offer
+                  </Text>
+                  <Text
+                    defaultLight={true}
+                    gray={true}
+                    useNativeDriver={true}
+                  >
+                    Unlock all features in application
+                  </Text>
+                </View>
                 <TouchableOpacity
                   activeOpacity={0.2}
                   onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    }
+                  }
                 >
                   <Text
                     h3={true}
@@ -797,12 +849,6 @@ ShallowWrapper {
                   </Text>
                 </TouchableOpacity>
               </View>
-              <Text
-                gray={true}
-                useNativeDriver={true}
-              >
-                Unlock all features in application
-              </Text>
             </View>,
             <View
               marginB-25={true}
@@ -875,6 +921,7 @@ ShallowWrapper {
                         useNativeDriver={true}
                       >
                         <Text
+                          default={true}
                           useNativeDriver={true}
                           white={true}
                         >
@@ -903,6 +950,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     useNativeDriver={true}
                   >
@@ -949,6 +997,7 @@ ShallowWrapper {
                         useNativeDriver={true}
                       >
                         <Text
+                          default={true}
                           useNativeDriver={true}
                           white={true}
                         >
@@ -977,6 +1026,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     useNativeDriver={true}
                   >
@@ -1057,6 +1107,7 @@ ShallowWrapper {
                         useNativeDriver={true}
                       >
                         <Text
+                          default={true}
                           useNativeDriver={true}
                           white={true}
                         >
@@ -1071,6 +1122,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -1107,6 +1159,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -1143,6 +1196,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -1180,6 +1234,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -1217,6 +1272,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -1242,6 +1298,7 @@ ShallowWrapper {
                 >
                   <Text
                     center={true}
+                    default={true}
                     gray={true}
                     useNativeDriver={true}
                   >
@@ -1258,6 +1315,7 @@ ShallowWrapper {
                 >
                   <Text
                     center={true}
+                    default={true}
                     gray={true}
                     onPress={[Function]}
                     useNativeDriver={true}
@@ -1268,10 +1326,11 @@ ShallowWrapper {
               </View>
             </View>,
           ],
-          "style": Object {
-            "marginHorizontal": -15,
+          "contentContainerStyle": Object {
             "paddingHorizontal": 15,
           },
+          "showsVerticalScrollIndicator": false,
+          "style": Object {},
         },
         "ref": null,
         "rendered": Array [
@@ -1280,10 +1339,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": Array [
+              "children": <View
+                row={true}
+                spread={true}
+                useNativeDriver={true}
+              >
                 <View
-                  row={true}
-                  spread={true}
+                  flex={true}
                   useNativeDriver={true}
                 >
                   <Text
@@ -1298,37 +1360,47 @@ ShallowWrapper {
                   >
                     Pro offer
                   </Text>
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <Text
+                    defaultLight={true}
+                    gray={true}
+                    useNativeDriver={true}
                   >
-                    <Text
-                      h3={true}
-                      primary={true}
-                      useNativeDriver={true}
-                    >
-                      Purchase
-                    </Text>
-                  </TouchableOpacity>
-                </View>,
-                <Text
-                  gray={true}
-                  useNativeDriver={true}
+                    Unlock all features in application
+                  </Text>
+                </View>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    }
+                  }
                 >
-                  Unlock all features in application
-                </Text>,
-              ],
+                  <Text
+                    h3={true}
+                    primary={true}
+                    useNativeDriver={true}
+                  >
+                    Purchase
+                  </Text>
+                </TouchableOpacity>
+              </View>,
               "marginB-25": true,
               "useNativeDriver": true,
             },
             "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": Array [
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <View
+                    flex={true}
+                    useNativeDriver={true}
+                  >
                     <Text
                       h2={true}
                       marginB-5={true}
@@ -1340,92 +1412,144 @@ ShallowWrapper {
                       useNativeDriver={true}
                     >
                       Pro offer
-                    </Text>,
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    </Text>
+                    <Text
+                      defaultLight={true}
+                      gray={true}
+                      useNativeDriver={true}
                     >
+                      Unlock all features in application
+                    </Text>
+                  </View>,
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Text
+                      h3={true}
+                      primary={true}
+                      useNativeDriver={true}
+                    >
+                      Purchase
+                    </Text>
+                  </TouchableOpacity>,
+                ],
+                "row": true,
+                "spread": true,
+                "useNativeDriver": true,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
                       <Text
-                        h3={true}
-                        primary={true}
+                        h2={true}
+                        marginB-5={true}
+                        style={
+                          Object {
+                            "fontWeight": "300",
+                          }
+                        }
                         useNativeDriver={true}
                       >
-                        Purchase
-                      </Text>
-                    </TouchableOpacity>,
-                  ],
-                  "row": true,
-                  "spread": true,
-                  "useNativeDriver": true,
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "children": "Pro offer",
-                      "h2": true,
-                      "marginB-5": true,
-                      "style": Object {
-                        "fontWeight": "300",
-                      },
-                      "useNativeDriver": true,
-                    },
-                    "ref": null,
-                    "rendered": "Pro offer",
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "activeOpacity": 0.2,
-                      "children": <Text
-                        h3={true}
-                        primary={true}
-                        useNativeDriver={true}
-                      >
-                        Purchase
+                        Pro offer
                       </Text>,
-                      "onPress": [Function],
-                    },
-                    "ref": null,
-                    "rendered": Object {
+                      <Text
+                        defaultLight={true}
+                        gray={true}
+                        useNativeDriver={true}
+                      >
+                        Unlock all features in application
+                      </Text>,
+                    ],
+                    "flex": true,
+                    "useNativeDriver": true,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
                       "instance": null,
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "children": "Purchase",
-                        "h3": true,
-                        "primary": true,
+                        "children": "Pro offer",
+                        "h2": true,
+                        "marginB-5": true,
+                        "style": Object {
+                          "fontWeight": "300",
+                        },
                         "useNativeDriver": true,
                       },
                       "ref": null,
-                      "rendered": "Purchase",
+                      "rendered": "Pro offer",
                       "type": [Function],
                     },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Unlock all features in application",
+                        "defaultLight": true,
+                        "gray": true,
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": "Unlock all features in application",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "activeOpacity": 0.2,
+                    "children": <Text
+                      h3={true}
+                      primary={true}
+                      useNativeDriver={true}
+                    >
+                      Purchase
+                    </Text>,
+                    "onPress": [Function],
+                    "style": Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Purchase",
+                      "h3": true,
+                      "primary": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": "Purchase",
                     "type": [Function],
                   },
-                ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Unlock all features in application",
-                  "gray": true,
-                  "useNativeDriver": true,
+                  "type": [Function],
                 },
-                "ref": null,
-                "rendered": "Unlock all features in application",
-                "type": [Function],
-              },
-            ],
+              ],
+              "type": [Function],
+            },
             "type": [Function],
           },
           Object {
@@ -1501,6 +1625,7 @@ ShallowWrapper {
                           useNativeDriver={true}
                         >
                           <Text
+                            default={true}
                             useNativeDriver={true}
                             white={true}
                           >
@@ -1529,6 +1654,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -1575,6 +1701,7 @@ ShallowWrapper {
                           useNativeDriver={true}
                         >
                           <Text
+                            default={true}
                             useNativeDriver={true}
                             white={true}
                           >
@@ -1603,6 +1730,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -1677,6 +1805,7 @@ ShallowWrapper {
                             useNativeDriver={true}
                           >
                             <Text
+                              default={true}
                               useNativeDriver={true}
                               white={true}
                             >
@@ -1705,6 +1834,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         useNativeDriver={true}
                       >
@@ -1751,6 +1881,7 @@ ShallowWrapper {
                             useNativeDriver={true}
                           >
                             <Text
+                              default={true}
                               useNativeDriver={true}
                               white={true}
                             >
@@ -1779,6 +1910,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         useNativeDriver={true}
                       >
@@ -1846,6 +1978,7 @@ ShallowWrapper {
                               useNativeDriver={true}
                             >
                               <Text
+                                default={true}
                                 useNativeDriver={true}
                                 white={true}
                               >
@@ -1874,6 +2007,7 @@ ShallowWrapper {
                           />
                         </View>,
                         <Text
+                          defaultLight={true}
                           gray={true}
                           useNativeDriver={true}
                         >
@@ -1922,6 +2056,7 @@ ShallowWrapper {
                                 useNativeDriver={true}
                               >
                                 <Text
+                                  default={true}
                                   useNativeDriver={true}
                                   white={true}
                                 >
@@ -1988,6 +2123,7 @@ ShallowWrapper {
                                   useNativeDriver={true}
                                 >
                                   <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -2024,6 +2160,7 @@ ShallowWrapper {
                                 "props": Object {
                                   "br20": true,
                                   "children": <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -2045,6 +2182,7 @@ ShallowWrapper {
                                   "nodeType": "class",
                                   "props": Object {
                                     "children": "Pro",
+                                    "default": true,
                                     "useNativeDriver": true,
                                     "white": true,
                                   },
@@ -2091,6 +2229,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Codes default background color",
+                          "defaultLight": true,
                           "gray": true,
                           "useNativeDriver": true,
                         },
@@ -2143,6 +2282,7 @@ ShallowWrapper {
                               useNativeDriver={true}
                             >
                               <Text
+                                default={true}
                                 useNativeDriver={true}
                                 white={true}
                               >
@@ -2171,6 +2311,7 @@ ShallowWrapper {
                           />
                         </View>,
                         <Text
+                          defaultLight={true}
                           gray={true}
                           useNativeDriver={true}
                         >
@@ -2219,6 +2360,7 @@ ShallowWrapper {
                                 useNativeDriver={true}
                               >
                                 <Text
+                                  default={true}
                                   useNativeDriver={true}
                                   white={true}
                                 >
@@ -2285,6 +2427,7 @@ ShallowWrapper {
                                   useNativeDriver={true}
                                 >
                                   <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -2321,6 +2464,7 @@ ShallowWrapper {
                                 "props": Object {
                                   "br20": true,
                                   "children": <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -2342,6 +2486,7 @@ ShallowWrapper {
                                   "nodeType": "class",
                                   "props": Object {
                                     "children": "Pro",
+                                    "default": true,
                                     "useNativeDriver": true,
                                     "white": true,
                                   },
@@ -2388,6 +2533,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Codes default foreground color",
+                          "defaultLight": true,
                           "gray": true,
                           "useNativeDriver": true,
                         },
@@ -2478,6 +2624,7 @@ ShallowWrapper {
                           useNativeDriver={true}
                         >
                           <Text
+                            default={true}
                             useNativeDriver={true}
                             white={true}
                           >
@@ -2492,6 +2639,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -2528,6 +2676,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -2564,6 +2713,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -2601,6 +2751,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -2638,6 +2789,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -2714,6 +2866,7 @@ ShallowWrapper {
                             useNativeDriver={true}
                           >
                             <Text
+                              default={true}
                               useNativeDriver={true}
                               white={true}
                             >
@@ -2728,6 +2881,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -2764,6 +2918,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -2800,6 +2955,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -2837,6 +2993,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -2874,6 +3031,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -2943,6 +3101,7 @@ ShallowWrapper {
                               useNativeDriver={true}
                             >
                               <Text
+                                default={true}
                                 useNativeDriver={true}
                                 white={true}
                               >
@@ -2957,6 +3116,7 @@ ShallowWrapper {
                           />
                         </View>,
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -3007,6 +3167,7 @@ ShallowWrapper {
                                 useNativeDriver={true}
                               >
                                 <Text
+                                  default={true}
                                   useNativeDriver={true}
                                   white={true}
                                 >
@@ -3059,6 +3220,7 @@ ShallowWrapper {
                                   useNativeDriver={true}
                                 >
                                   <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -3095,6 +3257,7 @@ ShallowWrapper {
                                 "props": Object {
                                   "br20": true,
                                   "children": <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -3116,6 +3279,7 @@ ShallowWrapper {
                                   "nodeType": "class",
                                   "props": Object {
                                     "children": "Pro",
+                                    "default": true,
                                     "useNativeDriver": true,
                                     "white": true,
                                   },
@@ -3150,6 +3314,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Scan numbers if codes consecutively without interruption",
+                          "defaultLight": true,
                           "gray": true,
                           "marginR-50": true,
                           "useNativeDriver": true,
@@ -3192,6 +3357,7 @@ ShallowWrapper {
                           />
                         </View>,
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -3274,6 +3440,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Vibrate if scan is successfull",
+                          "defaultLight": true,
                           "gray": true,
                           "marginR-50": true,
                           "useNativeDriver": true,
@@ -3316,6 +3483,7 @@ ShallowWrapper {
                           />
                         </View>,
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -3398,6 +3566,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Beep if scan is successfull",
+                          "defaultLight": true,
                           "gray": true,
                           "marginR-50": true,
                           "useNativeDriver": true,
@@ -3441,6 +3610,7 @@ ShallowWrapper {
                           />
                         </View>,
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -3525,6 +3695,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Save history of your scans",
+                          "defaultLight": true,
                           "gray": true,
                           "marginR-50": true,
                           "useNativeDriver": true,
@@ -3568,6 +3739,7 @@ ShallowWrapper {
                           />
                         </View>,
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -3652,6 +3824,7 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "children": "Save duplicate scan result in history",
+                          "defaultLight": true,
                           "gray": true,
                           "marginR-50": true,
                           "useNativeDriver": true,
@@ -3686,6 +3859,7 @@ ShallowWrapper {
                   >
                     <Text
                       center={true}
+                      default={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -3702,6 +3876,7 @@ ShallowWrapper {
                   >
                     <Text
                       center={true}
+                      default={true}
                       gray={true}
                       onPress={[Function]}
                       useNativeDriver={true}
@@ -3728,6 +3903,7 @@ ShallowWrapper {
                   >
                     <Text
                       center={true}
+                      default={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -3747,6 +3923,7 @@ ShallowWrapper {
                     "activeOpacity": 0.2,
                     "children": <Text
                       center={true}
+                      default={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -3762,6 +3939,7 @@ ShallowWrapper {
                     "props": Object {
                       "center": true,
                       "children": "Contact us",
+                      "default": true,
                       "gray": true,
                       "useNativeDriver": true,
                     },
@@ -3783,6 +3961,7 @@ ShallowWrapper {
                   >
                     <Text
                       center={true}
+                      default={true}
                       gray={true}
                       onPress={[Function]}
                       useNativeDriver={true}
@@ -3802,6 +3981,7 @@ ShallowWrapper {
                     "activeOpacity": 0.2,
                     "children": <Text
                       center={true}
+                      default={true}
                       gray={true}
                       onPress={[Function]}
                       useNativeDriver={true}
@@ -3817,6 +3997,7 @@ ShallowWrapper {
                     "props": Object {
                       "center": true,
                       "children": "Rate us",
+                      "default": true,
                       "gray": true,
                       "onPress": [Function],
                       "useNativeDriver": true,
@@ -3928,12 +4109,13 @@ ShallowWrapper {
             </Text>
           </View>,
           <ScrollView
-            style={
+            contentContainerStyle={
               Object {
-                "marginHorizontal": -15,
                 "paddingHorizontal": 15,
               }
             }
+            showsVerticalScrollIndicator={false}
+            style={Object {}}
           >
             <View
               marginB-25={true}
@@ -3944,21 +4126,39 @@ ShallowWrapper {
                 spread={true}
                 useNativeDriver={true}
               >
-                <Text
-                  h2={true}
-                  marginB-5={true}
-                  style={
-                    Object {
-                      "fontWeight": "300",
-                    }
-                  }
+                <View
+                  flex={true}
                   useNativeDriver={true}
                 >
-                  Pro offer
-                </Text>
+                  <Text
+                    h2={true}
+                    marginB-5={true}
+                    style={
+                      Object {
+                        "fontWeight": "300",
+                      }
+                    }
+                    useNativeDriver={true}
+                  >
+                    Pro offer
+                  </Text>
+                  <Text
+                    defaultLight={true}
+                    gray={true}
+                    useNativeDriver={true}
+                  >
+                    Unlock all features in application
+                  </Text>
+                </View>
                 <TouchableOpacity
                   activeOpacity={0.2}
                   onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    }
+                  }
                 >
                   <Text
                     h3={true}
@@ -3969,12 +4169,6 @@ ShallowWrapper {
                   </Text>
                 </TouchableOpacity>
               </View>
-              <Text
-                gray={true}
-                useNativeDriver={true}
-              >
-                Unlock all features in application
-              </Text>
             </View>
             <View
               marginB-25={true}
@@ -4047,6 +4241,7 @@ ShallowWrapper {
                         useNativeDriver={true}
                       >
                         <Text
+                          default={true}
                           useNativeDriver={true}
                           white={true}
                         >
@@ -4075,6 +4270,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     useNativeDriver={true}
                   >
@@ -4121,6 +4317,7 @@ ShallowWrapper {
                         useNativeDriver={true}
                       >
                         <Text
+                          default={true}
                           useNativeDriver={true}
                           white={true}
                         >
@@ -4149,6 +4346,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     useNativeDriver={true}
                   >
@@ -4229,6 +4427,7 @@ ShallowWrapper {
                         useNativeDriver={true}
                       >
                         <Text
+                          default={true}
                           useNativeDriver={true}
                           white={true}
                         >
@@ -4243,6 +4442,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -4279,6 +4479,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -4315,6 +4516,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -4352,6 +4554,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -4389,6 +4592,7 @@ ShallowWrapper {
                     />
                   </View>
                   <Text
+                    defaultLight={true}
                     gray={true}
                     marginR-50={true}
                     useNativeDriver={true}
@@ -4414,6 +4618,7 @@ ShallowWrapper {
                 >
                   <Text
                     center={true}
+                    default={true}
                     gray={true}
                     useNativeDriver={true}
                   >
@@ -4430,6 +4635,7 @@ ShallowWrapper {
                 >
                   <Text
                     center={true}
+                    default={true}
                     gray={true}
                     onPress={[Function]}
                     useNativeDriver={true}
@@ -4499,10 +4705,9 @@ ShallowWrapper {
           Object {
             "backgroundColor": "#FFFFFF",
             "flex": 1,
+            "paddingTop": 0,
           },
-          Object {
-            "marginHorizontal": 15,
-          },
+          Object {},
         ],
       },
       "ref": null,
@@ -4570,21 +4775,39 @@ ShallowWrapper {
                   spread={true}
                   useNativeDriver={true}
                 >
-                  <Text
-                    h2={true}
-                    marginB-5={true}
-                    style={
-                      Object {
-                        "fontWeight": "300",
-                      }
-                    }
+                  <View
+                    flex={true}
                     useNativeDriver={true}
                   >
-                    Pro offer
-                  </Text>
+                    <Text
+                      h2={true}
+                      marginB-5={true}
+                      style={
+                        Object {
+                          "fontWeight": "300",
+                        }
+                      }
+                      useNativeDriver={true}
+                    >
+                      Pro offer
+                    </Text>
+                    <Text
+                      defaultLight={true}
+                      gray={true}
+                      useNativeDriver={true}
+                    >
+                      Unlock all features in application
+                    </Text>
+                  </View>
                   <TouchableOpacity
                     activeOpacity={0.2}
                     onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
                   >
                     <Text
                       h3={true}
@@ -4595,12 +4818,6 @@ ShallowWrapper {
                     </Text>
                   </TouchableOpacity>
                 </View>
-                <Text
-                  gray={true}
-                  useNativeDriver={true}
-                >
-                  Unlock all features in application
-                </Text>
               </View>,
               <View
                 marginB-25={true}
@@ -4673,6 +4890,7 @@ ShallowWrapper {
                           useNativeDriver={true}
                         >
                           <Text
+                            default={true}
                             useNativeDriver={true}
                             white={true}
                           >
@@ -4701,6 +4919,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -4747,6 +4966,7 @@ ShallowWrapper {
                           useNativeDriver={true}
                         >
                           <Text
+                            default={true}
                             useNativeDriver={true}
                             white={true}
                           >
@@ -4775,6 +4995,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -4855,6 +5076,7 @@ ShallowWrapper {
                           useNativeDriver={true}
                         >
                           <Text
+                            default={true}
                             useNativeDriver={true}
                             white={true}
                           >
@@ -4869,6 +5091,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -4905,6 +5128,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -4941,6 +5165,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -4978,6 +5203,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -5015,6 +5241,7 @@ ShallowWrapper {
                       />
                     </View>
                     <Text
+                      defaultLight={true}
                       gray={true}
                       marginR-50={true}
                       useNativeDriver={true}
@@ -5040,6 +5267,7 @@ ShallowWrapper {
                   >
                     <Text
                       center={true}
+                      default={true}
                       gray={true}
                       useNativeDriver={true}
                     >
@@ -5056,6 +5284,7 @@ ShallowWrapper {
                   >
                     <Text
                       center={true}
+                      default={true}
                       gray={true}
                       onPress={[Function]}
                       useNativeDriver={true}
@@ -5066,10 +5295,11 @@ ShallowWrapper {
                 </View>
               </View>,
             ],
-            "style": Object {
-              "marginHorizontal": -15,
+            "contentContainerStyle": Object {
               "paddingHorizontal": 15,
             },
+            "showsVerticalScrollIndicator": false,
+            "style": Object {},
           },
           "ref": null,
           "rendered": Array [
@@ -5078,10 +5308,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": Array [
+                "children": <View
+                  row={true}
+                  spread={true}
+                  useNativeDriver={true}
+                >
                   <View
-                    row={true}
-                    spread={true}
+                    flex={true}
                     useNativeDriver={true}
                   >
                     <Text
@@ -5096,37 +5329,47 @@ ShallowWrapper {
                     >
                       Pro offer
                     </Text>
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <Text
+                      defaultLight={true}
+                      gray={true}
+                      useNativeDriver={true}
                     >
-                      <Text
-                        h3={true}
-                        primary={true}
-                        useNativeDriver={true}
-                      >
-                        Purchase
-                      </Text>
-                    </TouchableOpacity>
-                  </View>,
-                  <Text
-                    gray={true}
-                    useNativeDriver={true}
+                      Unlock all features in application
+                    </Text>
+                  </View>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      }
+                    }
                   >
-                    Unlock all features in application
-                  </Text>,
-                ],
+                    <Text
+                      h3={true}
+                      primary={true}
+                      useNativeDriver={true}
+                    >
+                      Purchase
+                    </Text>
+                  </TouchableOpacity>
+                </View>,
                 "marginB-25": true,
                 "useNativeDriver": true,
               },
               "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": Array [
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <View
+                      flex={true}
+                      useNativeDriver={true}
+                    >
                       <Text
                         h2={true}
                         marginB-5={true}
@@ -5138,92 +5381,144 @@ ShallowWrapper {
                         useNativeDriver={true}
                       >
                         Pro offer
-                      </Text>,
-                      <TouchableOpacity
-                        activeOpacity={0.2}
-                        onPress={[Function]}
+                      </Text>
+                      <Text
+                        defaultLight={true}
+                        gray={true}
+                        useNativeDriver={true}
                       >
+                        Unlock all features in application
+                      </Text>
+                    </View>,
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <Text
+                        h3={true}
+                        primary={true}
+                        useNativeDriver={true}
+                      >
+                        Purchase
+                      </Text>
+                    </TouchableOpacity>,
+                  ],
+                  "row": true,
+                  "spread": true,
+                  "useNativeDriver": true,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
                         <Text
-                          h3={true}
-                          primary={true}
+                          h2={true}
+                          marginB-5={true}
+                          style={
+                            Object {
+                              "fontWeight": "300",
+                            }
+                          }
                           useNativeDriver={true}
                         >
-                          Purchase
-                        </Text>
-                      </TouchableOpacity>,
-                    ],
-                    "row": true,
-                    "spread": true,
-                    "useNativeDriver": true,
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "children": "Pro offer",
-                        "h2": true,
-                        "marginB-5": true,
-                        "style": Object {
-                          "fontWeight": "300",
-                        },
-                        "useNativeDriver": true,
-                      },
-                      "ref": null,
-                      "rendered": "Pro offer",
-                      "type": [Function],
-                    },
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "class",
-                      "props": Object {
-                        "activeOpacity": 0.2,
-                        "children": <Text
-                          h3={true}
-                          primary={true}
-                          useNativeDriver={true}
-                        >
-                          Purchase
+                          Pro offer
                         </Text>,
-                        "onPress": [Function],
-                      },
-                      "ref": null,
-                      "rendered": Object {
+                        <Text
+                          defaultLight={true}
+                          gray={true}
+                          useNativeDriver={true}
+                        >
+                          Unlock all features in application
+                        </Text>,
+                      ],
+                      "flex": true,
+                      "useNativeDriver": true,
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
                         "instance": null,
                         "key": undefined,
                         "nodeType": "class",
                         "props": Object {
-                          "children": "Purchase",
-                          "h3": true,
-                          "primary": true,
+                          "children": "Pro offer",
+                          "h2": true,
+                          "marginB-5": true,
+                          "style": Object {
+                            "fontWeight": "300",
+                          },
                           "useNativeDriver": true,
                         },
                         "ref": null,
-                        "rendered": "Purchase",
+                        "rendered": "Pro offer",
                         "type": [Function],
                       },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Unlock all features in application",
+                          "defaultLight": true,
+                          "gray": true,
+                          "useNativeDriver": true,
+                        },
+                        "ref": null,
+                        "rendered": "Unlock all features in application",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "activeOpacity": 0.2,
+                      "children": <Text
+                        h3={true}
+                        primary={true}
+                        useNativeDriver={true}
+                      >
+                        Purchase
+                      </Text>,
+                      "onPress": [Function],
+                      "style": Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Purchase",
+                        "h3": true,
+                        "primary": true,
+                        "useNativeDriver": true,
+                      },
+                      "ref": null,
+                      "rendered": "Purchase",
                       "type": [Function],
                     },
-                  ],
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Unlock all features in application",
-                    "gray": true,
-                    "useNativeDriver": true,
+                    "type": [Function],
                   },
-                  "ref": null,
-                  "rendered": "Unlock all features in application",
-                  "type": [Function],
-                },
-              ],
+                ],
+                "type": [Function],
+              },
               "type": [Function],
             },
             Object {
@@ -5299,6 +5594,7 @@ ShallowWrapper {
                             useNativeDriver={true}
                           >
                             <Text
+                              default={true}
                               useNativeDriver={true}
                               white={true}
                             >
@@ -5327,6 +5623,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         useNativeDriver={true}
                       >
@@ -5373,6 +5670,7 @@ ShallowWrapper {
                             useNativeDriver={true}
                           >
                             <Text
+                              default={true}
                               useNativeDriver={true}
                               white={true}
                             >
@@ -5401,6 +5699,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         useNativeDriver={true}
                       >
@@ -5475,6 +5774,7 @@ ShallowWrapper {
                               useNativeDriver={true}
                             >
                               <Text
+                                default={true}
                                 useNativeDriver={true}
                                 white={true}
                               >
@@ -5503,6 +5803,7 @@ ShallowWrapper {
                           />
                         </View>
                         <Text
+                          defaultLight={true}
                           gray={true}
                           useNativeDriver={true}
                         >
@@ -5549,6 +5850,7 @@ ShallowWrapper {
                               useNativeDriver={true}
                             >
                               <Text
+                                default={true}
                                 useNativeDriver={true}
                                 white={true}
                               >
@@ -5577,6 +5879,7 @@ ShallowWrapper {
                           />
                         </View>
                         <Text
+                          defaultLight={true}
                           gray={true}
                           useNativeDriver={true}
                         >
@@ -5644,6 +5947,7 @@ ShallowWrapper {
                                 useNativeDriver={true}
                               >
                                 <Text
+                                  default={true}
                                   useNativeDriver={true}
                                   white={true}
                                 >
@@ -5672,6 +5976,7 @@ ShallowWrapper {
                             />
                           </View>,
                           <Text
+                            defaultLight={true}
                             gray={true}
                             useNativeDriver={true}
                           >
@@ -5720,6 +6025,7 @@ ShallowWrapper {
                                   useNativeDriver={true}
                                 >
                                   <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -5786,6 +6092,7 @@ ShallowWrapper {
                                     useNativeDriver={true}
                                   >
                                     <Text
+                                      default={true}
                                       useNativeDriver={true}
                                       white={true}
                                     >
@@ -5822,6 +6129,7 @@ ShallowWrapper {
                                   "props": Object {
                                     "br20": true,
                                     "children": <Text
+                                      default={true}
                                       useNativeDriver={true}
                                       white={true}
                                     >
@@ -5843,6 +6151,7 @@ ShallowWrapper {
                                     "nodeType": "class",
                                     "props": Object {
                                       "children": "Pro",
+                                      "default": true,
                                       "useNativeDriver": true,
                                       "white": true,
                                     },
@@ -5889,6 +6198,7 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": "Codes default background color",
+                            "defaultLight": true,
                             "gray": true,
                             "useNativeDriver": true,
                           },
@@ -5941,6 +6251,7 @@ ShallowWrapper {
                                 useNativeDriver={true}
                               >
                                 <Text
+                                  default={true}
                                   useNativeDriver={true}
                                   white={true}
                                 >
@@ -5969,6 +6280,7 @@ ShallowWrapper {
                             />
                           </View>,
                           <Text
+                            defaultLight={true}
                             gray={true}
                             useNativeDriver={true}
                           >
@@ -6017,6 +6329,7 @@ ShallowWrapper {
                                   useNativeDriver={true}
                                 >
                                   <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -6083,6 +6396,7 @@ ShallowWrapper {
                                     useNativeDriver={true}
                                   >
                                     <Text
+                                      default={true}
                                       useNativeDriver={true}
                                       white={true}
                                     >
@@ -6119,6 +6433,7 @@ ShallowWrapper {
                                   "props": Object {
                                     "br20": true,
                                     "children": <Text
+                                      default={true}
                                       useNativeDriver={true}
                                       white={true}
                                     >
@@ -6140,6 +6455,7 @@ ShallowWrapper {
                                     "nodeType": "class",
                                     "props": Object {
                                       "children": "Pro",
+                                      "default": true,
                                       "useNativeDriver": true,
                                       "white": true,
                                     },
@@ -6186,6 +6502,7 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": "Codes default foreground color",
+                            "defaultLight": true,
                             "gray": true,
                             "useNativeDriver": true,
                           },
@@ -6276,6 +6593,7 @@ ShallowWrapper {
                             useNativeDriver={true}
                           >
                             <Text
+                              default={true}
                               useNativeDriver={true}
                               white={true}
                             >
@@ -6290,6 +6608,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -6326,6 +6645,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -6362,6 +6682,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -6399,6 +6720,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -6436,6 +6758,7 @@ ShallowWrapper {
                         />
                       </View>
                       <Text
+                        defaultLight={true}
                         gray={true}
                         marginR-50={true}
                         useNativeDriver={true}
@@ -6512,6 +6835,7 @@ ShallowWrapper {
                               useNativeDriver={true}
                             >
                               <Text
+                                default={true}
                                 useNativeDriver={true}
                                 white={true}
                               >
@@ -6526,6 +6850,7 @@ ShallowWrapper {
                           />
                         </View>
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -6562,6 +6887,7 @@ ShallowWrapper {
                           />
                         </View>
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -6598,6 +6924,7 @@ ShallowWrapper {
                           />
                         </View>
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -6635,6 +6962,7 @@ ShallowWrapper {
                           />
                         </View>
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -6672,6 +7000,7 @@ ShallowWrapper {
                           />
                         </View>
                         <Text
+                          defaultLight={true}
                           gray={true}
                           marginR-50={true}
                           useNativeDriver={true}
@@ -6741,6 +7070,7 @@ ShallowWrapper {
                                 useNativeDriver={true}
                               >
                                 <Text
+                                  default={true}
                                   useNativeDriver={true}
                                   white={true}
                                 >
@@ -6755,6 +7085,7 @@ ShallowWrapper {
                             />
                           </View>,
                           <Text
+                            defaultLight={true}
                             gray={true}
                             marginR-50={true}
                             useNativeDriver={true}
@@ -6805,6 +7136,7 @@ ShallowWrapper {
                                   useNativeDriver={true}
                                 >
                                   <Text
+                                    default={true}
                                     useNativeDriver={true}
                                     white={true}
                                   >
@@ -6857,6 +7189,7 @@ ShallowWrapper {
                                     useNativeDriver={true}
                                   >
                                     <Text
+                                      default={true}
                                       useNativeDriver={true}
                                       white={true}
                                     >
@@ -6893,6 +7226,7 @@ ShallowWrapper {
                                   "props": Object {
                                     "br20": true,
                                     "children": <Text
+                                      default={true}
                                       useNativeDriver={true}
                                       white={true}
                                     >
@@ -6914,6 +7248,7 @@ ShallowWrapper {
                                     "nodeType": "class",
                                     "props": Object {
                                       "children": "Pro",
+                                      "default": true,
                                       "useNativeDriver": true,
                                       "white": true,
                                     },
@@ -6948,6 +7283,7 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": "Scan numbers if codes consecutively without interruption",
+                            "defaultLight": true,
                             "gray": true,
                             "marginR-50": true,
                             "useNativeDriver": true,
@@ -6990,6 +7326,7 @@ ShallowWrapper {
                             />
                           </View>,
                           <Text
+                            defaultLight={true}
                             gray={true}
                             marginR-50={true}
                             useNativeDriver={true}
@@ -7072,6 +7409,7 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": "Vibrate if scan is successfull",
+                            "defaultLight": true,
                             "gray": true,
                             "marginR-50": true,
                             "useNativeDriver": true,
@@ -7114,6 +7452,7 @@ ShallowWrapper {
                             />
                           </View>,
                           <Text
+                            defaultLight={true}
                             gray={true}
                             marginR-50={true}
                             useNativeDriver={true}
@@ -7196,6 +7535,7 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": "Beep if scan is successfull",
+                            "defaultLight": true,
                             "gray": true,
                             "marginR-50": true,
                             "useNativeDriver": true,
@@ -7239,6 +7579,7 @@ ShallowWrapper {
                             />
                           </View>,
                           <Text
+                            defaultLight={true}
                             gray={true}
                             marginR-50={true}
                             useNativeDriver={true}
@@ -7323,6 +7664,7 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": "Save history of your scans",
+                            "defaultLight": true,
                             "gray": true,
                             "marginR-50": true,
                             "useNativeDriver": true,
@@ -7366,6 +7708,7 @@ ShallowWrapper {
                             />
                           </View>,
                           <Text
+                            defaultLight={true}
                             gray={true}
                             marginR-50={true}
                             useNativeDriver={true}
@@ -7450,6 +7793,7 @@ ShallowWrapper {
                           "nodeType": "class",
                           "props": Object {
                             "children": "Save duplicate scan result in history",
+                            "defaultLight": true,
                             "gray": true,
                             "marginR-50": true,
                             "useNativeDriver": true,
@@ -7484,6 +7828,7 @@ ShallowWrapper {
                     >
                       <Text
                         center={true}
+                        default={true}
                         gray={true}
                         useNativeDriver={true}
                       >
@@ -7500,6 +7845,7 @@ ShallowWrapper {
                     >
                       <Text
                         center={true}
+                        default={true}
                         gray={true}
                         onPress={[Function]}
                         useNativeDriver={true}
@@ -7526,6 +7872,7 @@ ShallowWrapper {
                     >
                       <Text
                         center={true}
+                        default={true}
                         gray={true}
                         useNativeDriver={true}
                       >
@@ -7545,6 +7892,7 @@ ShallowWrapper {
                       "activeOpacity": 0.2,
                       "children": <Text
                         center={true}
+                        default={true}
                         gray={true}
                         useNativeDriver={true}
                       >
@@ -7560,6 +7908,7 @@ ShallowWrapper {
                       "props": Object {
                         "center": true,
                         "children": "Contact us",
+                        "default": true,
                         "gray": true,
                         "useNativeDriver": true,
                       },
@@ -7581,6 +7930,7 @@ ShallowWrapper {
                     >
                       <Text
                         center={true}
+                        default={true}
                         gray={true}
                         onPress={[Function]}
                         useNativeDriver={true}
@@ -7600,6 +7950,7 @@ ShallowWrapper {
                       "activeOpacity": 0.2,
                       "children": <Text
                         center={true}
+                        default={true}
                         gray={true}
                         onPress={[Function]}
                         useNativeDriver={true}
@@ -7615,6 +7966,7 @@ ShallowWrapper {
                       "props": Object {
                         "center": true,
                         "children": "Rate us",
+                        "default": true,
                         "gray": true,
                         "onPress": [Function],
                         "useNativeDriver": true,

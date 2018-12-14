@@ -19,7 +19,7 @@ import {
   Image,
 } from 'react-native-ui-lib';
 
-import { commonStyles, colors } from '../../styles';
+import { colors } from '../../styles';
 import { parseScannedString } from './ScannedCodeState';
 import { Button } from '../../components';
 import { codeTypesList } from '../newCode/NewCodeState';
@@ -108,7 +108,7 @@ export default function ScannedCodeView(props: Props) {
   });
 
   return (
-    <SafeAreaView style={commonStyles.safeArea}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: colors.white }}>
       <StatusBar translucent={false} backgroundColor={colors.lightBlue} />
       <View flex>
         <ScrollView

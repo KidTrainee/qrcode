@@ -4,7 +4,8 @@ import {
   createAppContainer,
   createBottomTabNavigator,
 } from 'react-navigation';
-import { Platform } from 'react-native';
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import { Platform, StatusBar } from 'react-native';
 import {
   Image,
   TouchableOpacity,
@@ -21,12 +22,20 @@ import GeneratedCode from '../generatedCode/GeneratedCodeViewContainer';
 import ScannedCode from '../scannedCode/ScannedCodeViewContainer';
 import Pricing from '../pricing/PricingViewContainer';
 
-const TabNavigator = createBottomTabNavigator({
+const tabbarCreatingFunction = Platform.select({
+  ios: createBottomTabNavigator,
+  android: createMaterialBottomTabNavigator,
+});
+
+const TabNavigator = tabbarCreatingFunction({
   Scanner,
   History,
   Generate: NewCode,
   Settings,
 }, {
+  ...Platform.OS === 'android' ? {
+    barStyle: { backgroundColor: '#ffffff' },
+  } : {},
   defaultNavigationOptions: ({ navigation }) => ({
     tabBarIcon: ({ focused }) => {
       const { routeName } = navigation.state;
@@ -56,7 +65,10 @@ const TabNavigator = createBottomTabNavigator({
           resizeMode="contain"
           style={{
             height: 23,
-            marginTop: 5,
+            ...Platform.select({
+              ios: { marginTop: 5 },
+              android: {},
+            }),
           }}
         />
       );
@@ -79,12 +91,11 @@ const TabNavigator = createBottomTabNavigator({
       },
       shadowOpacity: 0.22,
       shadowRadius: 2.22,
-      paddingTop: 5,
-      paddingBottom: iphoneXorBigger() ? 0 : 5,
       elevation: 5,
-      ...Platform.OS === 'android' && {
-        paddingBottom: 5,
-      },
+      ...Platform.OS === 'ios' ? {
+        paddingTop: 5,
+        paddingBottom: iphoneXorBigger() ? 0 : 5,
+      } : {},
     },
   },
 });
@@ -130,6 +141,12 @@ const AppNavigator = createStackNavigator({
       borderBottomWidth: 1,
       shadowOpacity: 0,
       borderBottomColor: colors.lightGray,
+      ...Platform.select({
+        ios: {},
+        android: {
+          marginTop: StatusBar.currentHeight,
+        },
+      }),
     },
     headerBackTitle: null,
   },

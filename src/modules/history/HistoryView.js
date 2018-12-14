@@ -54,7 +54,7 @@ export default function HistoryView(props: Props) {
       <ScrollView
         style={styles.historyItemsWrapper}
       >
-        {props.items.length === 0 && <Text marginT-20 gray center>You don't have any scanned code</Text>}
+        {props.items.length === 0 && <Text marginT-20 default gray center>You don't have any scanned code</Text>}
         {itemsToMap.map((qrcode) => {
           const parsedQRCode = parseScannedString(qrcode.data);
           const foundCodeType = codeTypes.find(codeType => codeType.label === parsedQRCode.type);

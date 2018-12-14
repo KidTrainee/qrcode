@@ -22,6 +22,7 @@ type Props = {
   onCodeScanned: (string) => void,
   focusedScreen: boolean,
   isFlashlightOn: boolean,
+  scanInProgress: boolean,
 };
 
 const windowWidth = Dimensions.get('window').width;
@@ -40,8 +41,11 @@ export default function HomeView(props: Props) {
             flashMode={props.isFlashlightOn ? RNCamera.Constants.FlashMode.torch : RNCamera.Constants.FlashMode.off}
             permissionDialogTitle="Permission to use camera"
             permissionDialogMessage="We need your permission to use your camera phone"
-            onBarCodeRead={Platform.select({ ios: props.onCodeScanned, android: null })}
-            onGoogleVisionBarcodesDetected={Platform.select({ android: props.onCodeScanned, ios: null })}
+            onBarCodeRead={props.onCodeScanned}
+            // onGoogleVisionBarcodesDetected={Platform.select({
+            //   android: props.onCodeScanned,
+            //   ios: null,
+            // })}
             notAuthorizedView={(
               <View flex centerV centerH paddingH-30>
                 <Text h2 darkBlue center>Camera access has not been granted :(</Text>
@@ -104,7 +108,7 @@ const styles = StyleSheet.create({
   cameraPreview: {
     width: windowWidth,
     height: Platform.select({ ios: windowHeight + 50, android: windowHeight }),
-    marginTop: Platform.select({ ios: -50, android: 0 }),
+    marginTop: Platform.select({ ios: -50, android: -1 * StatusBar.currentHeight }),
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
@@ -115,7 +119,7 @@ const styles = StyleSheet.create({
   },
   flashlightButton: {
     position: 'absolute',
-    bottom: Platform.select({ android: 100, ios: iphoneXorBigger() ? 170 : 115 }),
+    bottom: Platform.select({ android: 80, ios: iphoneXorBigger() ? 170 : 115 }),
     width: 100,
     height: 40,
     borderColor: colors.white,

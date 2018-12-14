@@ -7,12 +7,12 @@ import {
   Linking,
   ActivityIndicator,
   ScrollView,
+  Platform,
 } from 'react-native';
 import { Image, View, Text } from 'react-native-ui-lib';
 import _ from 'lodash';
 
 import { Button } from '../../components';
-import commonStyles from '../../styles/common';
 
 type Props = {
   isLoading: boolean,
@@ -23,11 +23,16 @@ type Props = {
 
 export default function PricingView(props: Props) {
   return (
-    <SafeAreaView style={commonStyles.safeArea}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         bounces={false}
-        contentContainerStyle={{ flex: 1 }}
+        contentContainerStyle={{
+          ...Platform.select({
+            ios: { flex: 1 },
+            android: {},
+          }),
+        }}
       >
         <View flex-1 spread>
           <View flex>
@@ -47,7 +52,7 @@ export default function PricingView(props: Props) {
                 resizeMode="contain"
                 style={{ width: 16, height: 16 }}
               />
-              <Text marginL-15>Unlimited history</Text>
+              <Text marginL-15 default>Unlimited history</Text>
             </View>
             <View row paddingH-50 marginB-15>
               <Image
@@ -56,7 +61,7 @@ export default function PricingView(props: Props) {
                 resizeMode="contain"
                 style={{ width: 16, height: 16 }}
               />
-              <Text marginL-15>Codes customization</Text>
+              <Text marginL-15 default>Codes customization</Text>
             </View>
             <View row paddingH-50 marginB-15>
               <Image
@@ -65,7 +70,7 @@ export default function PricingView(props: Props) {
                 resizeMode="contain"
                 style={{ width: 16, height: 16 }}
               />
-              <Text marginL-15>Batch scan</Text>
+              <Text marginL-15 default>Batch scan</Text>
             </View>
             <View row paddingH-50>
               <Image
@@ -74,9 +79,9 @@ export default function PricingView(props: Props) {
                 resizeMode="contain"
                 style={{ width: 16, height: 16 }}
               />
-              <Text marginL-15>Advanced codes generation</Text>
+              <Text marginL-15 deafault>Advanced codes generation</Text>
             </View>
-            <View paddingV-20 paddingH-50 center style={{ flexGrow: 1 }}>
+            <View marginV-20 paddingV-20 paddingH-50 center style={{ flexGrow: 1 }}>
               <Button style={{ minWidth: '100%' }} onPress={props.buyProVersion}>
                 {props.isLoading
                   ? <ActivityIndicator color="#FFFFFF" />
@@ -84,22 +89,27 @@ export default function PricingView(props: Props) {
               }
               </Button>
               <View row marginT-10>
-                <Text style={styles.restoreText} gray>Also you can</Text>
+                <Text style={styles.restoreText} gray default>Also you can</Text>
                 <TouchableOpacity onPress={props.restorePurchases}>
-                  <Text style={styles.restoreText} primary>&nbsp;restore&nbsp;</Text>
+                  <Text style={styles.restoreText} primary default>&nbsp;restore&nbsp;</Text>
                 </TouchableOpacity>
-                <Text style={styles.restoreText} gray>your payment</Text>
+                <Text style={styles.restoreText} gray default>your payment</Text>
               </View>
             </View>
           </View>
           <View centerH marginB-10 paddingH-50>
             <View row>
-              <Text gray text100>Check out the</Text>
+              <Text defaultLight gray text100>Check out the</Text>
               <TouchableOpacity onPress={() => Linking.openURL('https://apps.insider.io/policy/qrcode-ios')}>
-                <Text style={styles.policyText} primary>&nbsp;Privacy policy&nbsp;</Text>
+                <Text defaultLight center primary text100>&nbsp;Privacy policy&nbsp;</Text>
               </TouchableOpacity>
             </View>
-            <Text center gray text100>Payment will be chargered to iTunes Account at confirmation of purchase</Text>
+            <Text defaultLight center gray text100>
+              {
+                `Payment will be charged to your \
+${Platform.select({ ios: 'iTunes', android: 'Google' })} \
+Account at confirmation of purchase`}
+            </Text>
           </View>
         </View>
       </ScrollView>

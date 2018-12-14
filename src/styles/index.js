@@ -2,7 +2,7 @@
  * @flow
  */
 import { Typography, Colors, Assets } from 'react-native-ui-lib';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 
 import colors from './colors';
 import fonts from './fonts';
@@ -18,8 +18,15 @@ Colors.loadColors(colors);
 Typography.loadTypographies({
   h1: {
     fontSize: 20,
-    fontFamily: 'Muli',
-    fontWeight: 'bold',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Muli',
+        fontWeight: 'bold',
+      },
+      android: {
+        fontFamily: 'Muli-Bold',
+      },
+    }),
   },
   h2: {
     fontSize: 18,
@@ -29,8 +36,15 @@ Typography.loadTypographies({
   h3: {
     fontSize: 16,
     lineHeight: 22,
-    fontFamily: 'Muli',
-    fontWeight: 'bold',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Muli',
+        fontWeight: 'bold',
+      },
+      android: {
+        fontFamily: 'Muli-Bold',
+      },
+    }),
   },
   h4: {
     fontSize: 14,
@@ -40,14 +54,34 @@ Typography.loadTypographies({
   p: {
     fontSize: 12,
     lineHeight: 20,
-    fontFamily: 'Muli',
-    fontWeight: '300',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Muli',
+        fontWeight: '300',
+      },
+      android: {
+        fontFamily: 'Muli',
+      },
+    }),
   },
   button: {
     fontSize: 18,
-    fontFamily: 'Muli',
-    fontWeight: 'bold',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Muli',
+        fontWeight: 'bold',
+      },
+      android: {
+        fontFamily: 'Muli-Bold',
+      },
+    }),
     color: colors.primary,
+  },
+  default: {
+    fontFamily: 'Muli',
+  },
+  defaultLight: {
+    fontFamily: 'Muli-Light',
   },
 });
 

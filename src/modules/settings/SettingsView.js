@@ -8,6 +8,7 @@ import {
   ScrollView,
   Switch,
   Linking,
+  Platform,
 } from 'react-native';
 import {
   View,
@@ -61,6 +62,14 @@ export const SettingSwitch = (props: {
       onValueChange={value => props.onChange(props.name, value)}
       disabled={props.disabled}
       testID="switch"
+      trackColor={{
+        true: Platform.select({
+          android: colors.primaryGradientEnd,
+          ios: colors.lightGray,
+        }),
+        false: colors.lightGray,
+      }}
+      thumbColor={colors.primaryGradientEnd}
     />
 );
 
@@ -75,16 +84,28 @@ export default function SettingsView(props: Props) {
       <View centerH marginB-25 marginT-10>
         <Text h1 darkBlue>Settings</Text>
       </View>
-      <ScrollView style={styles.scrollView}>
+      <ScrollView
+        style={styles.scrollView}
+        contentContainerStyle={{ paddingHorizontal: 15 }}
+        showsVerticalScrollIndicator={false}
+      >
         {!props.isPro && (
           <View marginB-25>
             <View row spread>
-              <Text h2 marginB-5 style={styles.textNormal}>Pro offer</Text>
-              <TouchableOpacity onPress={props.goPricingPage}>
+              <View flex>
+                <Text h2 marginB-5 style={styles.textNormal}>Pro offer</Text>
+                <Text gray defaultLight>Unlock all features in application</Text>
+              </View>
+              <TouchableOpacity
+                style={{
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                onPress={props.goPricingPage}
+              >
                 <Text h3 primary>Purchase</Text>
               </TouchableOpacity>
             </View>
-            <Text gray>Unlock all features in application</Text>
           </View>
         )}
         <View marginB-25>
@@ -96,7 +117,7 @@ export default function SettingsView(props: Props) {
                   <Text h2 marginB-5 style={styles.textNormal}>Background color</Text>
                   {!props.isPro && (
                     <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                      <Text white>Pro</Text>
+                      <Text white default>Pro</Text>
                     </View>
                   )}
                 </View>
@@ -108,7 +129,7 @@ export default function SettingsView(props: Props) {
                   ]}
                 />
               </View>
-              <Text gray>Codes default background color</Text>
+              <Text gray defaultLight>Codes default background color</Text>
             </View>
             <View marginB-25>
               <View row spread>
@@ -116,7 +137,7 @@ export default function SettingsView(props: Props) {
                   <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
                   {!props.isPro && (
                     <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                      <Text white>Pro</Text>
+                      <Text white default>Pro</Text>
                     </View>
                   )}
                 </View>
@@ -128,7 +149,7 @@ export default function SettingsView(props: Props) {
                   ]}
                 />
               </View>
-              <Text gray>Codes default foreground color</Text>
+              <Text gray defaultLight>Codes default foreground color</Text>
             </View>
           </View>
         </View>
@@ -141,7 +162,7 @@ export default function SettingsView(props: Props) {
                   <Text h2 marginB-5 style={styles.textNormal}>Batch scan</Text>
                   {!props.isPro && (
                     <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                      <Text white>Pro</Text>
+                      <Text white default>Pro</Text>
                     </View>
                   )}
                 </View>
@@ -151,7 +172,7 @@ export default function SettingsView(props: Props) {
                   name="batch"
                 />
               </View>
-              <Text gray marginR-50>Scan numbers if codes consecutively without interruption</Text>
+              <Text gray marginR-50 defaultLight>Scan numbers if codes consecutively without interruption</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
@@ -162,7 +183,7 @@ export default function SettingsView(props: Props) {
                   name="vibrate"
                 />
               </View>
-              <Text gray marginR-50>Vibrate if scan is successfull</Text>
+              <Text gray marginR-50 defaultLight>Vibrate if scan is successfull</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
@@ -173,7 +194,7 @@ export default function SettingsView(props: Props) {
                   name="beep"
                 />
               </View>
-              <Text gray marginR-50>Beep if scan is successfull</Text>
+              <Text gray marginR-50 defaultLight>Beep if scan is successfull</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
@@ -185,7 +206,7 @@ export default function SettingsView(props: Props) {
                   name="history"
                 />
               </View>
-              <Text gray marginR-50>Save history of your scans</Text>
+              <Text gray marginR-50 defaultLight>Save history of your scans</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
@@ -197,14 +218,14 @@ export default function SettingsView(props: Props) {
                   name="duplicate"
                 />
               </View>
-              <Text gray marginR-50>Save duplicate scan result in history</Text>
+              <Text gray marginR-50 defaultLight>Save duplicate scan result in history</Text>
             </View>
           </View>
         </View>
         <View row marginB-25>
           <View flex marginR-20>
             <TouchableOpacity onPress={() => Linking.openURL('mailto:apps@insider.io?subject=QRCode')}>
-              <Text center gray>Contact us</Text>
+              <Text center gray default>Contact us</Text>
             </TouchableOpacity>
           </View>
           <View flex>
@@ -212,6 +233,7 @@ export default function SettingsView(props: Props) {
               <Text
                 center
                 gray
+                default
                 onPress={() => Rate.rate({
                   AppleAppID: '1445350234',
                   GooglePackageName: 'io.insider.apps.qr',
@@ -252,13 +274,14 @@ export default function SettingsView(props: Props) {
 }
 
 const styles = StyleSheet.create({
-  viewContainer: {
-    marginHorizontal: 15,
-  },
-  scrollView: {
-    marginHorizontal: -15,
-    paddingHorizontal: 15,
-  },
+  viewContainer: {},
+  scrollView: Platform.select({
+    ios: {
+      marginHorizontal: -15,
+      paddingHorizontal: 15,
+    },
+    android: {},
+  }),
   textNormal: {
     fontWeight: '300',
   },

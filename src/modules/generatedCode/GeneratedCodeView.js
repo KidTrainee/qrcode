@@ -59,7 +59,7 @@ export default function GeneratedCodeView(props: Props) {
   return (
     <SafeAreaView style={commonStyles.safeArea}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        <View marginT-15 padding-15 style={{ backgroundColor: props.settings.backgroundColor }}>
+        <View padding-15 style={{ backgroundColor: props.settings.backgroundColor }}>
           <QRCode
             testID="view:qrcode"
             value={codeValue.length > 0 ? codeValue : ' '}

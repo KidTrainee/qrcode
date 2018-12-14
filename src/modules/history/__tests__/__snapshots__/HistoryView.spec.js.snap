@@ -162,6 +162,7 @@ ShallowWrapper {
       "style": Object {
         "backgroundColor": "#FFFFFF",
         "flex": 1,
+        "paddingTop": 0,
       },
     },
     "ref": null,
@@ -794,6 +795,7 @@ ShallowWrapper {
         "style": Object {
           "backgroundColor": "#FFFFFF",
           "flex": 1,
+          "paddingTop": 0,
         },
       },
       "ref": null,
@@ -1369,6 +1371,7 @@ ShallowWrapper {
         >
           <Text
             center={true}
+            default={true}
             gray={true}
             marginT-20={true}
             useNativeDriver={true}
@@ -1380,6 +1383,7 @@ ShallowWrapper {
       "style": Object {
         "backgroundColor": "#FFFFFF",
         "flex": 1,
+        "paddingTop": 0,
       },
     },
     "ref": null,
@@ -1448,6 +1452,7 @@ ShallowWrapper {
           "children": Array [
             <Text
               center={true}
+              default={true}
               gray={true}
               marginT-20={true}
               useNativeDriver={true}
@@ -1470,6 +1475,7 @@ ShallowWrapper {
             "props": Object {
               "center": true,
               "children": "You don't have any scanned code",
+              "default": true,
               "gray": true,
               "marginT-20": true,
               "useNativeDriver": true,
@@ -1523,6 +1529,7 @@ ShallowWrapper {
           >
             <Text
               center={true}
+              default={true}
               gray={true}
               marginT-20={true}
               useNativeDriver={true}
@@ -1534,6 +1541,7 @@ ShallowWrapper {
         "style": Object {
           "backgroundColor": "#FFFFFF",
           "flex": 1,
+          "paddingTop": 0,
         },
       },
       "ref": null,
@@ -1602,6 +1610,7 @@ ShallowWrapper {
             "children": Array [
               <Text
                 center={true}
+                default={true}
                 gray={true}
                 marginT-20={true}
                 useNativeDriver={true}
@@ -1624,6 +1633,7 @@ ShallowWrapper {
               "props": Object {
                 "center": true,
                 "children": "You don't have any scanned code",
+                "default": true,
                 "gray": true,
                 "marginT-20": true,
                 "useNativeDriver": true,
