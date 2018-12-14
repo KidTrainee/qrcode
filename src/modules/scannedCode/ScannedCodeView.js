@@ -216,7 +216,7 @@ export default function ScannedCodeView(props: Props) {
             style={styles.showQrCodeButton}
             onPress={props.isPro ? props.goGeneratedCodePage : props.goPricingPage}
           >
-            <Text gray>Show QRCode&nbsp; {props.isPro}</Text>
+            <Text default gray>Show QRCode&nbsp; {props.isPro}</Text>
             {!props.isPro && (
               <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4>
                 <Text white>Pro</Text>

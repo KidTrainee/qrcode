@@ -12,7 +12,7 @@ import PricingView from './PricingView';
 
 const itemSkus = Platform.select({
   ios: 'io.insider.apps.qr.pro',
-  android: 'android.test.purchased',
+  android: 'io.insider.apps.qr.pro', // 'android.test.purchased',
 });
 
 export const enhance = compose(
