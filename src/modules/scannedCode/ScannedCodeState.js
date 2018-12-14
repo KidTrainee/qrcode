@@ -42,6 +42,12 @@ export function parseScannedString(scannedString: string = ''): {
     fields: [],
   };
 
+  if (!scannedString) {
+    // eslint-disable-next-line no-param-reassign
+    scannedString = '';
+  }
+  // eslint-disable-next-line no-param-reassign
+  scannedString = `${scannedString}`;
   const splittedInputString = scannedString.split(':');
   switch (scannedString.split(':')[0].toUpperCase()) {
     case 'SMSTO':

@@ -17,6 +17,30 @@ describe('convertArrayToKeyValue', () => {
 
 describe('parseScannedString', () => {
   it('should return text with empty array on invalid strings', () => {
+    expect(parseScannedString(123)).toEqual({
+      type: codeTypesList.TEXT,
+      fields: [{
+        title: 'text',
+        value: '123'
+      }],
+    });
+
+    expect(parseScannedString(undefined)).toEqual({
+      type: codeTypesList.TEXT,
+      fields: [{
+        title: 'text',
+        value: ''
+      }],
+    });
+
+    expect(parseScannedString(null)).toEqual({
+      type: codeTypesList.TEXT,
+      fields: [{
+        title: 'text',
+        value: ''
+      }],
+    });
+
     expect(parseScannedString('')).toEqual({
       type: codeTypesList.TEXT,
       fields: [{
