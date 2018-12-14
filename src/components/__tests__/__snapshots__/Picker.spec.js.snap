@@ -3,7 +3,7 @@
 exports[`Picker Component renders as expected on datetime 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withState(withState(withHandlers(PickerComponent)))
+  Symbol(enzyme.__unrendered__): <withState(withState(withHandlers(withHandlers(PickerComponent))))
     placeholder="hello"
     type="datetime"
   />,
@@ -68,7 +68,7 @@ ShallowWrapper {
 exports[`Picker Component renders as expected on picker 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withState(withState(withHandlers(PickerComponent)))
+  Symbol(enzyme.__unrendered__): <withState(withState(withHandlers(withHandlers(PickerComponent))))
     items={
       Array [
         Object {

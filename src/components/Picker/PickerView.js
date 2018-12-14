@@ -1,6 +1,8 @@
 // @flow
 import React from 'react';
-import { Modal, Picker, DatePickerIOS } from 'react-native';
+import {
+  Modal, Picker, DatePickerIOS, Platform,
+} from 'react-native';
 import { View, Text } from 'react-native-ui-lib';
 import moment from 'moment';
 
@@ -49,6 +51,7 @@ export type PickerProps = {
     label: string,
   }>,
   title?: string,
+  openAndroidDatepicker: () => void,
 };
 
 const PickerComponent = (props: PickerProps) => (
@@ -56,38 +59,40 @@ const PickerComponent = (props: PickerProps) => (
     <Input
       key={props.key}
       placeholder={props.placeholder}
-      onFocus={props.toggleModal}
+      onFocus={Platform.OS === 'ios' ? props.toggleModal : props.openAndroidDatepicker}
       value={props.type === 'datetime'
-        ? props.inputValue && moment(props.inputValue).format('DD-MM-YYYY HH:MM')
+        ? props.inputValue && moment(props.inputValue).format('DD-MM-YYYY hh:mm')
         : props.inputValue
       }
     />
-    <Modal
-      animationType="slide"
-      transparent={false}
-      visible={props.isModalOpened}
-    >
-      <View paddingH-15 flex-1 centerV>
-        <Text h2 center marginB-20>{props.title}</Text>
-        {props.type === 'datetime'
-          ? (
-            <DatePickerIOS
-              date={props.inputValue ? props.inputValue : new Date()}
-              onDateChange={props.handleSetValue}
-              minimumDate={props.minimumDate}
-            />
-          ) : (
-            <Picker
-              selectedValue={props.inputValue}
-              onValueChange={props.handleSetValue}
-            >
-              {props.items && props.items.map(item => <Picker.Item key={item.id} {...item} />)}
-            </Picker>
-          )
-        }
-        <Button onPress={props.toggleModal} style={{ marginTop: 20 }}>Save</Button>
-      </View>
-    </Modal>
+    {Platform.OS === 'ios' && (
+      <Modal
+        animationType="slide"
+        transparent={false}
+        visible={props.isModalOpened}
+      >
+        <View paddingH-15 flex-1 centerV>
+          <Text h2 center marginB-20>{props.title}</Text>
+          {props.type === 'datetime'
+            ? (
+              <DatePickerIOS
+                date={props.inputValue ? props.inputValue : new Date()}
+                onDateChange={props.handleSetValue}
+                minimumDate={props.minimumDate}
+              />
+            ) : (
+              <Picker
+                selectedValue={props.inputValue}
+                onValueChange={props.handleSetValue}
+              >
+                {props.items && props.items.map(item => <Picker.Item key={item.id} {...item} />)}
+              </Picker>
+            )
+          }
+          <Button onPress={props.toggleModal} style={{ marginTop: 20 }}>Save</Button>
+        </View>
+      </Modal>
+    )}
   </View>
 );
 

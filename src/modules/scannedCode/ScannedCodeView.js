@@ -8,6 +8,7 @@ import {
   Share,
   TouchableOpacity,
   StyleSheet,
+  Platform,
 } from 'react-native';
 import Toast from 'react-native-easy-toast';
 import openMap from 'react-native-open-maps';
@@ -199,7 +200,11 @@ export default function ScannedCodeView(props: Props) {
           )}
           { parsedString.type === codeTypesList.SMS && (
             <View>
-              <OpenButton data={`sms:${fieldsDict.to}&body=${fieldsDict.message}`}>Send</OpenButton>
+              <OpenButton
+                data={`sms:${fieldsDict.to}${Platform.select({ ios: '&', android: '?' })}body=${fieldsDict.message}`}
+              >
+                Send
+              </OpenButton>
             </View>
           )}
           { parsedString.type === codeTypesList.GEO && (

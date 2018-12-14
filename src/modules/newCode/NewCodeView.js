@@ -79,6 +79,7 @@ export default function NewCodeView(props: Props) {
               styles.typeContainer,
               index === codeTypes.length - 1 && { marginRight: 40 },
               codeType.label === props.activeCodeType && styles.activeCodeType,
+              { marginVertical: 5 },
             ]}
           >
             <Image
@@ -141,7 +142,6 @@ const styles = StyleSheet.create({
     maxHeight: codeTypeWidth + 10, // 5px * 2 vertival padding
     marginHorizontal: -20,
     paddingHorizontal: 20,
-    paddingTop: 5,
   },
   typeContainer: {
     position: 'relative',

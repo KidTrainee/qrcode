@@ -214,6 +214,7 @@ export default function SettingsView(props: Props) {
                 gray
                 onPress={() => Rate.rate({
                   AppleAppID: '1445350234',
+                  GooglePackageName: 'io.insider.apps.qr',
                   preferInApp: true,
                   openAppStoreIfInAppFails: true,
                 })}
