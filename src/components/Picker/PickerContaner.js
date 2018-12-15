@@ -17,6 +17,7 @@ export default compose(
   }),
   withHandlers({
     toggleModal: props => () => {
+      Keyboard.dismiss();
       props.setModalState(!props.isModalOpened);
     },
     // eslint-disable-next-line consistent-return

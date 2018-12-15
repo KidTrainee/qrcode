@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { View } from 'react-native-ui-lib';
+import { StyleSheet, Platform } from 'react-native';
+import { View, Text } from 'react-native-ui-lib';
 
 import { codeTypesList, fieldTypesList } from './NewCodeState';
 import { Input, Picker } from '../../components';
@@ -72,18 +72,39 @@ const CodeGeneratingForm = (props: Props) => {
       return (
         <View>
           {generateTextInput(5, text => props.updateField(fieldTypesList.WIFI_SSID, text), 'SSID')}
-          <Picker
-            title="Pick encryption type"
-            placeholder="Encryption"
-            onSetValue={text => props.updateField(fieldTypesList.WIFI_ENCRYPTION, text)}
-            items={[
-              { id: 1, label: 'None', value: '' },
-              { id: 2, label: 'WEP', value: 'WEP' },
-              { id: 3, label: 'WPA/WPA2', value: 'WPA' },
-            ]}
-          />
-          {generateTextInput(
-            7, text => props.updateField(fieldTypesList.WIFI_PASSWORD, text), 'Password', 'default', true,
+          {Platform.OS === 'ios' ? (
+            <React.Fragment>
+              <Picker
+                title="Pick encryption type"
+                placeholder="Encryption"
+                onSetValue={text => props.updateField(fieldTypesList.WIFI_ENCRYPTION, text)}
+                items={[
+                  { id: 1, label: 'None', value: '' },
+                  { id: 2, label: 'WEP', value: 'WEP' },
+                  { id: 3, label: 'WPA/WPA2', value: 'WPA' },
+                ]}
+              />
+              {generateTextInput(
+                7, text => props.updateField(fieldTypesList.WIFI_PASSWORD, text), 'Password', 'default', true,
+              )}
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              {generateTextInput(
+                7, text => props.updateField(fieldTypesList.WIFI_PASSWORD, text), 'Password', 'default', true,
+              )}
+              <Text marginB-20 marginT-15 defaultLight darkGray>Encryption</Text>
+              <Picker
+                title="Pick encryption type"
+                placeholder="Encryption"
+                onSetValue={text => props.updateField(fieldTypesList.WIFI_ENCRYPTION, text)}
+                items={[
+                  { id: 1, label: 'None', value: '' },
+                  { id: 2, label: 'WEP', value: 'WEP' },
+                  { id: 3, label: 'WPA/WPA2', value: 'WPA' },
+                ]}
+              />
+            </React.Fragment>
           )}
         </View>
       );
