@@ -27,7 +27,7 @@ ShallowWrapper {
       "thumbColor": "#FF7B3C",
       "trackColor": Object {
         "false": "#D3D7E0",
-        "true": "#FF7B3C",
+        "true": "#D3D7E0",
       },
       "value": true,
     },
@@ -47,7 +47,7 @@ ShallowWrapper {
         "thumbColor": "#FF7B3C",
         "trackColor": Object {
           "false": "#D3D7E0",
-          "true": "#FF7B3C",
+          "true": "#D3D7E0",
         },
         "value": true,
       },
@@ -146,7 +146,12 @@ ShallowWrapper {
             }
           }
           showsVerticalScrollIndicator={false}
-          style={Object {}}
+          style={
+            Object {
+              "marginHorizontal": -15,
+              "paddingHorizontal": 15,
+            }
+          }
         >
           <View
             marginB-25={true}
@@ -1330,7 +1335,10 @@ ShallowWrapper {
             "paddingHorizontal": 15,
           },
           "showsVerticalScrollIndicator": false,
-          "style": Object {},
+          "style": Object {
+            "marginHorizontal": -15,
+            "paddingHorizontal": 15,
+          },
         },
         "ref": null,
         "rendered": Array [
@@ -4115,7 +4123,12 @@ ShallowWrapper {
               }
             }
             showsVerticalScrollIndicator={false}
-            style={Object {}}
+            style={
+              Object {
+                "marginHorizontal": -15,
+                "paddingHorizontal": 15,
+              }
+            }
           >
             <View
               marginB-25={true}
@@ -5299,7 +5312,10 @@ ShallowWrapper {
               "paddingHorizontal": 15,
             },
             "showsVerticalScrollIndicator": false,
-            "style": Object {},
+            "style": Object {
+              "marginHorizontal": -15,
+              "paddingHorizontal": 15,
+            },
           },
           "ref": null,
           "rendered": Array [

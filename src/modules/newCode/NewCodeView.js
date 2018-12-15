@@ -98,8 +98,10 @@ export default function NewCodeView(props: Props) {
         ))}
       </ScrollView>
       <KeyboardAwareScrollView
+        extraScrollHeight={Platform.select({ ios: -50, android: 0 })}
+        enableOnAndroid
+        keyboardShouldPersistTaps="handled"
         viewIsInsideTabBar
-        extraScrollHeight={-50}
         style={{ paddingHorizontal: 5, flex: 1, marginBottom: -20 }}
         bounces={false}
         showsVerticalScrollIndicator={false}

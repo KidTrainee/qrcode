@@ -1,5 +1,9 @@
 import {
-  Alert, Clipboard, Platform, PermissionsAndroid,
+  Alert,
+  Clipboard,
+  Platform,
+  PermissionsAndroid,
+  ToastAndroid,
 } from 'react-native';
 import {
   compose, withState, withHandlers, lifecycle,
@@ -149,7 +153,11 @@ export default compose(
     },
     copyToClipboard: props => (data: string) => {
       Clipboard.setString(data);
-      if (props.toastRef) props.toastRef.show('Copied to clipboard!');
+      if (Platform.OS === 'ios') {
+        if (props.toastRef) props.toastRef.show('Copied to clipboard!');
+      } else {
+        ToastAndroid.show('Copied to clipboard!', ToastAndroid.SHORT);
+      }
     },
   }),
   lifecycle({

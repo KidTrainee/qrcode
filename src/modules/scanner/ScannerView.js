@@ -10,7 +10,7 @@ import {
 import { View, Image, Text } from 'react-native-ui-lib';
 import { RNCamera } from 'react-native-camera';
 
-import { commonStyles, colors } from '../../styles';
+import { commonStyles, colors, scale } from '../../styles';
 
 type Props = {
   navigation: {
@@ -49,10 +49,19 @@ export default function HomeView(props: Props) {
             notAuthorizedView={(
               <View flex centerV centerH paddingH-30>
                 <Text h2 darkBlue center>Camera access has not been granted :(</Text>
-                <Text marginT-15 p center>The only thing you could do is to reinstall
-                  the app and click allow when the app will ask you for camera permissions.
-                  We promise that we use it for code scanning purposes only!
-                </Text>
+                { Platform.OS === 'ios' && (
+                  <Text marginT-15 p center>The only thing you could do is to reinstall
+                    the app and click allow when the app will ask you for camera permissions.
+                    We promise that we use it for code scanning purposes only!
+                  </Text>
+                )}
+                { Platform.OS === 'android' && (
+                  <Text marginT-15 p center>The only thing you could do is to restart
+                    the app and click allow when the app will ask you for camera permissions.
+                    Or alternatively you can do in from the settings.
+                    We promise that we use it for code scanning purposes only!
+                  </Text>
+                )}
               </View>
             )}
           >
@@ -119,7 +128,7 @@ const styles = StyleSheet.create({
   },
   flashlightButton: {
     position: 'absolute',
-    bottom: Platform.select({ android: 80, ios: iphoneXorBigger() ? 170 : 115 }),
+    bottom: Platform.select({ android: scale(80), ios: iphoneXorBigger() ? 170 : 115 }),
     width: 100,
     height: 40,
     borderColor: colors.white,

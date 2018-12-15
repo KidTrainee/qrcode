@@ -24,7 +24,7 @@
         android:name="io.insider.apps.qr.MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-        android:windowSoftInputMode="adjustUnspecified"
+        android:windowSoftInputMode="adjustPan"
         android:screenOrientation="portrait"
       >
         <intent-filter>

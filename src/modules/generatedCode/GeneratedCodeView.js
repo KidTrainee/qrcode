@@ -76,7 +76,7 @@ export default function GeneratedCodeView(props: Props) {
                 <Text h2 marginB-5 style={styles.textNormal}>Background color</Text>
                 {!props.isPro && (
                   <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                    <Text white>Pro</Text>
+                    <Text default white>Pro</Text>
                   </View>
                 )}
               </View>
@@ -88,7 +88,7 @@ export default function GeneratedCodeView(props: Props) {
                 ]}
               />
             </View>
-            <Text gray>Codes default background color</Text>
+            <Text defaultLight gray>Codes default background color</Text>
           </View>
           <View marginB-10>
             <View row spread>
@@ -96,7 +96,7 @@ export default function GeneratedCodeView(props: Props) {
                 <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
                 {!props.isPro && (
                   <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                    <Text white>Pro</Text>
+                    <Text default white>Pro</Text>
                   </View>
                 )}
               </View>
@@ -108,7 +108,7 @@ export default function GeneratedCodeView(props: Props) {
                 ]}
               />
             </View>
-            <Text gray>Codes default foreground color</Text>
+            <Text defaultLight gray>Codes default foreground color</Text>
           </View>
         </View>
         <SlidersColorPicker
