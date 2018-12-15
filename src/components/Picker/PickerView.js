@@ -57,7 +57,7 @@ export type PickerProps = {
 
 const PickerComponent = (props: PickerProps) => (
   <View>
-    {Platform.OS === 'ios' ? (
+    {Platform.OS === 'ios' || props.type === 'datetime' ? (
       <View>
         <Input
           key={props.key}
