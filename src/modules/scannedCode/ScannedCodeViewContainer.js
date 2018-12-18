@@ -138,7 +138,7 @@ export default compose(
           } else {
             Alert.alert(
               'Premissions denied',
-              'You can find it in your contacts',
+              'Please give the app an access and try again',
               [{ text: 'Close' }],
             );
           }
