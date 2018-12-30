@@ -13,3 +13,10 @@ jest.mock('react-native-firebase', () => ({
     logEvent: jest.fn(),
   })),
 }));
+
+jest.mock('react-native-languages', () => ({
+  RNLanguages: {
+    language: 'en',
+    languages: ['en'],
+  },
+}));

@@ -7,6 +7,7 @@ import {
 } from 'recompose';
 import * as RNIap from 'react-native-iap';
 
+import i18n from '../../translations';
 import { setIsPro } from '../AppState';
 import PricingView from './PricingView';
 
@@ -29,10 +30,10 @@ export const enhance = compose(
   withHandlers({
     showErrorAlert: () => () => {
       Alert.alert(
-        'Something was wrong',
-        'Please, try again',
+        i18n.t('screens.pricing.wrongAlert.title'),
+        i18n.t('screens.pricing.wrongAlert.message'),
         [
-          { text: 'OK' },
+          { text: i18n.t('screens.pricing.wrongAlert.okButton') },
         ],
       );
     },
@@ -56,8 +57,8 @@ export const enhance = compose(
             props.setIsPro(true);
             props.navigation.pop();
             Alert.alert(
-              'Restore Successful',
-              'You successfully restored the following purchases: QRCode Pro',
+              i18n.t('screens.pricing.restoreAlert.title'),
+              i18n.t('screens.pricing.restoreAlert.message'),
             );
           }
         });

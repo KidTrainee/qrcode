@@ -1,6 +1,8 @@
 // @flow
 import vcard from 'vcard-parser';
 import _ from 'lodash';
+
+import i18n from '../../translations';
 import { codeTypesList } from '../newCode/NewCodeState';
 
 type ScannedCodeState = {};
@@ -54,8 +56,8 @@ export function parseScannedString(scannedString: string = ''): {
     case 'SMS':
       result.type = codeTypesList.SMS;
       result.fields = [
-        { title: 'to', value: splittedInputString[1] || '' },
-        { title: 'message', value: splittedInputString[2] || '' },
+        { title: i18n.t('screens.generate.fieldsNames.smsTo'), value: splittedInputString[1] || '' },
+        { title: i18n.t('screens.generate.fieldsNames.emailBody'), value: splittedInputString[2] || '' },
       ];
       break;
     case 'WIFI':
@@ -75,17 +77,17 @@ export function parseScannedString(scannedString: string = ''): {
         parsedWifiFields[keyValue[0].toLocaleLowerCase()] = keyValue[1] || '';
       });
       result.fields = [
-        { title: 'ssid', value: parsedWifiFields.s },
-        { title: 'encryption', value: parsedWifiFields.t },
-        { title: 'password', value: parsedWifiFields.p },
+        { title: i18n.t('screens.generate.fieldsNames.wifiSsid'), value: parsedWifiFields.s },
+        { title: i18n.t('screens.generate.fieldsNames.wifiEncryption'), value: parsedWifiFields.t },
+        { title: i18n.t('screens.generate.fieldsNames.wifiPassword'), value: parsedWifiFields.p },
       ];
       break;
     case 'GEO':
       result.type = codeTypesList.GEO;
       const geoString = splittedInputString[1] || '';
       result.fields = [
-        { title: 'longitude', value: geoString.split(',')[0] || '' },
-        { title: 'latitude', value: geoString.split(',')[1] || '' },
+        { title: i18n.t('screens.generate.fieldsNames.geoLong'), value: geoString.split(',')[0] || '' },
+        { title: i18n.t('screens.generate.fieldsNames.geoLat'), value: geoString.split(',')[1] || '' },
       ];
       break;
     case 'MATMSG':
@@ -105,9 +107,9 @@ export function parseScannedString(scannedString: string = ''): {
         parsedFields[keyValue[0].toLocaleLowerCase()] = keyValue[1] || '';
       });
       result.fields = [
-        { title: 'to', value: parsedFields.to },
-        { title: 'subject', value: parsedFields.sub },
-        { title: 'body', value: parsedFields.body },
+        { title: i18n.t('screens.generate.fieldsNames.emailTo'), value: parsedFields.to },
+        { title: i18n.t('screens.generate.fieldsNames.emailSubject'), value: parsedFields.sub },
+        { title: i18n.t('screens.generate.fieldsNames.emailBody'), value: parsedFields.body },
       ];
       break;
     case 'MAILTO':
@@ -134,15 +136,15 @@ export function parseScannedString(scannedString: string = ''): {
         emailBody = emailParamsArray[1].split('=')[1];
       }
       result.fields = [
-        { title: 'to', value: emailString.split('?')[0] || '' },
-        { title: 'subject', value: emailSubject || '' },
-        { title: 'body', value: emailBody || '' },
+        { title: i18n.t('screens.generate.fieldsNames.emailTo'), value: emailString.split('?')[0] || '' },
+        { title: i18n.t('screens.generate.fieldsNames.emailSubject'), value: emailSubject || '' },
+        { title: i18n.t('screens.generate.fieldsNames.emailBody'), value: emailBody || '' },
       ];
       break;
     case 'TEL':
       result.type = codeTypesList.TEL;
       result.fields = [
-        { title: 'number', value: splittedInputString[1] || '' },
+        { title: i18n.t('screens.generate.fieldsNames.smsTo'), value: splittedInputString[1] || '' },
       ];
       break;
     case 'BEGIN': {
@@ -150,11 +152,23 @@ export function parseScannedString(scannedString: string = ''): {
         result.type = codeTypesList.CONTACT;
         const parsedCard = vcard.parse(scannedString);
         result.fields = [
-          { title: 'name', value: _.get(parsedCard, 'n[0].value[1]', '') },
-          { title: 'surname', value: _.get(parsedCard, 'n[0].value[0]', '') },
-          { title: 'full name', value: _.get(parsedCard, 'fn[0].value', '') },
-          { title: 'phone', value: _.get(parsedCard, 'tel[0].value', '').replace('tel:', '') },
-          { title: 'email', value: _.get(parsedCard, 'email[0].value', '') },
+          { title: i18n.t('screens.generate.fieldsNames.contactName'), value: _.get(parsedCard, 'n[0].value[1]', '') },
+          {
+            title: i18n.t('screens.generate.fieldsNames.contactSurname'),
+            value: _.get(parsedCard, 'n[0].value[0]', ''),
+          },
+          {
+            title: i18n.t('screens.generate.fieldsNames.contactFullName'),
+            value: _.get(parsedCard, 'fn[0].value', ''),
+          },
+          {
+            title: i18n.t('screens.generate.fieldsNames.contactPhone'),
+            value: _.get(parsedCard, 'tel[0].value', '').replace('tel:', ''),
+          },
+          {
+            title: i18n.t('screens.generate.fieldsNames.contactEmail'),
+            value: _.get(parsedCard, 'email[0].value', ''),
+          },
         ];
         break;
       }
@@ -169,24 +183,24 @@ export function parseScannedString(scannedString: string = ''): {
           eventData[line.split(':')[0]] = line.split(':')[1];
         });
         result.fields = [
-          { title: 'title', value: eventData.SUMMARY || '' },
-          { title: 'location', value: eventData.LOCATION || '' },
-          { title: 'description', value: eventData.DESCRIPTION || '' },
-          { title: 'start', value: eventData.DTSTART || '' },
-          { title: 'end', value: eventData.DTEND || '' },
+          { title: i18n.t('screens.generate.fieldsNames.eventTitle'), value: eventData.SUMMARY || '' },
+          { title: i18n.t('screens.generate.fieldsNames.eventLocation'), value: eventData.LOCATION || '' },
+          { title: i18n.t('screens.generate.fieldsNames.eventDescription'), value: eventData.DESCRIPTION || '' },
+          { title: i18n.t('screens.generate.fieldsNames.eventStart'), value: eventData.DTSTART || '' },
+          { title: i18n.t('screens.generate.fieldsNames.eventEnd'), value: eventData.DTEND || '' },
         ];
         break;
       }
       result.type = codeTypesList.TEXT;
       result.fields = [
-        { title: 'text', value: scannedString },
+        { title: i18n.t('screens.generate.fieldsNames.text'), value: scannedString },
       ];
       break;
     }
     default:
       result.type = codeTypesList.TEXT;
       result.fields = [
-        { title: 'text', value: scannedString },
+        { title: i18n.t('screens.generate.fieldsNames.text'), value: scannedString },
       ];
   }
 
@@ -196,7 +210,7 @@ export function parseScannedString(scannedString: string = ''): {
     if (scannedString.match(urlRegexp)) {
       result.type = codeTypesList.URL;
       result.fields = [
-        { title: 'link', value: scannedString },
+        { title: i18n.t('screens.generate.fieldsNames.url'), value: scannedString },
       ];
     }
   }

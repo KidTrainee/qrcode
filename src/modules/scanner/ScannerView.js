@@ -10,6 +10,7 @@ import {
 import { View, Image, Text } from 'react-native-ui-lib';
 import { RNCamera } from 'react-native-camera';
 
+import i18n from '../../translations';
 import { commonStyles, colors, scale } from '../../styles';
 
 type Props = {
@@ -48,19 +49,12 @@ export default function HomeView(props: Props) {
             // })}
             notAuthorizedView={(
               <View flex centerV centerH paddingH-30>
-                <Text h2 darkBlue center>Camera access has not been granted :(</Text>
+                <Text h2 darkBlue center>{i18n.t('screens.scanner.accessTitle')}</Text>
                 { Platform.OS === 'ios' && (
-                  <Text marginT-15 p center>The only thing you could do is to reinstall
-                    the app and click allow when the app will ask you for camera permissions.
-                    We promise that we use it for code scanning purposes only!
-                  </Text>
+                  <Text marginT-15 p center>{i18n.t('screens.scanner.accessMessageIos')}</Text>
                 )}
                 { Platform.OS === 'android' && (
-                  <Text marginT-15 p center>The only thing you could do is to restart
-                    the app and click allow when the app will ask you for camera permissions.
-                    Or alternatively you can do in from the settings.
-                    We promise that we use it for code scanning purposes only!
-                  </Text>
+                  <Text marginT-15 p center>{i18n.t('screens.scanner.accessMessageAndroid')}</Text>
                 )}
               </View>
             )}

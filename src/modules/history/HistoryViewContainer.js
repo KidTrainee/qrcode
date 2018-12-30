@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 import { compose, withHandlers, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
 import firebase from 'react-native-firebase';
+import i18n from '../../translations';
 
 import { removeItemFromHistory, clearHistory } from './HistoryState';
 import HistoryView from './HistoryView';
@@ -24,11 +25,11 @@ export default compose(
     },
     handleClearHistory: props => () => {
       Alert.alert(
-        'Are you sure?',
-        'This action will remove all your scanned codes',
+        i18n.t('screens.history.cancelAlert.title'),
+        i18n.t('screens.history.cancelAlert.message'),
         [
-          { text: 'Cancel', onPress: () => {}, style: 'cancel' },
-          { text: 'OK', onPress: props.clearHistory },
+          { text: i18n.t('screens.history.cancelAlert.cancelButton'), onPress: () => {}, style: 'cancel' },
+          { text: i18n.t('screens.history.cancelAlert.okButton'), onPress: props.clearHistory },
         ],
         { cancelable: true },
       );

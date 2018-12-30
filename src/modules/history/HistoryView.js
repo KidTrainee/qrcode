@@ -15,6 +15,7 @@ import {
 import LinearGradient from 'react-native-linear-gradient';
 import moment from 'moment';
 
+import i18n from '../../translations';
 import { codeTypes } from '../newCode/NewCodeView';
 import { codeTypesList } from '../newCode/NewCodeState';
 import { parseScannedString } from '../scannedCode/ScannedCodeState';
@@ -44,17 +45,21 @@ export default function HistoryView(props: Props) {
         backgroundColor={colors.lightBlue}
       />
       <View row centerH centerV marginB-25 marginT-10>
-        <Text h1 darkBlue>History</Text>
+        <Text h1 darkBlue>{i18n.t('screens.history.title', { defaultValue: i18n.t('tabs.history') })}</Text>
         {props.items.length > 10 && (
           <TouchableOpacity style={styles.clearButton} onPress={props.handleClearHistory}>
-            <Text red>Clear</Text>
+            <Text red>{i18n.t('screens.history.clear')}</Text>
           </TouchableOpacity>
         )}
       </View>
       <ScrollView
         style={styles.historyItemsWrapper}
       >
-        {props.items.length === 0 && <Text marginT-20 default gray center>You don't have any scanned code</Text>}
+        {props.items.length === 0 && (
+          <Text marginT-20 default gray center>
+            {i18n.t('screens.history.noCodesMessage')}
+          </Text>
+        )}
         {itemsToMap.map((qrcode) => {
           const parsedQRCode = parseScannedString(qrcode.data);
           const foundCodeType = codeTypes.find(codeType => codeType.label === parsedQRCode.type);
@@ -101,9 +106,9 @@ export default function HistoryView(props: Props) {
         })}
         {!props.isPro && props.items.length > 10 && (
           <TouchableOpacity style={styles.needMoreButton} onPress={props.goPricingPage}>
-            <Text gray>Need more history? Unlock with&nbsp;</Text>
+            <Text gray>{i18n.t('screens.history.needMore')}&nbsp;</Text>
             <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4>
-              <Text white>Pro</Text>
+              <Text white>{i18n.t('other.pro')}</Text>
             </View>
           </TouchableOpacity>
         )}

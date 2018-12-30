@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
 } from 'react-native-ui-lib';
 
+import i18n from '../../translations';
 import { iphoneXorBigger } from '../scanner/ScannerView';
 import { colors } from '../../styles';
 
@@ -28,10 +29,10 @@ const tabbarCreatingFunction = Platform.select({
 });
 
 const TabNavigator = tabbarCreatingFunction({
-  Scanner,
-  History,
-  Generate: NewCode,
-  Settings,
+  [i18n.t('tabs.scanner')]: Scanner,
+  [i18n.t('tabs.history')]: History,
+  [i18n.t('tabs.generate')]: NewCode,
+  [i18n.t('tabs.settings')]: Settings,
 }, {
   ...Platform.OS === 'android' ? {
     barStyle: { backgroundColor: '#ffffff' },
@@ -41,13 +42,13 @@ const TabNavigator = tabbarCreatingFunction({
       const { routeName } = navigation.state;
       let iconName;
       switch (routeName) {
-        case 'History':
+        case i18n.t('tabs.history'):
           iconName = 'history';
           break;
-        case 'Settings':
+        case i18n.t('tabs.settings'):
           iconName = 'settings';
           break;
-        case 'Generate':
+        case i18n.t('tabs.generate'):
           iconName = 'plus';
           break;
         default:
@@ -110,19 +111,19 @@ const AppNavigator = createStackNavigator({
   ScannedCode: {
     screen: ScannedCode,
     navigationOptions: () => ({
-      title: 'Scanned Code',
+      title: i18n.t('titles.scanned'),
     }),
   },
   GeneratedCode: {
     screen: GeneratedCode,
     navigationOptions: () => ({
-      title: 'New Code',
+      title: i18n.t('titles.new'),
     }),
   },
   Pricing: {
     screen: Pricing,
     navigationOptions: () => ({
-      title: 'Pricing',
+      title: i18n.t('titles.pricing'),
     }),
   },
 }, {

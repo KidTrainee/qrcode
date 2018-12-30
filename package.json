@@ -16,6 +16,7 @@
     "e2e:test": "detox test --configuration ios.sim.debug"
   },
   "dependencies": {
+    "i18n-js": "^3.1.0",
     "lodash": "^4.17.11",
     "moment": "^2.22.2",
     "moment-timezone": "^0.5.23",
@@ -30,6 +31,7 @@
     "react-native-gesture-handler": "^1.0.9",
     "react-native-iap": "^2.3.21",
     "react-native-keyboard-aware-scroll-view": "^0.7.4",
+    "react-native-languages": "^3.0.1",
     "react-native-linear-gradient": "^2.5.2",
     "react-native-open-maps": "^0.3.2",
     "react-native-paper": "^2.3.0",

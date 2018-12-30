@@ -15,6 +15,7 @@ import moment from 'moment';
 
 import firebase from 'react-native-firebase';
 import ScannedCodeView from './ScannedCodeView';
+import i18n from '../../translations';
 
 export default compose(
   connect(
@@ -28,15 +29,15 @@ export default compose(
       Contacts.addContact(contact, (addErr) => {
         if (addErr) {
           return Alert.alert(
-            'Something was wrong',
-            'Please, try again',
-            [{ text: 'Close' }],
+            i18n.t('screens.pricing.wrongAlert.title'),
+            i18n.t('screens.pricing.wrongAlert.message'),
+            [{ text: i18n.t('screens.pricing.wrongAlert.okButton') }],
           );
         }
         return Alert.alert(
-          'Contact was saved',
-          'You can find it in contacts',
-          [{ text: 'Great!' }],
+          i18n.t('screens.scanned.contactAlert.title'),
+          i18n.t('screens.scanned.contactAlert.message'),
+          [{ text: i18n.t('screens.scanned.successButton') }],
         );
       });
     },
@@ -66,37 +67,41 @@ export default compose(
 
         if (id) {
           Alert.alert(
-            'Event was saved',
-            'You can find it in calendar',
-            [{ text: 'Great!' }],
+            i18n.t('screens.scanned.eventAlert.title'),
+            i18n.t('screens.scanned.eventAlert.message'),
+            [{ text: i18n.t('screens.scanned.successButton') }],
           );
         } else {
           Alert.alert(
-            'Something was wrong',
-            'Please, try again',
-            [{ text: 'Close' }],
+            i18n.t('screens.pricing.wrongAlert.title'),
+            i18n.t('screens.pricing.wrongAlert.message'),
+            [{ text: i18n.t('screens.pricing.wrongAlert.okButton') }],
           );
         }
       } catch (e) {
         Alert.alert(
-          'Something was wrong',
-          'Please, try again',
-          [{ text: 'Close' }],
+          i18n.t('screens.pricing.wrongAlert.title'),
+          i18n.t('screens.pricing.wrongAlert.message'),
+          [{ text: i18n.t('screens.pricing.wrongAlert.okButton') }],
         );
       }
     },
     addToContacts: props => async (fieldsDict) => {
       const contact = {
-        emailAddresses: [{
-          label: 'Home',
-          email: fieldsDict.email,
-        }],
-        phoneNumbers: [{
-          label: 'Home',
-          number: fieldsDict.phone,
-        }],
         familyName: fieldsDict.surname,
         givenName: fieldsDict.name,
+        ...fieldsDict.email ? {
+          emailAddresses: [{
+            label: 'Home',
+            email: fieldsDict.email,
+          }],
+        } : {},
+        ...fieldsDict.phone ? {
+          phoneNumbers: [{
+            label: 'Home',
+            number: fieldsDict.phone,
+          }],
+        } : {},
       };
       // iOS
       if (Platform.OS === 'ios') {
@@ -106,16 +111,12 @@ export default compose(
           if (permission === 'undefined') {
             Contacts.requestPermission((requestErr, newPermission) => {
               if (newPermission === 'authorized') {
-                Alert.alert(
-                  'Contact was saved',
-                  'You can find it in contacts',
-                  [{ text: 'Great!' }],
-                );
+                props.addToContactsAction(contact);
               } else {
                 Alert.alert(
-                  'Something was wrong',
-                  'Please, try again',
-                  [{ text: 'Close' }],
+                  i18n.t('screens.pricing.wrongAlert.title'),
+                  i18n.t('screens.pricing.wrongAlert.message'),
+                  [{ text: i18n.t('screens.pricing.wrongAlert.okButton') }],
                 );
               }
             });
@@ -129,24 +130,24 @@ export default compose(
           const granted = await PermissionsAndroid.request(
             PermissionsAndroid.PERMISSIONS.WRITE_CONTACTS,
             {
-              title: 'Add to Contacts Permission',
-              message: 'QR Code needs access to your contacts to create new contact',
+              title: i18n.t('screens.scanned.contactPermissionsAlert.title'),
+              message: i18n.t('screens.scanned.contactPermissionsAlert.message'),
             },
           );
           if (granted === PermissionsAndroid.RESULTS.GRANTED) {
             props.addToContactsAction(contact);
           } else {
             Alert.alert(
-              'Premissions denied',
-              'Please give the app an access and try again',
-              [{ text: 'Close' }],
+              i18n.t('screens.pricing.wrongAlert.title'),
+              i18n.t('screens.pricing.wrongAlert.message'),
+              [{ text: i18n.t('screens.pricing.wrongAlert.okButton') }],
             );
           }
         } catch (err) {
           Alert.alert(
-            'Something was wrong',
-            'Please, try again',
-            [{ text: 'Close' }],
+            i18n.t('screens.pricing.wrongAlert.title'),
+            i18n.t('screens.pricing.wrongAlert.message'),
+            [{ text: i18n.t('screens.pricing.wrongAlert.okButton') }],
           );
         }
       }
@@ -154,9 +155,9 @@ export default compose(
     copyToClipboard: props => (data: string) => {
       Clipboard.setString(data);
       if (Platform.OS === 'ios') {
-        if (props.toastRef) props.toastRef.show('Copied to clipboard!');
+        if (props.toastRef) props.toastRef.show(i18n.t('screens.scanned.copied'));
       } else {
-        ToastAndroid.show('Copied to clipboard!', ToastAndroid.SHORT);
+        ToastAndroid.show(i18n.t('screens.scanned.copied'), ToastAndroid.SHORT);
       }
     },
   }),

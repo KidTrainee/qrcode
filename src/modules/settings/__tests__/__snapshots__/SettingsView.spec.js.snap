@@ -136,6 +136,7 @@ ShallowWrapper {
             h1={true}
             useNativeDriver={true}
           >
+             
             Settings
           </Text>
         </View>,
@@ -189,12 +190,6 @@ ShallowWrapper {
               <TouchableOpacity
                 activeOpacity={0.2}
                 onPress={[Function]}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "justifyContent": "center",
-                  }
-                }
               >
                 <Text
                   h3={true}
@@ -580,7 +575,7 @@ ShallowWrapper {
                     }
                     useNativeDriver={true}
                   >
-                    History
+                    Beep
                   </Text>
                   <SettingSwitch
                     disabled={true}
@@ -676,7 +671,7 @@ ShallowWrapper {
                   onPress={[Function]}
                   useNativeDriver={true}
                 >
-                  Rate us
+                  Rate
                 </Text>
               </TouchableOpacity>
             </View>
@@ -773,6 +768,7 @@ ShallowWrapper {
             h1={true}
             useNativeDriver={true}
           >
+             
             Settings
           </Text>,
           "marginB-25": true,
@@ -785,13 +781,19 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Settings",
+            "children": Array [
+              " ",
+              "Settings",
+            ],
             "darkBlue": true,
             "h1": true,
             "useNativeDriver": true,
           },
           "ref": null,
-          "rendered": "Settings",
+          "rendered": Array [
+            " ",
+            "Settings",
+          ],
           "type": [Function],
         },
         "type": [Function],
@@ -838,12 +840,6 @@ ShallowWrapper {
                 <TouchableOpacity
                   activeOpacity={0.2}
                   onPress={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "justifyContent": "center",
-                    }
-                  }
                 >
                   <Text
                     h3={true}
@@ -1229,7 +1225,7 @@ ShallowWrapper {
                       }
                       useNativeDriver={true}
                     >
-                      History
+                      Beep
                     </Text>
                     <SettingSwitch
                       disabled={true}
@@ -1325,7 +1321,7 @@ ShallowWrapper {
                     onPress={[Function]}
                     useNativeDriver={true}
                   >
-                    Rate us
+                    Rate
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -1379,12 +1375,6 @@ ShallowWrapper {
                 <TouchableOpacity
                   activeOpacity={0.2}
                   onPress={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "justifyContent": "center",
-                    }
-                  }
                 >
                   <Text
                     h3={true}
@@ -1432,12 +1422,6 @@ ShallowWrapper {
                   <TouchableOpacity
                     activeOpacity={0.2}
                     onPress={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                      }
-                    }
                   >
                     <Text
                       h3={true}
@@ -1533,10 +1517,6 @@ ShallowWrapper {
                       Purchase
                     </Text>,
                     "onPress": [Function],
-                    "style": Object {
-                      "alignItems": "center",
-                      "justifyContent": "center",
-                    },
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2749,7 +2729,7 @@ ShallowWrapper {
                         }
                         useNativeDriver={true}
                       >
-                        History
+                        Beep
                       </Text>
                       <SettingSwitch
                         disabled={true}
@@ -2991,7 +2971,7 @@ ShallowWrapper {
                           }
                           useNativeDriver={true}
                         >
-                          History
+                          Beep
                         </Text>
                         <SettingSwitch
                           disabled={true}
@@ -3608,7 +3588,7 @@ ShallowWrapper {
                             }
                             useNativeDriver={true}
                           >
-                            History
+                            Beep
                           </Text>
                           <SettingSwitch
                             disabled={true}
@@ -3648,7 +3628,7 @@ ShallowWrapper {
                               }
                               useNativeDriver={true}
                             >
-                              History
+                              Beep
                             </Text>,
                             <SettingSwitch
                               disabled={true}
@@ -3668,7 +3648,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "children": "History",
+                              "children": "Beep",
                               "h2": true,
                               "marginB-5": true,
                               "style": Object {
@@ -3677,7 +3657,7 @@ ShallowWrapper {
                               "useNativeDriver": true,
                             },
                             "ref": null,
-                            "rendered": "History",
+                            "rendered": "Beep",
                             "type": [Function],
                           },
                           Object {
@@ -3889,7 +3869,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       useNativeDriver={true}
                     >
-                      Rate us
+                      Rate
                     </Text>
                   </TouchableOpacity>
                 </View>,
@@ -3974,7 +3954,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       useNativeDriver={true}
                     >
-                      Rate us
+                      Rate
                     </Text>
                   </TouchableOpacity>,
                   "flex": true,
@@ -3994,7 +3974,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       useNativeDriver={true}
                     >
-                      Rate us
+                      Rate
                     </Text>,
                   },
                   "ref": null,
@@ -4004,14 +3984,14 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "center": true,
-                      "children": "Rate us",
+                      "children": "Rate",
                       "default": true,
                       "gray": true,
                       "onPress": [Function],
                       "useNativeDriver": true,
                     },
                     "ref": null,
-                    "rendered": "Rate us",
+                    "rendered": "Rate",
                     "type": [Function],
                   },
                   "type": [Function],
@@ -4113,6 +4093,7 @@ ShallowWrapper {
               h1={true}
               useNativeDriver={true}
             >
+               
               Settings
             </Text>
           </View>,
@@ -4166,12 +4147,6 @@ ShallowWrapper {
                 <TouchableOpacity
                   activeOpacity={0.2}
                   onPress={[Function]}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "justifyContent": "center",
-                    }
-                  }
                 >
                   <Text
                     h3={true}
@@ -4557,7 +4532,7 @@ ShallowWrapper {
                       }
                       useNativeDriver={true}
                     >
-                      History
+                      Beep
                     </Text>
                     <SettingSwitch
                       disabled={true}
@@ -4653,7 +4628,7 @@ ShallowWrapper {
                     onPress={[Function]}
                     useNativeDriver={true}
                   >
-                    Rate us
+                    Rate
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -4750,6 +4725,7 @@ ShallowWrapper {
               h1={true}
               useNativeDriver={true}
             >
+               
               Settings
             </Text>,
             "marginB-25": true,
@@ -4762,13 +4738,19 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "Settings",
+              "children": Array [
+                " ",
+                "Settings",
+              ],
               "darkBlue": true,
               "h1": true,
               "useNativeDriver": true,
             },
             "ref": null,
-            "rendered": "Settings",
+            "rendered": Array [
+              " ",
+              "Settings",
+            ],
             "type": [Function],
           },
           "type": [Function],
@@ -4815,12 +4797,6 @@ ShallowWrapper {
                   <TouchableOpacity
                     activeOpacity={0.2}
                     onPress={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                      }
-                    }
                   >
                     <Text
                       h3={true}
@@ -5206,7 +5182,7 @@ ShallowWrapper {
                         }
                         useNativeDriver={true}
                       >
-                        History
+                        Beep
                       </Text>
                       <SettingSwitch
                         disabled={true}
@@ -5302,7 +5278,7 @@ ShallowWrapper {
                       onPress={[Function]}
                       useNativeDriver={true}
                     >
-                      Rate us
+                      Rate
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -5356,12 +5332,6 @@ ShallowWrapper {
                   <TouchableOpacity
                     activeOpacity={0.2}
                     onPress={[Function]}
-                    style={
-                      Object {
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                      }
-                    }
                   >
                     <Text
                       h3={true}
@@ -5409,12 +5379,6 @@ ShallowWrapper {
                     <TouchableOpacity
                       activeOpacity={0.2}
                       onPress={[Function]}
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "justifyContent": "center",
-                        }
-                      }
                     >
                       <Text
                         h3={true}
@@ -5510,10 +5474,6 @@ ShallowWrapper {
                         Purchase
                       </Text>,
                       "onPress": [Function],
-                      "style": Object {
-                        "alignItems": "center",
-                        "justifyContent": "center",
-                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -6726,7 +6686,7 @@ ShallowWrapper {
                           }
                           useNativeDriver={true}
                         >
-                          History
+                          Beep
                         </Text>
                         <SettingSwitch
                           disabled={true}
@@ -6968,7 +6928,7 @@ ShallowWrapper {
                             }
                             useNativeDriver={true}
                           >
-                            History
+                            Beep
                           </Text>
                           <SettingSwitch
                             disabled={true}
@@ -7585,7 +7545,7 @@ ShallowWrapper {
                               }
                               useNativeDriver={true}
                             >
-                              History
+                              Beep
                             </Text>
                             <SettingSwitch
                               disabled={true}
@@ -7625,7 +7585,7 @@ ShallowWrapper {
                                 }
                                 useNativeDriver={true}
                               >
-                                History
+                                Beep
                               </Text>,
                               <SettingSwitch
                                 disabled={true}
@@ -7645,7 +7605,7 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "class",
                               "props": Object {
-                                "children": "History",
+                                "children": "Beep",
                                 "h2": true,
                                 "marginB-5": true,
                                 "style": Object {
@@ -7654,7 +7614,7 @@ ShallowWrapper {
                                 "useNativeDriver": true,
                               },
                               "ref": null,
-                              "rendered": "History",
+                              "rendered": "Beep",
                               "type": [Function],
                             },
                             Object {
@@ -7866,7 +7826,7 @@ ShallowWrapper {
                         onPress={[Function]}
                         useNativeDriver={true}
                       >
-                        Rate us
+                        Rate
                       </Text>
                     </TouchableOpacity>
                   </View>,
@@ -7951,7 +7911,7 @@ ShallowWrapper {
                         onPress={[Function]}
                         useNativeDriver={true}
                       >
-                        Rate us
+                        Rate
                       </Text>
                     </TouchableOpacity>,
                     "flex": true,
@@ -7971,7 +7931,7 @@ ShallowWrapper {
                         onPress={[Function]}
                         useNativeDriver={true}
                       >
-                        Rate us
+                        Rate
                       </Text>,
                     },
                     "ref": null,
@@ -7981,14 +7941,14 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "center": true,
-                        "children": "Rate us",
+                        "children": "Rate",
                         "default": true,
                         "gray": true,
                         "onPress": [Function],
                         "useNativeDriver": true,
                       },
                       "ref": null,
-                      "rendered": "Rate us",
+                      "rendered": "Rate",
                       "type": [Function],
                     },
                     "type": [Function],
