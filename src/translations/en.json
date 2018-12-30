@@ -1,0 +1,139 @@
+{
+  "tabs": {
+    "scanner": "Scanner",
+    "history": "History",
+    "generate": "Generate",
+    "settings": "Settings"
+  },
+  "titles": {
+    "scanned": "Scanned Code",
+    "new": "New Code",
+    "pricing": "Pricing"
+  },
+  "screens": {
+    "scanner": {
+      "accessTitle": "Camera access has not been granted :(",
+      "accessMessageIos": "The only thing you could do is to reinstall the app and click allow when the app will ask you for camera permissions. We promise that we use it for code scanning purposes only!",
+      "accessMessageAndroid": "The only thing you could do is to restart the app and click allow when the app will ask you for camera permissions. Or alternatively you can do in from the settings. We promise that we use it for code scanning purposes only!"
+    },
+    "history": {
+      "noCodesMessage": "You don't have any scanned code",
+      "clear": "Clear",
+      "needMore": "Need more history? Unlock with",
+      "cancelAlert": {
+        "title": "Are you sure?",
+        "message": "This action will remove all your scanned codes",
+        "cancelButton": "Cancel",
+        "okButton": "OK"
+      }
+    },
+    "generate": {
+      "title": "Generate Code",
+      "generateButton": "Generate",
+      "fieldsNames": {
+        "emailTo": "To",
+        "emailSubject": "Subject",
+        "emailBody": "Message",
+        "smsTo": "Phone number",
+        "wifiSsid": "SSID",
+        "wifiEncryption": "Encryption",
+        "wifiEncryptionTitle": "Pick encryption type",
+        "wifiPassword": "Password",
+        "geoLong": "Long",
+        "geoLat": "Lat",
+        "contactName": "First Name",
+        "contactSurname": "Last Name",
+        "contactFullName": "Full Name",
+        "contactPhone": "Phone",
+        "contactEmail": "Email",
+        "eventTitle": "Title",
+        "eventDescription": "Description",
+        "eventLocation": "Location",
+        "eventStart": "Start",
+        "eventEnd": "End",
+        "eventDateTitle": "Pick date",
+        "text": "Text",
+        "url": "URL",
+        "tel": "Tel"
+      }
+    },
+    "generated": {
+      "shareButton": "Share",
+      "slider": {
+        "label": "Recommended",
+        "ok": "Done",
+        "cancel": "Cancel"
+      }
+    },
+    "pricing": {
+      "proLabel": "Pro Version",
+      "advantages": ["Unlimited history", "Codes customization", "Batch scan", "Advanced codes generation"],
+      "purchase": "Purchase for",
+      "restore": ["Also you can", "restore", "your payment"],
+      "privacy": ["Check out the", "Privacy policy", "Payment will be charged to your", "Account at confirmation of purchase"],
+      "wrongAlert": {
+        "title": "Something was wrong",
+        "message": "Please, try again",
+        "okButton": "OK"
+      },
+      "restoreAlert": {
+        "title": "Restore Successful",
+        "message": "You successfully restored the following purchases: QRCode Pro"
+      }
+    },
+    "scanned": {
+      "show": "Show QRCode",
+      "contactPermissionsAlert": {
+        "title": "Add to Contacts Permission",
+        "message": "QR Code needs access to your contacts to create new contact"
+      },
+      "eventAlert": {
+        "title": "Event was saved",
+        "message": "You can find it in calendar"
+      },
+      "contactAlert": {
+        "title": "Contact was saved",
+        "message": "You can find it in contact"
+      },
+      "successButton": "Great!",
+      "copied": "Copied to clipboard!"
+    },
+    "settings": {
+      "offer": "Pro offer",
+      "offerDescription": "Unlock all features in application",
+      "offerButton": "Purchase",
+      "customization": "Customization",
+      "background": "Background color",
+      "backgroundDescription": "Codes default background color",
+      "foreground": "Foreground color",
+      "foregroundDescription": "Codes default foreground color",
+      "general": "General",
+      "batch": "Batch scan",
+      "batchDescription": "Scan numbers if codes consecutively without interruption",
+      "vibrate": "Vibrate",
+      "vibrateDescription": "Vibrate if scan is successfull",
+      "beep": "Beep",
+      "beepDescription": "Beep if scan is successfull",
+      "history": "History",
+      "historyDescription": "Save history of your scans",
+      "duplicate": "Duplicate scans",
+      "duplicateDescription": "Save duplicate scan result in history",
+      "rate": "Rate",
+      "contact": "Contact us"
+    }
+  },
+  "codeTypes": {
+    "text": "text",
+    "url": "url",
+    "email": "email",
+    "tel": "tel",
+    "sms": "sms",
+    "contact": "contact",
+    "geo": "geo",
+    "event": "event",
+    "wifi": "wifi"
+  },
+  "other": {
+    "pro": "Pro"
+  }
+}

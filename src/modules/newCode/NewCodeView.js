@@ -21,6 +21,7 @@ import { codeTypesList } from './NewCodeState';
 import { Button } from '../../components';
 
 import { commonStyles, colors } from '../../styles';
+import i18n from '../../translations';
 
 type Props = {
   navigation: {
@@ -60,7 +61,9 @@ export default function NewCodeView(props: Props) {
         backgroundColor={colors.lightBlue}
       />
       <View centerH marginB-25 marginT-10>
-        <Text h1 darkBlue testID="label:generate-code">Generate Code</Text>
+        <Text h1 darkBlue testID="label:generate-code">
+          {i18n.t('screens.generate.title', { defaultValue: i18n.t('tabs.generate') })}
+        </Text>
       </View>
       <ScrollView
         testID="scroll:code-type"
@@ -91,7 +94,7 @@ export default function NewCodeView(props: Props) {
             <Text h3 lightBlue marginT-5 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
             {codeType.proOnly && !props.isPro && (
               <View style={styles.proLabel} paddingH-3 paddingV-1 marginB-4 marginL-5>
-                <Text white>Pro</Text>
+                <Text white>{i18n.t('other.pro')}</Text>
               </View>
             )}
           </TouchableOpacity>
@@ -129,7 +132,7 @@ export default function NewCodeView(props: Props) {
           marginBottom: 15,
         }}
       >
-        Generate
+        {i18n.t('screens.generate.generateButton')}
       </Button>
     </SafeAreaView>
   );

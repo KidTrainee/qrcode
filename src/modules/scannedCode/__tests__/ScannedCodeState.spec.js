@@ -20,7 +20,7 @@ describe('parseScannedString', () => {
     expect(parseScannedString(123)).toEqual({
       type: codeTypesList.TEXT,
       fields: [{
-        title: 'text',
+        title: 'Text',
         value: '123'
       }],
     });
@@ -28,7 +28,7 @@ describe('parseScannedString', () => {
     expect(parseScannedString(undefined)).toEqual({
       type: codeTypesList.TEXT,
       fields: [{
-        title: 'text',
+        title: 'Text',
         value: ''
       }],
     });
@@ -36,7 +36,7 @@ describe('parseScannedString', () => {
     expect(parseScannedString(null)).toEqual({
       type: codeTypesList.TEXT,
       fields: [{
-        title: 'text',
+        title: 'Text',
         value: ''
       }],
     });
@@ -44,7 +44,7 @@ describe('parseScannedString', () => {
     expect(parseScannedString('')).toEqual({
       type: codeTypesList.TEXT,
       fields: [{
-        title: 'text',
+        title: 'Text',
         value: ''
       }],
     });
@@ -52,7 +52,7 @@ describe('parseScannedString', () => {
     expect(parseScannedString('phs:')).toEqual({
       type: codeTypesList.TEXT,
       fields: [{
-        title: 'text',
+        title: 'Text',
         value: 'phs:'
       }],
     });
@@ -60,7 +60,7 @@ describe('parseScannedString', () => {
     expect(parseScannedString('begin:random')).toEqual({
       type: codeTypesList.TEXT,
       fields: [{
-        title: 'text',
+        title: 'Text',
         value: 'begin:random'
       }],
     });
@@ -70,10 +70,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('sms:sms:smsmessage')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: 'sms',
       }, {
-        title: 'message',
+        title: 'Message',
         value: 'smsmessage',
       }],
     });
@@ -81,10 +81,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('sms:sms:')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: 'sms',
       }, {
-        title: 'message',
+        title: 'Message',
         value: '',
       }],
     });
@@ -92,10 +92,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('sms::')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: '',
       }, {
-        title: 'message',
+        title: 'Message',
         value: '',
       }],
     });
@@ -103,20 +103,20 @@ describe('parseScannedString', () => {
     expect(parseScannedString('sms')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: '',
       }, {
-        title: 'message',
+        title: 'Message',
         value: '',
       }],
     });
     expect(parseScannedString('SMSTO:sms:smsmessage')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: 'sms',
       }, {
-        title: 'message',
+        title: 'Message',
         value: 'smsmessage',
       }],
     });
@@ -124,10 +124,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('SMSTO:sms:')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: 'sms',
       }, {
-        title: 'message',
+        title: 'Message',
         value: '',
       }],
     });
@@ -135,10 +135,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('SMSTO::')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: '',
       }, {
-        title: 'message',
+        title: 'Message',
         value: '',
       }],
     });
@@ -146,10 +146,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('SMSTO')).toEqual({
       type: codeTypesList.SMS,
       fields: [{
-        title: 'to',
+        title: 'Phone number',
         value: '',
       }, {
-        title: 'message',
+        title: 'Message',
         value: '',
       }],
     });
@@ -159,13 +159,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('WIFI:S:WIFI_SSID;T:WIFI_ENCRYPTION;P:WIFI_PASSWORD;;')).toEqual({
       type: codeTypesList.WIFI,
       fields: [{
-        title: 'ssid',
+        title: 'SSID',
         value: 'WIFI_SSID',
       }, {
-        title: 'encryption',
+        title: 'Encryption',
         value: 'WIFI_ENCRYPTION',
       }, {
-        title: 'password',
+        title: 'Password',
         value: 'WIFI_PASSWORD',
       }],
     });
@@ -173,13 +173,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('WIFI:S:WIFI_SSID;T:;P:;;')).toEqual({
       type: codeTypesList.WIFI,
       fields: [{
-        title: 'ssid',
+        title: 'SSID',
         value: 'WIFI_SSID',
       }, {
-        title: 'encryption',
+        title: 'Encryption',
         value: '',
       }, {
-        title: 'password',
+        title: 'Password',
         value: '',
       }],
     });
@@ -187,13 +187,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('WIFI:S:;T:;P:;;')).toEqual({
       type: codeTypesList.WIFI,
       fields: [{
-        title: 'ssid',
+        title: 'SSID',
         value: '',
       }, {
-        title: 'encryption',
+        title: 'Encryption',
         value: '',
       }, {
-        title: 'password',
+        title: 'Password',
         value: '',
       }],
     });
@@ -203,10 +203,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('geo:GEO_LONG,GEO_LAT')).toEqual({
       type: codeTypesList.GEO,
       fields: [{
-        title: 'longitude',
+        title: 'Long',
         value: 'GEO_LONG',
       }, {
-        title: 'latitude',
+        title: 'Lat',
         value: 'GEO_LAT',
       }],
     });
@@ -214,10 +214,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('geo:GEO_LONG,')).toEqual({
       type: codeTypesList.GEO,
       fields: [{
-        title: 'longitude',
+        title: 'Long',
         value: 'GEO_LONG',
       }, {
-        title: 'latitude',
+        title: 'Lat',
         value: '',
       }],
     });
@@ -225,10 +225,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('geo:,')).toEqual({
       type: codeTypesList.GEO,
       fields: [{
-        title: 'longitude',
+        title: 'Long',
         value: '',
       }, {
-        title: 'latitude',
+        title: 'Lat',
         value: '',
       }],
     });
@@ -236,10 +236,10 @@ describe('parseScannedString', () => {
     expect(parseScannedString('geo')).toEqual({
       type: codeTypesList.GEO,
       fields: [{
-        title: 'longitude',
+        title: 'Long',
         value: '',
       }, {
-        title: 'latitude',
+        title: 'Lat',
         value: '',
       }],
     });
@@ -249,13 +249,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('mailto:mail@example.com?subject=Your Subject&body=Body paragraph')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
-        title: 'to',
+        title: 'To',
         value: 'mail@example.com',
       }, {
-        title: 'subject',
+        title: 'Subject',
         value: 'Your Subject',
       }, {
-        title: 'body',
+        title: 'Message',
         value: 'Body paragraph',
       }],
     });
@@ -263,13 +263,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('mailto:mail@example.com?body=Body paragraph&subject=Your Subject')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
-        title: 'to',
+        title: 'To',
         value: 'mail@example.com',
       }, {
-        title: 'subject',
+        title: 'Subject',
         value: 'Your Subject',
       }, {
-        title: 'body',
+        title: 'Message',
         value: 'Body paragraph',
       }],
     });
@@ -277,13 +277,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('mailto:mail@example.com?subject=Your Subject')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
-        title: 'to',
+        title: 'To',
         value: 'mail@example.com',
       }, {
-        title: 'subject',
+        title: 'Subject',
         value: 'Your Subject',
       }, {
-        title: 'body',
+        title: 'Message',
         value: '',
       }],
     });
@@ -291,13 +291,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('mailto:mail@example.com?body=Body paragraph')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
-        title: 'to',
+        title: 'To',
         value: 'mail@example.com',
       }, {
-        title: 'subject',
+        title: 'Subject',
         value: '',
       }, {
-        title: 'body',
+        title: 'Message',
         value: 'Body paragraph',
       }],
     });
@@ -305,13 +305,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('mailto:mail@example.com')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
-        title: 'to',
+        title: 'To',
         value: 'mail@example.com',
       }, {
-        title: 'subject',
+        title: 'Subject',
         value: '',
       }, {
-        title: 'body',
+        title: 'Message',
         value: '',
       }],
     });
@@ -319,13 +319,13 @@ describe('parseScannedString', () => {
     expect(parseScannedString('MATMSG:TO:email@example.com;SUB:email subject;BODY:Email text;;')).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
-        title: 'to',
+        title: 'To',
         value: 'email@example.com',
       }, {
-        title: 'subject',
+        title: 'Subject',
         value: 'email subject',
       }, {
-        title: 'body',
+        title: 'Message',
         value: 'Email text',
       }],
     });
@@ -337,13 +337,13 @@ BODY:Email text;
 ;`)).toEqual({
       type: codeTypesList.EMAIL,
       fields: [{
-        title: 'to',
+        title: 'To',
         value: 'email@example.com',
       }, {
-        title: 'subject',
+        title: 'Subject',
         value: 'email subject',
       }, {
-        title: 'body',
+        title: 'Message',
         value: 'Email text',
       }],
     });
@@ -353,7 +353,7 @@ BODY:Email text;
     expect(parseScannedString('tel:telephone_number')).toEqual({
       type: codeTypesList.TEL,
       fields: [{
-        title: 'number',
+        title: 'Phone number',
         value: 'telephone_number',
       }],
     });
@@ -361,7 +361,7 @@ BODY:Email text;
     expect(parseScannedString('tel')).toEqual({
       type: codeTypesList.TEL,
       fields: [{
-        title: 'number',
+        title: 'Phone number',
         value: '',
       }],
     });
@@ -371,7 +371,7 @@ BODY:Email text;
     expect(parseScannedString('https://insiderdev.com')).toEqual({
       type: codeTypesList.URL,
       fields: [{
-        title: 'link',
+        title: 'URL',
         value: 'https://insiderdev.com',
       }],
     });
@@ -379,7 +379,7 @@ BODY:Email text;
     expect(parseScannedString('http://insiderdev.com')).toEqual({
       type: codeTypesList.URL,
       fields: [{
-        title: 'link',
+        title: 'URL',
         value: 'http://insiderdev.com',
       }],
     });
@@ -387,7 +387,7 @@ BODY:Email text;
     expect(parseScannedString('https://subdomain.domain.com')).toEqual({
       type: codeTypesList.URL,
       fields: [{
-        title: 'link',
+        title: 'URL',
         value: 'https://subdomain.domain.com',
       }],
     });
@@ -395,7 +395,7 @@ BODY:Email text;
     expect(parseScannedString('https://subdomain.domain.com?prop=one&prop2=two')).toEqual({
       type: codeTypesList.URL,
       fields: [{
-        title: 'link',
+        title: 'URL',
         value: 'https://subdomain.domain.com?prop=one&prop2=two',
       }],
     });
@@ -411,19 +411,19 @@ EMAIL:CONTACT_EMAIL
 END:VCARD`)).toEqual({
       type: codeTypesList.CONTACT,
       fields: [{
-        title: 'name',
+        title: 'First Name',
         value: 'CONTACT_NAME',
       }, {
-        title: 'surname',
+        title: 'Last Name',
         value: 'CONTACT_SURNAME',
       }, {
-        title: 'full name',
+        title: 'Full Name',
         value: 'CONTACT_NAME CONTACT_SURNAME',
       }, {
-        title: 'phone',
+        title: 'Phone',
         value: 'CONTACT_PHONE',
       }, {
-        title: 'email',
+        title: 'Email',
         value: 'CONTACT_EMAIL',
       }],
     });
@@ -445,19 +445,19 @@ x-qq:21588891
 END:VCARD`)).toEqual({
       type: codeTypesList.CONTACT,
       fields: [{
-        title: 'name',
+        title: 'First Name',
         value: 'Forrest',
       }, {
-        title: 'surname',
+        title: 'Last Name',
         value: 'Gump',
       }, {
-        title: 'full name',
+        title: 'Full Name',
         value: 'Forrest Gump',
       }, {
-        title: 'phone',
+        title: 'Phone',
         value: '+1-111-555-1212',
       }, {
-        title: 'email',
+        title: 'Email',
         value: 'forrestgump@example.com',
       }],
     });
@@ -467,19 +467,19 @@ VERSION:4.0
 END:VCARD`)).toEqual({
       type: codeTypesList.CONTACT,
       fields: [{
-        title: 'name',
+        title: 'First Name',
         value: '',
       }, {
-        title: 'surname',
+        title: 'Last Name',
         value: '',
       }, {
-        title: 'full name',
+        title: 'Full Name',
         value: '',
       }, {
-        title: 'phone',
+        title: 'Phone',
         value: '',
       }, {
-        title: 'email',
+        title: 'Email',
         value: '',
       }],
     });
@@ -495,19 +495,19 @@ DTEND:EVENT_END
 END:VEVENT`)).toEqual({
       type: codeTypesList.EVENT,
       fields: [{
-        title: 'title',
+        title: 'Title',
         value: 'EVENT_TITLE',
       }, {
-        title: 'location',
+        title: 'Location',
         value: 'EVENT_LOCATION',
       }, {
-        title: 'description',
+        title: 'Description',
         value: 'EVENT_DESCRIPTION',
       }, {
-        title: 'start',
+        title: 'Start',
         value: 'EVENT_START',
       }, {
-        title: 'end',
+        title: 'End',
         value: 'EVENT_END',
       }],
     });
@@ -516,19 +516,19 @@ END:VEVENT`)).toEqual({
 END:VEVENT`)).toEqual({
       type: codeTypesList.EVENT,
       fields: [{
-        title: 'title',
+        title: 'Title',
         value: '',
       }, {
-        title: 'location',
+        title: 'Location',
         value: '',
       }, {
-        title: 'description',
+        title: 'Description',
         value: '',
       }, {
-        title: 'start',
+        title: 'Start',
         value: '',
       }, {
-        title: 'end',
+        title: 'End',
         value: '',
       }],
     });

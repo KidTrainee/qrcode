@@ -1,4 +1,5 @@
 // @flow
+import i18n from '../../translations';
 
 export const fieldTypesList = {
   EMAIL_TO: 'email_to',
@@ -24,15 +25,15 @@ export const fieldTypesList = {
 };
 
 export const codeTypesList = {
-  TEXT: 'text',
-  URL: 'url',
-  EMAIL: 'email',
-  TEL: 'tel',
-  CONTACT: 'contact',
-  SMS: 'sms',
-  GEO: 'geo',
-  EVENT: 'event',
-  WIFI: 'wifi',
+  TEXT: i18n.t('codeTypes.text'),
+  URL: i18n.t('codeTypes.url'),
+  EMAIL: i18n.t('codeTypes.email'),
+  TEL: i18n.t('codeTypes.tel'),
+  CONTACT: i18n.t('codeTypes.contact'),
+  SMS: i18n.t('codeTypes.sms'),
+  GEO: i18n.t('codeTypes.geo'),
+  EVENT: i18n.t('codeTypes.event'),
+  WIFI: i18n.t('codeTypes.wifi'),
 };
 
 type NewCodeState = {

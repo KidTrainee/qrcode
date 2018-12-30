@@ -1,0 +1,139 @@
+{
+  "tabs": {
+    "scanner": "Scanner",
+    "history": "Verlauf",
+    "generate": "Erzeugen",
+    "settings": "Einstellungen"
+  },
+  "titles": {
+    "scanned": "Gescannter Code",
+    "new": "Neuer Code",
+    "pricing": "Preisgestaltung"
+  },
+  "screens": {
+    "scanner": {
+      "accessTitle": "Der Kamerazugriff wurde nicht gewährt:(",
+      "accessMessageIos": "Das Einzige, was Sie tun können, ist die App neu zu installieren und auf Zulassen zu klicken, wenn die App Sie nach Kameraberechtigungen fragt. Wir versprechen, dass wir es nur für Code-Scan Zwecke verwenden!",
+      "accessMessageAndroid": "Das Einzige, was Sie tun können, ist die App neu zu starten und auf Zulassen zu klicken, wenn die App Sie nach Kameraberechtigungen fragt. Als Alternative können Sie auch über die Einstellungen einsteigen. Wir versprechen, dass wir es nur für Code-Scan Zwecke verwenden!"
+    },
+    "history": {
+      "noCodesMessage": "Sie haben keinen gescannten Code.",
+      "clear": "Löschen",
+      "needMore": "Benötigen Sie mehr Verlauf? Freischalten mit",
+      "cancelAlert": {
+        "title": "Sind Sie sicher?",
+        "message": " Diese Aktion entfernt alle Ihre gescannten Codes",
+        "cancelButton": "Beenden",
+        "okButton": "OK"
+      }
+    },
+    "generate": {
+      "title": "Code erzeugen",
+      "generateButton": "Erzeugen",
+      "fieldsNames": {
+        "emailTo": "An",
+        "emailSubject": "Betreff",
+        "emailBody": "Nachricht",
+        "smsTo": "Telefonnummer",
+        "wifiSsid": "SSID",
+        "wifiEncryption": "Verschlüsselung",
+        "wifiEncryptionTitle": "Verschlüsselungstyp wählen",
+        "wifiPassword": "Passwort",
+        "geoLong": "Lang",
+        "geoLat": "Lat",
+        "contactName": "Vorname",
+        "contactSurname": "Nachname",
+        "contactFullName": "Vollständiger Name",
+        "contactPhone": "Telefon",
+        "contactEmail": "E-Mail",
+        "eventTitle": "Titel",
+        "eventDescription": "Beschreibung",
+        "eventLocation": "Standort",
+        "eventStart": "Start",
+        "eventEnd": "Ende",
+        "eventDateTitle": "Datum wählen",
+        "text": "Text",
+        "url": "URL",
+        "tel": "Tel"
+      }
+    },
+    "generated": {
+      "shareButton": "Teilen",
+      "slider": {
+        "label": "Empfohlen",
+        "ok": "Fertig",
+        "cancel": "Beenden"
+      }
+    },
+    "pricing": {
+      "proLabel": "Pro Version",
+      "advantages": ["Unlimitierter Verlauf", "Anpassung der Codes", "Scanstapel", "Fortgeschrittene Codes Generation "],
+      "purchase": "Kaufen für",
+      "restore": ["Sie können auch", "Ihre Zahlung", "wiederherstellen"],
+      "privacy": ["Überprüfen Sie die", "Datenschutzrichtlinie", "Die Zahlung wird zu Lasten von Ihrem", " Konto bei Kaufbestätigung "],
+      "wrongAlert": {
+        "title": "Etwas war falsch",
+        "message": "Bitte versuchen Sie es erneut",
+        "okButton": "OK"
+      },
+      "restoreAlert": {
+        "title": "Erfolgreiche Wiederherstellung",
+        "message": " Sie haben die folgenden Käufe erfolgreich wiederhergestellt: QRCode Pro "
+      }
+    },
+    "scanned": {
+      "show": "QRCode zeigen",
+      "contactPermissionsAlert": {
+        "title": "Zu Kontakt Berechtigung hinzufügen",
+        "message": " QR-Code benötigt Zugriff auf Ihre Kontakte, um neue Kontakte zu erstellen"
+      },
+      "eventAlert": {
+        "title": "Veranstaltung wurde gespeichert",
+        "message": "Sie können es im Kalender finden"
+      },
+      "contactAlert": {
+        "title": "Kontakt wurde gespeichert",
+        "message": "Sie können es unter Kontakt finden"
+      },
+      "successButton": "Großartig!",
+      "copied": " Kopiert in die Zwischenablage!"
+    },
+    "settings": {
+      "offer": "Pro Angebot",
+      "offerDescription": "Alle Funktionen in der Anwendung freischalten",
+      "offerButton": "Kauf",
+      "customization": "Anpassung",
+      "background": "Hintergrundfarbe",
+      "backgroundDescription": "Codes Standard Hintergrundfarbe",
+      "foreground": "Vordergrundfarbe",
+      "foregroundDescription": "Codes Standard Vordergrundfarbe",
+      "general": "Allgemein",
+      "batch": "Abzeichen Scan",
+      "batchDescription": "Scannen Sie Nummern, wenn Codes nacheinander und ohne Unterbrechung eingegeben werden",
+      "vibrate": "Vibrieren",
+      "vibrateDescription": "Vibration wenn der Scan erfolgreich ist",
+      "beep": "Signalton",
+      "beepDescription": "Signalton wenn der Scan erfolgreich ist",
+      "history": "Verlauf",
+      "historyDescription": "Verlauf Ihrer Scans speichern",
+      "duplicate": "Scans duplizieren",
+      "duplicateDescription": "Dupliziertes Scanergebnis in Verlauf speichern",
+      "rate": "Bewerten",
+      "contact": "Kontaktieren Sie uns"
+    }
+  },
+  "codeTypes": {
+    "text": "Text",
+    "url": "URL",
+    "email": "E-Mail",
+    "tel": "Tel",
+    "sms": "SMS",
+    "contact": "Kontakt",
+    "geo": "Geo",
+    "event": "Veranstaltung",
+    "wifi": "W-Lan"
+  },
+  "other": {
+    "pro": "Pro"
+  }
+}

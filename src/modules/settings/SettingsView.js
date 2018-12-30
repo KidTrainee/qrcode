@@ -19,6 +19,7 @@ import { SlidersColorPicker } from 'react-native-color';
 import Rate from 'react-native-rate';
 
 import { commonStyles, colors } from '../../styles';
+import i18n from '../../translations';
 
 
 type Props = {
@@ -82,7 +83,7 @@ export default function SettingsView(props: Props) {
         backgroundColor={colors.lightBlue}
       />
       <View centerH marginB-25 marginT-10>
-        <Text h1 darkBlue>Settings</Text>
+        <Text h1 darkBlue> {i18n.t('screens.settings.title', { defaultValue: i18n.t('tabs.settings') })}</Text>
       </View>
       <ScrollView
         style={styles.scrollView}
@@ -93,31 +94,27 @@ export default function SettingsView(props: Props) {
           <View marginB-25>
             <View row spread>
               <View flex>
-                <Text h2 marginB-5 style={styles.textNormal}>Pro offer</Text>
-                <Text gray defaultLight>Unlock all features in application</Text>
+                <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.offer')}</Text>
+                <Text gray defaultLight>{i18n.t('screens.settings.offerDescription')}</Text>
               </View>
               <TouchableOpacity
-                style={{
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
                 onPress={props.goPricingPage}
               >
-                <Text h3 primary>Purchase</Text>
+                <Text h3 primary>{i18n.t('screens.settings.offerButton')}</Text>
               </TouchableOpacity>
             </View>
           </View>
         )}
         <View marginB-25>
-          <Text h2 marginB-10>Customization</Text>
+          <Text h2 marginB-10>{i18n.t('screens.settings.customization')}</Text>
           <View br10 paddingH-15 paddingT-25 paddingB-0 style={styles.settingBlock}>
             <View marginB-25>
               <View row spread>
                 <View row centerV>
-                  <Text h2 marginB-5 style={styles.textNormal}>Background color</Text>
+                  <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.background')}</Text>
                   {!props.isPro && (
                     <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                      <Text white default>Pro</Text>
+                      <Text white default>{i18n.t('other.pro')}</Text>
                     </View>
                   )}
                 </View>
@@ -129,15 +126,15 @@ export default function SettingsView(props: Props) {
                   ]}
                 />
               </View>
-              <Text gray defaultLight>Codes default background color</Text>
+              <Text gray defaultLight>{i18n.t('screens.settings.backgroundDescription')}</Text>
             </View>
             <View marginB-25>
               <View row spread>
                 <View row centerV>
-                  <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
+                  <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.foreground')}</Text>
                   {!props.isPro && (
                     <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                      <Text white default>Pro</Text>
+                      <Text white default>{i18n.t('other.pro')}</Text>
                     </View>
                   )}
                 </View>
@@ -149,20 +146,20 @@ export default function SettingsView(props: Props) {
                   ]}
                 />
               </View>
-              <Text gray defaultLight>Codes default foreground color</Text>
+              <Text gray defaultLight>{i18n.t('screens.settings.foregroundDescription')}</Text>
             </View>
           </View>
         </View>
         <View marginB-25>
-          <Text h2 marginB-10>General</Text>
+          <Text h2 marginB-10>{i18n.t('screens.settings.general')}</Text>
           <View br10 paddingH-15 paddingT-25 paddingB-0 style={styles.settingBlock}>
             <View marginB-25>
               <View row spread centerV>
                 <View row centerV>
-                  <Text h2 marginB-5 style={styles.textNormal}>Batch scan</Text>
+                  <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.batch')}</Text>
                   {!props.isPro && (
                     <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
-                      <Text white default>Pro</Text>
+                      <Text white default>{i18n.t('other.pro')}</Text>
                     </View>
                   )}
                 </View>
@@ -172,33 +169,33 @@ export default function SettingsView(props: Props) {
                   name="batch"
                 />
               </View>
-              <Text gray marginR-50 defaultLight>Scan numbers if codes consecutively without interruption</Text>
+              <Text gray marginR-50 defaultLight>{i18n.t('screens.settings.batchDescription')}</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
-                <Text h2 marginB-5 style={styles.textNormal}>Vibrate</Text>
+                <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.vibrate')}</Text>
                 <SettingSwitch
                   value={props.settings.vibrate}
                   onChange={props.setSettingValue}
                   name="vibrate"
                 />
               </View>
-              <Text gray marginR-50 defaultLight>Vibrate if scan is successfull</Text>
+              <Text gray marginR-50 defaultLight>{i18n.t('screens.settings.vibrateDescription')}</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
-                <Text h2 marginB-5 style={styles.textNormal}>Beep</Text>
+                <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.beep')}</Text>
                 <SettingSwitch
                   value={props.settings.beep}
                   onChange={props.setSettingValue}
                   name="beep"
                 />
               </View>
-              <Text gray marginR-50 defaultLight>Beep if scan is successfull</Text>
+              <Text gray marginR-50 defaultLight>{i18n.t('screens.settings.beepDescription')}</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
-                <Text h2 marginB-5 style={styles.textNormal}>History</Text>
+                <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.beep')}</Text>
                 <SettingSwitch
                   value={props.settings.history}
                   onChange={props.setSettingValue}
@@ -206,11 +203,11 @@ export default function SettingsView(props: Props) {
                   name="history"
                 />
               </View>
-              <Text gray marginR-50 defaultLight>Save history of your scans</Text>
+              <Text gray marginR-50 defaultLight>{i18n.t('screens.settings.historyDescription')}</Text>
             </View>
             <View marginB-25>
               <View row spread centerV>
-                <Text h2 marginB-5 style={styles.textNormal}>Duplicate scans</Text>
+                <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.duplicate')}</Text>
                 <SettingSwitch
                   value={props.settings.duplicate}
                   onChange={props.setSettingValue}
@@ -218,14 +215,14 @@ export default function SettingsView(props: Props) {
                   name="duplicate"
                 />
               </View>
-              <Text gray marginR-50 defaultLight>Save duplicate scan result in history</Text>
+              <Text gray marginR-50 defaultLight>{i18n.t('screens.settings.duplicateDescription')}</Text>
             </View>
           </View>
         </View>
         <View row marginB-25>
           <View flex marginR-20>
             <TouchableOpacity onPress={() => Linking.openURL('mailto:apps@insider.io?subject=QRCode')}>
-              <Text center gray default>Contact us</Text>
+              <Text center gray default>{i18n.t('screens.settings.contact')}</Text>
             </TouchableOpacity>
           </View>
           <View flex>
@@ -241,7 +238,7 @@ export default function SettingsView(props: Props) {
                   openAppStoreIfInAppFails: true,
                 })}
               >
-                Rate us
+                {i18n.t('screens.settings.rate')}
               </Text>
             </TouchableOpacity>
           </View>
@@ -254,9 +251,9 @@ export default function SettingsView(props: Props) {
         onCancel={props.toggleBackgroundColorModal}
         onOk={props.handleBackgroundColorPick}
         swatches={recommendedColors}
-        swatchesLabel="Recommended"
-        okLabel="Done"
-        cancelLabel="Cancel"
+        swatchesLabel={i18n.t('screens.generated.slider.label')}
+        okLabel={i18n.t('screens.generated.slider.ok')}
+        cancelLabel={i18n.t('screens.generated.slider.cancel')}
       />
       <SlidersColorPicker
         visible={props.isForegroundModalVisible}
@@ -265,9 +262,9 @@ export default function SettingsView(props: Props) {
         onCancel={props.toggleForegroundColorModal}
         onOk={props.handleForegroundColorPick}
         swatches={recommendedColors}
-        swatchesLabel="Recommended"
-        okLabel="Done"
-        cancelLabel="Cancel"
+        swatchesLabel={i18n.t('screens.generated.slider.label')}
+        okLabel={i18n.t('screens.generated.slider.ok')}
+        cancelLabel={i18n.t('screens.generated.slider.cancel')}
       />
     </SafeAreaView>
   );

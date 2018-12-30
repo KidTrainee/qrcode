@@ -178,7 +178,7 @@ ShallowWrapper {
                   }
                 }
               >
-                Purchase for $4.99
+                Purchase for 4.99
               </Button>
               <View
                 marginT-10={true}
@@ -210,7 +210,9 @@ ShallowWrapper {
                     }
                     useNativeDriver={true}
                   >
-                     restore 
+                     
+                    restore
+                     
                   </Text>
                 </TouchableOpacity>
                 <Text
@@ -257,7 +259,9 @@ ShallowWrapper {
                   text100={true}
                   useNativeDriver={true}
                 >
-                   Privacy policy 
+                   
+                  Privacy policy
+                   
                 </Text>
               </TouchableOpacity>
             </View>
@@ -437,7 +441,7 @@ ShallowWrapper {
                   }
                 }
               >
-                Purchase for $4.99
+                Purchase for 4.99
               </Button>
               <View
                 marginT-10={true}
@@ -469,7 +473,9 @@ ShallowWrapper {
                     }
                     useNativeDriver={true}
                   >
-                     restore 
+                     
+                    restore
+                     
                   </Text>
                 </TouchableOpacity>
                 <Text
@@ -516,7 +522,9 @@ ShallowWrapper {
                   text100={true}
                   useNativeDriver={true}
                 >
-                   Privacy policy 
+                   
+                  Privacy policy
+                   
                 </Text>
               </TouchableOpacity>
             </View>
@@ -690,7 +698,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Purchase for $4.99
+                  Purchase for 4.99
                 </Button>
                 <View
                   marginT-10={true}
@@ -722,7 +730,9 @@ ShallowWrapper {
                       }
                       useNativeDriver={true}
                     >
-                       restore 
+                       
+                      restore
+                       
                     </Text>
                   </TouchableOpacity>
                   <Text
@@ -769,7 +779,9 @@ ShallowWrapper {
                     text100={true}
                     useNativeDriver={true}
                   >
-                     Privacy policy 
+                     
+                    Privacy policy
+                     
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -939,7 +951,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Purchase for $4.99
+                    Purchase for 4.99
                   </Button>
                   <View
                     marginT-10={true}
@@ -971,7 +983,9 @@ ShallowWrapper {
                         }
                         useNativeDriver={true}
                       >
-                         restore 
+                         
+                        restore
+                         
                       </Text>
                     </TouchableOpacity>
                     <Text
@@ -1326,7 +1340,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Purchase for $4.99
+                      Purchase for 4.99
                     </Button>,
                     <View
                       marginT-10={true}
@@ -1358,7 +1372,9 @@ ShallowWrapper {
                           }
                           useNativeDriver={true}
                         >
-                           restore 
+                           
+                          restore
+                           
                         </Text>
                       </TouchableOpacity>
                       <Text
@@ -1390,14 +1406,14 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "children": "Purchase for $4.99",
+                      "children": "Purchase for 4.99",
                       "onPress": undefined,
                       "style": Object {
                         "minWidth": "100%",
                       },
                     },
                     "ref": null,
-                    "rendered": "Purchase for $4.99",
+                    "rendered": "Purchase for 4.99",
                     "type": [Function],
                   },
                   Object {
@@ -1431,7 +1447,9 @@ ShallowWrapper {
                             }
                             useNativeDriver={true}
                           >
-                             restore 
+                             
+                            restore
+                             
                           </Text>
                         </TouchableOpacity>,
                         <Text
@@ -1486,7 +1504,9 @@ ShallowWrapper {
                             }
                             useNativeDriver={true}
                           >
-                             restore 
+                             
+                            restore
+                             
                           </Text>,
                           "onPress": undefined,
                         },
@@ -1496,7 +1516,11 @@ ShallowWrapper {
                           "key": undefined,
                           "nodeType": "class",
                           "props": Object {
-                            "children": " restore ",
+                            "children": Array [
+                              " ",
+                              "restore",
+                              " ",
+                            ],
                             "default": true,
                             "primary": true,
                             "style": Object {
@@ -1505,7 +1529,11 @@ ShallowWrapper {
                             "useNativeDriver": true,
                           },
                           "ref": null,
-                          "rendered": " restore ",
+                          "rendered": Array [
+                            " ",
+                            "restore",
+                            " ",
+                          ],
                           "type": [Function],
                         },
                         "type": [Function],
@@ -1566,7 +1594,9 @@ ShallowWrapper {
                       text100={true}
                       useNativeDriver={true}
                     >
-                       Privacy policy 
+                       
+                      Privacy policy
+                       
                     </Text>
                   </TouchableOpacity>
                 </View>,
@@ -1611,7 +1641,9 @@ ShallowWrapper {
                         text100={true}
                         useNativeDriver={true}
                       >
-                         Privacy policy 
+                         
+                        Privacy policy
+                         
                       </Text>
                     </TouchableOpacity>,
                   ],
@@ -1648,7 +1680,9 @@ ShallowWrapper {
                         text100={true}
                         useNativeDriver={true}
                       >
-                         Privacy policy 
+                         
+                        Privacy policy
+                         
                       </Text>,
                       "onPress": [Function],
                     },
@@ -1659,14 +1693,22 @@ ShallowWrapper {
                       "nodeType": "class",
                       "props": Object {
                         "center": true,
-                        "children": " Privacy policy ",
+                        "children": Array [
+                          " ",
+                          "Privacy policy",
+                          " ",
+                        ],
                         "defaultLight": true,
                         "primary": true,
                         "text100": true,
                         "useNativeDriver": true,
                       },
                       "ref": null,
-                      "rendered": " Privacy policy ",
+                      "rendered": Array [
+                        " ",
+                        "Privacy policy",
+                        " ",
+                      ],
                       "type": [Function],
                     },
                     "type": [Function],
@@ -1867,7 +1909,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Purchase for $4.99
+                  Purchase for 4.99
                 </Button>
                 <View
                   marginT-10={true}
@@ -1899,7 +1941,9 @@ ShallowWrapper {
                       }
                       useNativeDriver={true}
                     >
-                       restore 
+                       
+                      restore
+                       
                     </Text>
                   </TouchableOpacity>
                   <Text
@@ -1946,7 +1990,9 @@ ShallowWrapper {
                     text100={true}
                     useNativeDriver={true}
                   >
-                     Privacy policy 
+                     
+                    Privacy policy
+                     
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -2126,7 +2172,7 @@ ShallowWrapper {
                     }
                   }
                 >
-                  Purchase for $4.99
+                  Purchase for 4.99
                 </Button>
                 <View
                   marginT-10={true}
@@ -2158,7 +2204,9 @@ ShallowWrapper {
                       }
                       useNativeDriver={true}
                     >
-                       restore 
+                       
+                      restore
+                       
                     </Text>
                   </TouchableOpacity>
                   <Text
@@ -2205,7 +2253,9 @@ ShallowWrapper {
                     text100={true}
                     useNativeDriver={true}
                   >
-                     Privacy policy 
+                     
+                    Privacy policy
+                     
                   </Text>
                 </TouchableOpacity>
               </View>
@@ -2379,7 +2429,7 @@ ShallowWrapper {
                       }
                     }
                   >
-                    Purchase for $4.99
+                    Purchase for 4.99
                   </Button>
                   <View
                     marginT-10={true}
@@ -2411,7 +2461,9 @@ ShallowWrapper {
                         }
                         useNativeDriver={true}
                       >
-                         restore 
+                         
+                        restore
+                         
                       </Text>
                     </TouchableOpacity>
                     <Text
@@ -2458,7 +2510,9 @@ ShallowWrapper {
                       text100={true}
                       useNativeDriver={true}
                     >
-                       Privacy policy 
+                       
+                      Privacy policy
+                       
                     </Text>
                   </TouchableOpacity>
                 </View>
@@ -2628,7 +2682,7 @@ ShallowWrapper {
                         }
                       }
                     >
-                      Purchase for $4.99
+                      Purchase for 4.99
                     </Button>
                     <View
                       marginT-10={true}
@@ -2660,7 +2714,9 @@ ShallowWrapper {
                           }
                           useNativeDriver={true}
                         >
-                           restore 
+                           
+                          restore
+                           
                         </Text>
                       </TouchableOpacity>
                       <Text
@@ -3015,7 +3071,7 @@ ShallowWrapper {
                           }
                         }
                       >
-                        Purchase for $4.99
+                        Purchase for 4.99
                       </Button>,
                       <View
                         marginT-10={true}
@@ -3047,7 +3103,9 @@ ShallowWrapper {
                             }
                             useNativeDriver={true}
                           >
-                             restore 
+                             
+                            restore
+                             
                           </Text>
                         </TouchableOpacity>
                         <Text
@@ -3079,14 +3137,14 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "children": "Purchase for $4.99",
+                        "children": "Purchase for 4.99",
                         "onPress": undefined,
                         "style": Object {
                           "minWidth": "100%",
                         },
                       },
                       "ref": null,
-                      "rendered": "Purchase for $4.99",
+                      "rendered": "Purchase for 4.99",
                       "type": [Function],
                     },
                     Object {
@@ -3120,7 +3178,9 @@ ShallowWrapper {
                               }
                               useNativeDriver={true}
                             >
-                               restore 
+                               
+                              restore
+                               
                             </Text>
                           </TouchableOpacity>,
                           <Text
@@ -3175,7 +3235,9 @@ ShallowWrapper {
                               }
                               useNativeDriver={true}
                             >
-                               restore 
+                               
+                              restore
+                               
                             </Text>,
                             "onPress": undefined,
                           },
@@ -3185,7 +3247,11 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "class",
                             "props": Object {
-                              "children": " restore ",
+                              "children": Array [
+                                " ",
+                                "restore",
+                                " ",
+                              ],
                               "default": true,
                               "primary": true,
                               "style": Object {
@@ -3194,7 +3260,11 @@ ShallowWrapper {
                               "useNativeDriver": true,
                             },
                             "ref": null,
-                            "rendered": " restore ",
+                            "rendered": Array [
+                              " ",
+                              "restore",
+                              " ",
+                            ],
                             "type": [Function],
                           },
                           "type": [Function],
@@ -3255,7 +3325,9 @@ ShallowWrapper {
                         text100={true}
                         useNativeDriver={true}
                       >
-                         Privacy policy 
+                         
+                        Privacy policy
+                         
                       </Text>
                     </TouchableOpacity>
                   </View>,
@@ -3300,7 +3372,9 @@ ShallowWrapper {
                           text100={true}
                           useNativeDriver={true}
                         >
-                           Privacy policy 
+                           
+                          Privacy policy
+                           
                         </Text>
                       </TouchableOpacity>,
                     ],
@@ -3337,7 +3411,9 @@ ShallowWrapper {
                           text100={true}
                           useNativeDriver={true}
                         >
-                           Privacy policy 
+                           
+                          Privacy policy
+                           
                         </Text>,
                         "onPress": [Function],
                       },
@@ -3348,14 +3424,22 @@ ShallowWrapper {
                         "nodeType": "class",
                         "props": Object {
                           "center": true,
-                          "children": " Privacy policy ",
+                          "children": Array [
+                            " ",
+                            "Privacy policy",
+                            " ",
+                          ],
                           "defaultLight": true,
                           "primary": true,
                           "text100": true,
                           "useNativeDriver": true,
                         },
                         "ref": null,
-                        "rendered": " Privacy policy ",
+                        "rendered": Array [
+                          " ",
+                          "Privacy policy",
+                          " ",
+                        ],
                         "type": [Function],
                       },
                       "type": [Function],

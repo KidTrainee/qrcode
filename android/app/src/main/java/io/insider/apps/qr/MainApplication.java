@@ -3,6 +3,7 @@ package io.insider.apps.qr;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactcommunity.rnlanguages.RNLanguagesPackage;
 import com.rt2zz.reactnativecontacts.ReactNativeContacts;
 import com.calendarevents.CalendarEventsPackage;
 import io.invertase.firebase.RNFirebasePackage;
@@ -36,6 +37,7 @@ public class MainApplication extends Application implements ShareApplication, Re
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNLanguagesPackage(),
             new ReactNativeContacts(),
             new CalendarEventsPackage(),
             new RNIapPackage(),

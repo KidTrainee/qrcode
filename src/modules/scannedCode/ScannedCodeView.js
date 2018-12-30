@@ -19,6 +19,7 @@ import {
   Image,
 } from 'react-native-ui-lib';
 
+import i18n from '../../translations';
 import { colors } from '../../styles';
 import { parseScannedString } from './ScannedCodeState';
 import { Button } from '../../components';
@@ -216,10 +217,10 @@ export default function ScannedCodeView(props: Props) {
             style={styles.showQrCodeButton}
             onPress={props.isPro ? props.goGeneratedCodePage : props.goPricingPage}
           >
-            <Text default gray>Show QRCode&nbsp; {props.isPro}</Text>
+            <Text default gray>{i18n.t('screens.scanned.show')}&nbsp;</Text>
             {!props.isPro && (
               <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4>
-                <Text white>Pro</Text>
+                <Text white>{i18n.t('other.pro')}</Text>
               </View>
             )}
           </TouchableOpacity>

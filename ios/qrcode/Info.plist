@@ -45,6 +45,8 @@
 	<string>We need this permission to be able to save your contacts from scanned codes</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>We need this to be able to store the image in your library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need this to be able to store the image in your library</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-Bold.ttf</string>

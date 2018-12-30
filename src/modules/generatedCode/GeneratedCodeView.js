@@ -13,6 +13,7 @@ import Share from 'react-native-share';
 import { SlidersColorPicker } from 'react-native-color';
 import tinycolor from 'tinycolor2';
 
+import i18n from '../../translations';
 import { generateQRValueFromState } from './GeneratedCodeState';
 import { commonStyles } from '../../styles';
 import { Button } from '../../components';
@@ -73,7 +74,7 @@ export default function GeneratedCodeView(props: Props) {
           <View marginV-25>
             <View row spread>
               <View row centerV>
-                <Text h2 marginB-5 style={styles.textNormal}>Background color</Text>
+                <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.background')}</Text>
                 {!props.isPro && (
                   <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
                     <Text default white>Pro</Text>
@@ -88,12 +89,12 @@ export default function GeneratedCodeView(props: Props) {
                 ]}
               />
             </View>
-            <Text defaultLight gray>Codes default background color</Text>
+            <Text defaultLight gray>{i18n.t('screens.settings.backgroundDescription')}</Text>
           </View>
           <View marginB-10>
             <View row spread>
               <View row centerV>
-                <Text h2 marginB-5 style={styles.textNormal}>Foreground color</Text>
+                <Text h2 marginB-5 style={styles.textNormal}>{i18n.t('screens.settings.foreground')}</Text>
                 {!props.isPro && (
                   <View style={styles.proLabel} paddingH-3 paddingV-1 br20 marginB-4 marginL-5>
                     <Text default white>Pro</Text>
@@ -108,7 +109,7 @@ export default function GeneratedCodeView(props: Props) {
                 ]}
               />
             </View>
-            <Text defaultLight gray>Codes default foreground color</Text>
+            <Text defaultLight gray>{i18n.t('screens.settings.foregroundDescription')}</Text>
           </View>
         </View>
         <SlidersColorPicker
@@ -118,9 +119,9 @@ export default function GeneratedCodeView(props: Props) {
           onCancel={props.toggleBackgroundColorModal}
           onOk={props.handleBackgroundColorPick}
           swatches={recommendedColors}
-          swatchesLabel="Recommended"
-          okLabel="Done"
-          cancelLabel="Cancel"
+          swatchesLabel={i18n.t('screens.generated.slider.label')}
+          okLabel={i18n.t('screens.generated.slider.ok')}
+          cancelLabel={i18n.t('screens.generated.slider.cancel')}
         />
         <SlidersColorPicker
           visible={props.isForegroundModalVisible}
@@ -129,9 +130,9 @@ export default function GeneratedCodeView(props: Props) {
           onCancel={props.toggleForegroundColorModal}
           onOk={props.handleForegroundColorPick}
           swatches={recommendedColors}
-          swatchesLabel="Recommended"
-          okLabel="Done"
-          cancelLabel="Cancel"
+          swatchesLabel={i18n.t('screens.generated.slider.label')}
+          okLabel={i18n.t('screens.generated.slider.ok')}
+          cancelLabel={i18n.t('screens.generated.slider.cancel')}
         />
       </ScrollView>
       <View padding-20>
@@ -140,7 +141,7 @@ export default function GeneratedCodeView(props: Props) {
           onPress={() => props.handleShareButtonClick(Share)}
           radius={5}
         >
-          Share
+          {i18n.t('screens.generated.shareButton')}
         </Button>
       </View>
     </SafeAreaView>

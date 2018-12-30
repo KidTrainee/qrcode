@@ -1,4 +1,6 @@
 rootProject.name = 'qrcode'
+include ':react-native-languages'
+project(':react-native-languages').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-languages/android')
 include ':react-native-contacts'
 project(':react-native-contacts').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-contacts/android')
 include ':react-native-calendar-events'
