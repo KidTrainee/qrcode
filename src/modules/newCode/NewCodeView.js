@@ -91,7 +91,7 @@ export default function NewCodeView(props: Props) {
               assetGroup="types"
               assetName={codeType.label !== props.activeCodeType ? codeType.icon : `${codeType.icon}-white`}
             />
-            <Text h3 lightBlue marginT-5 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
+            <Text center h3 lightBlue marginT-5 white={codeType.label === props.activeCodeType}>{codeType.label}</Text>
             {codeType.proOnly && !props.isPro && (
               <View style={styles.proLabel} paddingH-3 paddingV-1 marginB-4 marginL-5>
                 <Text white>{i18n.t('other.pro')}</Text>
