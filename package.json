@@ -29,7 +29,7 @@
     "react-native-easy-toast": "gaykov/react-native-easy-toast",
     "react-native-firebase": "^5.1.1",
     "react-native-gesture-handler": "^1.0.9",
-    "react-native-iap": "^2.3.21",
+    "react-native-iap": "2.4.0-beta6",
     "react-native-keyboard-aware-scroll-view": "^0.7.4",
     "react-native-languages": "^3.0.1",
     "react-native-linear-gradient": "^2.5.2",
