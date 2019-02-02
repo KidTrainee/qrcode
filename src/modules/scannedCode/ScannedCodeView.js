@@ -131,6 +131,7 @@ export default function ScannedCodeView(props: Props) {
                 disabledColor={colors.darkBlue}
                 floatingPlaceholderColor={colors.darkGray}
                 copyToClipboard={props.copyToClipboard}
+                multiline
               />
             ))}
           </View>
@@ -248,8 +249,8 @@ const styles = StyleSheet.create({
     width: 40,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'transparent',
-    padding: 0,
+    backgroundColor: 'white',
+    padding: 10,
   },
   copyIcon: { height: 40, width: 25 },
   showQrCodeButton: {
