@@ -1,4 +1,4 @@
-import { Vibration, InteractionManager } from 'react-native';
+import { Vibration, InteractionManager, Platform } from 'react-native';
 import {
   compose, withState, withHandlers, lifecycle,
 } from 'recompose';
@@ -48,10 +48,15 @@ export default compose(
         data: string,
       }>
     }) => {
+      const selectorIndex = Platform.select({ ios: 'data', android: 'rawValue' });
       if (codeData.barcodes) {
         // I'm so sorry about the next line...
         // eslint-disable-next-line no-param-reassign
-        codeData = { data: _.get(codeData, 'barcodes.0.data', '') };
+        codeData = { data: _.get(codeData, `barcodes.0.${selectorIndex}`, '') };
+      }
+      if (Platform.OS === 'android' && codeData.rawValue) {
+        // eslint-disable-next-line no-param-reassign
+        codeData = { data: codeData.rawValue };
       }
       if (props.lastScannedCode === codeData.data) return;
       props.setLastScannedCode(codeData.data);

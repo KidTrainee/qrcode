@@ -62,4 +62,6 @@ ios/Pods
 # Test Coverage
 jest_coverage
 
- third-party/
+third-party/
+
+.vscode

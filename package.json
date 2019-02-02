@@ -23,7 +23,7 @@
     "react": "16.6.1",
     "react-native": "0.57.5",
     "react-native-calendar-events": "^1.6.3",
-    "react-native-camera": "^1.4.3",
+    "react-native-camera": "gaykov/react-native-camera",
     "react-native-color": "^0.0.10",
     "react-native-contacts": "^2.2.4",
     "react-native-easy-toast": "gaykov/react-native-easy-toast",
