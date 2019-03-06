@@ -1,6 +1,4 @@
 // @flow
-import { Platform } from 'react-native';
-
 type AppStateType = {
   isFirstOpen: boolean,
 };
@@ -12,7 +10,7 @@ type ActionType = {
 
 export const initialState: AppStateType = {
   isFirstOpen: true,
-  isPro: Platform.OS === 'ios',
+  isPro: true,
 };
 
 export const SET_FIRST_OPEN = 'ActionType/SET_FIRST_OPEN';
