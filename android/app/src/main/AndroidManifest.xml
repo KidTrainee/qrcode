@@ -2,8 +2,6 @@
     package="io.insider.apps.qr"
     xmlns:tools="http://schemas.android.com/tools"
 >
-
-    <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.VIBRATE"/>

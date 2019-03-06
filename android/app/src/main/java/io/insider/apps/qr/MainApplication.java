@@ -8,7 +8,6 @@ import com.rt2zz.reactnativecontacts.ReactNativeContacts;
 import com.calendarevents.CalendarEventsPackage;
 import io.invertase.firebase.RNFirebasePackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
-import com.dooboolab.RNIap.RNIapPackage;
 import io.insider.apps.qr.BuildConfig;
 import com.zmxv.RNSound.RNSoundPackage;
 import com.horcrux.svg.SvgPackage;
@@ -40,7 +39,6 @@ public class MainApplication extends Application implements ShareApplication, Re
             new RNLanguagesPackage(),
             new ReactNativeContacts(),
             new CalendarEventsPackage(),
-            new RNIapPackage(),
             new RNFirebasePackage(),
             new RNSoundPackage(),
             new SvgPackage(),

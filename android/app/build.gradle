@@ -152,7 +152,6 @@ dependencies {
     implementation project(':react-native-contacts')
     implementation project(':react-native-calendar-events')
     implementation project(':react-native-firebase')
-    implementation project(':react-native-iap')
     implementation project(':react-native-sound')
     implementation project(':react-native-svg')
     implementation project(':react-native-linear-gradient')

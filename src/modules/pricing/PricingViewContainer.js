@@ -96,16 +96,17 @@ export const enhance = compose(
       firebase.analytics().setCurrentScreen('pricing', 'PricingView');
       this.props.setLoadingStatus(true);
       // check if products are valid
-      try {
-        const products = await RNIap.getProducts([itemSkus]);
-        this.props.setProducts(products);
-        if (products.length === 0) {
-          this.props.goBackWithAlert();
-        }
-      } catch (e) {
-        this.props.goBackWithAlert();
-      }
+      // try {
+      //   const products = await RNIap.getProducts([itemSkus]);
+      //   this.props.setProducts(products);
+      //   if (products.length === 0) {
+      //     this.props.goBackWithAlert();
+      //   }
+      // } catch (e) {
+      //   this.props.goBackWithAlert();
+      // }
       this.props.setLoadingStatus(false);
+      this.props.goBackWithAlert();
     },
   }),
 );
