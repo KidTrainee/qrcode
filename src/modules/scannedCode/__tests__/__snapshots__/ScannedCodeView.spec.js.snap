@@ -107,11 +107,11 @@ ShallowWrapper {
           style={
             Object {
               "alignItems": "center",
-              "backgroundColor": "transparent",
+              "backgroundColor": "white",
               "bottom": 25,
               "height": 40,
               "justifyContent": "center",
-              "padding": 0,
+              "padding": 10,
               "position": "absolute",
               "right": 0,
               "width": 40,
@@ -175,11 +175,11 @@ ShallowWrapper {
           "onPress": [Function],
           "style": Object {
             "alignItems": "center",
-            "backgroundColor": "transparent",
+            "backgroundColor": "white",
             "bottom": 25,
             "height": 40,
             "justifyContent": "center",
-            "padding": 0,
+            "padding": 10,
             "position": "absolute",
             "right": 0,
             "width": 40,
@@ -233,11 +233,11 @@ ShallowWrapper {
             style={
               Object {
                 "alignItems": "center",
-                "backgroundColor": "transparent",
+                "backgroundColor": "white",
                 "bottom": 25,
                 "height": 40,
                 "justifyContent": "center",
-                "padding": 0,
+                "padding": 10,
                 "position": "absolute",
                 "right": 0,
                 "width": 40,
@@ -301,11 +301,11 @@ ShallowWrapper {
             "onPress": [Function],
             "style": Object {
               "alignItems": "center",
-              "backgroundColor": "transparent",
+              "backgroundColor": "white",
               "bottom": 25,
               "height": 40,
               "justifyContent": "center",
-              "padding": 0,
+              "padding": 10,
               "position": "absolute",
               "right": 0,
               "width": 40,
@@ -516,7 +516,7 @@ ShallowWrapper {
     "nodeType": "class",
     "props": Object {
       "dispatch": [Function],
-      "isPro": false,
+      "isPro": true,
       "navigation": Object {
         "state": Object {
           "params": Object {
@@ -561,7 +561,7 @@ ShallowWrapper {
       "nodeType": "class",
       "props": Object {
         "dispatch": [Function],
-        "isPro": false,
+        "isPro": true,
         "navigation": Object {
           "state": Object {
             "params": Object {

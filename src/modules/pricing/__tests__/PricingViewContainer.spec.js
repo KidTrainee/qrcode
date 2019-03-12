@@ -10,6 +10,7 @@ describe('Pricing View Container', () => {
   let wrapper, instance, mockFunction = jest.fn();
 
   beforeEach(function () {
+    mockFunction = jest.fn();
     const ComponentClass = toClass(() => <div>component</div>)
     const EnhancedComponent = enhance(ComponentClass)
 
@@ -53,7 +54,7 @@ describe('Pricing View Container', () => {
   it('should go back with alert', () => {
     instance.props().goBackWithAlert();
 
-    expect(mockFunction.mock.calls.length).toBe(1);
+    expect(mockFunction.mock.calls.length).toBe(2);
     expect(mockFunction.mock.calls[0][0]).toBe(undefined);
   })
 });
