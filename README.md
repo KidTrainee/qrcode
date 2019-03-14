@@ -1,5 +1,9 @@
 # QR Code Reader and Generator
 
+[![Build Status](https://app.bitrise.io/app/f1d145ef19337c8a/status.svg?token=1ixKk28nzlq9R_E-Pb5uXw&branch=master)](https://app.bitrise.io/app/f1d145ef19337c8a)
+[![codecov](https://codecov.io/gh/insiderdev/qrcode/branch/master/graph/badge.svg)](https://codecov.io/gh/insiderdev/qrcode)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/498cd80cad28425dad44c1fbc63243a1)](https://www.codacy.com/app/sdgaykov/qrcode?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=insiderdev/qrcode&amp;utm_campaign=Badge_Grade)
+
 Cross-platform mobile app for Android and iOS written with React Native.
 
 ![Big Beautiful Picture](https://i.imgur.com/PKMCXY0.png)
